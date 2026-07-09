@@ -1,0 +1,129 @@
+<object access-modifier="private" name="Security" display-name="Security" uuid="155436b7-95fd-43a0-9333-8e384bea3bf8" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5" description="" cardinal="1">
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="99de899c-aaff-43e8-a6d3-0ac79842293a" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="LoginStarted">
+			<body kind="om">
+				<![CDATA[ModeWork.Started = true;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Operator" display-name="Operator" uuid="d2068c1d-d119-41f7-ba7e-9751b89cf091" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="5" description="" cardinal="1">
+		<init target="Application" ver="5" value="Права"/>
+		<init target="Right" ver="5" value="Оператор"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[Access_Operator=me.Value;]]>
+			</body>
+		</do-on>
+		<init target="SecurityContext" ver="5">
+			<object access-modifier="private" uuid="94fa6efb-916f-4c91-912c-5d68ad1de142" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5"/>
+		</init>
+	</object>
+	<object access-modifier="private" name="Engineer" display-name="Engineer" uuid="f6e602c2-1fa9-4374-84e5-70bdd38f03d4" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="5" description="" cardinal="1">
+		<init target="Application" ver="5" value="Права"/>
+		<init target="Right" ver="5" value="Инженер"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[Access_Engineer=me.Value;]]>
+			</body>
+		</do-on>
+		<init target="SecurityContext" ver="5">
+			<object access-modifier="private" uuid="5a775d80-1ad7-4a3a-86fd-db57883a5e9b" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5"/>
+		</init>
+	</object>
+	<object access-modifier="private" name="Access_Operator" display-name="Access_Operator" uuid="8e7c1a02-f646-4d95-b429-f1e757c0fa1d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Access_Engineer" display-name="Access_Engineer" uuid="e817300a-fa90-4792-bb11-9acdc12335ee" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Auto" display-name="Auto" uuid="24a7b840-44f2-4ca1-a675-9f87f27d83e2" base-type="BoolTokenProxy" base-type-id="9cc1c61e-9310-406a-8f93-18028f747d59" ver="5" description="" cardinal="1">
+		<init target="Application" ver="5" value="Права"/>
+		<init target="Right" ver="5" value="Переход в автоматический режим работы"/>
+		<init target="SecurityContext" ver="5">
+			<object access-modifier="private" uuid="08f72e63-5fb9-4260-9a22-dbfdeab3e5f3" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5"/>
+		</init>
+	</object>
+	<object access-modifier="private" name="CurrentUser" display-name="CurrentUser" uuid="577e3678-ef04-4d4b-9b00-7a8cfc633504" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="ValuePath" ver="5" value="CurrentUserPU"/>
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="e3a310dc-4eaf-4f9c-92fa-c77b1fc08f80" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="1000" ver="5"/>
+			<designed target="Active" value="true" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[CurrentUser.In = SecurityContext.CurrentUserDisplayName;]]>
+				</body>
+			</do-on>
+		</object>
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[unit.ModeWork.IsPU]]>
+				</condition>
+				<expr>
+					<![CDATA["CurrentUserPU"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["CurrentUserARM"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<init target="MainSource" ver="5" ref="unit.Source.Main"/>
+	</object>
+	<object access-modifier="private" name="Authenticated" display-name="Authenticated" uuid="8364df51-a5aa-4f5b-9797-53a67536ceab" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="WriteAuth" display-name="WriteAuth" uuid="b6e21254-1f21-459d-85ff-03c6f4f3cf20" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="1000" ver="5"/>
+			<designed target="Active" value="true" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[parent.In = !unit.Security.SecurityContext.GuestMode;]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="ValuePath" ver="5" value="Mode_work.Authenticated"/>
+	</object>
+	<do-trace access-modifier="private" target="Access_Operator" ver="5">
+		<body>
+			<![CDATA[Operator.Value]]>
+		</body>
+	</do-trace>
+	<do-trace access-modifier="private" target="Access_Engineer" ver="5">
+		<body>
+			<![CDATA[Engineer.Value]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Acc_Operator" display-name="Acc_Operator" uuid="8fe5fb79-7d8d-4255-a34e-adc2f4634f15" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="dff1d9cf-68ba-4697-add5-e7b828379969" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="2000" ver="5"/>
+			<designed target="Active" value="true" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[parent.Value = here.Access_Operator.Value;]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="Source" ver="5" ref="unit.Source.Security_"/>
+		<init target="Path" ver="5" value="Access_Operator"/>
+		<do-trace access-modifier="private" target="Value" ver="5">
+			<body>
+				<![CDATA[Access_Operator]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Acc_Engineer" display-name="Acc_Engineer" uuid="61f34c2a-e1f6-4e48-a28d-f83584fa5d4f" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="c904c3cc-effe-4e20-85bd-ce022a8eaa87" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="2000" ver="5"/>
+			<designed target="Active" value="true" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[parent.Value = here.Access_Engineer.Value;]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="Path" ver="5" value="Access_Engineer"/>
+		<init target="Source" ver="5" ref="unit.Source.Security_"/>
+		<do-trace access-modifier="private" target="Value" ver="5">
+			<body>
+				<![CDATA[Access_Engineer]]>
+			</body>
+		</do-trace>
+	</object>
+</object>
+

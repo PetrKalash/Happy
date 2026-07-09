@@ -1,0 +1,255 @@
+<type access-modifier="private" name="TF_events" display-name="TF_events" uuid="820da629-44b2-4630-bd00-ee7fb2ee6988" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Запись времени на расходомер" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="740" ver="5"/>
+	<designed target="Height" value="240" ver="5"/>
+	<init target="WindowName" ver="5" value="Запись времени на расходомер"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="e58ee1d6-5955-4d07-8837-de0247c5c26b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="175" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="125" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="SetSP" display-name="SetSP" uuid="c5af8f5c-9fe0-4be9-a764-fd44daa79b97" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="InvokeTrigger" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+				<body kind="om">
+					<![CDATA[]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="IntervalEditor" display-name="IntervalEditor" uuid="de0858f7-b0db-451e-b32a-f9f2a0292db7" base-type="IntervalEditor" base-type-id="ef4b0474-0376-4b1d-844c-682e26880a1e" ver="5" description="" cardinal="1">
+			<designed target="X" value="190" ver="5"/>
+			<designed target="Y" value="45" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="360" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Scale" value="2" ver="5"/>
+			<object access-modifier="private" name="Begin_date_SP" display-name="Begin_date_SP" uuid="b7a4cdf1-268b-4c7a-a362-8e1227187871" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+				<designed target="Location" value="" ver="5"/>
+				<designed target="Port" value="4388" ver="5"/>
+				<designed target="HistoryPort" value="4950" ver="5"/>
+				<designed target="Path" value="Begin_date_SP" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<designed target="ReAdvise" value="0" ver="5"/>
+				<designed target="ClientDisplayName" value="HMI" ver="5"/>
+				<designed target="ClientId" value="HMI" ver="5"/>
+				<init target="ParentSource" ver="5" ref="Source_Archive"/>
+				<object access-modifier="private" name="DAY" display-name="DAY" uuid="a6038d98-deed-48f1-88ce-d0b70219450b" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InDAY"/>
+				</object>
+				<object access-modifier="private" name="MONTH" display-name="MONTH" uuid="53be0ca2-16c7-43f5-9abc-3eb2b876279c" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InMONTH"/>
+				</object>
+				<object access-modifier="private" name="YEAR" display-name="YEAR" uuid="d20f0e95-3b0b-4bab-b621-801c9072ddb8" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InYEAR"/>
+				</object>
+				<object access-modifier="private" name="HOUR" display-name="HOUR" uuid="039f7284-5d93-4cc2-8efe-fa4b8e053025" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InHOUR"/>
+				</object>
+				<object access-modifier="private" name="MINUTE" display-name="MINUTE" uuid="5ca34bc2-d83e-4421-99ad-31637f5d286d" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InMINUTE"/>
+				</object>
+				<object access-modifier="private" name="SECOND" display-name="SECOND" uuid="477d7791-2127-4672-a87a-7eb36573933d" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InSECOND"/>
+				</object>
+			</object>
+			<object access-modifier="private" name="End_date_SP" display-name="End_date_SP" uuid="82f2347d-b1d0-4c08-ad8e-5a209db569b1" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+				<designed target="Location" value="" ver="5"/>
+				<designed target="Port" value="4388" ver="5"/>
+				<designed target="HistoryPort" value="4950" ver="5"/>
+				<designed target="Path" value="End_date_SP" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<designed target="ReAdvise" value="0" ver="5"/>
+				<designed target="ClientDisplayName" value="HMI" ver="5"/>
+				<designed target="ClientId" value="HMI" ver="5"/>
+				<init target="ParentSource" ver="5" ref="Source_Archive"/>
+				<object access-modifier="private" name="DAY" display-name="DAY" uuid="b0b536c2-b890-4ec3-b4e7-05a580742568" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InDAY"/>
+				</object>
+				<object access-modifier="private" name="MONTH" display-name="MONTH" uuid="1a3892c9-a510-4bb5-822d-ff85703afd91" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InMONTH"/>
+				</object>
+				<object access-modifier="private" name="YEAR" display-name="YEAR" uuid="fbc6f7fd-4234-49fb-9767-d6f328907b6f" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InYEAR"/>
+				</object>
+				<object access-modifier="private" name="HOUR" display-name="HOUR" uuid="ae11eac5-547b-4b89-aaa1-27943c63047c" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InHOUR"/>
+				</object>
+				<object access-modifier="private" name="MINUTE" display-name="MINUTE" uuid="a7bab49c-bf2c-4234-90c9-aa8880d77e1a" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InMINUTE"/>
+				</object>
+				<object access-modifier="private" name="SECOND" display-name="SECOND" uuid="d9788fd9-65cd-4e83-900f-3f82e6350bb8" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="parent"/>
+					<init target="Path" ver="5" value="InSECOND"/>
+				</object>
+			</object>
+			<object access-modifier="private" name="OnChange" display-name="OnChange" uuid="bbecfc37-6611-4b95-bf82-375be3d3adcc" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="InvokeTrigger" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+					<body kind="om">
+						<![CDATA[Begin_date_SP.DAY = TypeConvert.ToInt2(DateTime.Day(Begin));
+Begin_date_SP.MONTH = TypeConvert.ToInt2(DateTime.Month(Begin));
+Begin_date_SP.YEAR = TypeConvert.ToInt2(DateTime.Year(Begin));
+Begin_date_SP.HOUR = TypeConvert.ToInt2(DateTime.Hour(Begin));
+Begin_date_SP.MINUTE = TypeConvert.ToInt2(DateTime.Minute(Begin));
+Begin_date_SP.SECOND = TypeConvert.ToInt2(DateTime.Second(Begin));
+
+End_date_SP.DAY = TypeConvert.ToInt2(DateTime.Day(End));
+End_date_SP.MONTH = TypeConvert.ToInt2(DateTime.Month(End));
+End_date_SP.YEAR = TypeConvert.ToInt2(DateTime.Year(End));
+End_date_SP.HOUR = TypeConvert.ToInt2(DateTime.Hour(End));
+End_date_SP.MINUTE = TypeConvert.ToInt2(DateTime.Minute(End));
+End_date_SP.SECOND = TypeConvert.ToInt2(DateTime.Second(End));]]>
+					</body>
+				</do-on>
+			</object>
+			<init target="pIntervalChanged" ver="5" ref="OnChange"/>
+		</object>
+		<object access-modifier="private" name="ErrorInterval" display-name="ErrorInterval" uuid="23263987-ab89-44ce-960a-8188bb2b3388" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="80" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="720" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Text" value="" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffff0000" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[IntervalEditor.Error]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Interval_text" display-name="Interval_text" uuid="4ffae28f-bbf2-4ee8-9b8b-e14b811090e2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="5" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="740" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Период формирования архива" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="36" ver="5"/>
+		</object>
+		<object access-modifier="private" name="BTN_1" display-name="BTN_1" uuid="a5ed991b-ccca-45fc-a5fe-c80c2b8d129d" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="" cardinal="1">
+			<designed target="X" value="220" ver="5"/>
+			<designed target="Y" value="125" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="320" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Text" value="Сформировать архив" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="25e2aace-949e-42e6-981d-a26f86610927" base-type="TF_events_table" base-type-id="58be7fd4-3155-4f61-b51e-bb38ab1ee22f" ver="5">
+					<init target="TF_" ver="5" ref="here.TF"/>
+					<init target="Begin_" ver="5" ref="IntervalEditor.Begin"/>
+					<init target="End_" ver="5" ref="IntervalEditor.End"/>
+					<init target="NameFile" ver="5" ref="NameTF"/>
+				</object>
+			</do-on>
+			<do-trace access-modifier="private" target="Enabled" ver="5">
+				<body>
+					<![CDATA[(String.Equals(IntervalEditor.Error, "") && Variant.ToUint2(Archive_type_SP.Out, 0) > 0 && Connect) && unit.Source.Connection]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Source_Archive" display-name="Source_Archive" uuid="8b9fe7b7-df90-45a3-9ea5-04e39f18268d" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="EventArchive" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="Source_"/>
+	</object>
+	<object access-modifier="private" name="TF" display-name="TF" uuid="36d7280f-4a5a-498a-8c35-552f016255cb" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Source_" display-name="Source_" uuid="8147178b-8aa7-43a8-8593-ef68abde6b27" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Main"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[TF]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Connect" display-name="Connect" uuid="86dc27bd-ed3b-4cc4-b257-a095488d0b20" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_"/>
+		<init target="Path" ver="5" value="Connect"/>
+	</object>
+	<init target="TF" ver="5" value="TF"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[Body.IntervalEditor.End = DateTime.Now();
+Body.IntervalEditor.Begin = DateTime.AddDays(DateTime.Now(), -1);
+Body.IntervalEditor.OnChange.Invoke();
+Archive_type_SP.In = Archive_type;
+if (Archive_type == 1) {
+	here.Head.Text_1.Text = "Архив событий";
+} else {
+	here.Head.Text_1.Text = "Архив вмешательств";
+}]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Archive_type_SP" display-name="Archive_type_SP" uuid="f92f4bac-77aa-45d9-a2a8-166abb4a0bf2" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="MainSource" ver="5" ref="Source_Archive"/>
+		<init target="ValuePath" ver="5" value="Archive_type_SP"/>
+	</object>
+	<object access-modifier="private" name="Archive_type" display-name="Archive_type" uuid="5b7e4da7-c5e3-42c7-9b23-22f67f98a969" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="5" description="" cardinal="1"/>
+	<init target="Archive_type" ver="5" value="1"/>
+	<object access-modifier="private" name="NameTF" display-name="NameTF" uuid="9bb53e52-b91b-42d4-a67b-6b0a05de9da8" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="NameTF" ver="5" value="TF"/>
+</type>
+

@@ -1,0 +1,83 @@
+{
+  "Version": 3,
+"Table2": [
+  {
+    "activity": "Все",
+    "subcondition": "",
+    "severity": "600",
+    "group": "600",
+    "background": 4294967295,
+    "text": 4294901760,
+    "blinking": "Нет",
+    "blinkingBackground": 4278190080,
+    "blinkingText": 4294967295,
+    "id": 0,
+    "ackBackground": 4294967295,
+    "ackText": 4294901760
+  },
+  {
+    "activity": "Все",
+    "subcondition": "",
+    "severity": "400",
+    "group": "400",
+    "background": 4294967295,
+    "text": 4291585536,
+    "blinking": "Нет",
+    "blinkingBackground": 4278190080,
+    "blinkingText": 4294967295,
+    "id": 1,
+    "ackBackground": 4294967295,
+    "ackText": 4291585536
+  },
+  {
+    "activity": "Все",
+    "subcondition": "",
+    "severity": "200",
+    "group": "200",
+    "background": 4294967295,
+    "text": 4278190335,
+    "blinking": "Нет",
+    "blinkingBackground": 4278190080,
+    "blinkingText": 4294967295,
+    "id": 2,
+    "ackBackground": 4294967295,
+    "ackText": 4278190335
+  },
+  {
+    "activity": "Все",
+    "subcondition": "",
+    "severity": "300",
+    "group": "300",
+    "background": 4294967295,
+    "text": 4278229248,
+    "blinking": "Нет",
+    "blinkingBackground": 4278190080,
+    "blinkingText": 4294967295,
+    "id": 3,
+    "ackBackground": 4294967295,
+    "ackText": 4278229248
+  },
+  {
+    "activity": "Все",
+    "subcondition": "",
+    "severity": "500",
+    "group": "500",
+    "background": 4294967295,
+    "text": 4289331455,
+    "blinking": "Нет",
+    "blinkingBackground": 4278190080,
+    "blinkingText": 4294967295,
+    "id": 4,
+    "ackBackground": 4294967295,
+    "ackText": 4289331455
+  }
+],
+"DefColBackground": 4294967295,
+"DefColText": 4278190080,
+"AckColBackground": 4294967295,
+"AckColText": 4278190080,
+"SelectEventsCol": 4278223103,
+"AckStyleMode": false,
+"BlinkingColumns": "[\"active_time\"]",
+"BlinkAllColumns": true
+}

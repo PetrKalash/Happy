@@ -1,0 +1,36 @@
+<object access-modifier="private" name="Switch" display-name="Switch" uuid="55228a0d-3817-46d8-bb9f-42e5e5e78367" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5" description="" cardinal="1">
+	<object access-modifier="private" name="SwitchModeNotAuth" display-name="SwitchModeNotAuth" uuid="aa199022-ceb6-41ec-b6ba-27e685a1098c" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<do-trace access-modifier="private" target="SwitchModeNotAuth" ver="5">
+		<body>
+			<![CDATA[unit.Security.SecurityContext.GuestMode &&
+((unit.ModeWork.ModeWork == 0 && (unit.ModeWork.SwitchA || unit.ModeWork.SwitchR) )||
+(unit.ModeWork.ModeWork == 1 && !unit.ModeWork.SwitchA) ||
+(unit.ModeWork.ModeWork == 4 && !unit.ModeWork.SwitchR))]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="SwitchToAutomize" display-name="SwitchToAutomize" uuid="ff282921-8aa6-4729-8b11-c8668c62fcfb" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="SwitchModeAuto" display-name="SwitchModeAuto" uuid="e987b5c1-cf8c-4e72-9a58-393ca2c87c50" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="P_out_Status" display-name="P_out_Status" uuid="9ed37f53-95bd-42c4-b219-b3ce2e161026" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="P_gas_out.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.AI_Sensors"/>
+		</object>
+		<object access-modifier="private" name="P_in_Status" display-name="P_in_Status" uuid="05918c96-268a-4153-9ac3-851d053cfd3e" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="P_gas_in.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.AI_Sensors"/>
+		</object>
+		<object access-modifier="private" name="CR1_1_Status" display-name="CR1_1_Status" uuid="73de7efb-e8fd-420c-9650-e5bfd69ad40d" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="CR_1_1.TS_Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+		<object access-modifier="private" name="CR1_2_Status" display-name="CR1_2_Status" uuid="1c2b4ecf-7279-442a-9305-da05ebdca27b" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="CR_1_2.TS_Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+	</object>
+	<do-trace access-modifier="private" target="SwitchModeAuto" ver="5">
+		<body>
+			<![CDATA[(SwitchModeAuto.P_out_Status || SwitchModeAuto.P_in_Status || SwitchModeAuto.CR1_1_Status==3 || SwitchModeAuto.CR1_2_Status==3 ) && unit.ModeWork.ModeWork == 6]]>
+		</body>
+	</do-trace>
+</object>
+

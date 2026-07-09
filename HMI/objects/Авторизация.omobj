@@ -1,0 +1,141 @@
+<type access-modifier="private" name="Авторизация" display-name="Авторизация" uuid="0b2044d7-d31d-4f9e-aa77-fdbd2a1f630d" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="41026666-0faf-40b1-9ee9-ffac4d70e00f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="LoginDialog_1" display-name="LoginDialog_1" uuid="0289669c-802c-4d99-8815-aa3108167f10" base-type="LoginDialog" base-type-id="eb8d4a9b-7cd2-4fcf-81e1-67eed3b5c0d4" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="599.66666666666663" ver="5"/>
+			<designed target="Height" value="307" ver="5"/>
+			<init target="init_ScreenKeyboard" ver="5">
+				<object access-modifier="private" uuid="eff2961a-5e6c-4e77-a986-c24ba1217b54" base-type="ScreenKeyboardOptions" base-type-id="0589bc8e-fbb2-4f0e-b5d2-f0d825538ef1" ver="5">
+					<init target="Enabled" ver="5" value="true"/>
+				</object>
+			</init>
+			<init target="init_Theme" ver="5">
+				<object access-modifier="private" uuid="dacaed34-2ede-4143-a14d-af9b8ecdc860" base-type="Theme" base-type-id="05d4d7df-0f8e-4ec1-ac85-b5460e30af81" ver="5">
+					<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+						<body>
+							<![CDATA[unit.Theme.BackgroundColor]]>
+						</body>
+					</do-trace>
+					<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+						<body>
+							<![CDATA[unit.Theme.TextColor]]>
+						</body>
+					</do-trace>
+					<init target="SelectionColor" ver="5" value="0xffaaaaff"/>
+				</object>
+			</init>
+			<designed target="WindowHeight" value="200" ver="5"/>
+			<object access-modifier="private" name="GoToChangePass" display-name="GoToChangePass" uuid="42e5fddb-3869-4c3a-965a-734ea2ffde57" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="InvokeTrigger" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+					<object access-modifier="private" uuid="ffee4992-38db-4716-bca3-5cea88e41132" base-type="Смена пароля" base-type-id="73ac0c54-110a-4a87-a57f-b0c47ec2c85c" ver="5">
+						<init target="UserId" ver="5" ref="LoginDialog_1.LoginDialogResult.UserId"/>
+						<init target="UserDisplayName" ver="5" ref="LoginDialog_1.LoginDialogResult.UserDisplayName"/>
+					</object>
+				</do-on>
+			</object>
+			<init target="ChangePassword" ver="5" ref="GoToChangePass"/>
+			<object access-modifier="private" name="LoginDialogResult" display-name="LoginDialogResult" uuid="6e9e8095-8716-4858-a498-22a001612b7d" base-type="LoginDialogResult" base-type-id="5a70987d-09be-4ae7-90b3-76a00c6721bb" ver="5" description="" cardinal="1"/>
+			<init target="Result" ver="5" ref="LoginDialogResult"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="c96b8e8d-98df-4809-8877-a387458cefef" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+				<designed target="X" value="36.333333333333329" ver="5"/>
+				<designed target="Y" value="260.99999999999994" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="35.666666666666657" ver="5"/>
+				<designed target="Height" value="36.666666666666686" ver="5"/>
+				<designed target="RoundingRadius" value="0" ver="5"/>
+				<designed target="PenColor" value="4278190080" ver="5"/>
+				<designed target="PenStyle" value="1" ver="5"/>
+				<designed target="PenWidth" value="1" ver="5"/>
+				<designed target="BrushColor" value="4278190080" ver="5"/>
+				<designed target="BrushStyle" value="0" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+					<body kind="om">
+						<![CDATA[//Rectangle_1.Visible=false;
+Timer_1.Active=true;
+LoginDialog_1.ButtonsPanel.Service.ScreenKeyboardButton.Click();]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="f25a8d4a-d462-4737-ab60-c5ddddfda764" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="500" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[here.Activate();
+
+Count=Count+1;
+if (Count==6){
+me.Active=false;
+}
+
+]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Count" display-name="Count" uuid="e66ba76a-15a2-46f9-a011-0308643aaee2" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="5" description="" cardinal="1"/>
+		</object>
+		<object access-modifier="private" name="Rectangle_21" display-name="Rectangle_21" uuid="51ed8514-8c7f-46b1-a8da-d6bdbeb54c8c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="599.8484848484851" ver="5"/>
+			<designed target="Y" value="-4.9857142857143373" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="1.123068918481863" ver="5"/>
+			<designed target="Height" value="313.76803751801424" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xffffffff" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+		</object>
+	</object>
+	<designed target="Width" value="600" ver="5"/>
+	<designed target="Height" value="360" ver="5"/>
+	<init target="WindowName" ver="5" value="Авторизация"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<object access-modifier="private" name="SecurityContext_1" display-name="SecurityContext_1" uuid="23c37ade-7811-4077-95d2-a89264ab2cac" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5" description="" cardinal="1"/>
+	<do access-modifier="private" name="ReOpen" display-name="ReOpen" ver="5" form-action="open" form-by-id="false">
+		<object access-modifier="private" uuid="ca00fb95-fd89-48aa-87f8-d8a3cad05024" base-type="Авторизация" base-type-id="0b2044d7-d31d-4f9e-aa77-fdbd2a1f630d" ver="5"/>
+	</do>
+</type>
+

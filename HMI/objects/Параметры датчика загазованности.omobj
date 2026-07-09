@@ -1,0 +1,398 @@
+<type access-modifier="private" name="Параметры датчика загазованности" display-name="Параметры датчика загазованности" uuid="bac48d53-2244-4c31-b2fc-496e250d9648" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="320" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="Connection" display-name="Connection" uuid="e8a07b6b-8d63-4cc0-901a-81e216e4e560" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+		<designed target="X" value="30" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="100" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="Connect" display-name="Connect" uuid="40db4e3c-cd92-4b42-95a7-7478118aa68a" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="Connect"/>
+			<init target="Source" ver="5" ref="SensorSource"/>
+		</object>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Connect]]>
+				</condition>
+				<expr>
+					<![CDATA["В норме"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["Ошибка"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!Connect]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="SensorPath" display-name="Путь до датчика" uuid="c94c1578-47f2-446a-a4dc-6f0ecb946938" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="SensorSource" display-name="SensorSource" uuid="a413f462-2030-453a-858e-73db6796276c" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Zag"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[SensorPath]]>
+			</body>
+		</do-trace>
+	</object>
+	<init target="SensorPath" ver="5" value="CH4_1_BBR"/>
+	<object access-modifier="private" name="Concentration" display-name="Concentration" uuid="34e49624-da3b-410b-8fec-78da833d4dbb" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+		<designed target="X" value="140" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="100" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connection.Connect || Status.Stat]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="Conc" display-name="Conc" uuid="28b51d4d-7954-4c09-b12d-5aa12d9c7b7d" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="SensorSource"/>
+			<init target="Path" ver="5" value="Value"/>
+		</object>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connection.Connect || Status.Stat]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[String.ToString("%.1f", Conc) + " " + Unit]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connection.Connect || Status.Stat]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[P2]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[P1]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffff00]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="P1" display-name="P1" uuid="7f56d223-9195-45ca-bf9f-6e9ba1d08e6c" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="SensorSource"/>
+			<init target="Path" ver="5" value="p1"/>
+		</object>
+		<object access-modifier="private" name="P2" display-name="P2" uuid="5d19f1c9-1cf2-442c-b64d-a8c601932428" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="SensorSource"/>
+			<init target="Path" ver="5" value="p2"/>
+		</object>
+		<do-trace access-modifier="private" target="TextColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connection.Connect]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.TextColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[P1 && !P2]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.TextColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<init target="Text" ver="5" value="..."/>
+		<init target="TextColor" ver="5" value="0xffffffff"/>
+	</object>
+	<object access-modifier="private" name="Status" display-name="Status" uuid="7854e623-e3e7-4137-8910-3f2dd87e9496" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+		<designed target="X" value="250" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="100" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connection.Connect]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="Stat" display-name="Stat" uuid="c81bf812-b822-4710-868f-849d9dca2352" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="SensorSource"/>
+			<init target="Path" ver="5" value="Err_set"/>
+		</object>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connection.Connect]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Stat]]>
+				</condition>
+				<expr>
+					<![CDATA["Неиспр."]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["В норме"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connection.Connect]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Stat]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Unit" display-name="Единица измерения" uuid="e55cbf6d-5aa7-4bf3-8f4b-f4cfd9a59e67" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="Unit" ver="5" value="%"/>
+	<object access-modifier="private" name="Acknowledge" display-name="Acknowledge" uuid="a2f115af-6fb3-408e-9c58-748d621f04c5" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="360" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="145" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="Сброс ошибки" ver="5"/>
+		<init target="EnableEngineer" ver="5" value="true"/>
+		<object access-modifier="private" name="Ack" display-name="Ack" uuid="01406244-fc16-4b37-a9fa-c7b097017a21" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="SensorSource"/>
+			<init target="ValuePath" ver="5" value="Ack"/>
+		</object>
+		<init target="Signal" ver="5" ref="Ack"/>
+		<init target="CommandText" ver="5" value="Сбросить ошибку датчика"/>
+	</object>
+	<object access-modifier="private" name="SetToZero" display-name="SetToZero" uuid="0e048711-4ae4-4b22-9d00-618c3836d23a" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="-5" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="30" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="0" ver="5"/>
+		<init target="EnableEngineer" ver="5" value="true"/>
+		<init target="CommandText" ver="5" value="Сделать установку нуля?"/>
+		<designed target="Font" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+			<body kind="om">
+				<![CDATA[]]>
+			</body>
+		</do-on>
+		<init target="Signal" ver="5">
+			<object access-modifier="private" uuid="0f97b1ba-b037-444a-bb1a-47a5f70b3584" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5">
+				<init target="ValuePath" ver="5" value="SetToZero"/>
+				<init target="MainSource" ver="5" ref="SensorSource"/>
+			</object>
+		</init>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[unit.Security.Access_Operator && unit.Security.Access_Engineer]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Alarm_message" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно по причине отсутствия связи с контроллерами"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[DopException]]>
+				</condition>
+				<expr>
+					<![CDATA[DopExceptionText]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Operator && !unit.Security.Access_Engineer && EnableAuth]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие недоступно для неавторизованного пользователя"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4)) && EnableAccess && !EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Engineer && EnableEngineer]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами Инженера"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[(!unit.Security.Access_Operator || !unit.Security.Access_Engineer) && EnableAdmin]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами администратора"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4) || unit.ModeWork.ModeWork == 6) && !EnableAccess && EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[""]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+</type>
+

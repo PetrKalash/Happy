@@ -1,0 +1,360 @@
+<type access-modifier="private" name="07. ФР. Дискретные сигналы" display-name="07. ФР. Дискретные сигналы" uuid="05e9f9b3-4ad3-414e-a9f9-48b579d2ac01" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1900" ver="5"/>
+	<designed target="Height" value="1200" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="990" ver="5"/>
+	<designed target="WindowHeight" value="860" ver="5"/>
+	<designed target="WindowCaption" value="Form_1" ver="5"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="0" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="0" ver="5"/>
+	<designed target="WindowScalingMode" value="0" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="0" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.BackgroundColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Table" display-name="Table" uuid="73c69de9-125d-49a7-9fd8-d170ae540493" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="264" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1365.8571428571427" ver="5"/>
+		<designed target="Height" value="1137.047619047619" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="DITable" display-name="DITable" uuid="682f63bc-b478-4205-ab7d-66bf3651aad1" base-type="AITable_1" base-type-id="ae7355d6-ed4d-4eb0-940b-7e1b6c836fd0" ver="5" description="" cardinal="2">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="40" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="1365.8571428571427" ver="5"/>
+			<designed target="Height" value="528.52380952380952" ver="5"/>
+			<object access-modifier="private" name="DISignals" display-name="DISignals" uuid="5fb65c2b-3d2e-4fef-a7dc-47a9090b625a" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler" display-name="Handler" ver="5" event="Initialized">
+					<body kind="javascript">
+						<![CDATA[// Список аналоговых сигналов (0 - номер канала, 1 - название сигнала, 2 - путь, 3 - показать единицы измерения, 4 - показать проценты
+// DI-таблица сгенерирована программой. Проверяйте все сигналы
+let DISignals = [
+    // DI1
+    [
+        ['РЕЗЕРВ'],
+        ['Сигнализация макс. уровня в емкости сбора конденсата', 'Alarm.Emk_cond_max'],
+        ['Неисправность сигнализатора макс. уровня в ескости слива сбора конденсата', 'Alarm.Error_cond_max'],
+        ['Стоп ГРС уличный пост', 'Alarm.Stop_GRS'],
+        ['Воздушная тревога', 'Alarm.Air_alert'],
+        ['Верхний уровень в емкости технической воды', 'Alarm.High_tech_water'],
+        ['Нижний уровень в емкости технической воды', 'Alarm.Low_tech_water'],
+        ['Верхний уровень в емкости хоз.быт. стоков', 'Alarm.High_hoz_waste'],
+        ['Нижний уровень в емкости хоз.быт. стоков', 'Alarm.Low_hoz_waste'],
+        ['Нижний уровень одоранта в ЕХО Е6-1', 'Alarm.Low_EXO6_1'],
+        ['Верхний уровень одоранта в ЕХО Е6-1', 'Alarm.High_EXO6_1'],
+        ['РЕЗЕРВ'],
+    ],
+    // DI2
+    [
+        ['Вводной выключатель основного ввода панели ПЭСПЗ включен', 'Alarm.Main_switch_PESPZ_on'],
+        ['Вводной выключатель основного ввода панели ПЭСПЗ отключен', 'Alarm.Main_switch_PESPZ_off'],
+        ['Вводной выключатель резервного ввода панели ПЭСПЗ включен', 'Alarm.Reserve_switch_PESPZ_on'],
+        ['Вводной выключатель резервного ввода панели ПЭСПЗ отключен', 'Alarm.Reserve_switch_PESPZ_off'],
+        ['Напряжение на основном вводе	(в норме/отсутствует)', 'Alarm.U_main_input'],
+        ['Напряжение на резервном вводе (в норме/отсутствует)', 'Alarm.U_reserve_input'],
+        ['Срабатывание АВР панели ПЭСПЗ', 'Alarm.AVR_PESPZ'],
+        ['Нажата тревожная кнопка', 'Alarm.Error_btn'],
+        ['Проникновение на площадку ГРС', 'Alarm.Pronic_GRS'],
+        ['Проникновение в помещения ГРС', 'Alarm.Pronic_room'],
+        ['Неисправность системы ТСО', 'Alarm.Error_TSO'],
+        ['Пожар на ГРС', 'Alarm.Pojar'],
+        ['Неисправность пожарной сигнализации', 'Alarm.PS_Error'],
+        ['РЕЗЕРВ'],
+        ['РЕЗЕРВ'],
+        ['РЕЗЕРВ'],
+        ['РЕЗЕРВ'],
+        ['РЕЗЕРВ'],
+        ['РЕЗЕРВ'],
+        ['РЕЗЕРВ'],
+        ['РЕЗЕРВ'],
+        ['Авария УЗИП на вводе САУ ГРС', 'Alarm.UZIP_in'],
+        ['Блок питания контроллеров и панели оператора', 'Alarm.BP_panel'],
+        ['Неисправность блока питания полевого оборудования', 'Alarm.BP_device'],
+        ['Неисправность блока питания кранов 110В', 'Alarm.BP110V'],
+        ['Дверь шкафа САУ №1 (открыта/закрыта)', 'Signals.Door2'],
+        ['Дверь шкафа САУ №1 (открыта/закрыта)', 'Signals.Door1'],
+        ['Квитирование аварий', 'Signals.Kvit_signal'],
+        ['Кнопка аварийного останова (разомкнутый контакт)', 'Signals.AO_button_raz'],
+        ['Кнопка аварийного останова (замкнутый контакт)', 'Signals.AO_button_zam'],
+    ],
+];
+
+
+/* Автозаполнение таблицы для каждого модуля DI 
+	Не изменять, если хотите больше модулей - измените кардинальное число у DITable
+	Работает автоматическая проверка путей и названий, если подписка не выполнена - цвет красный
+	Если у каналов одинаковые пути или названия - цвет фиолетовый
+*/
+here.Height = 0;
+let NumberDICounter = 1;
+let IndexColumn = 0;
+
+let allPaths = [];
+let allNames = [];
+DISignals.forEach((moduleSignals, moduleIndex) => {
+    Table.DITable[moduleIndex].CountChannels = moduleSignals.length;
+    // Заполнение таблицы
+    moduleSignals.forEach(([name, path], channelIdx) => {
+    		// Разделение на Column
+       	let IndexColumn = (channelIdx >= Math.ceil(Table.DITable[moduleIndex].CountChannels / 2)) ? 1 : 0;
+       	let rowIndex = (IndexColumn === 1) ? channelIdx - Math.ceil(Table.DITable[moduleIndex].CountChannels / 2) : channelIdx;
+			if (Table.DITable[moduleIndex].Body.Column[IndexColumn].DIData[rowIndex]) {
+			    Table.DITable[moduleIndex].Body.Column[IndexColumn].DIData[rowIndex].NameSignal    = name;
+			    Table.DITable[moduleIndex].Body.Column[IndexColumn].DIData[rowIndex].PathSignal    = path;
+			    Table.DITable[moduleIndex].Body.Column[IndexColumn].DIData[rowIndex].InvertPath    = 
+			    																		"Inverts.Invert" + (moduleIndex + 1) + ".invert" + channelIdx;
+			    Table.DITable[moduleIndex].Body.Column[IndexColumn].DIData[rowIndex].ErrorModuls = "Error_DI" + NumberDICounter;														
+				  allPaths.push(path);
+            allNames.push(name);
+			}
+    });
+    // Размер окна
+	  here.Height += (Table.DITable[moduleIndex].Height 
+	  + Table.DITable[moduleIndex].LayoutMargins.Top);
+	  Table.DITable[moduleIndex].NumberDI = NumberDICounter++;
+});
+// Нижний отступ
+here.Height += Table.DITable.LayoutMargins.Top;
+
+let pathToIndices = {};
+let nameToIndices = {};
+
+allPaths.forEach((path, index) => {
+    if (!pathToIndices[path]) pathToIndices[path] = [];
+    pathToIndices[path].push(index);
+});
+allNames.forEach((name, index) => {
+    if (!nameToIndices[name]) nameToIndices[name] = [];
+    nameToIndices[name].push(index);
+});
+
+// Индексы дублированных путей и названий
+let duplicatePathIndices = [];
+let duplicateNameIndices = [];
+
+for (let path in pathToIndices) {
+    if (pathToIndices[path].length > 1) {
+        duplicatePathIndices.push(...pathToIndices[path]);
+    }
+}
+for (let name in nameToIndices) {
+    if (nameToIndices[name].length > 1) {
+        duplicateNameIndices.push(...nameToIndices[name]);
+    }
+}
+
+let allDuplicateIndices = [...new Set([...duplicatePathIndices, ...duplicateNameIndices])];
+let globalIndex = 0;
+
+// Блок обработки дубликатов для DI сигналов
+DISignals.forEach((moduleSignals, moduleIndex) => {
+    moduleSignals.forEach(([name, path], channelIdx) => {
+        // Разделение на Column
+        let IndexColumn = (channelIdx >= Math.ceil(Table.DITable[moduleIndex].CountChannels / 2)) ? 1 : 0;
+        let rowIndex = (IndexColumn === 1) ? channelIdx - Math.ceil(Table.DITable[moduleIndex].CountChannels / 2) : channelIdx;
+        
+        if (Table.DITable[moduleIndex].Body.Column[IndexColumn]?.DIData[rowIndex]) {
+           // Проверка на то, что элемент - дубликат
+				 if (allDuplicateIndices.includes(globalIndex) && !/^резерв$/i.test(name.trim())) {
+				   Table.DITable[moduleIndex].Body.Column[IndexColumn].DIData[rowIndex].IncorrectValue.Value = true;
+				 }
+        }
+        globalIndex++;
+    });
+});]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="fbe57655-6c2c-44ee-8999-a4259d772659" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="2" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<object access-modifier="private" name="DOTable" display-name="DOTable" uuid="108515cb-84ba-4277-bb1b-ced906b5f2bd" base-type="DITable" base-type-id="5165b6cd-2ae4-4b93-b65b-4225a5b28a5b" ver="5" description="" cardinal="2">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="608.52380952380952" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="1365.8571428571427" ver="5"/>
+			<designed target="Height" value="528.52380952380952" ver="5"/>
+			<object access-modifier="private" name="DOSignals" display-name="DOSignals" uuid="84ae5ab0-18ec-40bf-af4a-13edf92d8926" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler" display-name="Handler" ver="5" event="Initialized">
+					<body kind="javascript">
+						<![CDATA[// Список аналоговых сигналов (0 - номер канала, 1 - номер канала, 2 - название сигнала, 3 - путь, 4 - УДКС
+// DO-таблица сгенерирована программой. Проверяйте все сигналы
+let DOSignals = [
+    // DO1
+    [
+        [97, 'Шкаф ЛСО №1 (включить/отключить)', 'Alarm.Start_LSO1'],
+        [98, 'Шкаф ЛСО №2 (включить/отключить)', 'Alarm.Start_LSO2'],
+        [99, 'Наружное освещение (включить/выключить)', 'Alarm.Outside_light'],
+        [100, 'Светомаскировка наружного освещения (включить/выключить)', 'Alarm.Mask_Outside_light'],
+        [101, 'Охранное освещение (включить/выключить)', 'Alarm.Security_light'],
+        [102, 'Светомаскировку охранного освещения (включить/выключить)', 'Alarm.Mask_Security_light'],
+        [105, 'Давление на входе ГРС ниже допустимого', 'UDKS.P_in_low'],
+        [106, 'Давление на выходе ГРС выше допустимого', 'UDKS.P_out_high'],
+        [107, 'Прорыв трубного пучка', 'UDKS.PG_break'],
+        [108, 'Авария одоризатора', 'UDKS.Alarm_odor'],
+        [109, 'Загазованность на ГРС', 'UDKS.Zag_GRS'],
+        [110, 'Неисправность ГРС', 'UDKS.Error_GRS'],
+        [111, 'Пожар на АГРС', 'UDKS.Pojar_AGRS'],
+        [112, 'Проникновение на АГРС', 'UDKS.Pronic_AGRS'],
+        [113, 'Превышение температуры в отсеке управления', 'UDKS.T_control_high'],
+        [114, 'Отсутствие напряжения на основном вводе', 'UDKS.No_U_main_input'],
+        [115, 'Авария ГПЭС', 'UDKS.Alarm_GPS'],
+        [127, 'Авария ГРС', 'Alarm.Alarm_signal'],
+        [128, 'Параметр для включения лампочки предупреждения на САУ', 'Alarm.War_signal'],
+    ],
+    // DO2
+    [
+        [97, 'Аварийное освещение (включить/выключить)', 'Alarm.Alarm_lighting'],
+        [98, 'Переодический сигнал для импульсного включения сигнализации', 'Alarm.rSignal_grs'],
+    ],
+];
+
+
+/* Автозаполнение таблицы для каждого модуля DO 
+	Не изменять, если хотите больше модулей - измените кардинальное число у DOTable
+	Работает автоматическая проверка путей и названий, если подписка не выполнена - цвет красный
+	Если у каналов одинаковые пути или названия - цвет фиолетовый
+*/
+let NumberDOCounter = 1;
+let IndexColumn = 0;
+let thisHeight = 0;
+
+let allPaths = [];
+let allNames = [];
+DOSignals.forEach((moduleSignals, moduleIndex) => {
+    Table.DOTable[moduleIndex].CountChannels = moduleSignals.length; 
+    // Затем заполняем и показываем только используемые
+    moduleSignals.forEach(([channel, name, path, udks], channelIdx) => {
+        let colIndex = (channelIdx >= Math.ceil(moduleSignals.length / 2)) ? 1 : 0;
+        let rowIndex = (colIndex === 1) ? channelIdx - Math.ceil(moduleSignals.length / 2) : channelIdx;
+        
+        if (Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex]) {
+            // Заполняем данные
+            Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].NumberChannel = channel;
+            Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].NameSignal = name;
+            
+            if (udks == true) {
+            		Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].PathUDKS.Path = path;
+            		Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].PathSignal == "";
+            } else {
+            		Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].PathSignal = path;
+            }
+            
+            // Устанавливаем текст и путь
+            Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].Channel.Text_1.Text = String(channel);
+            Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].CurrentValue.Settings.DOSet.Signal.ValuePath = path;
+            
+            Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].UDKS.Value = udks;
+				  Table.DOTable[moduleIndex].Body.Column[colIndex].DOData[rowIndex].Error = "Error_DO" + NumberDOCounter;	
+			    
+            allPaths.push(path);
+            allNames.push(name);
+        }
+    });
+    
+    // Расчет высоты окна   
+    thisHeight = (Table.DITable[moduleIndex].Height 
+        + Table.DITable[moduleIndex].LayoutMargins.Top);   
+    Table.DOTable[moduleIndex].NumberDO = NumberDOCounter++;
+});
+here.Height = (DOSignals.length == 1) ? here.Height + thisHeight - (here.Height / 4) : here.Height + thisHeight - (here.Height / 12);
+
+// Нижний отступ
+//here.Height += Table.DOTable.LayoutMargins.Top;
+
+let pathToIndices = {};
+let nameToIndices = {};
+
+allPaths.forEach((path, index) => {
+    if (!pathToIndices[path]) pathToIndices[path] = [];
+    pathToIndices[path].push(index);
+});
+allNames.forEach((name, index) => {
+    if (!nameToIndices[name]) nameToIndices[name] = [];
+    nameToIndices[name].push(index);
+});
+
+// Индексы дублированных путей и названий
+let duplicatePathIndices = [];
+let duplicateNameIndices = [];
+
+for (let path in pathToIndices) {
+    if (pathToIndices[path].length > 1) {
+        duplicatePathIndices.push(...pathToIndices[path]);
+    }
+}
+for (let name in nameToIndices) {
+    if (nameToIndices[name].length > 1) {
+        duplicateNameIndices.push(...nameToIndices[name]);
+    }
+}
+
+let allDuplicateIndices = [...new Set([...duplicatePathIndices, ...duplicateNameIndices])];
+let globalIndex = 0;
+
+// Блок обработки дубликатов для DO сигналов
+DOSignals.forEach((moduleSignals, moduleIndex) => {
+    moduleSignals.forEach(([channel, name, path], channelIdx) => {  // Исправлено здесь
+        let IndexColumn = (channelIdx >= Math.ceil(Table.DOTable[moduleIndex].CountChannels / 2)) ? 1 : 0;
+        let rowIndex = (IndexColumn === 1) ? channelIdx - Math.ceil(Table.DOTable[moduleIndex].CountChannels / 2) : channelIdx;
+        
+        if (Table.DOTable[moduleIndex].Body.Column[IndexColumn]?.DOData[rowIndex]) {
+            if (allDuplicateIndices.includes(globalIndex) && !/^резерв$/i.test(name.trim())) {
+                Table.DOTable[moduleIndex].Body.Column[IndexColumn].DOData[rowIndex].IncorrectValue.Value = true;
+            }
+        }
+        globalIndex++;
+    });
+});]]>
+					</body>
+				</do-on>
+			</object>
+			<designed target="PenWidth" value="2" ver="5"/>
+			<init target="isOnes" ver="5" value="true"/>
+		</object>
+	</object>
+</type>
+

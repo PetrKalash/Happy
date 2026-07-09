@@ -1,0 +1,379 @@
+<type access-modifier="private" name="Параметры табла загазованности" display-name="Параметры табла загазованности" uuid="c3084fe4-2101-490c-86e1-eecafaffaf7d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="320" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="0xff000000" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="Connection" display-name="Connection" uuid="046bf00a-891a-41be-97c4-285cffd0176e" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="106.26810902250308" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection
+]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Connect]]>
+				</condition>
+				<expr>
+					<![CDATA["В норме"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["Ошибка"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!Connect]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Prog_ON" display-name="Prog_ON" uuid="045bd5cf-a876-48e2-8c3b-613f627c8228" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+		<designed target="X" value="116.89491992475338" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="106.26810902250308" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connect || Error_Panel]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connect || Error_Panel]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Prog == 1 || Prog == 3]]>
+				</condition>
+				<expr>
+					<![CDATA["Порог 1"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Prog == 2 || Prog == 4]]>
+				</condition>
+				<expr>
+					<![CDATA["Порог 2"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["Отсутствует"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connect || Error_Panel]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Prog == 1 || Prog == 3]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffdddd00]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Prog == 2 || Prog == 4]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<designed target="RoundingRadius" value="5" ver="5"/>
+		<do-trace access-modifier="private" target="TextColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Prog == 1 || Prog == 3]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.TextColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<init target="Text" ver="5" value="..."/>
+		<designed target="BrushColor" value="0xff33334d" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Error_Module" display-name="Error_Module" uuid="a9465208-1e6e-421e-81ff-0ccd7ed2f1d8" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+		<designed target="X" value="233.78983984950676" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="106.26810902250307" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connect || Error_Panel
+]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connect]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Error_Panel]]>
+				</condition>
+				<expr>
+					<![CDATA["Авария"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["В норме"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || !Connect || Error_Panel]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Error_Panel]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<init target="Text" ver="5" value="..."/>
+		<designed target="BrushColor" value="0xff33334d" ver="5"/>
+		<init target="TextColor" ver="5" value="0xffffffff"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+	</object>
+	<object access-modifier="private" name="PanelPath" display-name="Путь до датчика" uuid="95761142-6249-4ef8-9889-eed30bb0d4cc" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="PanelPath" ver="5" value="Panel_ODR1"/>
+	<object access-modifier="private" name="PanelSource" display-name="PanelSource" uuid="3a031c13-a236-4f41-806f-35551dfff381" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[PanelPath]]>
+			</body>
+		</do-trace>
+		<init target="ParentSource" ver="5" ref="unit.Source.Zag"/>
+	</object>
+	<object access-modifier="private" name="Unit" display-name="Единица измерения" uuid="9327c9a6-357a-4149-8fe9-5f673103633f" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="Unit" ver="5" value="%"/>
+	<object access-modifier="private" name="Prog_Panel_Test" display-name="Prog_Panel_Test" uuid="8674dd01-173d-48a2-ac6a-1d3abe6027bd" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="PanelSource"/>
+		<init target="Path" ver="5" value="InProgTest"/>
+	</object>
+	<object access-modifier="private" name="Connect" display-name="Connect" uuid="9ad7a0c6-9de8-4f11-8c07-8cb4b40914dd" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Connect"/>
+		<init target="Source" ver="5" ref="PanelSource"/>
+	</object>
+	<object access-modifier="private" name="Error_Panel" display-name="Error_Panel" uuid="880267bd-544b-4b4f-89fd-9d794db58513" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="xError"/>
+		<init target="Source" ver="5" ref="PanelSource"/>
+	</object>
+	<object access-modifier="private" name="Prog" display-name="Prog" uuid="27f69cc5-d181-4ff1-874f-315baf0103b4" base-type="ApItemInt8" base-type-id="850fa50f-9fde-4f90-819c-249d6c7b054b" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Prog"/>
+		<init target="Source" ver="5" ref="PanelSource"/>
+	</object>
+	<object access-modifier="private" name="Prog_Panel_Start" display-name="Prog_Panel_Start" uuid="44d83629-e7d8-491e-976b-29387c468970" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="PanelSource"/>
+		<init target="Path" ver="5" value="InCmdStartHand"/>
+	</object>
+	<object access-modifier="private" name="IsCh4" display-name="Сценарий CH4" uuid="98b5124d-1e47-49fc-b5d7-47dda36aa6cc" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="IsCO" display-name="Сценарий CO" uuid="7a5aae1e-9f0a-4ceb-aa64-f3956eb787de" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="IsCCC" display-name="Сценарий CCC" uuid="46ffd28e-89c1-402c-87dc-f86377e894a4" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="IsCCC" ver="5" value="false"/>
+	<init target="IsCO" ver="5" value="false"/>
+	<init target="IsCh4" ver="5" value="true"/>
+	<object access-modifier="private" name="Scenario" display-name="Scenario" uuid="74eed18a-2049-4093-bcab-d0d55b937cfe" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="5" description="" cardinal="1">
+		<designed target="X" value="350.30685838271097" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="161" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Editable" value="false" ver="5"/>
+		<designed target="Text" value="" ver="5"/>
+		<designed target="SelectedIndex" value="-1" ver="5"/>
+		<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0" ver="5"/>
+		<designed target="FontColor" value="4278190080" ver="5"/>
+		<designed target="MaxVisibleItems" value="10" ver="5"/>
+		<designed target="InsertPolicy" value="3" ver="5"/>
+		<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="71156e81-1320-424b-88bf-f9b90527fc07" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="om">
+					<![CDATA[parent.AddItem("Не выбран");
+if (IsCh4) {
+	parent.AddItem("CH4 п.1");
+	parent.AddItem("CH4 п.2");
+}
+if (IsCO){
+	parent.AddItem("CO п.1");
+	parent.AddItem("CO п.2");
+}
+if (IsCCC){
+	parent.AddItem("CCC п.1");
+	parent.AddItem("CCC п.2");
+}
+
+parent.SelectedIndex = Variant.ToUint2(here.Prog, 0);]]>
+				</body>
+			</do-on>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="SelectedChanged">
+			<body kind="om">
+				<![CDATA[if (Ready) here.Prog_Panel_Test = TypeConvert.ToUint2(selected);
+Prog_Panel_Start = selected >0;
+]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="Ready" display-name="Ready" uuid="64af2a84-d2b0-4a78-acae-b763802f3e6d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="719206ad-859b-4237-b545-80b618aa6fb2" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="500" ver="5"/>
+			<designed target="Active" value="true" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[me.Active=false;
+Ready=true;]]>
+				</body>
+			</do-on>
+		</object>
+		<do-trace access-modifier="private" target="Enabled" ver="5">
+			<body>
+				<![CDATA[Variant.ToBool(unit.Security.Authenticated.Out, false) && Connect && (unit.ModeWork.ModeWork == 1 || unit.ModeWork.ModeWork == 4)]]>
+			</body>
+		</do-trace>
+	</object>
+</type>
+

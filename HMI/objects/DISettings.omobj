@@ -1,0 +1,299 @@
+<type access-modifier="private" name="DISettings" display-name="DISettings" uuid="72686ba1-43e8-4390-a552-9b3d6bca929f" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<object access-modifier="private" name="SignalBox" display-name="SignalBox" uuid="b4503f80-1d27-4e3c-b8dd-f3761090c355" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="3" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="100" ver="5"/>
+		<designed target="Height" value="32" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<object access-modifier="private" name="SignalText" display-name="SignalText" uuid="0def965b-a5ac-4406-b90c-272e7e1bb403" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="100" ver="5"/>
+			<designed target="Height" value="32" ver="5"/>
+			<designed target="Text" value="НЕТ" ver="5"/>
+			<designed target="Font" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || Error_Modul || Error_modul.Value]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[SignalParam]]>
+					</condition>
+					<expr>
+						<![CDATA[ActiveText]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[PassiveText]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="Text" ver="5" value=""/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="7c79dd4f-5631-4739-ade7-c6e2419ad98a" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="1" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[0x0]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[SignalParam]]>
+				</condition>
+				<expr>
+					<![CDATA[ActiveColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0x0]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error_Modul || Error_modul.Value]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="PenWidth" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error_Modul || Error_modul.Value]]>
+				</condition>
+				<expr>
+					<![CDATA[2]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[1]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="SignalPath" display-name="Путь" uuid="c780cc63-f958-4b02-864c-fa6867f4dd85" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="SignalParam" display-name="SignalParam" uuid="b3e109a0-91e0-482a-8076-545ee8e6f119" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[SignalPath]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="ActiveColor" display-name="Активный цвет" uuid="fdf8b719-2a38-43e5-bcd6-c211183e8e7c" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<init target="ActiveColor" ver="5" value="0xffff0000"/>
+	<object access-modifier="private" name="PassiveText" display-name="Станд. текст" uuid="ebf21ee2-11a5-45e9-8394-aa39a892a43d" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="ActiveText" display-name="Актив. текст" uuid="1fe21419-d4a7-4e73-96a1-87ece09fdda3" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="PassiveText" ver="5" value="НЕТ"/>
+	<init target="ActiveText" ver="5" value="ДА"/>
+	<object access-modifier="private" name="InvertPath" display-name="Путь инвертирования" uuid="73dd7057-9923-416c-8956-8fea1b265ff5" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="SignalPath" ver="5" value=""/>
+	<init target="InvertPath" ver="5" value=""/>
+	<object access-modifier="private" name="Invert" display-name="Invert" uuid="751c36a8-a437-464e-8bad-5a03bc87a2c6" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA[InvertPath]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Error_Modul" display-name="Error_Modul" uuid="03f9df10-ed62-41a6-845f-5632043e2ab1" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="InBTN_1" display-name="InBTN_1" uuid="2780e72a-987c-40ad-99cc-cd9ca138505a" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="-30" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="32" ver="5"/>
+		<designed target="Height" value="32" ver="5"/>
+		<designed target="Text" value="↑↓" ver="5"/>
+		<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="TextAlignment" value="36" ver="5"/>
+		<init target="Signal" ver="5" ref="Invert"/>
+		<do-trace access-modifier="private" target="CommandValue" ver="5">
+			<body>
+				<![CDATA[!Variant.ToBool(Invert.Out, false)]]>
+			</body>
+		</do-trace>
+		<init target="EnableEngineer" ver="5" value="true"/>
+		<init target="WindowName" ver="5" value="Подтверждение команды"/>
+		<init target="CommandText" ver="5" value="Инвертировать сигнал"/>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[String.Length(SignalPath) != 0 && unit.Security.Access_Engineer && 
+!Error_Modul && String.Length(InvertPath) != 0]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Variant.ToBool(Invert.Out, false)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff00aa00]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="OnHoverBrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Variant.ToBool(Invert.Out, false)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff00aa00]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="CommandText" ver="5">
+			<body>
+				<![CDATA["Инвертировать сигнал
+'" + Name + "'"]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Alarm_message" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно по причине отсутствия связи с контроллерами"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[DopException]]>
+				</condition>
+				<expr>
+					<![CDATA[DopExceptionText]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Operator && !unit.Security.Access_Engineer && EnableAuth]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие недоступно для неавторизованного пользователя"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4)) && EnableAccess && !EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Engineer && EnableEngineer]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами Инженера и выше"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[(!unit.Security.Access_Operator || !unit.Security.Access_Engineer) && EnableAdmin]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами администратора"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4) || unit.ModeWork.ModeWork == 6) && !EnableAccess && EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[""]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Name" display-name="Name" uuid="079546ca-fbba-4eca-ad3f-979f776be8d1" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="175b8e4e-410d-411f-8539-66c6e3b0d8bc" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+			<body kind="om">
+				<![CDATA[]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Error" display-name="Ошибка модуля" uuid="97570042-788c-4b30-857e-850f44524aa9" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Error_modul" display-name="Error_modul" uuid="0b5572ad-d81d-4f5c-8dc6-0110cdd87489" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA["Diagn." + Error]]>
+			</body>
+		</do-trace>
+	</object>
+</type>
+

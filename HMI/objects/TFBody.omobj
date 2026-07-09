@@ -1,0 +1,473 @@
+<type access-modifier="private" name="TFBody" display-name="TFBody" uuid="5f9e8246-a544-4d58-a606-927816cc039f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="600" ver="5"/>
+	<designed target="Height" value="550" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="Source_" display-name="Source_" uuid="6fd77956-530f-411b-8a32-4dcb6990a09a" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[Path_]]>
+			</body>
+		</do-trace>
+		<init target="ParentSource" ver="5" ref="unit.Source.Counters"/>
+	</object>
+	<object access-modifier="private" name="Connect" display-name="Connect" uuid="cd95dda4-1bf4-4d62-a422-0dde9f46fafb" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_"/>
+		<init target="Path" ver="5" value="Connect"/>
+	</object>
+	<object access-modifier="private" name="Path_" display-name="Путь до турбофлоу" uuid="1c91f6eb-88fc-4bce-8a8a-b096f605adca" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="Path_" ver="5" value="TF"/>
+	<object access-modifier="private" name="Header_" display-name="Заголовок (если пусто - скрыто)" uuid="d4c29775-d781-4065-baa8-44d2cac0c139" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Name_" display-name="Name_" uuid="9d6a4898-73d2-49d8-936d-645cb13ebf6d" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="38d75557-7895-4ef8-b84c-44975ea76018" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="48.909090909090935" ver="5"/>
+		<designed target="Y" value="31.61888111888112" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1.05" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="510.18181818181904" ver="5"/>
+		<designed target="Height" value="524.76223776223776" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Состояние прибора" display-name="Состояние прибора" uuid="8e20075c-3869-4e33-b292-0cecf9d57deb" base-type="ХРс. Состояние прибора" base-type-id="39f80f9b-1071-4904-88e1-435ac582c23b" ver="5" description="" cardinal="1">
+			<designed target="X" value="1.0909090909091113" ver="5"/>
+			<designed target="Y" value="0.88111888111884973" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="504.99999999999994" ver="5"/>
+			<designed target="Height" value="90" ver="5"/>
+			<do-trace access-modifier="private" target="Path_" ver="5">
+				<body>
+					<![CDATA[here.Path_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Header_" ver="5">
+				<body>
+					<![CDATA[here.Header_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Name_" ver="5">
+				<body>
+					<![CDATA[here.Name_]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Итоговая концентрация" display-name="Итоговая концентрация" uuid="53c70ffa-065d-4bd9-a944-8a5d80af5e2b" base-type="Давление" base-type-id="1a505fa3-fc43-4d23-8f6d-4485138e4ac5" ver="5" description="" cardinal="1">
+			<designed target="X" value="1.0909090909091343" ver="5"/>
+			<designed target="Y" value="96.738261738261514" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="250" ver="5"/>
+			<init target="GroupName" ver="5" value="ДАВЛЕНИЕ"/>
+			<designed target="Height" value="114" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<do-trace access-modifier="private" target="Path_" ver="5">
+				<body>
+					<![CDATA[here.Path_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Header_" ver="5">
+				<body>
+					<![CDATA[here.Header_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Name_" ver="5">
+				<body>
+					<![CDATA[here.Name_]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Молярная концентрация" display-name="Молярная концентрация" uuid="3fb22ebc-c361-48df-9c8b-f31a87093d2c" base-type="Расход газа" base-type-id="bd8c2313-2d11-4b41-b6a4-f9802f8cc71c" ver="5" description="" cardinal="1">
+			<designed target="X" value="256.09090909090821" ver="5"/>
+			<designed target="Y" value="96.738261738261514" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="249.99999999999997" ver="5"/>
+			<init target="GroupName" ver="5" value="РАСХОД"/>
+			<init target="Prefix" ver="5" value="m_"/>
+			<designed target="Height" value="170" ver="5"/>
+			<do-trace access-modifier="private" target="Path_" ver="5">
+				<body>
+					<![CDATA[here.Path_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Header_" ver="5">
+				<body>
+					<![CDATA[here.Header_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Name_" ver="5">
+				<body>
+					<![CDATA[here.Name_]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="ХРс. Концентрация_2_1" display-name="ХРс. Концентрация_2_1" uuid="d2910d28-98a0-4174-8c95-c1c919f58a2d" base-type="Объем" base-type-id="758bc543-c40f-4740-a228-027f4e6a004f" ver="5" description="" cardinal="1">
+			<designed target="X" value="2.0909090909092498" ver="5"/>
+			<designed target="Y" value="217.35730935730874" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="248.99999999999989" ver="5"/>
+			<init target="GroupName" ver="5" value="ОБЪЕМ"/>
+			<designed target="Height" value="195" ver="5"/>
+			<do-trace access-modifier="private" target="Path_" ver="5">
+				<body>
+					<![CDATA[here.Path_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Header_" ver="5">
+				<body>
+					<![CDATA[here.Header_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Name_" ver="5">
+				<body>
+					<![CDATA[here.Name_]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="ХРс. Концентрация_2_1_1" display-name="ХРс. Концентрация_2_1_1" uuid="595e3f1a-6cf8-48d2-98c1-77640000980c" base-type="Сутки" base-type-id="731498fe-16b7-4ba5-acae-5f6320fc27f2" ver="5" description="" cardinal="1">
+			<designed target="X" value="256.09090909090816" ver="5"/>
+			<designed target="Y" value="272.59540459540415" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="250" ver="5"/>
+			<init target="GroupName" ver="5" value="ОБЪЕМ СУТ."/>
+			<designed target="Height" value="195" ver="5"/>
+			<do-trace access-modifier="private" target="Path_" ver="5">
+				<body>
+					<![CDATA[here.Path_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Header_" ver="5">
+				<body>
+					<![CDATA[here.Header_]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Name_" ver="5">
+				<body>
+					<![CDATA[here.Name_]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="DataArchive" display-name="DataArchive" uuid="47cc2d1c-e5d6-445a-a466-3ca896b2dd12" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="" cardinal="1">
+			<designed target="X" value="-0.90909090909087453" ver="5"/>
+			<designed target="Y" value="476.68631368631299" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="162.03448275862067" ver="5"/>
+			<designed target="Height" value="45.757575757575921" ver="5"/>
+			<designed target="Text" value="Архив расхода" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="b56cf2fe-d019-45bd-96e7-b096d034d084" base-type="TF_archive" base-type-id="90e67ade-c807-4498-8039-092826be6b19" ver="5">
+					<init target="TF" ver="5">
+						<expr>
+							<![CDATA["Counters." + here.Path_]]>
+						</expr>
+					</init>
+					<init target="WindowName" ver="5" value="Архив расхода"/>
+					<init target="NameTF" ver="5">
+						<expr>
+							<![CDATA[Name_ + "_expense"]]>
+						</expr>
+					</init>
+				</object>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="EventArchive" display-name="EventArchive" uuid="4e17533b-9b21-46e8-8a54-7a4572e43732" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="" cardinal="1">
+			<designed target="X" value="169.88401253918508" ver="5"/>
+			<designed target="Y" value="476.68631368631299" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="166.41379310344828" ver="5"/>
+			<designed target="Height" value="45.757575757575921" ver="5"/>
+			<designed target="Text" value="Архив событий" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="ee492ffa-fe70-4cd6-9e82-29371e8dbf54" base-type="TF_events" base-type-id="820da629-44b2-4630-bd00-ee7fb2ee6988" ver="5">
+					<init target="TF" ver="5">
+						<expr>
+							<![CDATA["Counters." + here.Path_]]>
+						</expr>
+					</init>
+					<init target="NameTF" ver="5">
+						<expr>
+							<![CDATA[Name_ + "_event"]]>
+						</expr>
+					</init>
+				</object>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="SPArchive" display-name="SPArchive" uuid="75b7ce21-a890-4cdd-8d16-9975b219e350" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="" cardinal="1">
+			<designed target="X" value="345.05642633228751" ver="5"/>
+			<designed target="Y" value="476.68631368631299" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="162.03448275862064" ver="5"/>
+			<designed target="Height" value="45.757575757575921" ver="5"/>
+			<designed target="Text" value="Архив 
+вмешательств" ver="5"/>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="93d7ad4b-89aa-4de4-8f7f-0c955f979ba2" base-type="TF_events" base-type-id="820da629-44b2-4630-bd00-ee7fb2ee6988" ver="5">
+					<init target="Archive_type" ver="5" value="2"/>
+					<init target="TF" ver="5">
+						<expr>
+							<![CDATA["Counters." + here.Path_]]>
+						</expr>
+					</init>
+					<init target="NameTF" ver="5">
+						<expr>
+							<![CDATA[Name_ + "_intervention"]]>
+						</expr>
+					</init>
+				</object>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="RV" display-name="RV" uuid="d01f8747-0001-4db8-8138-17be512ab9c4" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="" cardinal="1">
+			<designed target="X" value="263.45598845598749" ver="5"/>
+			<designed target="Y" value="210.18270618270614" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="118.68811404353687" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="Text" value="Расход газа" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="306c550b-5f8f-44cb-a1ae-a24f5ce8af9e" base-type="RV" base-type-id="c7456ca6-22d4-4ced-8a1e-b9caea6c849e" ver="5">
+					<init target="TF" ver="5">
+						<expr>
+							<![CDATA[here.Path_]]>
+						</expr>
+					</init>
+				</object>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="SetTime" display-name="SetTime" uuid="25b01cae-219a-4ae2-b2cb-1be6c5beae6b" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="" cardinal="1">
+			<designed target="X" value="328.34487734487737" ver="5"/>
+			<designed target="Y" value="43.325563325563273" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="170.39682539682525" ver="5"/>
+			<designed target="Height" value="39.999999999999993" ver="5"/>
+			<designed target="Text" value="Записать время" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="efe842bb-e144-4144-94d9-8caa45c4c9b0" base-type="Date_time" base-type-id="086c8019-029b-43cf-8114-89b6a64e4df7" ver="5">
+					<init target="TF" ver="5">
+						<expr>
+							<![CDATA["Counters." + here.Path_]]>
+						</expr>
+					</init>
+				</object>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Сигнализация_1" display-name="Сигнализация_1" uuid="ff647373-6621-4022-b2b9-6f8269b5b1d5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="130.32900432900439" ver="5"/>
+			<designed target="Y" value="425.23826173826177" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="105" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="RoundingRadius" value="10" ver="5"/>
+			<designed target="PenColor" value="4278190080" ver="5"/>
+			<designed target="PenStyle" value="0" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff1f1f1f" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="a727689a-0f48-41f1-90fa-cf897e68badd" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="105" ver="5"/>
+				<designed target="Height" value="30" ver="5"/>
+				<designed target="Text" value="Норма" ver="5"/>
+				<designed target="Font" value="Roboto,10,-1,5,75,0,0,0,0,0,Bold" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<do-trace access-modifier="private" target="FontColor" ver="5">
+					<conditional-expr>
+						<condition>
+							<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192 ]]>
+						</condition>
+						<expr>
+							<![CDATA[0xffaa55ff]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0xffffffff]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<do-trace access-modifier="private" target="Text" ver="5">
+					<conditional-expr>
+						<condition>
+							<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192]]>
+						</condition>
+						<expr>
+							<![CDATA["???"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[String.ToString("%.1f", APValue) + " °C"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="d89844ee-08ab-4fcc-a764-6986cbf2789b" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<object access-modifier="private" name="APValue" display-name="APValue" uuid="cfc1cfc2-a861-49b8-b507-a0cab0147ef6" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="T"/>
+				<init target="Source" ver="5" ref="Source_"/>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="3ca3b2b6-da48-480d-872d-127dd5caae17" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="40.266666666666694" ver="5"/>
+		<designed target="Y" value="460.33333333333337" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="159.40000000000003" ver="5"/>
+		<designed target="Height" value="40" ver="5"/>
+		<designed target="Text" value="Температура газа" ver="5"/>
+		<designed target="Font" value="Roboto,10,-1,5,75,0,0,0,0,0,Bold" ver="5"/>
+		<designed target="FontColor" value="0xffffffff" ver="5"/>
+		<designed target="TextAlignment" value="129" ver="5"/>
+	</object>
+	<object access-modifier="private" name="NSI" display-name="NSI" uuid="26e84f80-647a-4153-8245-4476305618df" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="" cardinal="1">
+		<designed target="X" value="443.14521928979639" ver="5"/>
+		<designed target="Y" value="239.13186813186809" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="118.68811404353687" ver="5"/>
+		<designed target="Height" value="42.153846153846132" ver="5"/>
+		<designed target="Text" value="Состав газа" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-by-id="false" form-action="open-dialog">
+			<object access-modifier="private" uuid="f7458870-624d-4094-9521-b4fb947cf1ab" base-type="NSI" base-type-id="352a8731-3258-4502-aa86-a7becdf6c1b9" ver="5">
+				<init target="TF" ver="5">
+					<expr>
+						<![CDATA[here.Path_]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Enable_48" display-name="Enable_48" uuid="68bf0107-2d69-49d0-9399-ec969c8e1263" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="71.404545454545541" ver="5"/>
+		<designed target="Y" value="273.34982517482513" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="471" ver="5"/>
+		<designed target="Height" value="53.999999999999943" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="2" ver="5"/>
+		<designed target="BrushColor" value="0xffdd0000" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="9cf0ff2f-a96d-4d9f-8a4c-55937f4bd231" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="471" ver="5"/>
+			<designed target="Height" value="53.999999999999943" ver="5"/>
+			<designed target="Text" value="Потеря связи" ver="5"/>
+			<designed target="Font" value="Golos Text,20,-1,5,50,0,0,0,0,0,Regular" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="d8a80225-9f9d-4231-8287-3f48ac511e71" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="1" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<object access-modifier="private" name="AlarmRun" display-name="AlarmRun" uuid="3154e0a1-a3b6-49fa-a456-f31ed4223462" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="Pump_heat1.Alarm_run"/>
+			<init target="Source" ver="5" ref="unit.Source.UPT"/>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[!Connect || !unit.Source.Connection]]>
+			</body>
+		</do-trace>
+		<object access-modifier="private" name="Blinker_1" display-name="Blinker_1" uuid="d2abcda5-0368-46d2-bdfe-57e348c12639" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="5" description="" cardinal="1">
+			<designed target="Period" value="500" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="BrushColor" value="0xffff0000" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Active" ver="5">
+				<body>
+					<![CDATA[!Connect || !unit.Source.Connection]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Connect" display-name="Connect" uuid="bae74012-aa91-4a92-b0ba-36df123fdb31" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="TF1_1.Connect"/>
+			<init target="Source" ver="5" ref="unit.Source.Counters"/>
+			<do-trace access-modifier="private" target="Path" ver="5">
+				<body>
+					<![CDATA[here.Path_ + ".Connect"]]>
+				</body>
+			</do-trace>
+		</object>
+		<init target="Visible" ver="5" value="false"/>
+	</object>
+</type>
+

@@ -1,0 +1,98 @@
+<type access-modifier="private" name="IBJournal" display-name="IBJournal" uuid="07065452-6a9c-49ec-81fa-27a7062d577c" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1260" ver="5"/>
+	<designed target="Height" value="900" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4293914607" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="1260" ver="5"/>
+	<designed target="WindowHeight" value="900" ver="5"/>
+	<designed target="WindowCaption" value="Form_1" ver="5"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="2" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="0" ver="5"/>
+	<designed target="WindowScalingMode" value="1" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="0" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="81f9777a-0ae4-403c-bcd2-ff4630da22c9" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="1260" ver="5"/>
+		<designed target="Height" value="900" ver="5"/>
+		<init target="SoundPlaybackManagmentAvailable" ver="5" value="false"/>
+		<init target="AcknowledgmentDoubleClick" ver="5" value="false"/>
+		<init target="RequestAcknowledgmentComment" ver="5" value="false"/>
+		<init target="WriteComputerNameToComment" ver="5" value="false"/>
+		<init target="AckAllAvailable" ver="5" value="false"/>
+		<init target="init_ApSource" ver="5" ref="IBSource"/>
+		<init target="RequestEventsStart" ver="5" value="false"/>
+		<init target="ActiveMode" ver="5" value="1"/>
+		<init target="AcknowledgmentAvailable" ver="5" value="false"/>
+		<init target="CurrentEventsAvailable" ver="5" value="false"/>
+		<init target="Width" ver="5">
+			<expr>
+				<![CDATA[1280/1.3]]>
+			</expr>
+		</init>
+		<init target="Height" ver="5">
+			<expr>
+				<![CDATA[900/1.3]]>
+			</expr>
+		</init>
+		<init target="SuppressAndBlock" ver="5" value="false"/>
+		<init target="init_ScreenKeyboard" ver="5">
+			<object access-modifier="private" uuid="51adc7f7-b91e-4fab-8c09-75d073167c13" base-type="ScreenKeyboardOptions" base-type-id="0589bc8e-fbb2-4f0e-b5d2-f0d825538ef1" ver="5">
+				<init target="Enabled" ver="5" value="true"/>
+			</object>
+		</init>
+		<init target="isMiniAlarm" ver="5" value="false"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[Alarms_1.LogOn( unit.Security.SecurityContext.CurrentUser );
+Alarms_1.ReloadHistory();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="IBSource" display-name="IBSource" uuid="d709463c-ad22-4346-8ddc-55fdf78979f5" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="127.0.0.1" ver="5"/>
+		<designed target="Port" value="4389" ver="5"/>
+		<designed target="HistoryPort" value="4951" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+	</object>
+	<init target="Width" ver="5">
+		<expr>
+			<![CDATA[1280/1.3]]>
+		</expr>
+	</init>
+	<init target="Height" ver="5">
+		<expr>
+			<![CDATA[900/1.3]]>
+		</expr>
+	</init>
+</type>
+

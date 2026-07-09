@@ -1,0 +1,213 @@
+<type access-modifier="private" name="Подтверждение_aлгоритм" display-name="Подтверждение_aлгоритм" uuid="75847af1-3421-4ca6-b27b-b29bfaa9277c" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_2" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="400" ver="5"/>
+	<designed target="Height" value="400" ver="5"/>
+	<init target="WindowName" ver="5" value=""/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="1562a5e9-1e4a-472a-a22c-0651d9cdaa4a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="088431a5-9cce-452b-a649-774d1816e90f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<designed target="Text" value="Подтвердить команду" ver="5"/>
+			<designed target="Font" value="Golos Text,16,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="68" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Rectangle_10" display-name="Rectangle_10" uuid="ad1d7c3f-2446-4419-97f4-abb8f45ea078" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="25" ver="5"/>
+			<designed target="Y" value="270" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="150" ver="5"/>
+			<designed target="Height" value="60" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.MainColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="Text_9" display-name="Text_9" uuid="d944eeb4-aa64-4b4b-9877-fb91ccfb626f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="150" ver="5"/>
+				<designed target="Height" value="60" ver="5"/>
+				<designed target="Text" value="ДА" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<do-trace access-modifier="private" target="FontColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[AlgoRn.Value=true;]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="87bee9a6-9062-4367-8232-23eb49b9afec" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" base-const="true" base-ref="true" ver="5" description=""/>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-action="close"/>
+		</object>
+		<object access-modifier="private" name="Rectangle_11" display-name="Rectangle_11" uuid="f75cbe3a-6a55-4657-8183-c1a72aa9f027" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="225" ver="5"/>
+			<designed target="Y" value="270" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="150" ver="5"/>
+			<designed target="Height" value="60" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.MainColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="Text_9" display-name="Text_9" uuid="3e4aad56-0455-450f-999f-30ed37bb020b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="150" ver="5"/>
+				<designed target="Height" value="60" ver="5"/>
+				<designed target="Text" value="НЕТ" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<do-trace access-modifier="private" target="FontColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="close"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="b2d1cd1d-ff7a-4519-95a6-9d2e920912f7" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" base-const="true" base-ref="true" ver="5" description=""/>
+		</object>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="3eab082e-3692-4752-95be-2aeaa1bb1deb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="55" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="205" ver="5"/>
+			<designed target="Text" value="Текст команды" ver="5"/>
+			<designed target="Font" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[CommandText]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Window_1" display-name="Window_1" uuid="c59c6987-381b-4493-bd53-c927faa0f3ba" base-type="Window" base-type-id="04615219-28bb-4a9a-bba4-50ac66972eb0" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MessageReceived">
+				<body kind="om">
+					<![CDATA[if (messageType =="CloseAllSame" && messageData != this.WindowID)
+	{
+		Close();
+	}]]>
+				</body>
+			</do-on>
+			<init target="Group" ver="5" ref="unit.WindowGroup.Group"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Signal" display-name="Signal" uuid="29726e40-95c0-4882-ba1d-b7283d61b51d" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" base-const="true" base-ref="true" ver="5" description=""/>
+	<init target="ShowClose" ver="5" value="true"/>
+	<object access-modifier="private" name="CommandText" display-name="Текст команды" uuid="8b7c187c-5c15-4b4b-9704-112115f32101" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="CommandText" ver="5" value=""/>
+	<object access-modifier="private" name="CommandValue" display-name="CommandValue" uuid="62da3444-d842-4f9e-bafc-b9896072670b" base-type="notifying_variant" base-type-id="31323414-1285-4b70-92bf-304e6e81aaf0" ver="5" description="" cardinal="1"/>
+	<init target="CommandValue" ver="5" value="true" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8"/>
+	<object access-modifier="private" name="Algo" display-name="Algo" uuid="95c23da0-019a-4ac1-9b1d-137173388271" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="Algo" ver="5" value=""/>
+	<object access-modifier="private" name="AlgoRn" display-name="AlgoRn" uuid="6fb7bf67-d94d-49c3-b8c4-f17b533ce802" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[Algo]]>
+			</body>
+		</do-trace>
+	</object>
+</type>
+

@@ -1,0 +1,189 @@
+<type access-modifier="private" name="Форма входа" display-name="Форма входа" uuid="0f4ad498-d2d4-40f8-a059-2d1790ecf4c1" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_2" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="600" ver="5"/>
+	<designed target="Height" value="300" ver="5"/>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="27dcb8a3-9843-49d7-bdcf-06ab79f3139f" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5"/>
+	<object access-modifier="private" name="UserList" display-name="UserList" uuid="765e746f-6097-4b89-a0e5-24549209d589" base-type="UserList" base-type-id="7d9c142e-8718-4caa-82be-60ea2ec65981" ver="5">
+		<init target="SecurityContext" ver="5">
+			<object access-modifier="private" uuid="292fda1d-98f4-4535-8d5b-6729e88423a0" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5"/>
+		</init>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="UpdateFinished">
+			<body kind="om">
+				<![CDATA[Body.ComboBox_UserList.Clear();
+//очистка выпадающего списка перед обновлением
+i: var = 0;
+while (i < Count)
+//для всех учетных записей (Count)
+{
+	Body.ComboBox_UserList.AddItem(GetDisplayName(i));
+
+	//добавление в выпадающий список всех имен пользователей
+	UserName[i] = GetLoginName(i);
+	//запись соответствующих логинов в массив
+	i+=1;
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="UserName" display-name="UserName" uuid="45b944a6-458f-4f46-bd63-4d3ab9b0fd67" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" cardinal="30"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="03e532ee-8871-4a3f-ac08-dabfc1fa469c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="ComboBox_UserList" display-name="ComboBox_UserList" uuid="8b418f04-e82a-42cd-8507-07fef04bf421" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="5">
+			<designed target="X" value="85" ver="5"/>
+			<designed target="Y" value="30" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="425" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<designed target="Editable" value="false" ver="5"/>
+			<designed target="Text" value="" ver="5"/>
+			<designed target="SelectedIndex" value="-1" ver="5"/>
+			<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<designed target="MaxVisibleItems" value="21" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="InsertPolicy" value="3" ver="5"/>
+		</object>
+		<designed target="Flip" value="0" ver="5"/>
+		<object access-modifier="private" name="Password" display-name="Password" uuid="7099fb71-7441-4cdd-8dc7-8ac3aa435daa" base-type="Ввод пароля" base-type-id="1842de5c-cf05-4ac5-84b1-03d5644c512b" ver="5" description="" cardinal="1">
+			<designed target="X" value="85" ver="5"/>
+			<designed target="Y" value="90" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="425" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный"/>
+		</object>
+		<object access-modifier="private" name="EnableButton_3" display-name="EnableButton_3" uuid="174263a8-3882-42d0-af28-7038f9a01e12" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="180" ver="5"/>
+			<designed target="Y" value="175" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="240" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="1b22a9c1-7f64-435f-97a9-665670501f7f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="240" ver="5"/>
+				<designed target="Height" value="50" ver="5"/>
+				<designed target="Text" value="Войти" ver="5"/>
+				<designed target="Font" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+			</object>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="25a33f58-5c5b-40b5-8d9f-b05f66643ad0" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Timer_1.Active=true;
+SecurityContext.AsyncLogin(UserName[ComboBox_UserList.SelectedIndex],Password.PasswordValue);
+/*вызов функции AsyncLogin, входными данными для которой являются: 
+логин, введенный в поле ComboBox_UserList; 
+пароль, введенный в поле TextEdit_Password. */
+]]>
+				</body>
+			</do-on>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="3fedbba9-fc3d-4a3f-a85a-90dabb94dca3" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[if (SecurityContext.CurrentUserDisplayName == Body.ComboBox_UserList.Text) {Close();}
+else {	ErrorText.Visible = true; ErrorText.Timer_1.Active = true;}
+me.Active=false;]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="ErrorText" display-name="ErrorText" uuid="17c30823-d411-48db-a497-9f36a5942304" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="100" ver="5"/>
+			<designed target="Y" value="145" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Пароль введен неверно." ver="5"/>
+			<designed target="Font" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffff0000" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<init target="Visible" ver="5" value="false"/>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="00866c2b-8939-43a0-90cf-92976317cbed" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="3000" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[parent.Visible = false;
+me.Active=false;]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[UserList.BeginUpdate();]]>
+		</body>
+	</do-on>
+</type>
+

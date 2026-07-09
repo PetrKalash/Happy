@@ -1,0 +1,121 @@
+<type access-modifier="private" name="ПУ. MainForm" display-name="ПУ. MainForm" uuid="581b571a-052d-4058-b5f6-d7ff79a05069" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1920" ver="5"/>
+	<designed target="Height" value="1080" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="1920" ver="5"/>
+	<designed target="WindowHeight" value="1080" ver="5"/>
+	<designed target="WindowCaption" value="MainForm" ver="5"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="1" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="2" ver="5"/>
+	<designed target="WindowScalingMode" value="2" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="1" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.BackgroundColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Connection" display-name="Connection" uuid="4ab07937-e00f-4b9f-98a9-bf65e7200633" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Service.Modules.OpcUaClient.REGUL.HasActiveServer"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (Value == false) {
+ OnConnectionLostLong.Active = true;
+ OnConnectionLostLong.Period = 60000; // 1 минута
+} else {
+ OnConnectionLostLong.Active = false;
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="OnConnectionLostLong" display-name="OnConnectionLostLong" uuid="0f71ca62-87d8-4a9c-9491-4626ce590fde" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="60000" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[this.Active=false;
+ConnectModules=false;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="OnTimer" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="55502e99-4ad9-41e1-8efd-b2935d34fd87" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+				<init target="Message" ver="5" value="Отсутствует связь с модулями"/>
+				<init target="Icon" ver="5" value="2"/>
+				<init target="isConnect" ver="5" value="true"/>
+				<do-trace access-modifier="private" target="AutoClose" ver="5">
+					<body>
+						<![CDATA[unit.Source.Connection]]>
+					</body>
+				</do-trace>
+			</object>
+		</do-on>
+		<object access-modifier="private" name="ConnectModules" display-name="ConnectModules" uuid="dba6a580-31cd-4d0c-8610-2a73aa357d01" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="Error_moduls"/>
+			<init target="Source" ver="5" ref="unit.Source.Diagn"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="OnConnectionMessageClose" display-name="OnConnectionMessageClose" uuid="636c9025-e476-452d-bf16-d5cee10325b9" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" ver="5" description="">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+			<body kind="om">
+				<![CDATA[OnConnectionLostLong.Active = true;
+OnConnectionLostLong.Period = 1000 * 10 * 60; // 10 минут]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="AOButton" display-name="AOButton" uuid="551a516d-ce88-4ea1-ad64-86a75b982262" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (me.Value) {
+OpenCount();
+} 
+]]>
+			</body>
+		</do-on>
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Signals.AO_btn"/>
+		<do access-modifier="private" name="OpenCount" display-name="OpenCount" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+			<object access-modifier="private" uuid="13ce946c-debe-4c33-89a2-d363eb371688" base-type="Обратный отсчет" base-type-id="35817de4-ec67-443b-a969-985350b97322" ver="5"/>
+		</do>
+	</object>
+	<object access-modifier="private" name="Window" display-name="Window" uuid="b34e5b8c-830e-4dad-87a6-2bd62218c44e" base-type="Window" base-type-id="04615219-28bb-4a9a-bba4-50ac66972eb0" ver="5" description="" cardinal="1">
+		<init target="Group" ver="5" ref="unit.WindowGroup.Group"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[unit.WindowGroup.Group.SendToAll("CloseDialog", "CloseDialog");
+]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Authenticated" display-name="Authenticated" uuid="b816b281-5232-4130-8203-744aaa1f89ff" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Mode_work.OutAuthenticated"/>
+	</object>
+</type>
+

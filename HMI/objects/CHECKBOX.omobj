@@ -1,0 +1,30 @@
+<type access-modifier="private" name="CHECKBOX" display-name="CHECKBOX" uuid="30e3ddb5-238c-4802-ac45-fd79db234d31" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="30" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="Text" value="✔" ver="5"/>
+	<do-trace access-modifier="private" target="Text" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[Variant.ToBool(Signal.Out, false)]]>
+			</condition>
+			<expr>
+				<![CDATA["✔"]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[""]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<do-trace access-modifier="private" target="CommandValue" ver="5">
+		<body>
+			<![CDATA[!Variant.ToBool(Signal.Out, false)]]>
+		</body>
+	</do-trace>
+	<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+</type>
+

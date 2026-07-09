@@ -1,0 +1,293 @@
+<type access-modifier="private" name="Date_time" display-name="Date_time" uuid="086c8019-029b-43cf-8114-89b6a64e4df7" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Запись времени на расходомер" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="400" ver="5"/>
+	<designed target="Height" value="300" ver="5"/>
+	<init target="WindowName" ver="5" value="Запись времени на расходомер"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="ee5a584b-c647-49c7-8c08-6b564907b17f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="175" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="125" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Set" display-name="Set" uuid="ba495776-149c-40d2-be3b-5c38ac6bc843" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="195" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="380" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Text" value="Записать время на расходомер" ver="5"/>
+			<init target="Signal" ver="5">
+				<object access-modifier="private" uuid="9aa9487c-fb5f-4e20-9bb5-3d0f2c05c64b" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5">
+					<init target="ValuePath" ver="5" value="Set"/>
+					<init target="MainSource" ver="5" ref="Source_Date"/>
+				</object>
+			</init>
+			<init target="EnableEngineer" ver="5" value="true"/>
+			<init target="EnableAccess" ver="5" value="false"/>
+			<init target="EnableAuto" ver="5" value="false"/>
+			<init target="WindowName" ver="5" value="Записать время на расходомер"/>
+			<init target="CommandText" ver="5" value="Подтвердите действие"/>
+			<do-trace access-modifier="private" target="Enabled" ver="5">
+				<body>
+					<![CDATA[Signal.Out.Quality ==192 && Connect]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="AfterAccept" display-name="AfterAccept" uuid="99e799fe-ffe8-43cc-90b2-d8205ea7814c" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" ver="5" description="">
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="InvokeTrigger" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+					<object access-modifier="private" uuid="5df29785-1f2e-4952-9b18-17160e2dc2b7" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+						<init target="Icon" ver="5" value="0"/>
+						<init target="Buttons" ver="5" value="0"/>
+						<init target="Message" ver="5" value="Команда изменения времени подана"/>
+					</object>
+				</do-on>
+			</object>
+			<init target="AfterAcceptAction" ver="5" ref="AfterAccept"/>
+			<init target="Alarm_message" ver="5" value="Действие запрещено по неопределенным причинам"/>
+		</object>
+		<object access-modifier="private" name="Date_time_text" display-name="Date_time_text" uuid="f2a05d5e-0cf2-4ad4-bc9c-820c22b2c5c8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="115" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Text" value="Время
+расходомера" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Date_time_" display-name="Date_time_" uuid="dd03f159-6974-4223-9666-737ac17150d7" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="125" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="265" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<object access-modifier="private" name="Date_time" display-name="Date_time" uuid="e54bfff4-fb9c-4a77-a5de-c4f80c81d57e" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="Date_time"/>
+				<init target="Source" ver="5" ref="Source_"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || Date_time.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA[unit.Theme.NoConnectBoundColor]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[unit.Theme.BoundColor]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || Date_time.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[me.Date_time]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="PenColor" ver="5" value="0xffffffff"/>
+		</object>
+		<object access-modifier="private" name="DateEditor" display-name="DateEditor" uuid="1b9aca54-8799-4375-8881-51a71a222810" base-type="DateEditor" base-type-id="69318eaa-4b1e-41d3-a9ef-5126cded808c" ver="5" description="" cardinal="1">
+			<designed target="X" value="55" ver="5"/>
+			<designed target="Y" value="85" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="85" ver="5"/>
+			<designed target="Height" value="25" ver="5"/>
+			<designed target="Scale" value="2" ver="5"/>
+			<object access-modifier="private" name="OnChange" display-name="OnChange" uuid="1278d7c4-71f6-4ba7-b69c-340d4abdbcec" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="InvokeTrigger" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+					<body kind="om">
+						<![CDATA[Source_Date.DAY.In = DateTime.Day(parent.Value);
+Source_Date.MONTH.In = DateTime.Month(parent.Value);
+Source_Date.YEAR.In = TypeConvert.ToInt2(DateTime.Year(parent.Value));]]>
+					</body>
+				</do-on>
+			</object>
+			<init target="pValueChanged" ver="5" ref="OnChange"/>
+			<do-trace access-modifier="private" target="Enabled" ver="5">
+				<body>
+					<![CDATA[Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="TimeEditor" display-name="TimeEditor" uuid="cc5b8069-f27a-43fa-a59d-e74d9d434ced" base-type="TimeEditor" base-type-id="d0247632-ed97-46ad-b054-1da38b54f7b7" ver="5" description="" cardinal="1">
+			<designed target="X" value="240" ver="5"/>
+			<designed target="Y" value="85" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="100" ver="5"/>
+			<designed target="Height" value="25" ver="5"/>
+			<designed target="Scale" value="2" ver="5"/>
+			<object access-modifier="private" name="OnChange" display-name="OnChange" uuid="5c43a83e-4351-4ccf-b4fd-5e56bb04611b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="InvokeTrigger" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+					<body kind="om">
+						<![CDATA[Source_Date.HOUR.In = DateTime.Hour(parent.Value);
+Source_Date.MINUTE.In = DateTime.Minute(parent.Value);
+Source_Date.SECOND.In = DateTime.Second(parent.Value);]]>
+					</body>
+				</do-on>
+			</object>
+			<init target="pValueChanged" ver="5" ref="OnChange"/>
+			<do-trace access-modifier="private" target="Enabled" ver="5">
+				<body>
+					<![CDATA[Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="SetCurrentTime" display-name="SetCurrentTime" uuid="d79cec94-6b72-4b0a-8d9f-3d8e4e1f1f65" base-type="Checkbox" base-type-id="ba26cad1-a080-4c5d-8847-ce576488cf3f" ver="5" description="" cardinal="1">
+			<designed target="X" value="110" ver="5"/>
+			<designed target="Y" value="140" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="2" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="185" ver="5"/>
+			<designed target="Height" value="17" ver="5"/>
+			<designed target="Text" value="Записать текущее время" ver="5"/>
+			<designed target="Font" value="Golos Text,6,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="State" value="false" ver="5"/>
+			<object access-modifier="private" name="Timer" display-name="Timer" uuid="f9bc9807-a4b2-49e7-b890-f3ccc309f7fe" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[DateEditor.Value = DateTime.Now();
+TimeEditor.Value = DateTime.Now();
+DateEditor.OnChange.Invoke();
+TimeEditor.OnChange.Invoke();]]>
+					</body>
+				</do-on>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="StateChanged">
+				<body kind="om">
+					<![CDATA[Timer.Active = me.State;]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Enabled" ver="5">
+				<body>
+					<![CDATA[Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="SetSP" display-name="SetSP" uuid="1c2c4bfe-8a58-4814-b57d-26194bd99a2e" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="InvokeTrigger" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+				<body kind="om">
+					<![CDATA[]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Source_Date" display-name="Source_Date" uuid="90ca8fca-8fa2-479a-b5d2-5d620edb37df" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="Date_time_SP" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="Source_"/>
+		<object access-modifier="private" name="DAY" display-name="DAY" uuid="b7d76c1c-29d8-432c-9698-effd1a9c689b" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="Source_Date"/>
+			<init target="ValuePath" ver="5" value="DAY"/>
+		</object>
+		<object access-modifier="private" name="MONTH" display-name="MONTH" uuid="9ea9ab8f-21d8-497e-8859-7742f17386b5" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="Source_Date"/>
+			<init target="ValuePath" ver="5" value="MONTH"/>
+		</object>
+		<object access-modifier="private" name="YEAR" display-name="YEAR" uuid="80afb9e5-3c18-4f9f-a98f-fc88fbc10572" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="Source_Date"/>
+			<init target="ValuePath" ver="5" value="YEAR"/>
+		</object>
+		<object access-modifier="private" name="HOUR" display-name="HOUR" uuid="6d26e725-72e6-474b-bff2-418a89e7c60b" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="Source_Date"/>
+			<init target="ValuePath" ver="5" value="HOUR"/>
+		</object>
+		<object access-modifier="private" name="MINUTE" display-name="MINUTE" uuid="923789a8-d430-4913-b22d-6af159bf4e16" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="Source_Date"/>
+			<init target="ValuePath" ver="5" value="MINUTE"/>
+		</object>
+		<object access-modifier="private" name="SECOND" display-name="SECOND" uuid="a911218e-9320-4123-a393-b82a843419f3" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="Source_Date"/>
+			<init target="ValuePath" ver="5" value="SECOND"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Source_" display-name="Source_" uuid="4d273d55-3816-46bd-8afc-5ee9022c7fb0" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Main"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[TF]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Connect" display-name="Connect" uuid="f3c54337-186d-4e5b-960c-232adc6b3e83" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_"/>
+		<init target="Path" ver="5" value="Connect"/>
+	</object>
+	<init target="TF" ver="5" value="TF"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[Body.DateEditor.Value = DateTime.Now();
+Body.TimeEditor.Value = DateTime.Now();
+Body.DateEditor.OnChange.Invoke();
+Body.TimeEditor.OnChange.Invoke();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="TF" display-name="TF" uuid="acfa3626-7811-4855-968d-c3c5b90a4b50" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+</type>
+

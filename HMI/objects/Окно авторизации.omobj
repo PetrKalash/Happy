@@ -1,0 +1,329 @@
+<type access-modifier="private" name="Окно авторизации" display-name="Окно авторизации" uuid="7666a14b-9c55-4a89-9c1e-3812d96f4d4e" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="500" ver="5"/>
+	<designed target="Height" value="320" ver="5"/>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="b0713cb2-1659-4025-9859-bc40b37fda98" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="CurrentUserChanged">
+			<body kind="om">
+				<![CDATA[//вывод системного сообщения о смене текущего пользователя
+Body.Text_SysMessage.Text="Вы вошли как "+ me.CurrentUserDisplayName;
+
+
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="ConnectedChanged">
+			<body kind="om">
+				<![CDATA[//вывод системного сообщения о смене состояния подключения к Агенту
+if (connected == true)
+{
+	Body.Text_SysMessage.Text = "Подключен к Агенту";
+}
+else
+{
+	Body.Text_SysMessage.Text = ConnectionError;
+}]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="5" event="LoginFailed">
+			<body kind="om">
+				<![CDATA[//вывода текста ошибки входа
+Body.Text_SysMessage.Text = errorMessage;
+
+
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="5" event="LoginStarted">
+			<body kind="om">
+				<![CDATA[//вывод системного сообщения о начале попытки подключения
+Body.Text_SysMessage.Text = "Выполняется подключение...";
+
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="5" event="LoginRejected">
+			<body kind="om">
+				<![CDATA[//вывод сообщения о некорректных учетных данных
+Body.Text_SysMessage.Text = errorMessage;
+
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="f827d463-a4bd-475f-bd03-3ca084b28c6e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Text_SysMessage" display-name="Text_SysMessage" uuid="a0c9e81f-0d8c-42b2-b860-c67a2775b4fe" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="240" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="490" ver="5"/>
+			<designed target="Height" value="20" ver="5"/>
+			<designed target="Text" value="Сообщение о состоянии" ver="5"/>
+			<designed target="Font" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+		</object>
+		<designed target="Flip" value="0" ver="5"/>
+		<object access-modifier="private" name="EnableButton" display-name="EnableButton" uuid="5e0ed25b-b509-4bbd-9700-2d21beeb2eb7" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="105" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="300" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="4909bb04-0999-4f66-b89a-6d1f4fcc8921" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="2ed70f53-5d22-4ab3-a528-14295fc7c4ee" base-type="Конфигурация безопасности" base-type-id="7cd38bd6-9372-4a75-9fd1-f7aabb7265f1" ver="5"/>
+			</do-on>
+			<do-trace access-modifier="private" target="Visible" ver="5">
+				<body>
+					<![CDATA[unit.Security.Access_Operator && unit.Security.Access_Engineer]]>
+				</body>
+			</do-trace>
+			<init target="Text" ver="5" value="Управление пользователями"/>
+			<init target="TextFont" ver="5" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="BTN" ver="5" value="true"/>
+		</object>
+		<object access-modifier="private" name="EnableButton_1" display-name="EnableButton_1" uuid="722cf2b1-fc27-4721-bf64-b3bfd31342ae" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="105" ver="5"/>
+			<designed target="Y" value="100" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="300" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="df091da6-b1e4-4fcc-b8e8-a8c7432e863e" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-by-id="false" form-action="open">
+				<object access-modifier="private" uuid="253ee362-51b8-4554-ad07-613398afcd3f" base-type="Авторизация" base-type-id="0b2044d7-d31d-4f9e-aa77-fdbd2a1f630d" ver="5"/>
+			</do-on>
+			<init target="Text" ver="5" value="Войти/Выйти"/>
+			<init target="TextFont" ver="5" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="BTN" ver="5" value="true"/>
+		</object>
+		<object access-modifier="private" name="EnableButton_4" display-name="EnableButton_4" uuid="3e2e5670-1858-4c9f-924d-753165fc714d" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="105" ver="5"/>
+			<designed target="Y" value="190" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="300" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="9af0032b-f597-4a8b-b381-ba79c4f7e550" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Visible" ver="5">
+				<body>
+					<![CDATA[unit.Security.Access_Operator && unit.Security.Access_Engineer]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="96768617-34a2-4772-9603-fd3c8b22e390" base-type="Журнал ИБ" base-type-id="23aa8273-21aa-4158-ade6-0f7e712c2d01" ver="5"/>
+			</do-on>
+			<init target="Text" ver="5" value="Журнал ИБ"/>
+			<init target="TextFont" ver="5" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="BTN" ver="5" value="true"/>
+		</object>
+		<object access-modifier="private" name="EnableButton_5" display-name="EnableButton_5" uuid="97288ffd-3c65-48c5-9008-c76153293b9c" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="105" ver="5"/>
+			<designed target="Y" value="145" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="300" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="91317259-74db-4201-9e74-52dd96086f55" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="7b21d1bf-b961-4797-94b5-46739aad9949" base-type="IntegrityControl_App" base-type-id="5cd2185c-c37d-490b-a701-bacd78c532a9" ver="5"/>
+			</do-on>
+			<do-trace access-modifier="private" target="Visible" ver="5">
+				<body>
+					<![CDATA[unit.Security.Access_Operator && unit.Security.Access_Engineer]]>
+				</body>
+			</do-trace>
+			<init target="Text" ver="5" value="Проверка целостности"/>
+			<init target="TextFont" ver="5" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="BTN" ver="5" value="true"/>
+		</object>
+		<object access-modifier="private" name="EnableButton_6" display-name="EnableButton_6" uuid="006a2278-dbd7-409c-90fd-852d98d9eceb" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="105" ver="5"/>
+			<designed target="Y" value="55" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="300" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="c3b4d13c-46ad-4898-a21a-8184ec9acc5e" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-by-id="false" form-action="open">
+				<object access-modifier="private" uuid="4b0c8c3c-c85d-4ef0-867b-b8ac0d1fe0b6" base-type="Смена пароля" base-type-id="73ac0c54-110a-4a87-a57f-b0c47ec2c85c" ver="5">
+					<init target="UserId" ver="5">
+						<expr>
+							<![CDATA[SecurityContext.CurrentUserId]]>
+						</expr>
+					</init>
+					<init target="UserDisplayName" ver="5">
+						<expr>
+							<![CDATA[SecurityContext.CurrentUserDisplayName]]>
+						</expr>
+					</init>
+				</object>
+			</do-on>
+			<init target="Text" ver="5" value="Изменить пароль"/>
+			<init target="TextFont" ver="5" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="BTN" ver="5" value="true"/>
+			<do-trace access-modifier="private" target="Visible" ver="5">
+				<body>
+					<![CDATA[(unit.Security.Access_Operator && unit.Security.Access_Engineer) || (unit.Security.Access_Operator || unit.Security.Access_Engineer)]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<init target="WindowName" ver="5" value="Авторизация"/>
+</type>
+

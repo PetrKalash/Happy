@@ -1,0 +1,500 @@
+<type access-modifier="private" name="Header_desc" display-name="Header_desc" uuid="086ef955-0328-4bf2-8916-bad5ef58cb56" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="500" ver="5"/>
+	<designed target="Height" value="400" ver="5"/>
+	<init target="WindowName" ver="5" value="Описание заголовков таблицы"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="db158522-e353-40a3-8008-c7323498e247" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="500" ver="5"/>
+		<designed target="Height" value="350" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Table" display-name="Table" uuid="d28d0829-69c0-43e7-86e0-669f0becd08d" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Width" value="500" ver="5"/>
+			<designed target="Height" value="350" ver="5"/>
+			<designed target="BackgroundColor" value="4294967295" ver="5"/>
+			<designed target="FrameColor" value="4278190080" ver="5"/>
+			<designed target="GridColor" value="4292401368" ver="5"/>
+			<designed target="HeaderHeight" value="21" ver="5"/>
+			<designed target="HeaderVisible" value="true" ver="5"/>
+			<designed target="RowHeight" value="30" ver="5"/>
+			<designed target="RowOrder" value="0" ver="5"/>
+			<designed target="SelectionBehavior" value="0" ver="5"/>
+			<designed target="SelectionMode" value="3" ver="5"/>
+			<designed target="SelectionOverlayEnabled" value="true" ver="5"/>
+			<designed target="LatestRowTracking" value="false" ver="5"/>
+			<designed target="DelayedSortingEnabled" value="false" ver="5"/>
+			<designed target="HorizontalScrollMode" value="0" ver="5"/>
+			<designed target="VerticalScrollMode" value="0" ver="5"/>
+			<designed target="HorizontalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="VerticalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="RowHeightResizeMode" value="3" ver="5"/>
+			<init target="TableModel" ver="5">
+				<object access-modifier="private" uuid="460928bb-8236-46b9-b8c2-97681436c5ac" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="5">
+					<designed target="Frozen" value="false" ver="5"/>
+					<designed target="MaxRowCount" value="10000" ver="5"/>
+					<designed target="OptOfProcessingEvents" value="0" ver="5"/>
+				</object>
+			</init>
+			<object access-modifier="private" name="Column_bit" display-name="Column_bit" uuid="a7852b91-7bfc-4594-abe8-7d265ff79bfb" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Название" ver="5"/>
+				<designed target="Description" value="Название" ver="5"/>
+				<designed target="Id" value="bit" ver="5"/>
+				<designed target="ColumnOwnId" value="bit" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="0xffe7e7e7" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="150" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="false" ver="5"/>
+				<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.BackgroundColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="TitleBackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.MainColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="TitleForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="Column_desc" display-name="Column_desc" uuid="afe7c8cb-fc84-4642-89f5-d1db66ad0bfc" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Описание" ver="5"/>
+				<designed target="Description" value="Описание" ver="5"/>
+				<designed target="Id" value="desc" ver="5"/>
+				<designed target="ColumnOwnId" value="desc" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="0xffe7e7e7" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="129" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.BackgroundColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="TitleBackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.MainColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="TitleForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="Column_decor" display-name="Column_decor" uuid="755cebba-5b98-4391-b324-3048c0184375" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Декор" ver="5"/>
+				<designed target="Description" value="Декор" ver="5"/>
+				<designed target="Id" value="decor" ver="5"/>
+				<designed target="ColumnOwnId" value="decor" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="200" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="true" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="TableDecorator" display-name="TableDecorator" uuid="32f957b4-a214-42d8-906c-5044a13d3e31" base-type="TableDecorator" base-type-id="2ff6a2d7-9573-4060-bfea-29c63d61b079" ver="5" description="" cardinal="1">
+				<designed target="JsonDecorator" value='{
+    "Conditions": [
+        {
+            "condition_name": "con_decor1",
+            "condition": {
+                "==": {
+                    "data:decor": 1
+                }
+            }
+        },
+        {
+            "condition_name": "con_decor0",
+            "condition": {
+                "==": {
+                    "data:decor": 0
+                }
+            }
+        },
+        {
+            "condition_name": "con_decor3",
+            "condition": {
+                "==": {
+                    "data:decor": 3
+                }
+            }
+        }
+    ],
+    "Decorating": [
+        {
+            "decoration_rule_name": "dec_decor0",
+            "rowstyle": "rowstyle_decor0",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor0": true
+                }
+            }
+        },
+        {
+            "decoration_rule_name": "dec_decor1",
+            "rowstyle": "rowstyle_decor1",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor1": true
+                }
+            }
+        },
+        {
+            "decoration_rule_name": "dec_decor3",
+            "rowstyle": "rowstyle_decor3",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor3": true
+                }
+            }
+        }
+    ],
+    "StyleDictionary": [
+        {
+            "style_name": "rowstyle_decor0",
+            "style": {
+                "background_color": "#ff000000"
+            }
+        },
+        {
+            "style_name": "rowstyle_decor1",
+            "style": {
+                "background_color": "#ff2d2d2d"
+            }
+        },
+        {
+            "style_name": "rowstyle_decor3",
+            "style": {
+                "background_color": "#ff4c5d71"
+            }
+        }
+    ]
+}' ver="5"/>
+			</object>
+			<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="61c7bffe-ec26-4f97-944c-2fbc1938531c" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+					<body kind="om">
+						<![CDATA[
+parent.TableModel.AddColumn(Column_bit.Id, Column_bit.Title, Column_bit.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_desc.Id, Column_desc.Title, Column_desc.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_decor.Id, Column_decor.Title, Column_decor.Description, "", "uint2", false, true);
+TableDecorator.JsonDecorator = TableDecorator.JsonDecorator;
+
+SetDescRow("День", "Время записи");
+SetDescRow("Vр, м³", "Объём рабочий");
+SetDescRow("Vpв, м³", "Объём востановленный рабочий");
+SetDescRow("Vр,сум, м³", "Объём суммарный рабочий");
+SetDescRow("Vст, м³", "Объём стандартный");
+SetDescRow("Vств, м³", "Объём востановленный стандартный");
+SetDescRow("Vст,сум, м³", "Объём суммарный стандартный");
+SetDescRow("Pa, МПа", "Давление (абс)");
+SetDescRow("Т, °C", "Температура");
+SetDescRow("Кпер", "Коэффициент перевода");
+SetDescRow("М, кг", "Масса газа");
+SetDescRow("Код НС", "Код НС");
+SetDescRow("tнс, мин", "Время НС (общий бит НС)");]]>
+					</body>
+				</do-on>
+			</object>
+			<do access-modifier="private" name="SetDescRow" display-name="SetDescRow" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[rowCount: int4 = TableModel.GetRowCount();
+TableModel.AddRow();
+TableModel.SetCellData(rowCount, 0, bit);
+TableModel.SetCellData(rowCount, 1, desc);
+TableModel.SetCellData(rowCount, 2, rowCount%2);
+]]>
+				</body>
+				<param access-modifier="private" name="bit" display-name="" uuid="1fb4ce0c-83b8-4e76-9268-25e1d27a3dc6" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5"/>
+				<param access-modifier="private" name="desc" display-name="" uuid="db47b9fe-ce78-4653-9ff1-31b454ac6e5a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5"/>
+			</do>
+		</object>
+		<object access-modifier="private" name="PrintBTN" display-name="PrintBTN" uuid="af8aed75-760f-4627-9596-f31878f77793" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+			<designed target="X" value="405" ver="5"/>
+			<designed target="Y" value="-45" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="40" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="PenColor" value="0xff00ff00" ver="5"/>
+			<designed target="PenStyle" value="0" ver="5"/>
+			<designed target="PenWidth" value="2" ver="5"/>
+			<designed target="ImageFile" value="icons/printer.png" ver="5"/>
+			<designed target="Active" value="true" ver="5"/>
+			<designed target="CurrentFrameNumber" value="0" ver="5"/>
+			<designed target="Speed" value="1" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Table_for_print.SetPageOrientation(0);
+Table_for_print.SetPageHeaderTextAlignment(here.Head.Text_1.TextAlignment);
+Table_for_print.SetPageHeaderFont(here.Head.Text_1.Font);
+Table_for_print.SetPageHeaderText(here.WindowName);
+Table_for_print.PrintDialog();
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Ellipse_1" display-name="Ellipse_1" uuid="45bffcb7-3c30-4a33-bb40-08f8c1f8d3f6" base-type="Ellipse" base-type-id="7f9e9b77-5d97-45c4-89c1-0f67adb636cd" ver="5" description="" cardinal="1">
+			<designed target="X" value="404.25" ver="5"/>
+			<designed target="Y" value="-45.5" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="42" ver="5"/>
+			<designed target="Height" value="42" ver="5"/>
+			<designed target="PenColor" value="0xff00ff00" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="3" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<designed target="PieAngle" value="360" ver="5"/>
+			<designed target="PieAngleStart" value="360" ver="5"/>
+			<designed target="HoleSize" value="0" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Table_for_print" display-name="Table_for_print" uuid="6bfdba1e-ec43-44ec-baea-8c6cad68ac9b" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="5" description="" cardinal="1">
+			<designed target="X" value="530" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Width" value="735" ver="5"/>
+			<designed target="Height" value="350" ver="5"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+			<designed target="FrameColor" value="0xff000000" ver="5"/>
+			<designed target="GridColor" value="0xffd8d8d8" ver="5"/>
+			<designed target="HeaderHeight" value="21" ver="5"/>
+			<designed target="HeaderVisible" value="true" ver="5"/>
+			<designed target="RowHeight" value="30" ver="5"/>
+			<designed target="RowOrder" value="0" ver="5"/>
+			<designed target="SelectionBehavior" value="0" ver="5"/>
+			<designed target="SelectionMode" value="3" ver="5"/>
+			<designed target="SelectionOverlayEnabled" value="true" ver="5"/>
+			<designed target="LatestRowTracking" value="false" ver="5"/>
+			<designed target="DelayedSortingEnabled" value="false" ver="5"/>
+			<designed target="HorizontalScrollMode" value="0" ver="5"/>
+			<designed target="VerticalScrollMode" value="0" ver="5"/>
+			<designed target="HorizontalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="VerticalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="RowHeightResizeMode" value="3" ver="5"/>
+			<init target="TableModel" ver="5">
+				<object access-modifier="private" uuid="9039e18e-4681-4119-91bb-13b5dc510170" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="5">
+					<designed target="Frozen" value="false" ver="5"/>
+					<designed target="MaxRowCount" value="10000" ver="5"/>
+					<designed target="OptOfProcessingEvents" value="0" ver="5"/>
+				</object>
+			</init>
+			<object access-modifier="private" name="Column_bit" display-name="Column_bit" uuid="1c41c2be-edaf-4ac3-99a0-ebd2393028c5" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Название" ver="5"/>
+				<designed target="Description" value="Название" ver="5"/>
+				<designed target="Id" value="bit" ver="5"/>
+				<designed target="ColumnOwnId" value="bit" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="0xffe7e7e7" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="150" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="false" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Column_desc" display-name="Column_desc" uuid="1945494f-bb27-41d3-89ee-bbef7e63da17" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Описание" ver="5"/>
+				<designed target="Description" value="Описание" ver="5"/>
+				<designed target="Id" value="desc" ver="5"/>
+				<designed target="ColumnOwnId" value="desc" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="129" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Column_decor" display-name="Column_decor" uuid="173550d9-c7b0-476b-8604-595ea3bcd773" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Декор" ver="5"/>
+				<designed target="Description" value="Декор" ver="5"/>
+				<designed target="Id" value="decor" ver="5"/>
+				<designed target="ColumnOwnId" value="decor" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="200" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="true" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="5683d37e-3249-4b39-af58-ad403926d723" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+					<body kind="om">
+						<![CDATA[
+parent.TableModel.AddColumn(Column_bit.Id, Column_bit.Title, Column_bit.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_desc.Id, Column_desc.Title, Column_desc.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_decor.Id, Column_decor.Title, Column_decor.Description, "", "uint2", false, true);
+
+
+SetDescRow("День", "Время записи");
+SetDescRow("Vр, м³", "Объём рабочий");
+SetDescRow("Vpв, м³", "Объём востановленный рабочий");
+SetDescRow("Vр,сум, м³", "Объём суммарный рабочий");
+SetDescRow("Vст, м³", "Объём стандартный");
+SetDescRow("Vств, м³", "Объём востановленный стандартный");
+SetDescRow("Vст,сум, м³", "Объём суммарный стандартный");
+SetDescRow("Pa, МПа", "Давление (абс)");
+SetDescRow("Т, °C", "Температура");
+SetDescRow("Кпер", "Коэффициент перевода");
+SetDescRow("М, кг", "Масса газа");
+SetDescRow("Код НС", "Код НС");
+SetDescRow("tнс, мин", "Время НС (общий бит НС)");]]>
+					</body>
+				</do-on>
+			</object>
+			<do access-modifier="private" name="SetDescRow" display-name="SetDescRow" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[rowCount: int4 = TableModel.GetRowCount();
+TableModel.AddRow();
+TableModel.SetCellData(rowCount, 0, bit);
+TableModel.SetCellData(rowCount, 1, desc);
+TableModel.SetCellData(rowCount, 2, rowCount%2);
+]]>
+				</body>
+				<param access-modifier="private" name="bit" display-name="" uuid="f2d78460-f643-4dc5-b54f-6fcc7ff88bf0" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5"/>
+				<param access-modifier="private" name="desc" display-name="" uuid="169749f3-a4c4-45f2-b0e4-0186eb439c5c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5"/>
+			</do>
+		</object>
+	</object>
+</type>
+

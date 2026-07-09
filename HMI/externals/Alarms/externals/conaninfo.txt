@@ -1,0 +1,23 @@
+[settings]
+
+
+[requires]
+
+
+[options]
+
+
+[full_settings]
+
+
+[full_requires]
+
+
+[full_options]
+
+
+[recipe_hash]
+    51071943501a2d3320958ff60778eb0c
+
+[env]
+

@@ -1,0 +1,93 @@
+<type access-modifier="private" name="BTN" display-name="BTN" uuid="743708b9-f456-46b4-a4e5-9bf1eda346fc" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="150" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="Checkable" value="false" ver="5"/>
+	<designed target="Checked" value="false" ver="5"/>
+	<designed target="Text" value="Кнопка" ver="5"/>
+	<designed target="TextAlignment" value="132" ver="5"/>
+	<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+	<designed target="FontColor" value="0xffffffff" ver="5"/>
+	<designed target="OnClickFontColor" value="0xffffffff" ver="5"/>
+	<designed target="OnHoverFontColor" value="0xffffffff" ver="5"/>
+	<designed target="DisabledFontColor" value="0xffffffff" ver="5"/>
+	<designed target="BrushColor" value="0xff2c2c2c" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="OnClickBrushColor" value="0xff00aa00" ver="5"/>
+	<designed target="OnClickBrushStyle" value="1" ver="5"/>
+	<designed target="OnHoverBrushColor" value="0xff2c2c2c" ver="5"/>
+	<designed target="OnHoverBrushStyle" value="1" ver="5"/>
+	<designed target="DisabledBrushColor" value="0xff9f9f9f" ver="5"/>
+	<designed target="DisabledBrushStyle" value="1" ver="5"/>
+	<designed target="PenColor" value="0xff00ff00" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="OnClickPenColor" value="0xffffffff" ver="5"/>
+	<designed target="OnClickPenStyle" value="1" ver="5"/>
+	<designed target="OnClickPenWidth" value="2" ver="5"/>
+	<designed target="OnHoverPenColor" value="0xff00ff00" ver="5"/>
+	<designed target="OnHoverPenStyle" value="1" ver="5"/>
+	<designed target="OnHoverPenWidth" value="2" ver="5"/>
+	<designed target="DisabledPenColor" value="4290295992" ver="5"/>
+	<designed target="DisabledPenStyle" value="1" ver="5"/>
+	<designed target="DisabledPenWidth" value="2" ver="5"/>
+	<object access-modifier="private" name="EnterTimer" display-name="EnterTimer" uuid="170f4b77-b4e8-4f36-9b99-a510e8b9fbec" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="3" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (here.Scale < 1.14){
+	here.Scale = here.Scale + 0.002;
+} else {
+	Hover=false;
+}
+
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Active" ver="5">
+			<body>
+				<![CDATA[Hover]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="LeaveTimer" display-name="LeaveTimer" uuid="648543d8-ce55-4511-9ffa-719efd4e484e" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="3" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (here.Scale > 1){
+	here.Scale = Math.Max(1, here.Scale - 0.002);
+}
+
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Active" ver="5">
+			<body>
+				<![CDATA[!Hover]]>
+			</body>
+		</do-trace>
+	</object>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="5" event="MousePress">
+		<body kind="om">
+			<![CDATA[Hover=true;]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="5" event="MouseRelease">
+		<body kind="om">
+			<![CDATA[Hover=false;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Hover" display-name="Hover" uuid="21b3aa7b-d50f-40dc-9e19-fdb58959e738" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+</type>
+

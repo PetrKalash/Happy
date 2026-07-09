@@ -1,0 +1,32 @@
+<type access-modifier="private" name="AI_Signal" display-name="AI_Signal" uuid="325af2a5-9ff9-4d98-bccf-e40a5627b748" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5" description="">
+	<object access-modifier="private" name="Enable" display-name="Enable" uuid="df6c8cd7-4f0a-4b16-b87a-f8630fe4c0a0" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="ValuePath" ver="5" value="Enable"/>
+		<init target="MainSource" ver="5" ref="SignalSource"/>
+	</object>
+	<object access-modifier="private" name="SignalSource" display-name="SignalSource" uuid="73ba6767-dfe9-4a3c-8df4-625bae0d8874" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Main"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[SignalPath]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="SignalPath" display-name="Путь до сигнала" uuid="01737fb4-bba0-4063-be8a-cdd5b90cce45" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Value" display-name="Value" uuid="a3421979-d115-47de-9db5-8e4a4b6903bf" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="ValuePath" ver="5" value="Value"/>
+		<init target="MainSource" ver="5" ref="SignalSource"/>
+	</object>
+	<object access-modifier="private" name="Signal" display-name="Signal" uuid="aa5f7aca-d6b8-46a0-9ffb-78abe960d94a" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="SignalSource"/>
+		<init target="Path" ver="5" value="Signal"/>
+	</object>
+</type>
+

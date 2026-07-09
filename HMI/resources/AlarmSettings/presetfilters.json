@@ -1,0 +1,81 @@
+{
+    "Version": 1,
+    "Filters": [
+      {
+        "name": "Аварийные сигналы",
+        "used": true,
+        "severity": "600"
+      },
+      {
+        "name": "Алгоритмы",
+        "used": true,
+        "source": "Algos"
+      },
+      {
+        "name": "Счетчики газа",
+        "used": true,
+        "source": "Counters.TF"
+      },
+	  {
+        "name": "Счетчики электроэнергии",
+        "used": true,
+        "source": "Counters.Mercuries"
+      },
+      {
+        "name": "Датчики аналоговые",
+        "used": true,
+        "source": "Sensors"
+      },
+      {
+        "name": "Краны",
+        "used": true,
+        "source": "Cranes"
+      },
+      {
+        "name": "Одоризация",
+        "used": true,
+        "source": "Odor."
+      },
+	 {
+        "name": "Отсек подготовки теплоносителя",
+        "used": true,
+        "source": "UPT"
+      },
+      {
+        "name": "Датчики загазованности",
+        "used": true,
+        "message": "Датчик загазованности"
+      },
+      {
+        "name": "ИБП",
+        "used": true,
+        "source": "Devices.IBP"
+      },
+      {
+        "name": "ВРУ",
+        "used": true,
+        "source": "Devices.VRY"
+      },
+	  {
+        "name": "ШС",
+        "used": true,
+        "source": "Devices.SHS"
+      },
+      {
+        "name": "Команды от оператора",
+        "used": true,
+        "message": "оператор"
+      },
+      {
+        "name": "Команды от диспетчера",
+        "used": true,
+        "message": "диспетчер"
+      },
+      {
+        "name": "Диагностика модулей",
+        "used": true,
+        "source": "Diagn"
+      }
+    ],
+    "Mode": 0
+  }

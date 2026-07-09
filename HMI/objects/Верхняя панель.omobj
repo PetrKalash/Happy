@@ -1,0 +1,111 @@
+<type access-modifier="private" name="Верхняя панель" display-name="Верхняя панель" uuid="1b7af5d6-b4c8-44fc-928f-239231e68710" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1920" ver="5"/>
+	<designed target="Height" value="100" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="BrushColor" value="0xff33334d" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.TitleColor]]>
+		</body>
+	</do-trace>
+	<do-trace access-modifier="private" target="PenColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.BoundColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Кнопка 'Домой'" display-name="Кнопка 'Домой'" uuid="a7b0609c-52c3-415f-8110-1306292bfb22" base-type="Кнопка 'Домой'" base-type-id="30f65c47-58f9-40d4-9681-02e9e8767c10" ver="5" description="" cardinal="1">
+		<designed target="X" value="10" ver="5"/>
+		<designed target="Y" value="10" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="80" ver="5"/>
+		<designed target="Height" value="80" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+			<body kind="om">
+				<![CDATA[unit.WindowGroup.Group.SendToAll("Main", "Main");]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="LayoutSizeLimits_1" display-name="LayoutSizeLimits_1" uuid="6bde7ee5-f917-4967-a585-3b8fc4f41ac0" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+			<designed target="MinWidth" value="80" ver="5"/>
+			<designed target="MinHeight" value="80" ver="5"/>
+			<designed target="MaxWidth" value="80" ver="5"/>
+			<designed target="MaxHeight" value="80" ver="5"/>
+		</object>
+		<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="f0dc6a9d-c1c7-4653-9170-75b44496a056" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+			<designed target="Top" value="0" ver="5"/>
+			<designed target="Bottom" value="0" ver="5"/>
+			<designed target="Left" value="10" ver="5"/>
+			<designed target="Right" value="0" ver="5"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="fb96723a-f09b-497a-9826-0060ffd27dc7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="90" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1740" ver="5"/>
+		<designed target="Height" value="100" ver="5"/>
+		<designed target="Text" value="Модуль аналогового ввода AI1" ver="5"/>
+		<designed target="Font" value="Golos Text,26,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="0xffffffff" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<body>
+				<![CDATA[PanelName]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="FontColor" ver="5">
+			<body>
+				<![CDATA[unit.Theme.TextColor]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="PanelName" display-name="Название формы" uuid="0fdfa800-f9c8-4067-aa03-ac71398efc61" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="PanelName" ver="5" value="Модуль аналогового ввода AI1"/>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="86df2b67-923d-4669-a7ca-51f017f3d30d" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="1" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Кнопка 'Меню'_1" display-name="Кнопка 'Меню'_1" uuid="495c0e80-ff96-4874-874b-807cbf8d77ca" base-type="Кнопка 'Меню'" base-type-id="87f23a5b-193e-4752-b2be-b59f59abb835" ver="5" description="" cardinal="1">
+		<designed target="X" value="1830" ver="5"/>
+		<designed target="Y" value="10" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="80" ver="5"/>
+		<designed target="Height" value="80" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="0af4d5be-99d5-4353-8451-a67a70e54cf2" base-type="00. Меню №2" base-type-id="f1df972e-e9a3-4d04-bc36-2f38f5a5ae13" ver="5"/>
+		</do-on>
+		<object access-modifier="private" name="LayoutSizeLimits_1" display-name="LayoutSizeLimits_1" uuid="d4a805f1-4782-43cf-8bc0-8a8f9dab3933" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+			<designed target="MinWidth" value="80" ver="5"/>
+			<designed target="MinHeight" value="80" ver="5"/>
+			<designed target="MaxWidth" value="80" ver="5"/>
+			<designed target="MaxHeight" value="80" ver="5"/>
+		</object>
+		<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="853158b3-44b0-4f61-b0de-3a43b8457418" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+			<designed target="Top" value="0" ver="5"/>
+			<designed target="Bottom" value="0" ver="5"/>
+			<designed target="Left" value="0" ver="5"/>
+			<designed target="Right" value="10" ver="5"/>
+		</object>
+	</object>
+</type>
+

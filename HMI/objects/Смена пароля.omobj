@@ -1,0 +1,61 @@
+<type access-modifier="private" name="Смена пароля" display-name="Смена пароля" uuid="73ac0c54-110a-4a87-a57f-b0c47ec2c85c" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="faf1d616-c11b-4eda-b721-f411cf4ead31" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="590" ver="5"/>
+		<designed target="Height" value="305" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="ChangePasswordDialog_1" display-name="ChangePasswordDialog_1" uuid="42b05c55-06eb-4fd9-87a1-2246a5f50366" base-type="ChangePasswordDialog" base-type-id="bc08353b-5b47-467f-aa5f-1d3f7ab7119b" ver="5" description="" cardinal="1">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="565" ver="5"/>
+			<designed target="Height" value="300" ver="5"/>
+			<init target="init_Theme" ver="5">
+				<object access-modifier="private" uuid="cc967d75-2794-483a-8367-e8036425c3ff" base-type="Theme" base-type-id="05d4d7df-0f8e-4ec1-ac85-b5460e30af81" ver="5">
+					<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+						<body>
+							<![CDATA[unit.Theme.BackgroundColor]]>
+						</body>
+					</do-trace>
+					<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+						<body>
+							<![CDATA[unit.Theme.TextColor]]>
+						</body>
+					</do-trace>
+					<init target="SelectionColor" ver="5" value="0xffaaaaff"/>
+				</object>
+			</init>
+			<init target="init_ScreenKeyboard" ver="5">
+				<object access-modifier="private" uuid="6c91f233-f369-4904-b4f6-a539e64abdf8" base-type="ScreenKeyboardOptions" base-type-id="0589bc8e-fbb2-4f0e-b5d2-f0d825538ef1" ver="5">
+					<init target="Enabled" ver="5" value="true"/>
+				</object>
+			</init>
+			<init target="UserId" ver="5" ref="here.UserId"/>
+			<init target="UserDisplayName" ver="5" ref="here.UserDisplayName"/>
+		</object>
+	</object>
+	<designed target="Height" value="355" ver="5"/>
+	<init target="WindowName" ver="5" value="Смена пароля"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="570" ver="5"/>
+	<param access-modifier="private" name="UserId" display-name="UserId" uuid="d45b35d9-079a-4dce-a82a-3ce339f94624" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description=""/>
+	<param access-modifier="private" name="UserDisplayName" display-name="UserDisplayName" uuid="ab31c888-31c8-41cb-955f-74cbf3869f14" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description=""/>
+</type>
+

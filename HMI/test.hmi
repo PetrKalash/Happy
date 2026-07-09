@@ -1,0 +1,126 @@
+<unit uuid="659592ba-6ed5-49d1-bd4f-7ab2ea20b3ff" name="Test" display-name="Test" description="" ver="5" main-form-id="b3d1038c-0e59-4247-9ed6-82c4ab9a105e">
+	<object file="Theme.omobj" filter=""/>
+	<object file="Аналоговый сигнал.omobj" filter=".Диалоговые окна/.Аналоговые сигналы"/>
+	<object file="Датчик аналоговый.omobj" filter=".Диалоговые окна/.Аналоговые сигналы"/>
+	<object file="06. ФР. Аналоговые сигналы.omobj" filter=".Экраны ПУ/.Фреймы"/>
+	<object file="06. ПУ. Аналоговые сигналы.omobj" filter=".Экраны ПУ/.Экраны"/>
+	<object file="AITable.omobj" filter=".Экраны ПУ/04. Аналоговые сигналы"/>
+	<object file="AIData.omobj" filter=".Экраны ПУ/04. Аналоговые сигналы"/>
+	<object file="AISettings.omobj" filter=".Экраны ПУ/04. Аналоговые сигналы"/>
+	<object file="AI_Signal.omobj" filter=".Экраны ПУ/04. Аналоговые сигналы"/>
+	<object file="Сетка.omobj" filter=".Экраны ПУ/04. Аналоговые сигналы"/>	<object file="07. ФР. Дискретные сигналы.omobj" filter=".Экраны ПУ/.Фреймы"/>
+	<object file="07. ПУ. Дискретные сигналы.omobj" filter=".Экраны ПУ/.Экраны"/>
+	<object file="DITable.omobj" filter=".Экраны ПУ/05. Дискретные сигналы/.DI"/>
+	<object file="DIData.omobj" filter=".Экраны ПУ/05. Дискретные сигналы/.DI"/>
+	<object file="DISettings.omobj" filter=".Экраны ПУ/05. Дискретные сигналы/.DI"/>
+	<object file="DOTable.omobj" filter=".Экраны ПУ/05. Дискретные сигналы/.DO"/>
+	<object file="DOData.omobj" filter=".Экраны ПУ/05. Дискретные сигналы/.DO"/>
+	<object file="DOSettings.omobj" filter=".Экраны ПУ/05. Дискретные сигналы/.DO"/>
+	<object file="09. ПУ. Диагностика модулей.omobj" filter=".Экраны ПУ/.Экраны"/>
+	<object file="GoodBad.omobj" filter=".Экраны ПУ/03. Связь с оборудованием"/>
+	<object file="Module.omobj" filter=".Экраны ПУ/03. Связь с оборудованием"/>
+	<object file="RSData.omobj" filter=".Экраны ПУ/03. Связь с оборудованием"/>
+	<object file="RSTable.omobj" filter=".Экраны ПУ/03. Связь с оборудованием"/>
+	<object file="09. ФР. Диагностика модулей.omobj" filter=".Экраны ПУ/.Фреймы"/>
+	<object file="Верхняя панель.omobj" filter=".Экраны ПУ/.00. Меню"/>
+	<object file="ЭКМ.omobj" filter=".Главная мнемосхема"/>
+	<object file="ЭКМ Мин Макс.omobj" filter=".Главная мнемосхема"/>
+	<object file="Кран.omobj" filter=".Главная мнемосхема"/>
+	<object file="01. ПУ. Главная мнемосхема.omobj" filter=".Экраны ПУ/.Мнемосхемы"/>
+	<object file="ПУ. MAIN.omobj" filter=".Экраны ПУ/.Main"/>
+	<object file="ПУ. MainForm.omobj" filter=".Экраны ПУ/.Main"/>
+	<object file="Переход в авто.omobj" filter=".Диалоговые окна/.Алгоритмы"/>
+	<object file="ModeWork.omobj" filter=""/>
+	<object file="Security.omobj" filter=""/>
+	<object file="GVL.omobj" filter=""/>
+	<object file="Source.omobj" filter=""/>
+	<object file="Algos.omobj" filter=""/>
+	<object file="Cranes.omobj" filter=""/>
+	<object file="Журнал ИБ.omobj" filter=".Диалоговые окна/.Авторизация"/>
+	<object file="IBJournal.omobj" filter=".Утилити"/>
+	<object file="Изменение пароля.omobj" filter=".Диалоговые окна/.Авторизация"/>
+	<object file="Конфигурация безопасности.omobj" filter=".Диалоговые окна/.Авторизация"/>
+	<object file="Окно авторизации.omobj" filter=".Диалоговые окна/.Авторизация"/>
+	<object file="Форма входа.omobj" filter=".Диалоговые окна/.Авторизация"/>
+	<object file="Switch.omobj" filter=""/>
+	<object file="WindowGroup.omobj" filter=""/>
+	<object file="AlarmJournal.omobj" filter=".Утилити"/>
+	<object file="Диалоговое окно.omobj" filter=".Утилити"/>
+	<object file="Подтверждение.omobj" filter=".Утилити"/>
+	<object file="Сообщение.omobj" filter=".Утилити"/>
+	<object file="Управление краном.omobj" filter=".Диалоговые окна/.Краны"/>
+	<object file="InBTN.omobj" filter=".Утилити"/>
+	<object file="BTN.omobj" filter=".Утилити"/>
+	<object file="ПУ. TrendsForm.omobj" filter=".Утилити"/>
+	<object file="AlarmDialog.omobj" filter=".Утилити"/>
+	<object file="MiniAlarmJournal.omobj" filter=".Утилити"/>
+	<object file="Подтверждение_aлгоритм.omobj" filter=".Утилити"/>
+	<object file="Кнопка 'Домой'.omobj" filter=".Экраны ПУ/00. Меню"/>
+	<object file="Кнопка 'Меню'.omobj" filter=".Экраны ПУ/00. Меню"/>
+	<object file="Кнопка 'Закрыть'.omobj" filter=".Экраны ПУ/00. Меню"/>
+	<object file="00. Меню.omobj" filter=".Экраны ПУ/.Экраны"/>
+	<object file="Модуль.omobj" filter=".Экраны ПУ/07. Диагностика модулей"/>
+	<object file="TouchScreen.omobj" filter=".Экраны ПУ/08. Журнал событий"/>
+	<object file="Уставка.omobj" filter=".Утилити"/>
+	<object file="MessageDialog.omobj" filter=".Утилити"/>
+	<object file="Numpad.omobj" filter=".Утилити"/>
+	<object file="CHECKBOX.omobj" filter=".Утилити"/>
+	<object file="Кнопка.omobj" filter=".Экраны ПУ/00. Меню"/>
+	<object file="Кнопка для меню №2.omobj" filter=".Экраны ПУ/00. Меню"/>
+	<object file="MenuBtn.omobj" filter=".Экраны ПУ/00. Меню"/>
+	<object file="Текст с фоном.omobj" filter=".Утилити"/>
+	<object file="Авторизация.omobj" filter=".Диалоговые окна/.Авторизация"/>
+	<object file="Смена пароля.omobj" filter=".Диалоговые окна/.Авторизация"/>
+	<object file="Ввод пароля.omobj" filter=".Утилити"/>
+	<object file="Keyboard.omobj" filter=".Утилити"/>
+	<object file="Folder.omobj" filter=".Утилити"/>
+	<object file="Выпадающий список.omobj" filter=".Утилити"/>
+	<object file="Группа 2.0.omobj" filter=".Утилити"/>
+	<object file="Параметр.omobj" filter=".Утилити"/>
+	<object file="Стрелка.omobj" filter=".Утилити"/>
+	<object file="Время.omobj" filter=".Диалоговые окна/.Время"/>
+	<object file="Регулятор_окно.omobj" filter=".Диалоговые окна/.Регуляторы"/>
+	<object file="PDF.omobj" filter=""/>
+	<object file="01. ПУ. Главный экран.omobj" filter=".Экраны ПУ/.Экраны"/>
+	<object file="06. ПУ. Графики.omobj" filter=".Экраны ПУ/.Экраны"/>
+	<object file="08. ПУ.  Журнал событий.omobj" filter=".Экраны ПУ/.Экраны"/>
+	<unit-link name="CommonLib" type="b0491687-7585-47f3-b51f-4e24fd62aef1" type-hint="" assembly-path="CommonLib" ver="5"/>
+	<unit-link name="SecurityConfigurator" type="b0491687-7585-47f3-b51f-4e24fd62aef1" type-hint="" assembly-path="SecurityConfigurator" ver="5"/>
+	<unit-link name="Trends" type="b0491687-7585-47f3-b51f-4e24fd62aef1" type-hint="" assembly-path="Trends" ver="5"/>
+	<unit-link name="Alpha_HMI_IntegrityControl" type="b0491687-7585-47f3-b51f-4e24fd62aef1" type-hint="" assembly-path="Alpha.HMI.IntegrityControl" ver="5"/>
+	<unit-link name="Alarms" type="b0491687-7585-47f3-b51f-4e24fd62aef1" type-hint="" assembly-path="Alarms" ver="5"/>
+	<object file="LR_Mode.omobj" filter=".Диалоговые окна/.Алгоритмы"/>
+	<object file="Управление алгоритмом.omobj" filter=".Диалоговые окна/.Алгоритмы"/>
+	<object file="Элемент меню алгоритмов.omobj" filter=".Диалоговые окна/.Алгоритмы"/>
+	<object file="Проверка оборудования.omobj" filter=".Диалоговые окна/.Алгоритмы/.Алго"/>
+	<object file="Обратный отсчет.omobj" filter=".Диалоговые окна/.Алгоритмы"/>
+	<object file="Параметры датчика загазованности.omobj" filter=".Диалоговые окна/.Загазованность"/>
+	<object file="Параметры табла загазованности.omobj" filter=".Диалоговые окна/.Загазованность"/>
+	<object file="Клапан заправки.omobj" filter=".Диалоговые окна/.Одоризация"/>
+	<object file="Автоматический режим.omobj" filter=".Диалоговые окна/.Регуляторы"/>
+	<object file="Ошибка связи.omobj" filter=".Диалоговые окна/.Регуляторы"/>
+	<object file="Ручной режим.omobj" filter=".Диалоговые окна/.Регуляторы"/>
+	<object file="Date_time.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Header_desc.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="NS_bit_mask.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="NSI.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="RV.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="TF.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="TF_archive.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="TF_archive_logs.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="TF_archive_table.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="TF_events.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="TF_events_table.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="TFBody.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Давление.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Дата и время.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Объем.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Расход газа.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Сутки.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Настройки норм расхода.omobj" filter=".Диалоговые окна/.Счетчики газа/.TF"/>
+	<object file="Дата.omobj" filter=".Диалоговые окна/.Счетчики газа/.EK270"/>
+	<object file="Расход.omobj" filter=".Диалоговые окна/.Счетчики газа/.EK270"/>
+	<object file="Объем_2.omobj" filter=".Диалоговые окна/.Счетчики газа/.EK270"/>
+	<object file="ЕК270.omobj" filter=".Диалоговые окна/.Счетчики газа/.EK270"/>
+	<object file="СГ.omobj" filter=".Главная мнемосхема"/>
+</unit>

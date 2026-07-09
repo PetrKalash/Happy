@@ -1,0 +1,191 @@
+<type access-modifier="private" name="09. ПУ. Диагностика модулей" display-name="09. ПУ. Диагностика модулей" uuid="9ec04675-0f27-45d8-85d2-d2c0866ef4e4" base-type="ПУ. MainForm" base-type-id="581b571a-052d-4058-b5f6-d7ff79a05069" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1920" ver="5"/>
+	<designed target="Height" value="1080" ver="5"/>
+	<designed target="PenColor" value="0xff000000" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="1280" ver="5"/>
+	<designed target="WindowHeight" value="1024" ver="5"/>
+	<designed target="WindowCaption" value="ГРС Новомосковская-3" ver="5"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="2" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="1" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.BackgroundColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Panel" display-name="Panel" uuid="f0489a39-a3d6-41be-986f-6448a2b42cb4" base-type="Верхняя панель" base-type-id="1b7af5d6-b4c8-44fc-928f-239231e68710" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="1920" ver="5"/>
+		<designed target="Height" value="113.99999999999999" ver="5"/>
+		<init target="PanelName" ver="5" value="Диагностика модулей"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[unit.WindowGroup.Main.SendToAll("hide", "");]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Diagn2_1" display-name="Diagn2_1" uuid="3929cf2f-d8d0-48b8-adb9-f75d8feb8f96" base-type="Diagn2" base-type-id="8213ee99-3b12-4d53-ac32-9bda1d8faaae" ver="5" description="" cardinal="1">
+		<designed target="X" value="219.99999999999994" ver="5"/>
+		<designed target="Y" value="304.99999999999994" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<init target="modules" ver="5" value='{
+	"comment": "Структура диагностики модулей сгенерирована программой. Проверяйте все модули",
+	"array": [
+    [
+      {
+        "moduleName": "ST 01 012",
+        "kdName": "ST1"
+      },
+      {
+        "moduleName": "PP 00 011",
+        "kdName": "PP1"
+      },
+      {
+        "moduleName": "CU 00 052",
+        "kdName": "CU1"
+      },
+      {
+        "moduleName": "AI 16 012",
+        "kdName": "AI1"
+      },
+      {
+        "moduleName": "AI 16 012",
+        "kdName": "AI2"
+      },
+      {
+        "moduleName": "AI 16 012",
+        "kdName": "AI3"
+      },
+      {
+        "moduleName": "AI 16 012",
+        "kdName": "AI4"
+      },
+      {
+        "moduleName": "AI 16 012",
+        "kdName": "AI5"
+      },
+      {
+        "moduleName": "AI 16 012",
+        "kdName": "AI6"
+      },
+      {
+        "moduleName": "AI 16 012",
+        "kdName": "AI7"
+      },
+      {
+        "moduleName": "DI 32 012",
+        "kdName": "DI1"
+      },
+      {
+        "moduleName": "DI 32 012",
+        "kdName": "DI2"
+      },
+      {
+        "moduleName": "DI 32 012",
+        "kdName": "DI3"
+      },
+      {
+        "moduleName": "AO 08 011",
+        "kdName": "AO1"
+      },
+      {
+        "moduleName": "DO 32 041",
+        "kdName": "DO1"
+      },
+      {
+        "moduleName": "DO 32 041",
+        "kdName": "DO2"
+      },
+      {
+        "moduleName": "DO 32 041",
+        "kdName": "DO3"
+      },
+      {
+        "moduleName": "DO 32 041",
+        "kdName": "DO4"
+      },
+      {
+        "moduleName": "DO 32 041",
+        "kdName": "DO5"
+      },
+      {
+        "moduleName": "ST 01 012",
+        "kdName": "ST2"
+      }
+    ],
+    [
+      {
+        "moduleName": "ST 01 012",
+        "kdName": "ST3"
+      },
+      {
+        "moduleName": "PP 00 011",
+        "kdName": "PP2"
+      },
+      {
+        "moduleName": "CP 04 011",
+        "kdName": "RS1"
+      },
+      {
+        "moduleName": "CP 04 011",
+        "kdName": "RS2"
+      },
+      {
+        "moduleName": "CP 04 011",
+        "kdName": "RS3"
+      },
+      {
+        "moduleName": "CP 04 011",
+        "kdName": "RS4"
+      },
+      {
+        "moduleName": "CP 04 011",
+        "kdName": "RS5"
+      },
+      {
+        "moduleName": "CP 04 011",
+        "kdName": "RS6"
+      },
+      {
+        "moduleName": "CP 04 011",
+        "kdName": "RS7"
+      },
+      {
+        "moduleName": "ST 01 012",
+        "kdName": "ST4"
+      }
+    ]
+    ]
+}'/>
+		<designed target="Scale" value="1.5" ver="5"/>
+		<designed target="Height" value="539.99999999999966" ver="5"/>
+		<designed target="Width" value="1455" ver="5"/>
+	</object>
+</type>
+

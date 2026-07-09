@@ -1,0 +1,56 @@
+<type access-modifier="public" name="RSTable" display-name="RSTable" uuid="ad6b7f90-4624-4b0d-843d-0512e85737a5" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1800" ver="5"/>
+	<designed target="Height" value="610" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="LayoutMargins" display-name="LayoutMargins" uuid="e10504fc-f34e-41f6-910a-bfff61f9f49b" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+		<designed target="Top" value="40" ver="5"/>
+		<designed target="Bottom" value="0" ver="5"/>
+		<designed target="Left" value="0" ver="5"/>
+		<designed target="Right" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="LayoutSizeLimits" display-name="LayoutSizeLimits" uuid="451cc6d9-a0b2-409c-bf55-5a20ae347457" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+		<designed target="MinWidth" value="0" ver="5"/>
+		<designed target="MinHeight" value="0" ver="5"/>
+		<designed target="MaxWidth" value="16777215" ver="5"/>
+		<designed target="MaxHeight" value="305" ver="5"/>
+	</object>
+	<object access-modifier="private" name="RSData" display-name="RSData" uuid="5af97f08-f058-4ba0-8325-c1e211396614" base-type="RSData" base-type-id="1a137869-b03b-4b14-81e1-2184f44742e4" ver="5" description="" cardinal="20">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="900" ver="5"/>
+		<designed target="Height" value="305" ver="5"/>
+		<designed target="BrushColor" value="0xff000000" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<do-trace access-modifier="private" target="CurrentShowPercent" ver="5">
+			<body>
+				<![CDATA[RSData[Index].ShowPercent]]>
+			</body>
+		</do-trace>
+		<designed target="Visible" value="true" ver="5"/>
+		<do-trace access-modifier="private" target="CurrentShowUnit" ver="5">
+			<body>
+				<![CDATA[RSData[Index].ShowUnit]]>
+			</body>
+		</do-trace>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+	</object>
+</type>
+

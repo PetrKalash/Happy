@@ -1,0 +1,52 @@
+<type access-modifier="private" name="Конфигурация безопасности" display-name="Конфигурация безопасности" uuid="7cd38bd6-9372-4a75-9fd1-f7aabb7265f1" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="1118" ver="5"/>
+	<designed target="Height" value="700" ver="5"/>
+	<init target="WindowName" ver="5" value="Конфигурация безопасности"/>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="4d019c4b-66e2-4b0c-b778-1cbbad79769f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1118" ver="5"/>
+		<designed target="Height" value="650" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="SecurityConfigurator_App_1" display-name="SecurityConfigurator_App_1" uuid="e26c095f-0912-4540-9e73-f92f1fca1c72" base-type="SecurityConfigurator_Form" base-type-id="fc99cb05-a6e5-4d5f-935d-3df549cd0bfd" ver="5" description="" cardinal="1">
+			<designed target="X" value="129.99999999999997" ver="5"/>
+			<designed target="Y" value="69.999999999999986" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="860" ver="5"/>
+			<designed target="Height" value="500" ver="5"/>
+			<designed target="Scale" value="1.3" ver="5"/>
+			<designed target="WindowIconPath" value="Security_Icons/SecurityConfigurator.ico" ver="5"/>
+			<init target="init_ScreenKeyboard" ver="5">
+				<object access-modifier="private" uuid="a90ae92a-ad70-4bea-9a05-92bce1f2b986" base-type="ScreenKeyboardOptions" base-type-id="0589bc8e-fbb2-4f0e-b5d2-f0d825538ef1" ver="5">
+					<init target="Enabled" ver="5" value="true"/>
+				</object>
+			</init>
+			<init target="init_Settings" ver="5">
+				<object access-modifier="private" uuid="5b08a8cc-fd4c-47af-9161-f55e3d416a44" base-type="SecurityConfigurator_Settings" base-type-id="a7c582fd-25fb-4cc3-8522-3166d1a63de6" ver="5">
+					<init target="UserInAtLeastOneGroup" ver="5" value="false"/>
+				</object>
+			</init>
+			<init target="init_Permissions" ver="5">
+				<object access-modifier="private" uuid="4bf0b6f4-17ff-42a6-89bf-27d2edfeb24f" base-type="SecurityConfigurator_Permissions" base-type-id="a6a67dc7-2872-46c8-a397-13aa48ddb4e7" ver="5"/>
+			</init>
+		</object>
+	</object>
+</type>
+

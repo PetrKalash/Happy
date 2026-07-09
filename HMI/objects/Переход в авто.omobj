@@ -1,0 +1,458 @@
+<type access-modifier="private" name="Переход в авто" display-name="Переход в авто" uuid="e61527c9-9dae-45cb-9986-e28abc342e28" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="500" ver="5"/>
+	<designed target="Height" value="360" ver="5"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="1a7e1e4b-1561-49ed-9ae8-8f9231d1c690" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Label" display-name="Label" uuid="7a46fe3d-8fd0-40a8-b950-be2f5b3d3fba" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="50" ver="5"/>
+			<designed target="Y" value="20" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="230" ver="5"/>
+			<designed target="Text" value="Проверка условий перехода в
+Автоматизированный режим" ver="5"/>
+			<designed target="Font" value="Golos Text,9,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="36" ver="5"/>
+			<object access-modifier="private" name="Blinker" display-name="Blinker" uuid="6975aeea-cf6f-4265-b252-35406d575fc9" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="5" description="" cardinal="1">
+				<designed target="Period" value="250" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="PenColor" value="0xff000000" ver="5"/>
+				<designed target="BrushColor" value="4278190080" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Blink">
+					<body kind="om">
+						<![CDATA[Loading.Rotation = TypeConvert.ToDouble((Loading.Rotation + 11.25));]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Loading" display-name="Loading" uuid="2c5bb4c5-ff91-4bc6-9db8-5b9e1f6154ee" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+				<designed target="X" value="150" ver="5"/>
+				<designed target="Y" value="55" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="Height" value="100" ver="5"/>
+				<designed target="PenColor" value="4278190080" ver="5"/>
+				<designed target="PenStyle" value="0" ver="5"/>
+				<designed target="PenWidth" value="1" ver="5"/>
+				<designed target="ImageFile" value="loading.png" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="CurrentFrameNumber" value="0" ver="5"/>
+				<designed target="Speed" value="1" ver="5"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="866f9ef7-44d8-45a2-b924-5ff7309a0dfb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="660" ver="5"/>
+			<designed target="Y" value="335" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="250" ver="5"/>
+			<designed target="Height" value="15" ver="5"/>
+			<designed target="Text" value="Текст" ver="5"/>
+			<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<designed target="TextAlignment" value="33" ver="5"/>
+			<init target="Text" ver="5" value=""/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[unit.Cranes.CranesArray[0]]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Table" display-name="Table" uuid="5d090ab3-cc62-4079-9dc6-15d9684da223" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="5" description="" cardinal="1">
+			<designed target="X" value="530" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Width" value="500" ver="5"/>
+			<designed target="Height" value="250" ver="5"/>
+			<designed target="BackgroundColor" value="0xff333333" ver="5"/>
+			<designed target="FrameColor" value="0xff000000" ver="5"/>
+			<designed target="GridColor" value="0xffd8d8d8" ver="5"/>
+			<designed target="HeaderHeight" value="21" ver="5"/>
+			<designed target="HeaderVisible" value="false" ver="5"/>
+			<designed target="RowHeight" value="30" ver="5"/>
+			<designed target="RowOrder" value="0" ver="5"/>
+			<designed target="SelectionBehavior" value="0" ver="5"/>
+			<designed target="SelectionMode" value="0" ver="5"/>
+			<designed target="SelectionOverlayEnabled" value="false" ver="5"/>
+			<designed target="LatestRowTracking" value="false" ver="5"/>
+			<designed target="DelayedSortingEnabled" value="false" ver="5"/>
+			<designed target="HorizontalScrollMode" value="0" ver="5"/>
+			<designed target="VerticalScrollMode" value="0" ver="5"/>
+			<designed target="HorizontalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="VerticalScrollBarPolicy" value="2" ver="5"/>
+			<designed target="RowHeightResizeMode" value="3" ver="5"/>
+			<object access-modifier="private" name="Column" display-name="Column" uuid="bd450809-304b-4316-95da-f4330ed80997" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Блокировка" ver="5"/>
+				<designed target="Description" value="" ver="5"/>
+				<designed target="Id" value="block" ver="5"/>
+				<designed target="ColumnOwnId" value="" ver="5"/>
+				<designed target="BackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Regular" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,10,-1,5,50,0,0,0,0,0,Regular" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="500" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Model" display-name="Model" uuid="bab58dab-7f1c-44a7-962a-8a6baf06f88f" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="5" description="" cardinal="1">
+				<designed target="Frozen" value="false" ver="5"/>
+				<designed target="MaxRowCount" value="10000" ver="5"/>
+				<designed target="OptOfProcessingEvents" value="0" ver="5"/>
+			</object>
+			<init target="TableModel" ver="5" ref="Model"/>
+			<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="3e8c614e-5627-4f1b-a01e-945259d8baa0" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+					<body kind="om">
+						<![CDATA[Body.Table.Model.AddColumn("block", "Причина блокировки","","","string",true,false);
+CheckWarnings();
+]]>
+					</body>
+				</do-on>
+			</object>
+			<init target="Visible" ver="5" value="false"/>
+			<init target="X" ver="5" value="0"/>
+			<init target="Y" ver="5" value="60"/>
+			<do access-modifier="private" name="CheckWarnings" display-name="CheckWarnings" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[
+CheckCranes();
+CheckAlgos();
+CheckSubAlgos();
+if (Body.Table.Model.GetRowCount() > 0){
+	Body.Table.Visible = true;
+	Label.Text = "Следующие сигналы могут привести к некоректной работе станции или к непреднамеренной активации алгоритмов. Перейти в Автоматизированный режим?";
+	Label.FontColor = 0xffff0000;
+	here.WindowName = "ВНИМАНИЕ!!!";
+	
+
+	here.Body.AcceptBtn.Visible = true;
+	
+	
+	
+	here.Height = 420;
+	AcceptBtn.Visible = true;
+	
+	AcceptBtn.Y = 315;
+	
+
+	return;
+} else {
+Accept_A=true;
+	Close();
+}
+
+
+
+]]>
+				</body>
+			</do>
+		</object>
+		<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="a94e8e23-34fa-418e-80f1-50d89b369779" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="660" ver="5"/>
+			<designed target="Y" value="365" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="250" ver="5"/>
+			<designed target="Height" value="15" ver="5"/>
+			<designed target="Text" value="Текст" ver="5"/>
+			<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<designed target="TextAlignment" value="33" ver="5"/>
+			<init target="Text" ver="5" value=""/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[unit.Algos.Bypass.Trigger[0]]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="AcceptBtn" display-name="AcceptBtn" uuid="3c6bbf5b-90ee-4dfd-9d82-a2237af99b27" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="5" description="" cardinal="1">
+			<designed target="X" value="25" ver="5"/>
+			<designed target="Y" value="105" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="140" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Checkable" value="false" ver="5"/>
+			<designed target="Checked" value="false" ver="5"/>
+			<designed target="Text" value="Подтвердить" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="5"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="5"/>
+			<designed target="BrushColor" value="0xff000000" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<designed target="OnClickBrushColor" value="4288651167" ver="5"/>
+			<designed target="OnClickBrushStyle" value="1" ver="5"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="5"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="5"/>
+			<designed target="DisabledBrushColor" value="4290295992" ver="5"/>
+			<designed target="DisabledBrushStyle" value="1" ver="5"/>
+			<designed target="PenColor" value="0xff00ff00" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="2" ver="5"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="5"/>
+			<designed target="OnClickPenStyle" value="1" ver="5"/>
+			<designed target="OnClickPenWidth" value="1" ver="5"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverPenStyle" value="1" ver="5"/>
+			<designed target="OnHoverPenWidth" value="1" ver="5"/>
+			<designed target="DisabledPenColor" value="4290295992" ver="5"/>
+			<designed target="DisabledPenStyle" value="1" ver="5"/>
+			<designed target="DisabledPenWidth" value="1" ver="5"/>
+			<init target="Visible" ver="5" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Accept_A=true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-action="close"/>
+		</object>
+		<object access-modifier="private" name="CancelBtn" display-name="CancelBtn" uuid="a3bd977c-065a-4018-9311-0ebeadbc105d" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="5" description="" cardinal="1">
+			<designed target="X" value="335" ver="5"/>
+			<designed target="Y" value="105" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="140" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Checkable" value="false" ver="5"/>
+			<designed target="Checked" value="false" ver="5"/>
+			<designed target="Text" value="Отмена" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="5"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="5"/>
+			<designed target="BrushColor" value="0xff000000" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<designed target="OnClickBrushColor" value="4288651167" ver="5"/>
+			<designed target="OnClickBrushStyle" value="1" ver="5"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="5"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="5"/>
+			<designed target="DisabledBrushColor" value="4290295992" ver="5"/>
+			<designed target="DisabledBrushStyle" value="1" ver="5"/>
+			<designed target="PenColor" value="0xffff0000" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="2" ver="5"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="5"/>
+			<designed target="OnClickPenStyle" value="1" ver="5"/>
+			<designed target="OnClickPenWidth" value="1" ver="5"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverPenStyle" value="1" ver="5"/>
+			<designed target="OnHoverPenWidth" value="1" ver="5"/>
+			<designed target="DisabledPenColor" value="4290295992" ver="5"/>
+			<designed target="DisabledPenStyle" value="1" ver="5"/>
+			<designed target="DisabledPenWidth" value="1" ver="5"/>
+			<init target="Visible" ver="5" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="close"/>
+		</object>
+		<object access-modifier="private" name="Cmd_oper_auto" display-name="Cmd_oper_auto" uuid="bcb18d58-7fc2-4219-839b-c9948fd9572b" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="unit.Source.Main"/>
+			<init target="ValuePath" ver="5" value="Mode_work.Cmd_oper_auto"/>
+		</object>
+	</object>
+	<init target="WindowName" ver="5" value="Проверка условий перехода в
+Автоматический режим"/>
+	<init target="ShowClose" ver="5" value="false"/>
+	<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[
+
+for (let i = 0; i < 25; i++){
+	let msg = unit.Cranes.CheckCrane(unit.Cranes.CranesArray[i].Value, unit.Cranes.CranesArray[i].Name, unit.Cranes.CranesArray[i].Status, unit.Cranes.CranesArray[i].line_TS_O, unit.Cranes.CranesArray[i].line_TS_C, unit.Cranes.CranesArray[i].Status_line_TU_O, unit.Cranes.CranesArray[i].Status_line_TU_C);
+	if (msg.length != 0 ) {
+		Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, msg);
+
+	}; 
+}
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="CheckAlgos" display-name="CheckAlgos" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[
+for (let i = 0; i < unit.Algos.AO_BS_Bypass.Trigger.Length; i++){
+    if (unit.Algos.AO_BS_Bypass.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "АОб с переходом на байпас: " + unit.Algos.AO_BS_Bypass.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.AO_PP_BS.Trigger.Length; i++){
+    if (unit.Algos.AO_PP_BS.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "АОППб: " + unit.Algos.AO_PP_BS.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.AO_PP_S.Trigger.Length; i++){
+    if (unit.Algos.AO_PP_S.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "АОППс: " + unit.Algos.AO_PP_S.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.AO_S_Bypass.Trigger.Length; i++){
+    if (unit.Algos.AO_S_Bypass.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "АОс с переходом на байпас: " + unit.Algos.AO_S_Bypass.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.Zag_BBR.Trigger.Length; i++){
+    if (unit.Algos.Zag_BBR.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "Загазованность в редуцировании: " + unit.Algos.Zag_BBR.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.Zag_UPT.Trigger.Length; i++){
+    if (unit.Algos.Zag_UPT.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "Загазованность в котельной: " + unit.Algos.Zag_UPT.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.Zag_GEN.Trigger.Length; i++){
+    if (unit.Algos.Zag_GEN.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "Загазованность в генераторной: " + unit.Algos.Zag_GEN.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.UR.Trigger.Length; i++){
+    if (unit.Algos.UR.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "Контроль кранов ЛР: " + unit.Algos.UR.Trigger[i].Text);
+    }
+}
+]]>
+		</body>
+	</do>
+	<designed target="WindowSizeMode" value="2" ver="5"/>
+	<do access-modifier="private" name="CheckSubAlgos" display-name="CheckSubAlgos" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[
+for (let i = 0; i < unit.Algos.Block_boiler.Trigger.Length; i++){
+    if (unit.Algos.Block_boiler.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "Блок котлов: " + unit.Algos.Block_boiler.Trigger[i].Text);
+    }
+}
+
+for (let i = 0; i < unit.Algos.Drain_cond1.Trigger.Length; i++){
+    if (unit.Algos.Drain_cond1.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "Сброс конд 1: " + unit.Algos.Drain_cond1.Trigger[i].Text);
+    }
+}
+for (let i = 0; i < unit.Algos.Drain_cond2.Trigger.Length; i++){
+    if (unit.Algos.Drain_cond2.Trigger[i].Value) {
+        Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, "Сброс конд 2" + unit.Algos.Drain_cond2.Trigger[i].Text);
+    }
+}]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="AutoMode" display-name="AutoMode" uuid="a7cadc16-57a5-4e04-8fbb-794776006ee5" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Mode_work.InCmd_oper_auto1"/>
+	</object>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="59a22cf9-80e1-4f0a-8c9d-e80c6a1b13c7" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="1000" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[AutoMode=false;
+me.Active=false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Accept_A" display-name="Accept_A" uuid="d2c19156-0ce7-4ab9-addf-4b34177635e6" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Mode_work.InAccept_A"/>
+	</object>
+	<object access-modifier="private" name="OutAccept_A" display-name="OutAccept_A" uuid="b75a06dc-3149-446c-8a3f-9dc5a226ad03" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Mode_work.OutAccept_A"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (value)
+	Close();]]>
+			</body>
+		</do-on>
+	</object>
+</type>
+

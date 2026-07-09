@@ -1,0 +1,292 @@
+<type access-modifier="private" name="Расход" display-name="Расход" uuid="775c1ce3-68ea-4a20-b129-5feb3b424590" base-type="Группа 2.0" base-type-id="21b4f5ae-3f0d-4de6-a76e-868853a7af73" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="250" ver="5"/>
+	<designed target="Height" value="114" ver="5"/>
+	<init target="GroupName" ver="5" value="Итоговая концентрация"/>
+	<object access-modifier="private" name="Prefix" display-name="Префикс пути" uuid="8a226829-2a20-4008-a885-f91cacc5a508" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="HRsSource" display-name="HRsSource" uuid="7ff0e993-5aed-417f-88c5-90ce9947ff01" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="HR_sulfur" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Devices"/>
+	</object>
+	<designed target="BrushColor" value="0xff1f1f1f" ver="5"/>
+	<object access-modifier="private" name="Сероводород" display-name="Сероводород" uuid="1615e35e-3261-4d39-a49c-b92bade97602" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="30" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="250" ver="5"/>
+		<designed target="Height" value="39" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="0xff2d2d2d" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="ea187d5f-d076-4891-9099-06a24a8ee87c" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="1" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<object access-modifier="private" name="LayoutSizeLimits_1" display-name="LayoutSizeLimits_1" uuid="f4ece435-d32d-4be0-ad11-e028403ca1ba" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+			<designed target="MinWidth" value="0" ver="5"/>
+			<designed target="MinHeight" value="39" ver="5"/>
+			<designed target="MaxWidth" value="16777215" ver="5"/>
+			<designed target="MaxHeight" value="39" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="8d9e112c-0ee2-4cbd-992e-e0b9d0941bc7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="15" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="135" ver="5"/>
+			<designed target="Height" value="39" ver="5"/>
+			<designed target="Text" value="Стандартный расход" ver="5"/>
+			<designed target="Font" value="Roboto,10,-1,5,50,0,0,0,0,0,Regular" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="41b4f9c5-3f8d-4b2b-811d-7d7737879f11" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+				<designed target="Top" value="0" ver="5"/>
+				<designed target="Bottom" value="0" ver="5"/>
+				<designed target="Left" value="15" ver="5"/>
+				<designed target="Right" value="0" ver="5"/>
+			</object>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="56be8137-4a1e-4637-8189-5baad1237b15" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="5" description="" cardinal="1">
+				<designed target="Weight" value="1" ver="5"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="f334b4fc-b2e9-4585-aa44-2b8ed2763750" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="150" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="85" ver="5"/>
+			<designed target="Height" value="39" ver="5"/>
+			<designed target="Text" value="0.000 %" ver="5"/>
+			<designed target="Font" value="Roboto,10,-1,5,75,0,0,0,0,0,Bold" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="130" ver="5"/>
+			<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="ee464da1-ce48-42b7-8cd5-5d5f08628094" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+				<designed target="Top" value="0" ver="5"/>
+				<designed target="Bottom" value="0" ver="5"/>
+				<designed target="Left" value="0" ver="5"/>
+				<designed target="Right" value="15" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || FloatValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffaa55ff]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[String.ToString("%.1f", FloatValue) + " м³/ч"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="FloatValue" display-name="FloatValue" uuid="d7d08475-5ffb-40bc-acdb-5d3a95c9e6e5" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="Rate_stand"/>
+			<init target="Source" ver="5" ref="MainSource"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Метилмеркаптан" display-name="Метилмеркаптан" uuid="27f873c9-2546-4cfb-843a-5eb33fd5834c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="69" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="250" ver="5"/>
+		<designed target="Height" value="39" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="0xff1f1f1f" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="bcee58f2-d699-421c-baf1-25f17292f273" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="1" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<object access-modifier="private" name="LayoutSizeLimits_1" display-name="LayoutSizeLimits_1" uuid="5443ab1d-d5bf-492c-a738-25a7f6fb8467" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+			<designed target="MinWidth" value="0" ver="5"/>
+			<designed target="MinHeight" value="39" ver="5"/>
+			<designed target="MaxWidth" value="16777215" ver="5"/>
+			<designed target="MaxHeight" value="39" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="9d05d501-c63e-4663-bf0a-91d1ae92ffb6" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="15" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="135" ver="5"/>
+			<designed target="Height" value="39" ver="5"/>
+			<designed target="Text" value="Рабочий расход" ver="5"/>
+			<designed target="Font" value="Roboto,10,-1,5,50,0,0,0,0,0,Regular" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="b20187ce-09e9-4f67-b3fa-595a11565b9a" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+				<designed target="Top" value="0" ver="5"/>
+				<designed target="Bottom" value="0" ver="5"/>
+				<designed target="Left" value="15" ver="5"/>
+				<designed target="Right" value="0" ver="5"/>
+			</object>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="f94bef01-97bc-421d-9c99-d5a3f92047cb" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="5" description="" cardinal="1">
+				<designed target="Weight" value="1" ver="5"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="a7a2054d-756e-489b-b886-291e6f0f8716" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="150" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="85" ver="5"/>
+			<designed target="Height" value="39" ver="5"/>
+			<designed target="Text" value="0.000 %" ver="5"/>
+			<designed target="Font" value="Roboto,10,-1,5,75,0,0,0,0,0,Bold" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="130" ver="5"/>
+			<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="0d5aad89-185f-4fdc-bfb7-9c81810e0b46" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+				<designed target="Top" value="0" ver="5"/>
+				<designed target="Bottom" value="0" ver="5"/>
+				<designed target="Left" value="0" ver="5"/>
+				<designed target="Right" value="15" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || FloatValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA[0xffaa55ff]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffffffff]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[String.ToString("%.1f", FloatValue) + " м³/ч"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="FloatValue" display-name="FloatValue" uuid="ce51bdb2-3c39-44b3-998d-80798ec0350b" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="Rate_work"/>
+			<init target="Source" ver="5" ref="MainSource"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="MainSource" display-name="MainSource" uuid="8becb366-2af6-43bc-a96d-0149b97c0f96" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="GPS" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Counters"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[here.Path_]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Source_" display-name="Source_" uuid="a72e9fe9-639c-4fba-82de-f98316090c92" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[Path_]]>
+			</body>
+		</do-trace>
+		<init target="ParentSource" ver="5" ref="unit.Source.Counters"/>
+	</object>
+	<object access-modifier="private" name="Connect" display-name="Connect" uuid="208f61a9-14b2-416e-a55b-5869147d09d0" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_"/>
+		<init target="Path" ver="5" value="Connect"/>
+	</object>
+	<object access-modifier="private" name="Path_" display-name="Путь до турбофлоу" uuid="1f396869-c147-475b-bd0c-36f15aafb70b" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="Path_" ver="5" value="TF"/>
+	<object access-modifier="private" name="Header_" display-name="Заголовок (если пусто - скрыто)" uuid="a4efa51e-3676-4e5a-998f-2fc056a802ba" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Name_" display-name="Name_" uuid="edc3365e-74c4-4d9a-934c-08b06c7614bf" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+</type>
+

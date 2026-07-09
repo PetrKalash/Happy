@@ -1,0 +1,35 @@
+<type access-modifier="private" name="Журнал ИБ" display-name="Журнал ИБ" uuid="23aa8273-21aa-4158-ade6-0f7e712c2d01" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="1200" ver="5"/>
+	<designed target="Height" value="900" ver="5"/>
+	<object access-modifier="private" name="Frame_1" display-name="Frame_1" uuid="b15b47ea-5e7f-4a21-93cd-3dd443369233" base-type="Frame" base-type-id="71f78e19-ef99-4133-a029-2968b14f02b6" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1280" ver="5"/>
+		<designed target="Height" value="974" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<designed target="OverrideScaling" value="false" ver="5"/>
+		<designed target="ShowScrollBars" value="true" ver="5"/>
+		<designed target="MoveByMouse" value="false" ver="5"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened" frame-link="Frame_1" form-action="open-in-frame" form-by-id="false">
+		<object access-modifier="private" uuid="9e6808de-885f-4880-be53-be2622306528" base-type="IB_Journal" base-type-id="07065452-6a9c-49ec-81fa-27a7062d577c" ver="5"/>
+	</do-on>
+	<init target="WindowName" ver="5" value="Журнал информационной безопасности"/>
+</type>
+

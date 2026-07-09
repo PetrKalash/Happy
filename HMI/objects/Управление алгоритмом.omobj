@@ -1,0 +1,540 @@
+<type access-modifier="private" name="Управление алгоритмом" display-name="Управление алгоритмом" uuid="912253bc-b4f9-439f-a99f-074a9a8ec669" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="380" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="WindowName" display-name="WindowName" uuid="1eba02f6-a980-4821-a045-ff21814f0126" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="AlgoSource" display-name="AlgoSource" uuid="603d5b8c-4830-44d5-adaa-6c64348fa92d" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" base-const="true" ver="5" description="">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Algo"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[AlgoPath]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="AlgoPath" display-name="Путь до алгоритма" uuid="60704fda-fb8c-4a1b-adcd-4f76dfb1e8ac" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="AlgoPath" ver="5" value="AO_BS_Bypass"/>
+	<object access-modifier="private" name="NoRightsAction" display-name="NoRightsAction" uuid="c0710e17-2890-4f3b-bb90-251b0f504cd5" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="a68ecbf7-11b2-4651-b775-f14a67597572" base-type="Сообщение" base-type-id="0babc8f4-86ac-4dba-9145-1c0d2529a898" ver="5">
+				<init target="MessageText" ver="5" value="Для управления алгоритмами, пожалуйста получите права на управление"/>
+				<init target="WindowName" ver="5" value="Необходима авторизация"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="NoEngineerAction" display-name="NoEngineerAction" uuid="5fc0a4b2-41b0-42b6-bbba-5dea19e16176" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="ff30726a-69cc-45d0-87fd-ec9d39827579" base-type="Сообщение" base-type-id="0babc8f4-86ac-4dba-9145-1c0d2529a898" ver="5">
+				<init target="MessageText" ver="5" value="Управление алгоритмами станции доступно только пользователям с правами инженера"/>
+				<init target="WindowName" ver="5" value="Недостаточно прав"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="NoAccessAction" display-name="NoAccessAction" uuid="47ff7134-adc6-4d70-94be-614379f90094" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="20b8a1ad-5400-4915-bc71-a116ed3247d3" base-type="Сообщение" base-type-id="0babc8f4-86ac-4dba-9145-1c0d2529a898" ver="5">
+				<init target="MessageText" ver="5" value="Для управления алгоритмами необходимо перейти в режим управления от данного устройства"/>
+				<init target="WindowName" ver="5" value="Неподходящий режим работы"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="ENABLE_BTN" display-name="ENABLE_BTN" uuid="2d1e4ba4-ae80-4593-9d33-64c7456121d3" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="120" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="ЗАПРЕЩЕН" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+				</condition>
+				<expr>
+					<![CDATA["РАЗРЕШЕН"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["ЗАПРЕЩЕН"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectMainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff00aa00]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xffaa0000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="OnHoverBrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectMainColor]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff00aa00]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xffaa0000]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="Enable" display-name="Enable" uuid="2857ef28-c0d5-4034-894d-ca02b691933e" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="ValuePath" ver="5" value="Enable"/>
+			<init target="MainSource" ver="5" ref="AlgoSource"/>
+		</object>
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="96186fe9-7d50-4583-9b82-858899fa6850" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="AlgoSource"/>
+			<init target="Path" ver="5" value="Trigger"/>
+		</object>
+		<init target="Signal" ver="5" ref="Enable"/>
+		<init target="EnableEngineer" ver="5" value="true"/>
+		<init target="WindowName_1" ver="5" value="Внимание"/>
+		<do-trace access-modifier="private" target="CommandText" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+				</condition>
+				<expr>
+					<![CDATA["Запретить выполнение алгоритма?"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[Trigger]]>
+				</condition>
+				<expr>
+					<![CDATA["Разрешить выполнение алгоритма?
+Внимание!
+Активно условие запуска!"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA["Разрешить выполнение алгоритма?"]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="CommandValue" ver="5">
+			<body>
+				<![CDATA[!Variant.ToBool(Enable.Out, false)]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="DopException" ver="5">
+			<body>
+				<![CDATA[unit.ModeWork.ModeWork == 4 || ChooseError]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Alarm_message" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно по причине отсутствия связи с контроллерами"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[DopException]]>
+				</condition>
+				<expr>
+					<![CDATA[DopExceptionText]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Operator && !unit.Security.Access_Engineer && EnableAuth]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие недоступно для неавторизованного пользователя"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4)) && EnableAccess && !EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Engineer && EnableEngineer]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами Инженера"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[(!unit.Security.Access_Operator || !unit.Security.Access_Engineer) && EnableAdmin]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами администратора"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4) || unit.ModeWork.ModeWork == 6) && !EnableAccess && EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[""]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+			<body kind="om">
+				<![CDATA[//if (ChooseError) {
+	//OpenDialog();
+	//return;
+//}
+if ((!ChooseError) && (!Variant.ToBool(Enable.Out, false))) {
+	StartCheck();
+}]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="Enable1" display-name="Enable1" uuid="f5f54c0c-1374-405c-9270-1fceeaa2e618" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="AlgoSource"/>
+			<init target="Path" ver="5" value="Enable"/>
+		</object>
+		<init target="DopAction" ver="5" ref="OpenCheckAlgo"/>
+		<do access-modifier="private" name="StartCheck" display-name="StartCheck" ver="5" type="bool" type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8">
+			<body kind="javascript">
+				<![CDATA[let msg = unit.Algos[AlgoPath].CheckAlgoRedy(true);
+if (msg.length != 0) {
+	OpenCheckAlgo.Enabled = true;
+	return true;
+}
+
+msg = unit.Algos[AlgoPath].CheckCranes(true);
+if (msg.length != 0) {
+	OpenCheckAlgo.Enabled = true;
+	return true;
+}
+
+
+return false;]]>
+			</body>
+		</do>
+		<do-trace access-modifier="private" target="DopExceptionText" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[unit.ModeWork.ModeWork == 4]]>
+				</condition>
+				<expr>
+					<![CDATA["Управление алгоритмами в ручном режиме запрещено"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[ChooseError]]>
+				</condition>
+				<expr>
+					<![CDATA["Необходимо выбрать основную и резервную линии узла редуцирования"]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="RUN_BTN" display-name="RUN_BTN" uuid="c9d870cd-46c7-47cb-8efc-ac810880e0c8" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="130" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="120" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="ЗАПУСК" ver="5"/>
+		<object access-modifier="private" name="Run" display-name="Run" uuid="3a829d45-fd31-4f9d-a2f5-efa0518f3e2a" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="ValuePath" ver="5" value="Run"/>
+			<init target="MainSource" ver="5" ref="AlgoSource"/>
+		</object>
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="7c0d2eeb-d1f5-4ace-a847-90aefd2f8629" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="500" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<do-trace access-modifier="private" target="Active" ver="5">
+				<body>
+					<![CDATA[Variant.ToBool(Run.Out, false)]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[Run.In=false;]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="EnableEngineer" ver="5" value="true"/>
+		<init target="CommandText" ver="5" value="Запустить алгоритм?"/>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[Status==0]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="DopException" ver="5">
+			<body>
+				<![CDATA[unit.ModeWork.ModeWork == 4 || ChooseError]]>
+			</body>
+		</do-trace>
+		<init target="Signal" ver="5" ref="Run"/>
+		<do-trace access-modifier="private" target="Alarm_message" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно по причине отсутствия связи с контроллерами"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[DopException]]>
+				</condition>
+				<expr>
+					<![CDATA[DopExceptionText]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Operator && !unit.Security.Access_Engineer && EnableAuth]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие недоступно для неавторизованного пользователя"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4)) && EnableAccess && !EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Security.Access_Engineer && EnableEngineer]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами Инженера"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[(!unit.Security.Access_Operator || !unit.Security.Access_Engineer) && EnableAdmin]]>
+				</condition>
+				<expr>
+					<![CDATA["Данное действие доступно только пользователям с правами администратора"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4) || unit.ModeWork.ModeWork == 6) && !EnableAccess && EnableAuto]]>
+				</condition>
+				<expr>
+					<![CDATA["Действие недоступно в текущем режиме работы"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[""]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="DopExceptionText" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[unit.ModeWork.ModeWork == 4 ]]>
+				</condition>
+				<expr>
+					<![CDATA["Управление алгоритмами в ручном режиме запрещено"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[ChooseError]]>
+				</condition>
+				<expr>
+					<![CDATA["Необходимо выбрать основную и резервную линии узла редуцирования"]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="SBROS_BTN" display-name="SBROS_BTN" uuid="66a44d83-ea1f-4c01-91ed-aa13829e40cd" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="260" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="120" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="СБРОС" ver="5"/>
+		<object access-modifier="private" name="Sbros" display-name="Sbros" uuid="7708d334-606d-4d55-b739-43635cf4e88f" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="ValuePath" ver="5" value="Sbros"/>
+			<init target="MainSource" ver="5" ref="AlgoSource"/>
+		</object>
+		<init target="Signal" ver="5" ref="Sbros"/>
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="556d3f92-6afe-4aea-9186-1d450e636062" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="500" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<do-trace access-modifier="private" target="Active" ver="5">
+				<body>
+					<![CDATA[Variant.ToBool(Sbros.Out, false)]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[Sbros.In=false;]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="EnableEngineer" ver="5" value="true"/>
+		<init target="CommandText" ver="5" value="Сбросить алгоритм?"/>
+		<do-trace access-modifier="private" target="DopException" ver="5">
+			<body>
+				<![CDATA[unit.ModeWork.ModeWork == 4 ]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="DopExceptionText" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[unit.ModeWork.ModeWork == 4 ]]>
+				</condition>
+				<expr>
+					<![CDATA["Управление алгоритмами в ручном режиме запрещено"]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Status" display-name="Status" uuid="43e37787-ea1c-48a3-bc2e-5df5dee4af1b" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="AlgoSource"/>
+		<init target="Path" ver="5" value="Status"/>
+	</object>
+	<object access-modifier="private" name="OpenCheckAlgo" display-name="OpenCheckAlgo" uuid="f9ef1f17-2df7-4bc9-9895-d6350176de02" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="false" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="817e1bab-34f7-46b2-b2f1-c9109ca8d607" base-type="Проверка оборудования" base-type-id="d33c9fe3-f44d-49e1-a1ab-7b575a13dd78" ver="5">
+				<init target="AlgoPath" ver="5">
+					<expr>
+						<![CDATA[here.AlgoPath]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="Invoked">
+			<body kind="javascript">
+				<![CDATA[me.Enabled=false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="UR_Error" display-name="UR_Error" uuid="a35ef79e-873f-471a-ba16-722decf2bba7" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="ChooseError" display-name="ChooseError" uuid="d770b21e-09ff-4f8e-8f83-91719bc7f908" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[UR_Error]]>
+			</body>
+		</do-trace>
+	</object>
+	<do access-modifier="private" name="OpenDialog" display-name="OpenDialog" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="34d228e1-b2d2-4a28-a257-794bc24a4e25" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Icon" ver="5" value="2"/>
+			<do-trace access-modifier="private" target="WindowIconPath" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Icon == 3]]>
+					</condition>
+					<expr>
+						<![CDATA["CommonLib_Icons/Error16.png"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Icon == 2]]>
+					</condition>
+					<expr>
+						<![CDATA["CommonLib_Icons/Warning16.png"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Icon == 1]]>
+					</condition>
+					<expr>
+						<![CDATA["CommonLib_Icons/Question16.png"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["CommonLib_Icons/Information16.png"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="Message" ver="5" value="Необходимо выбрать основную и резервную линии узла редуцирования"/>
+		</object>
+	</do>
+</type>
+

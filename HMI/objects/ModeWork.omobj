@@ -1,0 +1,56 @@
+<object access-modifier="private" name="ModeWork" display-name="ModeWork" uuid="a1b5e61c-82d9-47e4-a77f-1332c7b96706" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5" description="" cardinal="1">
+	<object access-modifier="private" name="SwitchA" display-name="SwitchA" uuid="1f6bd6f7-2e64-4cf5-8623-00c6c1c590f5" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Mode_work.Switch_A"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (!SwitchA && !SwitchR){
+Started=true;
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SwitchR" display-name="SwitchR" uuid="c02063e0-c5d0-4fd4-a920-2446ab2d1766" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Mode_work.Switch_R"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (!SwitchA && !SwitchR){
+Started=true;
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="ModeWork" display-name="ModeWork" uuid="a731209e-d16f-4959-9375-e61b50b0871e" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Mode_work.Mode_work_grs"/>
+	</object>
+	<object access-modifier="private" name="Debug" display-name="Debug" uuid="06f1926e-54a8-4b28-8684-36cc7dbaeef2" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Access" display-name="Access" uuid="d7037f85-0391-463d-8e62-de43e8a3e990" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<do-trace access-modifier="private" target="Access" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[IsPU]]>
+			</condition>
+			<expr>
+				<![CDATA[ModeWork == 1]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[ModeWork == 2]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="IsPU" display-name="IsPU" uuid="26d10412-ceea-41af-bce2-d47764f99b23" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="IsPU" ver="5" value="true"/>
+	<object access-modifier="private" name="Started" display-name="Started" uuid="a888d09c-6285-45f4-acb7-45b5544ee3a6" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="Access" ver="5" value="false"/>
+	<object access-modifier="private" name="Kvit_window" display-name="Kvit_window" uuid="31792c92-aff8-4c16-b707-c9058021cdad" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="PreModeWork" display-name="PreModeWork" uuid="05d8ed82-5c9f-4988-8a23-8270382bdea8" base-type="notifying_uint2" base-type-id="ac10cc3c-8557-43b5-8da5-1144cd866e59" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Mode_work_upt" display-name="Mode_work_upt" uuid="3baf7d1d-fa2a-44f3-8ab2-e1337e3f3ae8" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Mode_work_upt"/>
+		<init target="Source" ver="5" ref="unit.Source.UPT"/>
+	</object>
+</object>
+

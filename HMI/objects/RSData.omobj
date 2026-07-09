@@ -1,0 +1,53 @@
+<type access-modifier="private" name="RSData" display-name="RSData" uuid="1a137869-b03b-4b14-81e1-2184f44742e4" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1800" ver="5"/>
+	<designed target="Height" value="305" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="22851a52-a71a-415e-b5d4-fba5b0f45d10" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="1" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="CurrentNameSignal" display-name="Показать название сигнала" uuid="61a13a67-60a0-48b2-b021-ace7e2676685" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Number" display-name="Number" uuid="6ad42d31-3fe1-4971-b934-1983a1ffba41" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="5" description="" cardinal="1"/>
+	<init target="Number" ver="5" value="1"/>
+	<object access-modifier="private" name="ModuleNumber" display-name="ModuleNumber" uuid="61e4e1a9-c8e5-4f3d-8689-fbdd9265dde9" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="5" description="" cardinal="1"/>
+	<init target="ModuleNumber" ver="5" value="1"/>
+	<object access-modifier="private" name="ErrorModuls" display-name="ErrorModuls" uuid="d9963e29-c77b-481b-ac7d-2be5c092ba27" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Module" display-name="Module" uuid="acdab0e7-9416-4a48-8ab4-89d0794fe89b" base-type="Модуль" base-type-id="aa873c7f-7f64-4bfb-a867-8daa2c22ed89" ver="5" description="" cardinal="1">
+		<designed target="X" value="335" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="15" ver="5"/>
+		<designed target="Height" value="305" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<object access-modifier="private" name="LayoutMargins" display-name="LayoutMargins" uuid="53b79398-b928-4b31-88e6-bb0963472338" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+			<designed target="Top" value="0" ver="5"/>
+			<designed target="Bottom" value="0" ver="5"/>
+			<designed target="Left" value="335" ver="5"/>
+			<designed target="Right" value="0" ver="5"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="LayoutSizeLimits" display-name="LayoutSizeLimits" uuid="659f6f53-2056-4363-a4b0-f0b18a4a2c7b" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+		<designed target="MinWidth" value="0" ver="5"/>
+		<designed target="MinHeight" value="305" ver="5"/>
+		<designed target="MaxWidth" value="16777215" ver="5"/>
+		<designed target="MaxHeight" value="305" ver="5"/>
+	</object>
+</type>
+

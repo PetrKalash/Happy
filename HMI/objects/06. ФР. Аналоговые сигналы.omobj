@@ -1,0 +1,178 @@
+<type access-modifier="private" name="06. ФР. Аналоговые сигналы" display-name="06. ФР. Аналоговые сигналы" uuid="72b2af80-ae4b-459d-9d7b-8a57871e6a20" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1900" ver="5"/>
+	<designed target="Height" value="800" ver="5"/>
+	<designed target="PenColor" value="0xff000000" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="990" ver="5"/>
+	<designed target="WindowHeight" value="860" ver="5"/>
+	<designed target="WindowCaption" value="Form_1" ver="5"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="0" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="0" ver="5"/>
+	<designed target="WindowScalingMode" value="0" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="0" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.BackgroundColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Table" display-name="Table" uuid="610b5bc0-c43b-42f9-bc92-d07392e6ea22" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="266" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1365.968253968254" ver="5"/>
+		<designed target="Height" value="755.52380952380963" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="AITable" display-name="AITable" uuid="84c0bf95-e020-4d86-b8e9-82cf1f621b80" base-type="AITable" base-type-id="c0b7143e-0320-4e7a-b0e7-10b653763013" ver="5" description="" cardinal="4">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="40" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="1365.968253968254" ver="5"/>
+			<designed target="Height" value="715.52380952380963" ver="5"/>
+			<object access-modifier="private" name="AISignals" display-name="AISignals" uuid="efc1fdaa-b7de-4658-bf41-be982f5fc0ea" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler" display-name="Handler" ver="5" event="Initialized">
+					<body kind="javascript">
+						<![CDATA[// Список аналоговых сигналов (0 - номер канала, 1 - название сигнала, 2 - путь, 3 - показать единицы измерения, 4 - показать проценты
+// Таблица сгенерирована программой. Проверяйте все сигналы
+let AISignals = [
+    // AI1
+    [
+    ],
+    // AI2
+    [
+    ],
+    // AI3
+    [
+    ],
+    // AI4
+    [
+    ],
+];
+
+
+/* Автозаполнение таблицы для каждого модуля AI 
+	Не изменять, если хотите больше модулей - измените кардинальное число у AITable
+	Работает автоматическая проверка путей и названий, если подписка не выполнена - цвет красный
+	Если у каналов одинаковые пути или названия - цвет фиолетовый
+*/
+// Автозаполнение таблицы и сбор данных для проверки
+here.Height = 0;
+let NumberAICounter = 1;
+let allPaths = [];
+let allNames = [];
+
+AISignals.forEach((moduleSignals, moduleIndex) => {
+    Table.AITable[moduleIndex].CountChannels = moduleSignals.length;
+    moduleSignals.forEach(([number, name, path, showUnit, showPercent], channelIdx) => {
+        if (Table.AITable[moduleIndex].Body.AIData[channelIdx]) {
+            Table.AITable[moduleIndex].Body.AIData[channelIdx].NumberChannel = number;
+            Table.AITable[moduleIndex].Body.AIData[channelIdx].NameSignal = name;
+            Table.AITable[moduleIndex].Body.AIData[channelIdx].PathSignal = path;
+            Table.AITable[moduleIndex].Body.AIData[channelIdx].ShowUnit = showUnit;
+            Table.AITable[moduleIndex].Body.AIData[channelIdx].ShowPercent = showPercent;
+            Table.AITable[moduleIndex].Body.AIData[channelIdx].ErrorModuls = "Error_AI" + NumberAICounter;
+            
+            allPaths.push(path);
+            allNames.push(name);
+        }
+    });
+    
+    // Расчет высоты окна
+    here.Height += (Table.AITable[moduleIndex].Height 
+        - ((16 - Table.AITable[moduleIndex].CountChannels) 
+        * Table.AITable.Body.AIData.Height) 
+        + Table.AITable[moduleIndex].LayoutMargins.Top);
+    
+    Table.AITable[moduleIndex].NumberAI = NumberAICounter++;
+});
+
+// Нижний отступ
+here.Height += Table.AITable.LayoutMargins.Top;
+
+let pathToIndices = {};
+let nameToIndices = {};
+
+allPaths.forEach((path, index) => {
+    if (!pathToIndices[path]) pathToIndices[path] = [];
+    pathToIndices[path].push(index);
+});
+allNames.forEach((name, index) => {
+    if (!nameToIndices[name]) nameToIndices[name] = [];
+    nameToIndices[name].push(index);
+});
+
+// Индексы дублированных путей и названий
+let duplicatePathIndices = [];
+let duplicateNameIndices = [];
+
+for (let path in pathToIndices) {
+    if (pathToIndices[path].length > 1) {
+        duplicatePathIndices.push(...pathToIndices[path]);
+    }
+}
+for (let name in nameToIndices) {
+    if (nameToIndices[name].length > 1) {
+        duplicateNameIndices.push(...nameToIndices[name]);
+    }
+}
+
+let allDuplicateIndices = [...new Set([...duplicatePathIndices, ...duplicateNameIndices])];
+let globalIndex = 0;
+// Добавление дубликатов в таблицу
+AISignals.forEach((moduleSignals, moduleIndex) => {
+    moduleSignals.forEach(([number, name, path, showUnit, showPercent], channelIdx) => {
+        if (Table.AITable[moduleIndex].Body.AIData[channelIdx]) {
+            // Проверка на то, что элемент - дубликат
+            if (allDuplicateIndices.includes(globalIndex)) {
+                Table.AITable[moduleIndex].Body.AIData[channelIdx].IncorrectValue.Value = true;
+            }
+        }
+        globalIndex++;
+    });
+});]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="da38d6b0-b8dd-4be2-bd53-f0f2257f2ddd" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="2" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+	</object>
+</type>
+

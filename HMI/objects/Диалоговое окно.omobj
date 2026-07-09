@@ -1,0 +1,202 @@
+<type access-modifier="private" name="Диалоговое окно" display-name="Диалоговое окно" uuid="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="400" ver="5"/>
+	<designed target="Height" value="300" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="1600" ver="5"/>
+	<designed target="WindowHeight" value="900" ver="5"/>
+	<designed target="WindowCaption" value="Диалоговое окно" ver="5"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="1" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="0" ver="5"/>
+	<designed target="WindowScalingMode" value="1" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="1" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<object access-modifier="private" name="Head" display-name="Head" uuid="2fd5f8e9-7c36-475f-a820-9c77d878eba8" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="50" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="2" ver="5"/>
+		<designed target="BrushColor" value="0xff33334d" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<object access-modifier="private" name="LayoutSizeLimits_1" display-name="LayoutSizeLimits_1" uuid="1c3f9111-69e0-4df1-9645-08a3a54791cf" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+			<designed target="MinWidth" value="0" ver="5"/>
+			<designed target="MinHeight" value="50" ver="5"/>
+			<designed target="MaxWidth" value="16777215" ver="5"/>
+			<designed target="MaxHeight" value="50" ver="5"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseMove">
+			<body kind="om">
+				<![CDATA[if (MouseDown) {
+	here.WindowX = here.WindowX + TypeConvert.ToInt4(here.MouseX - MouseInX);
+	here.WindowY = here.WindowY + TypeConvert.ToInt4(here.MouseY - MouseInY);
+}]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="MouseDown" display-name="MouseDown" uuid="456772c5-6812-4104-95d0-53c4357a7cff" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="MouseInX" display-name="MouseInX" uuid="e795073a-a0a9-4d86-b8f5-121477d2dc84" base-type="double" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="MouseInY" display-name="MouseInY" uuid="03036954-dbc9-480e-b90e-ebf8f76ce5ce" base-type="double" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="a1ad5e3d-a80c-47b3-bd58-b1c1953a77c0" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="50" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="300" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<designed target="Text" value="" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="9741541e-03dc-48a7-8093-bbcbc5a85c1e" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+				<designed target="Top" value="0" ver="5"/>
+				<designed target="Bottom" value="0" ver="5"/>
+				<designed target="Left" value="50" ver="5"/>
+				<designed target="Right" value="0" ver="5"/>
+				<do-trace access-modifier="private" target="Left" ver="5">
+					<conditional-expr>
+						<condition>
+							<![CDATA[ShowClose]]>
+						</condition>
+						<expr>
+							<![CDATA[50]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[0]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<do-trace access-modifier="private" target="Font" ver="5">
+				<body>
+					<![CDATA[TitleFont]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[here.WindowName]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="CloseButton" display-name="CloseButton" uuid="e02bb97e-0924-439a-94e7-cdba960c30b2" base-type="Кнопка 'Закрыть'" base-type-id="03d568ff-446d-4051-ad8f-78aad39c7d5d" ver="5" description="" cardinal="1">
+			<designed target="X" value="910" ver="5"/>
+			<designed target="Y" value="5" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="40" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<object access-modifier="private" name="LayoutSizeLimits_1" display-name="LayoutSizeLimits_1" uuid="7e22adca-c9a5-4b61-a8c5-5778c7350398" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+				<designed target="MinWidth" value="40" ver="5"/>
+				<designed target="MinHeight" value="40" ver="5"/>
+				<designed target="MaxWidth" value="40" ver="5"/>
+				<designed target="MaxHeight" value="40" ver="5"/>
+			</object>
+			<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="09baf270-5522-4a53-a00e-3d5fc31d62e8" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+				<designed target="Top" value="5" ver="5"/>
+				<designed target="Bottom" value="5" ver="5"/>
+				<designed target="Left" value="5" ver="5"/>
+				<designed target="Right" value="5" ver="5"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="close"/>
+			<do-trace access-modifier="private" target="Visible" ver="5">
+				<body>
+					<![CDATA[ShowClose]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="38a70e4c-0312-43c4-8da9-209ed1b5d64e" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="1" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MousePress">
+			<body kind="om">
+				<![CDATA[MouseDown=true;
+MouseInX=here.MouseX;
+MouseInY=here.MouseY;
+]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="5" event="MouseRelease">
+			<body kind="om">
+				<![CDATA[MouseDown=false;]]>
+			</body>
+		</do-on>
+		<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="5" event="MouseLeave">
+			<body kind="om">
+				<![CDATA[MouseDown=false;]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<body>
+				<![CDATA[unit.Theme.TitleColor]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="cc2ec6b2-824e-4b36-b83d-a60111e63f24" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="2" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="WindowName" display-name="Название окна" uuid="fb5399bb-23f9-4ad3-a557-65cfb5f0c3d7" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="WindowName" ver="5" value="Диалоговое окно"/>
+	<object access-modifier="private" name="ShowClose" display-name="Показывать кнопку 'Закрыть'" uuid="188665be-9787-4ac6-b8a7-05bd908de9a5" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="ShowClose" ver="5" value="true"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.BackgroundColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="TitleFont" display-name="TitleFont" uuid="c713e4c0-1dbc-4b2e-a6db-87d8032ffdc2" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="TitleFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="KeyPress">
+		<body kind="om">
+			<![CDATA[if (event.KeyCode == 75)
+	Close();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[here.Focus = true;]]>
+		</body>
+	</do-on>
+</type>
+

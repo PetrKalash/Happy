@@ -1,0 +1,1274 @@
+<type access-modifier="private" name="TF_events_table" display-name="TF_events_table" uuid="58be7fd4-3155-4f61-b51e-bb38ab1ee22f" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="1600" ver="5"/>
+	<designed target="Height" value="900" ver="5"/>
+	<designed target="WindowWidth" value="1600" ver="5"/>
+	<designed target="WindowHeight" value="900" ver="5"/>
+	<init target="WindowName" ver="5" value="Опрос архива расхода"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="9ace79df-1d54-4719-9e8e-636305c93035" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1600" ver="5"/>
+		<designed target="Height" value="850" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="0xff000000" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="TitleBody" display-name="TitleBody" uuid="7ac924ab-b8fd-4799-be69-72603a42ed89" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="1580" ver="5"/>
+			<designed target="Height" value="130" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<object access-modifier="private" name="Interval_text" display-name="Interval_text" uuid="8b34614f-1eff-4d90-9e81-e6272e61d9a7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="10" ver="5"/>
+				<designed target="Y" value="10" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="915" ver="5"/>
+				<designed target="Height" value="30" ver="5"/>
+				<designed target="Text" value="Отчет за период с 1601.00.00 00:00 по 1601.00.00 00:00 " ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="129" ver="5"/>
+				<init target="Text" ver="5">
+					<expr>
+						<![CDATA["Отчет за период с " + DateTime.ToString(Begin_, "%d.%m.%Y %H:%M:%S") + " по " + DateTime.ToString(End_, "%d.%m.%Y %H:%M:%S")]]>
+					</expr>
+				</init>
+			</object>
+			<object access-modifier="private" name="Action_text" display-name="Action_text" uuid="7b793e23-7c2b-4aed-8f0e-e7bdefbd3f2e" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="55" ver="5"/>
+				<designed target="Y" value="50" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="565" ver="5"/>
+				<designed target="Height" value="32" ver="5"/>
+				<designed target="Text" value="Отчет формируется..." ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="129" ver="5"/>
+				<object access-modifier="private" name="Image" display-name="Image" uuid="ce7acbfa-cddb-4dc9-a02a-4e56536915a1" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+					<designed target="X" value="-45" ver="5"/>
+					<designed target="Y" value="-5" ver="5"/>
+					<designed target="ZValue" value="0" ver="5"/>
+					<designed target="Rotation" value="0" ver="5"/>
+					<designed target="Scale" value="1" ver="5"/>
+					<designed target="Flip" value="0" ver="5"/>
+					<designed target="Visible" value="true" ver="5"/>
+					<designed target="Opacity" value="1" ver="5"/>
+					<designed target="Enabled" value="true" ver="5"/>
+					<designed target="Tooltip" value="" ver="5"/>
+					<designed target="Width" value="40" ver="5"/>
+					<designed target="Height" value="40" ver="5"/>
+					<designed target="PenColor" value="4278190080" ver="5"/>
+					<designed target="PenStyle" value="0" ver="5"/>
+					<designed target="PenWidth" value="1" ver="5"/>
+					<designed target="ImageFile" value="loading.png" ver="5"/>
+					<designed target="Active" value="true" ver="5"/>
+					<designed target="CurrentFrameNumber" value="0" ver="5"/>
+					<designed target="Speed" value="1" ver="5"/>
+					<object access-modifier="private" name="Timer" display-name="Timer" uuid="2ea0b11b-f346-41da-915e-99caa2a13d18" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+						<designed target="Period" value="200" ver="5"/>
+						<designed target="Active" value="true" ver="5"/>
+						<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+							<body kind="om">
+								<![CDATA[if (!Success && !Error){
+if (parent.Rotation == 360) {
+	parent.Rotation = 0;
+}
+parent.Rotation = parent.Rotation + 15;
+}
+]]>
+							</body>
+						</do-on>
+					</object>
+				</object>
+				<object access-modifier="private" name="step" display-name="step" uuid="c25eafc4-bd76-459d-89ef-00f7ef0708ca" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="Source_Archive"/>
+					<init target="Path" ver="5" value="step"/>
+					<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+						<body kind="om">
+							<![CDATA[if (Archive_type_SP == 1){
+	if (value == 1)			parent.Text = "Запрос архива событий за заданный интервал...";
+	else if (value == 2)	parent.Text = "Чтение списка событий..."; 
+	else if (value == 3) 	parent.Text = "Запрос информации об определенном событии...";
+	else if (value == 4)	parent.Text = "Чтение информации о пакете событий...";
+	else if (value == 5)	parent.Text = "Занесение пакета событий в таблицу...";
+	
+} else if (Archive_type_SP == 2){
+	if 		(value == 1)	parent.Text = "Запрос архива вмешательств за заданный интервал...";
+	else if 	(value == 2)	parent.Text = "Чтение списка вмешательств..."; 
+	else if 	(value == 3) 	parent.Text = "Запрос информации об определенном вмешательстве...";
+	else if 	(value == 4)	parent.Text = "Чтение информации о пакете вмешательств...";
+	else if 	(value == 5)	parent.Text = "Занесение пакета вмешастельств в таблицу...";
+}
+]]>
+						</body>
+					</do-on>
+				</object>
+			</object>
+			<object access-modifier="private" name="Info_text" display-name="Info_text" uuid="b76ca2d9-1edf-4fae-bad7-e2d7f17a618c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="10" ver="5"/>
+				<designed target="Y" value="90" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="915" ver="5"/>
+				<designed target="Height" value="30" ver="5"/>
+				<designed target="Text" value="Прибор: UFG.F; зав. номер 'Вычисляется...'; Время прибора: 'Вычисляется...'" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="129" ver="5"/>
+				<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="d7094d87-2a92-4038-89a1-5876d8337d9b" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+					<designed target="Period" value="1000" ver="5"/>
+					<designed target="Active" value="true" ver="5"/>
+					<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="5" event="OnTimer">
+						<body kind="om">
+							<![CDATA[tfDate: uint8 = DateTime.Parse(Date_time, "%d.%m.%Y %H:%M:%S");
+// создаем дату из ввремени панели
+
+if (String.Equals(Date_diff, "")){
+// вычислаем разницу между датой на турбофлоу и на панели
+Date_diff = DateTime.ToString(Math.Max(DateTime.Now(), tfDate )- Math.Min(tfDate, DateTime.Now()), "%T");
+}
+
+
+// записываем в строку над таблицами значения зав. номера, разницу хода часов и время на турбофлоу
+Body.TitleBody.Info_text.Text = "Прибор: UFG.F; Заводской номер: " + String.ToString(Serial) + "; Время прибора: " + Date_time + "; Разница во времени: " + Date_diff + ";";
+
+]]>
+						</body>
+					</do-on>
+					<do-trace access-modifier="private" target="Active" ver="5">
+						<body>
+							<![CDATA[!Success && !Error]]>
+						</body>
+					</do-trace>
+				</object>
+				<object access-modifier="private" name="Date_time" display-name="Date_time" uuid="9439d9c3-f42b-4c1a-8d76-6b39f1531f56" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="Source_"/>
+					<init target="Path" ver="5" value="Date_time"/>
+				</object>
+				<object access-modifier="private" name="Serial" display-name="Serial" uuid="eb84acf2-3620-45ea-90a9-b60da53c6c0a" base-type="ApItemUInt4" base-type-id="322ce770-6c7b-49bc-9cd6-a367ca5b4627" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="Source_"/>
+					<init target="Path" ver="5" value="Serial"/>
+				</object>
+				<object access-modifier="private" name="Date_diff" display-name="Date_diff" uuid="53fc9e99-3047-40a3-9594-ef0c9ac39eeb" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			</object>
+			<object access-modifier="private" name="PrintBTN" display-name="PrintBTN" uuid="54ee8ce9-4fc1-40ca-b039-97a6257773d8" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+				<designed target="X" value="1520" ver="5"/>
+				<designed target="Y" value="10" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="52" ver="5"/>
+				<designed target="Height" value="52" ver="5"/>
+				<designed target="PenColor" value="0xff00ff00" ver="5"/>
+				<designed target="PenStyle" value="0" ver="5"/>
+				<designed target="PenWidth" value="2" ver="5"/>
+				<designed target="ImageFile" value="icons/printer.png" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="CurrentFrameNumber" value="0" ver="5"/>
+				<designed target="Speed" value="1" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+					<body kind="om">
+						<![CDATA[Body.Archive_table_for_print.SetPageOrientation(0);
+
+Body.Archive_table_for_print.SetPageHeaderText(Body.TitleBody.Interval_text + "
+" + Body.TitleBody.Info_text);
+
+Body.Archive_table_for_print.PrintDialog();]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Ellipse_1" display-name="Ellipse_1" uuid="f7ff606f-71c5-4839-a42b-ba72860101a0" base-type="Ellipse" base-type-id="7f9e9b77-5d97-45c4-89c1-0f67adb636cd" ver="5" description="" cardinal="1">
+				<designed target="X" value="1519.25" ver="5"/>
+				<designed target="Y" value="11" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="52" ver="5"/>
+				<designed target="Height" value="52" ver="5"/>
+				<designed target="PenColor" value="0xff00ff00" ver="5"/>
+				<designed target="PenStyle" value="1" ver="5"/>
+				<designed target="PenWidth" value="3" ver="5"/>
+				<designed target="BrushColor" value="4278190080" ver="5"/>
+				<designed target="BrushStyle" value="0" ver="5"/>
+				<designed target="PieAngle" value="360" ver="5"/>
+				<designed target="PieAngleStart" value="360" ver="5"/>
+				<designed target="HoleSize" value="0" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="06a15668-83a5-4cf3-939d-44baa461be9e" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="javascript">
+						<![CDATA[var name = SaveTF.PathName.Value;
+var replaced = name.replace(/\\/, "\/\/");
+
+if (SaveTF.ButtonPress.Value) {
+	Body.Archive_table_for_print.Save("//" + replaced, "xlsx");
+	DebugTool_1.Log("//" + replaced);
+	SaveTF.ButtonPress.Value = false;
+}
+]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="a28da116-c79e-481f-af02-bca32a9d85d8" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="5" description="" cardinal="1"/>
+		</object>
+		<object access-modifier="private" name="ProgressBar" display-name="ProgressBar" uuid="212c6d20-637b-4942-91f6-64fb7f735be0" base-type="ProgressBar" base-type-id="a5193173-0399-4840-95f8-2e9958e4e74e" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="150" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="1500" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Orientation" value="1" ver="5"/>
+			<designed target="MinLimit" value="0" ver="5"/>
+			<designed target="MaxLimit" value="100" ver="5"/>
+			<designed target="Value" value="0" ver="5"/>
+			<designed target="ShowText" value="false" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="0xff797979" ver="5"/>
+			<object access-modifier="private" name="ProgressBar_text" display-name="ProgressBar_text" uuid="49da72ad-1f5d-473e-85ea-b7c341e4847d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="1500" ver="5"/>
+				<designed target="Y" value="-5" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="80" ver="5"/>
+				<designed target="Height" value="40" ver="5"/>
+				<designed target="Text" value="0%
+0/0" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="904ac710-f334-48af-b6d5-5d203ea229ee" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+					<designed target="Period" value="1000" ver="5"/>
+					<designed target="Active" value="true" ver="5"/>
+					<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+						<body kind="om">
+							<![CDATA[if (!Success && !Error){
+parent.Text = String.ToString("%.1f",TypeConvert.ToFloat(100 / TypeConvert.ToFloat(Row_count) *  Variant.ToFloat(Row_read.Out,0)) ) + "%
+" + Row_read.Out.ValueAsString + "/" + String.ToString(Row_count);
+} else if (Error) {
+	me.Active=false;
+} else if (Success) {
+	parent.Text = "100%
+	" + String.ToString(ProgressBar.MaxLimit) + "/" + String.ToString(ProgressBar.MaxLimit);
+}
+]]>
+						</body>
+					</do-on>
+				</object>
+			</object>
+			<object access-modifier="private" name="Timer" display-name="Timer" uuid="6d8bb79d-d098-4bfd-a899-2960bc7f4a32" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[
+	// в данном коде вычисляется максимальное значение индикатора прогресса. его необходимо вычислять из-за того, что период, за который запрашивается																		 архив, всегда разный
+	// сначала собираем начальную дату архива
+	beginDate: uint8 = Begin;
+	
+	//затем собираем конечную дату архива
+	endDate: uint8 = End;
+	
+	// создаем даты, равные одному часу и одному дню
+	oneDay: uint8 = DateTime.Create(1601,1,2,0,0,0);
+	oneHour: uint8 = DateTime.Create(1601,1,1,1,0,0);
+	
+	// в зависимости от типа архива нам нужно сначала отнять от большей даты меньшую, а потом
+	// 1 - разделить полученную дату на 1 час для почасовых архивов, чтобы получить количество часов в этом периоде, а значит колличество строк в таблице
+	// 2 - разделить полученную дату на 1 день для посуточных архивов
+	if (Archive_type_SP == 1) {
+			parent.MaxLimit = TypeConvert.ToInt4((endDate - beginDate) / oneHour) + 1;
+		} else if (Archive_type_SP == 2) {
+			parent.MaxLimit = TypeConvert.ToInt4((endDate - beginDate) / oneDay) + 1;
+		}
+
+me.Active=false;]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Begin" display-name="Begin" uuid="6fa18372-adec-41c8-b25d-a749c4883553" base-type="timestamp" base-type-id="27c3d64b-a025-4ed3-8f63-d47e43a496aa" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="End" display-name="End" uuid="990de023-078b-4929-8761-d27feaf7211b" base-type="timestamp" base-type-id="27c3d64b-a025-4ed3-8f63-d47e43a496aa" ver="5" description="" cardinal="1"/>
+			<init target="Begin" ver="5" ref="Begin_"/>
+			<init target="End" ver="5" ref="End_"/>
+			<do-trace access-modifier="private" target="Value" ver="5">
+				<body>
+					<![CDATA[Variant.ToInt4(Row_read.Out, 0)]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="MaxLimit" ver="5">
+				<body>
+					<![CDATA[TypeConvert.ToInt4(Row_count.Value)]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Archive_table" display-name="Archive_table" uuid="a0329bb4-a750-4c55-adbb-cda50005ef70" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="190" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Width" value="1580" ver="5"/>
+			<designed target="Height" value="650" ver="5"/>
+			<designed target="BackgroundColor" value="4294967295" ver="5"/>
+			<designed target="FrameColor" value="0xff000000" ver="5"/>
+			<designed target="GridColor" value="4292401368" ver="5"/>
+			<designed target="HeaderHeight" value="21" ver="5"/>
+			<designed target="HeaderVisible" value="true" ver="5"/>
+			<designed target="RowHeight" value="30" ver="5"/>
+			<designed target="RowOrder" value="0" ver="5"/>
+			<designed target="SelectionBehavior" value="0" ver="5"/>
+			<designed target="SelectionMode" value="3" ver="5"/>
+			<designed target="SelectionOverlayEnabled" value="false" ver="5"/>
+			<designed target="LatestRowTracking" value="false" ver="5"/>
+			<designed target="DelayedSortingEnabled" value="false" ver="5"/>
+			<designed target="HorizontalScrollMode" value="0" ver="5"/>
+			<designed target="VerticalScrollMode" value="0" ver="5"/>
+			<designed target="HorizontalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="VerticalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="RowHeightResizeMode" value="3" ver="5"/>
+			<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.BackgroundColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="GridColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="Column_I" display-name="Column_I" uuid="134b8469-602a-4be9-9a52-61b2053209b2" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="№" ver="5"/>
+				<designed target="Description" value="№" ver="5"/>
+				<designed target="Id" value="I" ver="5"/>
+				<designed target="ColumnOwnId" value="I" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.BackgroundColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="Column_D" display-name="Column_D" uuid="81f82d09-ee10-4d74-b39e-95ae59b8d941" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Время" ver="5"/>
+				<designed target="Description" value="Время" ver="5"/>
+				<designed target="Id" value="D" ver="5"/>
+				<designed target="ColumnOwnId" value="D" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="300" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Column_MSG" display-name="Column_MSG" uuid="9931c239-43fb-4ff0-9daa-2447c31a5abb" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Описание" ver="5"/>
+				<designed target="Description" value="Описание" ver="5"/>
+				<designed target="Id" value="MSG" ver="5"/>
+				<designed target="ColumnOwnId" value="MSG" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.BackgroundColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="Column_New_data" display-name="Column_New_data" uuid="ce23c916-d6e6-4eca-bfdb-b1349fc9f761" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Новые данные" ver="5"/>
+				<designed target="Description" value="Новые данные" ver="5"/>
+				<designed target="Id" value="New_data" ver="5"/>
+				<designed target="ColumnOwnId" value="New_data" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.BackgroundColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="Hidden" ver="5">
+					<body>
+						<![CDATA[Archive_type_SP != 2]]>
+					</body>
+				</do-trace>
+			</object>
+			<init target="TableModel" ver="5">
+				<object access-modifier="private" uuid="170ddda8-6db9-4d58-add7-8227d29dd5cc" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="5">
+					<designed target="Frozen" value="false" ver="5"/>
+					<designed target="MaxRowCount" value="10000" ver="5"/>
+					<designed target="OptOfProcessingEvents" value="0" ver="5"/>
+				</object>
+			</init>
+			<object access-modifier="private" name="Column_Old_data" display-name="Column_Old_data" uuid="e23a38cc-33e3-4aa4-b608-1b27fc2a916e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Прошлые данные" ver="5"/>
+				<designed target="Description" value="Прошлые данные" ver="5"/>
+				<designed target="Id" value="Old_data" ver="5"/>
+				<designed target="ColumnOwnId" value="Old_data" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.BackgroundColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="Hidden" ver="5">
+					<body>
+						<![CDATA[Archive_type_SP != 2]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="Column_Decor" display-name="Column_Decor" uuid="380261f1-1fe6-4a7a-8951-9b4362155717" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Декор" ver="5"/>
+				<designed target="Description" value="Декор" ver="5"/>
+				<designed target="Id" value="decor" ver="5"/>
+				<designed target="ColumnOwnId" value="decor" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="true" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="false" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="87271a29-bd71-4328-8a59-e2d85c928839" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+					<body kind="om">
+						<![CDATA[
+parent.TableModel.AddColumn(Column_I.Id, Column_I.Title, Column_I.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_D.Id, Column_D.Title, Column_D.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_MSG.Id, Column_MSG.Title, Column_MSG.Description, "", "string", false, true);
+
+	parent.TableModel.AddColumn(Column_New_data.Id, Column_New_data.Title, Column_New_data.Description, "", "string", false, true);
+	parent.TableModel.AddColumn(Column_Old_data.Id, Column_Old_data.Title, Column_Old_data.Description, "", "string", false, true);
+
+parent.TableModel.AddColumn(Column_Decor.Id, Column_Decor.Title, Column_Decor.Description, "", "uint2", false, true);
+TableDecorator_1.JsonDecorator = TableDecorator_1.JsonDecorator;]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="TableDecorator_1" display-name="TableDecorator_1" uuid="34029af1-1783-4ac8-8187-f0681ef77ba1" base-type="TableDecorator" base-type-id="2ff6a2d7-9573-4060-bfea-29c63d61b079" ver="5" description="" cardinal="1">
+				<designed target="JsonDecorator" value='{
+    "Conditions": [
+        {
+            "condition_name": "con_decor1",
+            "condition": {
+                "==": {
+                    "data:decor": 1
+                }
+            }
+        },
+        {
+            "condition_name": "con_decor0",
+            "condition": {
+                "==": {
+                    "data:decor": 0
+                }
+            }
+        },
+        {
+            "condition_name": "con_decor3",
+            "condition": {
+                "==": {
+                    "data:decor": 3
+                }
+            }
+        }
+        
+    ],
+    "Decorating": [
+        {
+            "decoration_rule_name": "dec_decor0",
+            "rowstyle": "rowstyle_decor0",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor0": true
+                }
+            }
+        },
+        {
+            "decoration_rule_name": "dec_decor1",
+            "rowstyle": "rowstyle_decor1",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor1": true
+                }
+            }
+        },
+        {
+            "decoration_rule_name": "dec_decor3",
+            "rowstyle": "rowstyle_decor3",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor3": true
+                }
+            }
+        }
+    ],
+    "StyleDictionary": [
+        {
+            "style_name": "rowstyle_decor0",
+            "style": {
+                "background_color": "#ff000000"
+            }
+        },
+        {
+            "style_name": "rowstyle_decor1",
+            "style": {
+                "background_color": "#ff2d2d2d"
+            }
+        },
+        {
+            "style_name": "rowstyle_decor3",
+            "style": {
+                "background_color": "#ff4c5d71"
+            }
+        }
+    ]
+
+    
+}' ver="5"/>
+			</object>
+			<object access-modifier="private" name="Final" display-name="Final" uuid="88c6b0d4-cf29-48ac-9a01-9ed12a4b3d82" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+				<object access-modifier="private" name="V_work" display-name="V_work" uuid="a81115c0-9738-4fff-ad86-f123435dddff" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_work_vost" display-name="V_work_vost" uuid="827dbd99-bdc1-4326-83cc-522410e8a852" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_work_sum" display-name="V_work_sum" uuid="aea1f149-f8c2-4c45-a7d1-d7a55c6e1901" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_st" display-name="V_st" uuid="b6ff0fe8-e113-4f51-a4aa-4efa566317c2" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_st_vost" display-name="V_st_vost" uuid="4e29daf5-2886-46f8-9411-51102bad9f00" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_st_sum" display-name="V_st_sum" uuid="362e8acb-307c-4f24-9fdd-b723decbcdfe" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+			</object>
+			<do access-modifier="private" name="AddNewRow" display-name="AddNewRow" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[rowCount: int4 = TableModel.GetRowCount();
+	
+TableModel.AddRow();
+
+	TableModel.SetCellData(rowCount, 0, String.ToString(rowCount+1));
+	TableModel.SetCellData(rowCount, 1, Source_Archive.D);
+	TableModel.SetCellData(rowCount, 2, Source_Archive.MSG);
+
+	TableModel.SetCellData(rowCount, 3, Source_Archive.New_data);
+	TableModel.SetCellData(rowCount, 4, Source_Archive.Old_data);
+
+	TableModel.SetCellData(rowCount, 5, rowCount%2);		
+
+Row_read.In = TypeConvert.ToUint2(Variant.ToUint2(Row_read.In, 0) + 1);
+
+
+Archive_table_for_print.AddNewRow();]]>
+				</body>
+			</do>
+		</object>
+		<object access-modifier="private" name="Archive_table_for_print" display-name="Archive_table_for_print" uuid="4a41d24d-3ec2-47aa-897b-abfc80e9cebe" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="5" description="" cardinal="1">
+			<designed target="X" value="1720" ver="5"/>
+			<designed target="Y" value="70" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Width" value="730" ver="5"/>
+			<designed target="Height" value="785" ver="5"/>
+			<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+			<designed target="FrameColor" value="0xff000000" ver="5"/>
+			<designed target="GridColor" value="0xff000000" ver="5"/>
+			<designed target="HeaderHeight" value="21" ver="5"/>
+			<designed target="HeaderVisible" value="true" ver="5"/>
+			<designed target="RowHeight" value="30" ver="5"/>
+			<designed target="RowOrder" value="0" ver="5"/>
+			<designed target="SelectionBehavior" value="0" ver="5"/>
+			<designed target="SelectionMode" value="3" ver="5"/>
+			<designed target="SelectionOverlayEnabled" value="false" ver="5"/>
+			<designed target="LatestRowTracking" value="false" ver="5"/>
+			<designed target="DelayedSortingEnabled" value="false" ver="5"/>
+			<designed target="HorizontalScrollMode" value="0" ver="5"/>
+			<designed target="VerticalScrollMode" value="0" ver="5"/>
+			<designed target="HorizontalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="VerticalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="RowHeightResizeMode" value="3" ver="5"/>
+			<init target="TableModel" ver="5">
+				<object access-modifier="private" uuid="4c1e36fd-8f7d-46ce-b380-64a909d08c54" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="5">
+					<designed target="Frozen" value="false" ver="5"/>
+					<designed target="MaxRowCount" value="10000" ver="5"/>
+					<designed target="OptOfProcessingEvents" value="0" ver="5"/>
+				</object>
+			</init>
+			<object access-modifier="private" name="Column_I" display-name="Column_I" uuid="1e032dcf-ff94-4a35-8bac-907f4bcb8751" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="№" ver="5"/>
+				<designed target="Description" value="№" ver="5"/>
+				<designed target="Id" value="I" ver="5"/>
+				<designed target="ColumnOwnId" value="I" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,8,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="0xffffffff" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,10,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="50" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Column_D" display-name="Column_D" uuid="19572b2a-0cb1-4cb2-b7c8-36d44ed9b926" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Время" ver="5"/>
+				<designed target="Description" value="Время" ver="5"/>
+				<designed target="Id" value="D" ver="5"/>
+				<designed target="ColumnOwnId" value="D" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,8,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="0xffffffff" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,10,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Column_MSG" display-name="Column_MSG" uuid="bcec12b7-ad49-4df1-b5af-c8923be21ce1" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Описание" ver="5"/>
+				<designed target="Description" value="Описание" ver="5"/>
+				<designed target="Id" value="MSG" ver="5"/>
+				<designed target="ColumnOwnId" value="MSG" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,8,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="0xffffffff" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,10,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Column_New_data" display-name="Column_New_data" uuid="e40f5152-6e14-4ff8-83c3-17cd1b72e690" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Новые данные" ver="5"/>
+				<designed target="Description" value="Новые данные" ver="5"/>
+				<designed target="Id" value="New_data" ver="5"/>
+				<designed target="ColumnOwnId" value="New_data" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,8,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="0xffffffff" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,10,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="Hidden" ver="5">
+					<body>
+						<![CDATA[Archive_type_SP != 2]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="Column_Old_data" display-name="Column_Old_data" uuid="79a58fde-075b-44d0-a13d-c8ed993d021e" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Прошлые данные" ver="5"/>
+				<designed target="Description" value="Прошлые данные" ver="5"/>
+				<designed target="Id" value="Old_data" ver="5"/>
+				<designed target="ColumnOwnId" value="Old_data" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,8,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="0xffffffff" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,10,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="Hidden" ver="5">
+					<body>
+						<![CDATA[Archive_type_SP != 2]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="Column_Decor" display-name="Column_Decor" uuid="250aa772-f929-4b07-bd09-c6f9da60d6c2" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Декор" ver="5"/>
+				<designed target="Description" value="Декор" ver="5"/>
+				<designed target="Id" value="decor" ver="5"/>
+				<designed target="ColumnOwnId" value="decor" ver="5"/>
+				<designed target="BackgroundColor" value="0xffffffff" ver="5"/>
+				<designed target="ForegroundColor" value="0xff000000" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="0xff333333" ver="5"/>
+				<designed target="TitleForegroundColor" value="0xffffffff" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,8,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="100" ver="5"/>
+				<designed target="WidthResizeMode" value="1" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="true" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="false" ver="5"/>
+			</object>
+			<object access-modifier="private" name="TableDecorator_1" display-name="TableDecorator_1" uuid="6f47e132-72c8-4585-8c5d-41d3a4d8d8bb" base-type="TableDecorator" base-type-id="2ff6a2d7-9573-4060-bfea-29c63d61b079" ver="5" description="" cardinal="1">
+				<designed target="JsonDecorator" value='{
+    "Conditions": [
+        {
+            "condition_name": "con_decor1",
+            "condition": {
+                "==": {
+                    "data:decor": 1
+                }
+            }
+        },
+        {
+            "condition_name": "con_decor0",
+            "condition": {
+                "==": {
+                    "data:decor": 0
+                }
+            }
+        },
+        {
+            "condition_name": "con_decor3",
+            "condition": {
+                "==": {
+                    "data:decor": 3
+                }
+            }
+        }
+    ],
+    "Decorating": [
+        {
+            "decoration_rule_name": "dec_decor0",
+            "rowstyle": "rowstyle_decor0",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor0": true
+                }
+            }
+        },
+        {
+            "decoration_rule_name": "dec_decor1",
+            "rowstyle": "rowstyle_decor1",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor1": true
+                }
+            }
+        },
+        {
+            "decoration_rule_name": "dec_decor3",
+            "rowstyle": "rowstyle_decor3",
+            "decoration_rule": {
+                "==": {
+                    "condition:con_decor3": true
+                }
+            }
+        }
+    ],
+    "StyleDictionary": [
+        {
+            "style_name": "rowstyle_decor0",
+            "style": {
+                "background_color": "#ffffffff"
+            }
+        },
+        {
+            "style_name": "rowstyle_decor1",
+            "style": {
+                "background_color": "#ffdedede"
+            }
+        },
+        {
+            "style_name": "rowstyle_decor3",
+            "style": {
+                "background_color": "#ffafbaff"
+            }
+        }
+    ]
+}' ver="5"/>
+			</object>
+			<object access-modifier="private" name="Final" display-name="Final" uuid="6bbebdd5-69ae-4f81-8103-f46ea36e7fb2" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+				<object access-modifier="private" name="V_work" display-name="V_work" uuid="9f1f12fe-0b45-4e21-9639-91a47c338ab2" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_work_vost" display-name="V_work_vost" uuid="87872bd2-fc8e-40b3-b2f1-894c680d1062" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_work_sum" display-name="V_work_sum" uuid="fce8c327-bad1-4aff-8945-400e40e62396" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_st" display-name="V_st" uuid="591a5666-7f55-41f2-8e3b-45609e9aaa88" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_st_vost" display-name="V_st_vost" uuid="b7d39ddc-219a-4069-8b16-a7f65bdd30ec" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="V_st_sum" display-name="V_st_sum" uuid="9b5b1a56-d2d1-4682-8408-e5cb2aef63c7" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5" description="" cardinal="1"/>
+			</object>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="PrintProcessFinished">
+				<body kind="om">
+					<![CDATA[]]>
+				</body>
+			</do-on>
+			<do access-modifier="private" name="AddNewRow" display-name="AddNewRow" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+				<body kind="om">
+					<![CDATA[rowCount: int4 = TableModel.GetRowCount();
+TableModel.AddRow();
+
+	TableModel.SetCellData(rowCount, 0, String.ToString(rowCount+1));
+	TableModel.SetCellData(rowCount, 1, Source_Archive.D);
+	TableModel.SetCellData(rowCount, 2, Source_Archive.MSG);
+
+	TableModel.SetCellData(rowCount, 3, Source_Archive.Old_data);
+	TableModel.SetCellData(rowCount, 4, Source_Archive.New_data);
+
+	TableModel.SetCellData(rowCount, 14, rowCount%2);		
+	
+Row_read.In = TypeConvert.ToInt2(Variant.ToInt2(Row_read.In, 0) + 1);
+
+]]>
+				</body>
+			</do>
+			<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="c9f147f1-117f-4962-9007-45f75acf3c39" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+					<body kind="om">
+						<![CDATA[
+parent.TableModel.AddColumn(Column_I.Id, Column_I.Title, Column_I.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_D.Id, Column_D.Title, Column_D.Description, "", "string", false, true);
+parent.TableModel.AddColumn(Column_MSG.Id, Column_MSG.Title, Column_MSG.Description, "", "string", false, true);
+
+	parent.TableModel.AddColumn(Column_New_data.Id, Column_New_data.Title, Column_New_data.Description, "", "string", false, true);
+	parent.TableModel.AddColumn(Column_Old_data.Id, Column_Old_data.Title, Column_Old_data.Description, "", "string", false, true);
+
+parent.TableModel.AddColumn(Column_Decor.Id, Column_Decor.Title, Column_Decor.Description, "", "uint2", false, true);
+TableDecorator_1.JsonDecorator = TableDecorator_1.JsonDecorator;]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Source_" display-name="Source_" uuid="70a37cb0-6641-497a-8b66-5e99249bbdbc" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Main"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[TF_]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Source_Archive" display-name="Source_Archive" uuid="e0978bf7-fe22-4f1a-8295-cb8b1014169c" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="EventArchive" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="Source_"/>
+		<object access-modifier="private" name="I" display-name="I" uuid="30feeebb-ce4a-4d1f-a8ae-c29b9f484a4a" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent"/>
+			<init target="Path" ver="5" value="Event.I"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+				<body kind="om">
+					<![CDATA[if (step == 5)
+Row_ready.AddRow.Invoke();]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="D" display-name="D" uuid="7bc34e0c-330d-4e04-aecc-900b40d05871" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent"/>
+			<init target="Path" ver="5" value="Event.D"/>
+		</object>
+		<object access-modifier="private" name="MSG" display-name="MSG" uuid="a1bff748-c661-4dbb-9a74-d3ce9728042f" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent"/>
+			<init target="Path" ver="5" value="Event.MSG"/>
+		</object>
+		<object access-modifier="private" name="Old_data" display-name="Old_data" uuid="67dcb544-c4b4-4293-a4bc-f8516232852e" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent"/>
+			<init target="Path" ver="5" value="Event.Old_data"/>
+		</object>
+		<object access-modifier="private" name="New_data" display-name="New_data" uuid="2e2fe9b2-e640-4ae2-a6f8-02e3b00f8390" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent"/>
+			<init target="Path" ver="5" value="Event.New_data"/>
+		</object>
+		<object access-modifier="private" name="step" display-name="step" uuid="a5612b07-77ee-4a59-86fb-bfe3d6c1b47e" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent"/>
+			<init target="Path" ver="5" value="step"/>
+		</object>
+	</object>
+	<param access-modifier="private" name="Begin_" display-name="Begin_" uuid="1bb2916a-da70-446e-8e4e-7cb02a57701b" base-type="timestamp" base-type-id="27c3d64b-a025-4ed3-8f63-d47e43a496aa" ver="5" description=""/>
+	<param access-modifier="private" name="End_" display-name="End_" uuid="4bcfa750-feed-433e-8ec9-397737988a29" base-type="timestamp" base-type-id="27c3d64b-a025-4ed3-8f63-d47e43a496aa" ver="5" description=""/>
+	<object access-modifier="private" name="TF_" display-name="TF_" uuid="ddd6ead6-0c51-4147-8ba1-2664c70fd62e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description=""/>
+	<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body kind="om">
+			<![CDATA[unit.Theme.BackgroundColor]]>
+		</body>
+	</do-trace>
+	<init target="TF_" ver="5" value="TF"/>
+	<object access-modifier="private" name="Archive_type_SP" display-name="Archive_type_SP" uuid="f177622d-01ba-4e8c-81b4-f0ef64179412" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_Archive"/>
+		<init target="Path" ver="5" value="OutArchive_type_SP"/>
+	</object>
+	<object access-modifier="private" name="Start" display-name="Start" uuid="426b8e61-6e77-4332-9e84-8675626de904" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="InStart"/>
+		<init target="Source" ver="5" ref="Source_Archive"/>
+	</object>
+	<object access-modifier="private" name="Success" display-name="Success" uuid="fc173cc6-2402-479b-af81-83a461c22938" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_Archive"/>
+		<init target="Path" ver="5" value="Success"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (value) {
+	Body.TitleBody.Action_text.Text = "Архив успешно сформирован. Время формирования: " + DateTime.ToString(DateTime.Now());
+	Body.TitleBody.Action_text.FontColor = 0xff00ff00;
+	Body.TitleBody.Action_text.Image.Timer.Active = false;
+	Body.TitleBody.Action_text.Image.Rotation = 0;
+	Body.TitleBody.Action_text.Image.ImageFile = "check.png"; 
+
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Error" display-name="Error" uuid="0b0d5f63-d7b2-41ad-a6b2-0fcdd5fc36b0" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_Archive"/>
+		<init target="Path" ver="5" value="Error"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (value) {
+	Body.TitleBody.Action_text.Text = "Ошибка формирования отчета";
+	Body.TitleBody.Action_text.FontColor = 0xffff0000;
+	Body.TitleBody.Action_text.Image.Timer.Active = false;
+	Body.TitleBody.Action_text.Image.Rotation = 0;
+	Body.TitleBody.Action_text.Image.ImageFile = "remove.png"; 
+
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[Start=true;
+Row_read.In=0;
+
+if (GetLogs) {
+	OpenLogs.Invoke();
+}
+if (Archive_type_SP == 1) {
+	here.Head.Text_1.Text = "Архив событий";
+} else {
+	here.Head.Text_1.Text = "Архив вмешательств";
+}]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Row_ready" display-name="Row_ready" uuid="1bb47fb1-cb5e-4ebe-b01c-a345c108bffc" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Row_ready"/>
+		<init target="Source" ver="5" ref="Source_Archive"/>
+		<object access-modifier="private" name="Row_realy_ready" display-name="Row_realy_ready" uuid="4c5ca73b-34c3-44f4-a193-ddaafd025575" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="5" event="ValueChanged">
+				<body kind="om">
+					<![CDATA[if (value) {
+
+	//AddRow.Invoke();
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<do-trace access-modifier="private" target="Row_realy_ready" ver="5">
+			<body>
+				<![CDATA[Row_ready > Variant.ToInt2(Row_read.In, 0) && Row_ready != 0 && Row_ready.Quality == 192 && Row_read.In.Quality == 216]]>
+			</body>
+		</do-trace>
+		<object access-modifier="private" name="AddRow" display-name="AddRow" uuid="47b6ac90-7182-4bd7-9be1-557b09523c70" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="InvokeTrigger" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+				<body kind="om">
+					<![CDATA[	rowCount: int4 = Body.Archive_table.TableModel.GetRowCount();
+	if (rowCount == 0) {
+		Body.Archive_table.AddNewRow();
+
+		
+	} else if (!String.Equals(Variant.ToString(Body.Archive_table.TableModel.GetCellData(rowCount-1, 0), ""), Source_Archive.I)) {
+		Body.Archive_table.AddNewRow();
+	
+	} ]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Row_read" display-name="Row_read" uuid="a079d0ab-f0a4-40a6-bec8-8aabfd40411c" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="ValuePath" ver="5" value="Row_read"/>
+		<init target="MainSource" ver="5" ref="Source_Archive"/>
+	</object>
+	<object access-modifier="private" name="Sbros" display-name="Sbros" uuid="d782e81b-d180-4e84-9449-2af38ae9773b" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="InSbros"/>
+		<init target="Source" ver="5" ref="Source_Archive"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="Closed">
+		<body kind="om">
+			<![CDATA[Sbros=true;]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="GetLogs" display-name="GetLogs" uuid="df750ce0-8ce0-4c04-8eed-9e69a9ec28a6" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="OpenLogs" display-name="OpenLogs" uuid="87f843ad-c902-4a30-8298-bb8ae1644804" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="7170bc6e-3864-4d15-9828-28194c566f2b" base-type="TF_archive_logs" base-type-id="fec13ef8-e0ec-4758-a4a1-75d5dfd2e526" ver="5">
+				<init target="TF" ver="5">
+					<expr>
+						<![CDATA[TF_]]>
+					</expr>
+				</init>
+			</object>
+		</do-on>
+	</object>
+	<init target="GetLogs" ver="5" value="false"/>
+	<object access-modifier="private" name="Row_count" display-name="Row_count" uuid="fc8e46ad-528c-4e3a-a964-c9a37193547f" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_Archive"/>
+		<init target="Path" ver="5" value="Row_count"/>
+	</object>
+	<object access-modifier="private" name="NameFile" display-name="NameFile" uuid="ff5dc404-68ea-407a-be59-7c0d9ebfe0fa" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description=""/>
+	<init target="NameFile" ver="5" value="TF"/>
+</type>
+

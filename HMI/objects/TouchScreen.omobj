@@ -1,0 +1,117 @@
+<type access-modifier="private" name="TouchScreen" display-name="TouchScreen" uuid="f0752ad3-872f-466f-ada7-8c03a9b972dc" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="100" ver="5"/>
+	<designed target="Height" value="100" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="CustomTable" display-name="CustomTable" uuid="03df317f-1376-4a4f-a7f8-fa697fe4d8f9" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" base-const="true" base-ref="true" ver="5" description=""/>
+	<do access-modifier="private" name="OnMove" display-name="OnMove" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[if (MouseDown) {
+
+	if (MouseInY < MouseY - 25) {
+		CurrentCell = CurrentCell - 1;
+		
+		if (CurrentCell <0) CurrentCell = 0;
+		
+		MouseInY = MouseY;
+		CustomTable.ScrollTo(CurrentCell,1,3);
+	}
+	
+	if (MouseInY > MouseY + 25) {
+		CurrentCell = CurrentCell + 1;
+		
+		if (AlternativMaxSbros == false) {
+			if (CurrentCell > CustomTable.TableModel.GetRowCount()) {
+					CurrentCell = CustomTable.TableModel.GetRowCount()-1;
+				}
+		} else {
+			AltSbros.Invoke();
+		}
+		
+		
+		MouseInY = MouseY;
+		CustomTable.ScrollTo(CurrentCell,1,3);
+	}
+}
+]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="OnPress" display-name="OnPress" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[MouseDown=true;
+MouseInX=here.MouseX;
+MouseInY=here.MouseY;]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="OnRelease" display-name="OnRelease" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[MouseDown=false;]]>
+		</body>
+	</do>
+	<do access-modifier="private" name="OnLeave" display-name="OnLeave" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[MouseDown=false;]]>
+		</body>
+	</do>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseMove">
+		<body kind="javascript">
+			<![CDATA[OnMove();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MousePress">
+		<body kind="javascript">
+			<![CDATA[OnPress();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="5" event="MouseRelease">
+		<body kind="javascript">
+			<![CDATA[OnRelease();]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="5" event="MouseLeave">
+		<body kind="javascript">
+			<![CDATA[OnLeave();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="MouseDown" display-name="MouseDown" uuid="01f672a9-d179-4fb2-95ff-6c078c51bf39" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5" description="" cardinal="1"/>
+	<init target="MouseDown" ver="5" value="false"/>
+	<object access-modifier="private" name="MouseInX" display-name="MouseInX" uuid="5a6d4412-997c-4cf3-8491-d96ef116a891" base-type="double" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="MouseInY" display-name="MouseInY" uuid="7c1fb674-cfbc-48e4-84a0-1d0fb47a740c" base-type="double" base-type-id="7ad62ecf-96dd-4751-9b96-e77954b44409" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="CurrentCell" display-name="CurrentCell" uuid="437fda71-545f-49f8-b744-5f8cd4f15771" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="AltSbros" display-name="AltSbros" uuid="bdb2af88-a88e-41f2-b49e-d126883d0c3a" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" base-ref="true" ver="5" description=""/>
+	<object access-modifier="private" name="AlternativMaxSbros" display-name="AlternativMaxSbros" uuid="f9328b69-35c0-4d9b-b989-bd436684069d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="AlternativMaxSbros" ver="5" value="false"/>
+	<object access-modifier="private" name="isSbrosCurrentCell" display-name="Обнулить счётчик " uuid="da13db10-ce12-4ae7-94da-2a33402d9a7d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="javascript">
+				<![CDATA[if (this.Value != OldIsSbros) {
+	SetZeroCurrentCell();
+	OldIsSbros = this.Value;
+}
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="OldIsSbros" display-name="OldIsSbros" uuid="57332691-94d6-41ae-8e59-369da0d4f0b3" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<do access-modifier="private" name="SetZeroCurrentCell" display-name="SetZeroCurrentCell" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[CurrentCell = 0]]>
+		</body>
+	</do>
+</type>
+

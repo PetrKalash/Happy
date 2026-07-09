@@ -1,0 +1,88 @@
+<type access-modifier="private" name="MessageDialog" display-name="MessageDialog" uuid="e57be645-5922-4aa1-be96-4629255ec5dc" base-type="MessageDialog" base-type-id="a468f863-f603-4768-ad4b-e16bc34ea78e" ver="5" description="">
+	<designed target="WindowCaption" value=" " ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="354" ver="5"/>
+	<designed target="Height" value="109" ver="5"/>
+	<init target="pTheme" ver="5">
+		<object access-modifier="private" uuid="b5f41a8c-582d-4fb9-b28f-4cceb9abffd0" base-type="Theme" base-type-id="05d4d7df-0f8e-4ec1-ac85-b5460e30af81" ver="5">
+			<init target="BackgroundColor" ver="5" value="0xff000000"/>
+			<init target="ForegroundColor" ver="5" value="0xffffffff"/>
+			<init target="DisabledFontColor" ver="5" value="0xffa0a0a0"/>
+			<init target="EditorBrushColor" ver="5" value="0xffffffff"/>
+			<init target="EditorFontColor" ver="5" value="0xff000000"/>
+			<init target="SelectionColor" ver="5" value="0xffcde8ff"/>
+			<init target="BorderColor" ver="5" value="0xff808080"/>
+			<init target="DisabledBorderColor" ver="5" value="0xffa0a0a0"/>
+			<init target="Font" ver="5" value="Tahoma,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="TitleFont" ver="5" value="Tahoma,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		</object>
+	</init>
+	<do-trace access-modifier="private" target="WindowIconPath" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[Icon == 3]]>
+			</condition>
+			<expr>
+				<![CDATA["CommonLib_Icons/Error16.png"]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[Icon == 2]]>
+			</condition>
+			<expr>
+				<![CDATA["CommonLib_Icons/Warning16.png"]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[Icon == 1]]>
+			</condition>
+			<expr>
+				<![CDATA["CommonLib_Icons/Question16.png"]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA["CommonLib_Icons/Information16.png"]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="AutoClose" display-name="AutoClose" uuid="98e418df-ba7a-43de-ae1c-8bfa0cb8c5ec" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value)
+	Close();]]>
+			</body>
+		</do-on>
+	</object>
+	<init target="LineHeight" ver="5" value="40"/>
+	<init target="CharactersPerLine" ver="5" value="50"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="WindowScalingMode" value="1" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowSizeMode" value="2" ver="5"/>
+	<designed target="Scale" value="1.8" ver="5"/>
+	<object access-modifier="private" name="Window_1" display-name="Window_1" uuid="613c3d64-6b9d-43c4-9c58-c2e8d7cbf1e8" base-type="Window" base-type-id="04615219-28bb-4a9a-bba4-50ac66972eb0" ver="5" description="" cardinal="1">
+		<init target="Group" ver="5" ref="unit.WindowGroup.Group"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MessageReceived">
+			<body kind="om">
+				<![CDATA[if (messageType=="closeallsame" && messageData!=Window_1.WindowID) {
+Close();
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[unit.WindowGroup.Group.SendToAll("closeallsame", Window_1.WindowID);]]>
+		</body>
+	</do-on>
+	<designed target="ShowWindowMaximize" value="false" ver="5"/>
+</type>
+

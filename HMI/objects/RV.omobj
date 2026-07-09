@@ -1,0 +1,207 @@
+<type access-modifier="private" name="RV" display-name="RV" uuid="c7456ca6-22d4-4ced-8a1e-b9caea6c849e" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="360" ver="5"/>
+	<designed target="Height" value="180" ver="5"/>
+	<init target="WindowName" ver="5" value="Параметры расхода газа"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="857250d1-1c2b-4fe5-aac1-e1e6fb04878c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="335" ver="5"/>
+		<designed target="Height" value="175" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="V_max_SP_text" display-name="V_max_SP_text" uuid="83555ea0-b14a-4c6d-99cf-ae833bab324d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="9" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="255" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Лимит газопотребления" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="V_max_SP" display-name="V_max_SP" uuid="f8c3a492-7b87-4cca-b133-2938525e7df7" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="231" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="120" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Min" ver="5" value="0"/>
+			<init target="ValueName" ver="5" value="Лимит газопотребления на выходе"/>
+			<init target="Unit" ver="5" value="м³"/>
+			<init target="IsUint" ver="5" value="true"/>
+			<init target="Max" ver="5" value="5000000"/>
+			<init target="Accuracy" ver="5" value="0"/>
+			<init target="LWORD" ver="5" value="false"/>
+			<init target="AdminOnly" ver="5" value="true"/>
+			<init target="noUnit" ver="5" value="false"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA["Counters." + TF + ".V_max_SP"]]>
+				</body>
+			</do-trace>
+			<init target="ErrorMsg" ver="5" value="Нет связи со счетчиком"/>
+			<do-trace access-modifier="private" target="Error" ver="5">
+				<body>
+					<![CDATA[!Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="R_max_SP_text" display-name="R_max_SP_text" uuid="8cf59cf2-a02e-486a-9401-eacfe0cb58b4" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="9" ver="5"/>
+			<designed target="Y" value="50" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="255" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Максимальный расход" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="R_max_SP" display-name="R_max_SP" uuid="f8ead965-c5d0-453d-8b41-9dcc2b3d1114" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="231" ver="5"/>
+			<designed target="Y" value="50" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="120" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Min" ver="5" value="0"/>
+			<init target="ValueName" ver="5" value="Максимальный расход на выходе"/>
+			<init target="Unit" ver="5" value="м³/ч"/>
+			<init target="IsUint" ver="5" value="false"/>
+			<init target="Max" ver="5" value="400000"/>
+			<init target="Accuracy" ver="5" value="0"/>
+			<init target="LWORD" ver="5" value="false"/>
+			<init target="AdminOnly" ver="5" value="true"/>
+			<init target="noUnit" ver="5" value="false"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA["Counters." + TF + ".R_max_SP"]]>
+				</body>
+			</do-trace>
+			<init target="ErrorMsg" ver="5" value="Нет связи со счетчиком"/>
+			<do-trace access-modifier="private" target="Error" ver="5">
+				<body>
+					<![CDATA[!Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="R_min_SP_text" display-name="R_min_SP_text" uuid="aad27cd8-466b-4960-b672-449637806491" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="9" ver="5"/>
+			<designed target="Y" value="90" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="255" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Минимальный расход" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="R_min_SP" display-name="R_min_SP" uuid="63608772-e10e-463f-b05f-2a42d673c53b" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="231" ver="5"/>
+			<designed target="Y" value="90" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="120" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Min" ver="5" value="0"/>
+			<init target="ValueName" ver="5" value="Минимальный расход на выходе"/>
+			<init target="Unit" ver="5" value="м³/ч"/>
+			<init target="IsUint" ver="5" value="false"/>
+			<init target="Max" ver="5" value="400000"/>
+			<init target="Accuracy" ver="5" value="0"/>
+			<init target="LWORD" ver="5" value="false"/>
+			<init target="AdminOnly" ver="5" value="true"/>
+			<init target="noUnit" ver="5" value="false"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA["Counters." + TF + ".R_min_SP"]]>
+				</body>
+			</do-trace>
+			<init target="ErrorMsg" ver="5" value="Нет связи со счетчиком"/>
+			<do-trace access-modifier="private" target="Error" ver="5">
+				<body>
+					<![CDATA[!Connect]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<designed target="WindowPosition" value="1" ver="5"/>
+	<init target="ShowClose" ver="5" value="true"/>
+	<init target="TF" ver="5" value="TF"/>
+	<object access-modifier="private" name="TF" display-name="TF" uuid="1f6f7480-579a-4da8-8542-b637cfb8b475" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Source_" display-name="Source_" uuid="7b739dbb-ebc9-467d-8e20-2d6d7924159c" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Counters"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[TF]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Connect" display-name="Connect" uuid="60e0acc8-7a87-4de0-8d3a-62a082bed8ae" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_"/>
+		<init target="Path" ver="5" value="Connect"/>
+	</object>
+</type>
+

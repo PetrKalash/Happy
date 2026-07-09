@@ -1,0 +1,161 @@
+<type access-modifier="private" name="DOSettings" display-name="DOSettings" uuid="fdcb47dd-1e28-41e9-9aa0-2370b1c2e248" base-type="BTN" base-type-id="743708b9-f456-46b4-a4e5-9bf1eda346fc" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Checkable" value="false" ver="5"/>
+	<designed target="Checked" value="false" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="OnClickBrushStyle" value="1" ver="5"/>
+	<designed target="OnHoverBrushStyle" value="1" ver="5"/>
+	<designed target="DisabledBrushStyle" value="1" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="OnClickPenStyle" value="1" ver="5"/>
+	<designed target="OnHoverPenStyle" value="1" ver="5"/>
+	<designed target="DisabledPenStyle" value="1" ver="5"/>
+	<object access-modifier="private" name="WindowName" display-name="Заголовок окна Подтверждения" uuid="48b73d31-ff43-4972-9381-72444b2e6c30" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="CommandText" display-name="Текст окна Подтверждения" uuid="521bda9a-5836-4ec1-a10b-fe646bc9d96e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="WindowName_1" display-name="Заголовок окна Сообщение" uuid="63b8b22f-7295-4351-be47-deab8ae14aca" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Alarm_message" display-name="Текст окна Сообщение" uuid="a1e8eb9f-9d8d-4905-a042-21bbc3179e75" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="AlarmMessage" display-name="AlarmMessage" uuid="a221b464-19e5-449b-8d2f-304b71be8dd4" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="ee72d786-a621-4399-9c59-4fe5138c6a39" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+				<init target="Message" ver="5" ref="here.Alarm_message"/>
+				<init target="Icon" ver="5" value="2"/>
+			</object>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+		<body kind="om">
+			<![CDATA[DebugTool_1.Log(Alarm_message.Value);
+
+if( String.Length(Alarm_message) != 0 || (DopException && String.Length(DopExceptionText) != 0) )
+{
+	AlarmMessage.Invoke();
+}
+else
+{
+	if (!DopAction.Enabled){
+		here.AcceptDialog.Invoke();
+	} else {
+		DopAction.Invoke();
+	}	
+}]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="DebugTool_1" display-name="DebugTool_1" uuid="48e8d087-a7ac-4bb7-8e47-766469bb97df" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Signal" display-name="Ссылка на сигнал" uuid="c2e167d4-2f13-4067-b518-d25532bb7495" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" base-const="true" base-ref="true" ver="5" description=""/>
+	<init target="CommandText" ver="5" value="Подтвердить действие?"/>
+	<object access-modifier="private" name="CommandValue" display-name="Задаваемое значение" uuid="22c5b9e2-14b1-44d7-a4db-28aadc7cef56" base-type="notifying_variant" base-type-id="31323414-1285-4b70-92bf-304e6e81aaf0" ver="5" description="" cardinal="1"/>
+	<init target="CommandValue" ver="5" value="true"/>
+	<object access-modifier="private" name="AcceptDialog" display-name="AcceptDialog" uuid="1f77241f-7774-4c7f-be85-551bae88a88b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="f6f0638d-5322-4293-a509-a175be7b94b5" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+				<init target="WindowCaption" ver="5" ref="here.WindowName"/>
+				<init target="Icon" ver="5" value="1"/>
+				<init target="Buttons" ver="5" value="2"/>
+				<init target="YesAction" ver="5" ref="ActionYes"/>
+				<init target="Message" ver="5" ref="here.CommandText"/>
+			</object>
+		</do-on>
+		<object access-modifier="private" name="ActionYes" display-name="ActionYes" uuid="ccf684a7-3c6b-44fc-a52f-fca05643fb34" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="InvokeTrigger" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+				<body kind="om">
+					<![CDATA[here.Signal.In = here.CommandValue;]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<init target="WindowName" ver="5" value="Подтверждение команды"/>
+	<init target="WindowName_1" ver="5" value="Внимание"/>
+	<init target="Alarm_message" ver="5" value="Действие запрещено по неопределенным причинам"/>
+	<do-trace access-modifier="private" target="Alarm_message" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Source.Connection]]>
+			</condition>
+			<expr>
+				<![CDATA["Действие недоступно по причине отсутствия связи с контроллерами"]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[DopException]]>
+			</condition>
+			<expr>
+				<![CDATA[DopExceptionText]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Security.Access_Operator && !unit.Security.Access_Engineer && EnableAuth]]>
+			</condition>
+			<expr>
+				<![CDATA["Данное действие недоступно для неавторизованного пользователя"]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4)) && EnableAccess && !EnableAuto]]>
+			</condition>
+			<expr>
+				<![CDATA["Действие недоступно в текущем режиме работы"]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Security.Access_Engineer && EnableEngineer]]>
+			</condition>
+			<expr>
+				<![CDATA["Данное действие доступно только пользователям с правами Инженера и выше"]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[(!unit.Security.Access_Operator || !unit.Security.Access_Engineer) && EnableAdmin]]>
+			</condition>
+			<expr>
+				<![CDATA["Данное действие доступно только пользователям с правами администратора"]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4) || unit.ModeWork.ModeWork == 6) && !EnableAccess && EnableAuto]]>
+			</condition>
+			<expr>
+				<![CDATA["Действие недоступно в текущем режиме работы"]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[""]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="EnableAuth" display-name="Только авторизованным" uuid="9d62e465-bde0-49aa-8b08-b984444f07d3" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="EnableEngineer" display-name="Только инженер" uuid="a59a1f39-c03a-40fe-9379-942307c4e002" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="EnableAdmin" display-name="Только админ" uuid="06ade250-f146-4461-85d3-ac56e3e968a1" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="EnableAccess" display-name="Контроль режима работы" uuid="8b2b36a8-cf68-437b-82ee-f38837643afb" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="EnableAuth" ver="5" value="true"/>
+	<init target="EnableAccess" ver="5" value="true"/>
+	<designed target="Width" value="150" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<object access-modifier="private" name="DopException" display-name="Доп условия" uuid="eaff1c40-7431-4f00-805a-2199c757d845" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="DopExceptionText" display-name="Текст доп условий" uuid="1032923e-920c-4ffe-8e9c-38ad971ff929" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="DopAction" display-name="DopAction" uuid="bc63f648-c380-4892-a595-0da2151518ce" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" base-ref="true" ver="5" description=""/>
+	<object access-modifier="private" name="EnableAuto" display-name="EnableAuto" uuid="df7a6fab-3e02-4df3-936b-3269d1da3854" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<designed target="DisabledPenWidth" value="2" ver="5"/>
+</type>
+

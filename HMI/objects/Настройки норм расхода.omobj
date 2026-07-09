@@ -1,0 +1,138 @@
+<type access-modifier="private" name="Настройки норм расхода" display-name="Настройки норм расхода" uuid="ea761377-ee3b-4e3d-a335-46c7da46d1f5" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_2" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="400" ver="5"/>
+	<designed target="Height" value="165" ver="5"/>
+	<init target="WindowName" ver="5" value="Алгоритм работы котлов в ББПТ"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="46aa1fad-4c07-47a8-96a2-7dee99c78f86" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="260" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Text_30" display-name="Text_30" uuid="504c66ae-5ab4-460c-bf3c-32ff1b6677dd" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="15" ver="5"/>
+			<designed target="Y" value="5" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="228.90112389509156" ver="5"/>
+			<designed target="Height" value="54" ver="5"/>
+			<designed target="Text" value="Настройка нормального расхода" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Text_31" display-name="Text_31" uuid="fe225c67-dd90-4aa7-9d88-11b19bb136c5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="15" ver="5"/>
+			<designed target="Y" value="59.663461538461547" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="189.22771349046732" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="Text" value="Настройка малого расхода" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Уставка_2" display-name="Уставка_2" uuid="6cd64d8c-dcbf-4bf5-a1bc-0f9dfdab1a39" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="274.77456647398856" ver="5"/>
+			<designed target="Y" value="14" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.22543352601156" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<init target="Unit" ver="5" value=" м³/час"/>
+			<init target="ValuePath" ver="5" value="SP.norm_waste_1"/>
+			<init target="Max" ver="5" value="100000"/>
+			<init target="Min" ver="5" value="-5"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Regular"/>
+			<init target="noUnit" ver="5" value="false"/>
+		</object>
+		<object access-modifier="private" name="Уставка_4" display-name="Уставка_4" uuid="66afde33-1d75-4d7f-a660-ba635d7bf21c" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="274.77456647398856" ver="5"/>
+			<designed target="Y" value="64" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.22543352601156" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<init target="Unit" ver="5" value=" м³/час"/>
+			<init target="ValuePath" ver="5" value="SP.norm_waste_2"/>
+			<init target="Min" ver="5" value="-5"/>
+			<init target="Max" ver="5" value="100000"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Regular"/>
+			<init target="noUnit" ver="5" value="false"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="AlgoSource" display-name="AlgoSource" uuid="d70b24fe-4d42-4d2c-a270-35321029e7e1" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="AO_BS" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Algo"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[AlgoPath]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="AlgoPath" display-name="Путь до алгоритма" uuid="a5d52283-8fd0-41f5-b396-f7ee42f07b68" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="AlgoPath" ver="5" value="Boiler_UPT"/>
+	<object access-modifier="private" name="Connect1" display-name="Connect1" uuid="3415bd60-2bce-4b18-b161-deb17d9155b5" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Boiler1.Connect"/>
+		<init target="Source" ver="5" ref="unit.Source.UPT"/>
+	</object>
+	<object access-modifier="private" name="Connect2" display-name="Connect2" uuid="44c50616-ee64-4bd4-8b37-5de7b3422106" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Boiler2.Connect"/>
+		<init target="Source" ver="5" ref="unit.Source.UPT"/>
+	</object>
+	<object access-modifier="private" name="Connect3" display-name="Connect3" uuid="474e9183-0428-4176-ac29-e9c14faf29be" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Boiler3.Connect"/>
+		<init target="Source" ver="5" ref="unit.Source.UPT"/>
+	</object>
+	<object access-modifier="private" name="Main_pump" display-name="Main_pump" uuid="ebb6761c-e048-4d36-bacb-3bcfe6cd523e" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="ValuePath" ver="5" value="Main_pump"/>
+		<init target="MainSource" ver="5" ref="AlgoSource"/>
+	</object>
+	<object access-modifier="private" name="Status" display-name="Status" uuid="06efbb91-d9b1-4f8c-a067-0416dbb8fe1c" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Mode_work"/>
+		<init target="Source" ver="5" ref="AlgoSource"/>
+	</object>
+	<object access-modifier="private" name="Enable" display-name="Enable" uuid="de6fe6d8-b670-4a4e-887c-cac7364461fd" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="MainSource" ver="5" ref="AlgoSource"/>
+		<init target="ValuePath" ver="5" value="Enable"/>
+	</object>
+	<object access-modifier="private" name="Alarm" display-name="Alarm" uuid="ab9c1d4f-e830-450b-b69d-55fa7aaccb77" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Alarm"/>
+		<init target="Source" ver="5" ref="AlgoSource"/>
+	</object>
+</type>
+

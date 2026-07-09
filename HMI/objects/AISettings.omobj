@@ -1,0 +1,611 @@
+<type access-modifier="private" name="AISettings" display-name="AISettings" uuid="4692dcb5-f2e0-4721-9762-665ad39c1190" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<object access-modifier="private" name="AIValueText" display-name="AIValueText" uuid="edb64318-a8f9-43a5-8aff-8e59e1f7bad0" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="99" ver="5"/>
+		<designed target="Height" value="28.000000000000004" ver="5"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Status || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[String.ToString("%." + String.ToString(Accuracy) +  "f", AIValue)]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Status || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="Blinker_1" display-name="Blinker_1" uuid="7eee57e0-b302-445c-8db6-afe38095a0ff" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="5" description="" cardinal="1">
+			<designed target="Period" value="1000" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<designed target="PenColor" value="0xff55557f" ver="5"/>
+			<designed target="BrushColor" value="0xff55557f" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<do-trace access-modifier="private" target="Active" ver="5">
+				<body>
+					<![CDATA[Debug_mode]]>
+				</body>
+			</do-trace>
+		</object>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[A_min.Signal || A_max.Signal]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[W_min.Signal || W_max.Signal]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffffff00]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.MainColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="TextColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[(W_min.Signal || W_max.Signal) && !(A_max.Signal || A_min.Signal)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.TextColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<init target="Text" ver="5" value="..."/>
+	</object>
+	<object access-modifier="private" name="Grid" display-name="Grid" uuid="d8b3e85f-87a2-4b7d-92e4-527c3ab685d6" base-type="Сетка" base-type-id="f752c8da-26b7-4bdd-be44-69e7d07ffcd0" ver="5" description="" cardinal="1">
+		<designed target="X" value="296.10000000000002" ver="5"/>
+		<designed target="Y" value="-1.3042735042735143" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="398.98286140089419" ver="5"/>
+		<designed target="Height" value="31" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Low" display-name="Low" uuid="1194a924-941f-4347-bf9d-b5b323422ccb" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="99" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="99" ver="5"/>
+		<designed target="Height" value="28.000000000000004" ver="5"/>
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors."+ AIPath + ".Low_range"]]>
+			</body>
+		</do-trace>
+		<init target="ValueName" ver="5" value="Минимальный диапазон"/>
+		<do-trace access-modifier="private" target="Unit" ver="5">
+			<body>
+				<![CDATA[here.Unit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Accuracy" ver="5">
+			<body>
+				<![CDATA[here.Accuracy]]>
+			</body>
+		</do-trace>
+		<init target="AdminOnly" ver="5" value="true"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputBoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="ErrorModule" ver="5">
+			<body>
+				<![CDATA[Error_modul.Value]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="MainSource" display-name="MainSource" uuid="cf463b8c-d3e7-4952-bcb3-522248435960" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[AIPath]]>
+			</body>
+		</do-trace>
+		<init target="ParentSource" ver="5" ref="unit.Source.AI_Sensors"/>
+	</object>
+	<object access-modifier="private" name="AIPath" display-name="Путь" uuid="9f453cf1-ceed-4530-abd1-f0b744315413" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="AIValue" display-name="AIValue" uuid="88257171-0e98-4316-846f-f55782875549" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Value"/>
+		<init target="Source" ver="5" ref="here.MainSource"/>
+	</object>
+	<init target="AIPath" ver="5" value="T_BBR"/>
+	<object access-modifier="private" name="Status" display-name="Status" uuid="6dd1f8f8-dfb1-4989-9006-804dec005f6f" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Status"/>
+		<init target="Source" ver="5" ref="here.MainSource"/>
+	</object>
+	<object access-modifier="private" name="High" display-name="High" uuid="71b7d1c8-8eb8-49ab-afd0-1570731dbb15" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="198" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="99" ver="5"/>
+		<designed target="Height" value="28.000000000000004" ver="5"/>
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors."+ AIPath + ".Up_range"]]>
+			</body>
+		</do-trace>
+		<init target="ValueName" ver="5" value="Максимальный диапазон"/>
+		<do-trace access-modifier="private" target="Unit" ver="5">
+			<body>
+				<![CDATA[here.Unit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Accuracy" ver="5">
+			<body>
+				<![CDATA[here.Accuracy]]>
+			</body>
+		</do-trace>
+		<init target="AdminOnly" ver="5" value="true"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputBoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="ErrorModule" ver="5">
+			<body>
+				<![CDATA[Error_modul.Value]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="AMin" display-name="AMin" uuid="b61400d0-54c6-4824-8f34-d94a27e44dce" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="297" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="99" ver="5"/>
+		<designed target="Height" value="28.000000000000004" ver="5"/>
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors."+ AIPath + ".A_min.Value"]]>
+			</body>
+		</do-trace>
+		<init target="ValueName" ver="5" value="Аварийно-низкое значение"/>
+		<do-trace access-modifier="private" target="Unit" ver="5">
+			<body>
+				<![CDATA[here.Unit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[Variant.ToBool(A_min.Enable.Out, false)]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Min" ver="5">
+			<body>
+				<![CDATA[Low.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Max" ver="5">
+			<body>
+				<![CDATA[High.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Accuracy" ver="5">
+			<body>
+				<![CDATA[here.Accuracy]]>
+			</body>
+		</do-trace>
+		<init target="AdminOnly" ver="5" value="true"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputBoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="ErrorModule" ver="5">
+			<body>
+				<![CDATA[Error_modul.Value]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="WMin" display-name="WMin" uuid="13660ec8-4de3-4220-ba0d-49c31ea0ba77" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="396" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="99" ver="5"/>
+		<designed target="Height" value="28.000000000000004" ver="5"/>
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors."+ AIPath + ".W_min.Value"]]>
+			</body>
+		</do-trace>
+		<init target="ValueName" ver="5" value="Предупредительно-низкое значение"/>
+		<do-trace access-modifier="private" target="Unit" ver="5">
+			<body>
+				<![CDATA[here.Unit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[Variant.ToBool(W_min.Enable.Out, false)]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Min" ver="5">
+			<body>
+				<![CDATA[Low.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Max" ver="5">
+			<body>
+				<![CDATA[High.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Accuracy" ver="5">
+			<body>
+				<![CDATA[here.Accuracy]]>
+			</body>
+		</do-trace>
+		<init target="AdminOnly" ver="5" value="true"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputBoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="ErrorModule" ver="5">
+			<body>
+				<![CDATA[Error_modul.Value]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="WMax" display-name="WMax" uuid="4b37fe8e-5382-4c79-bb25-2130ecb51b71" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="495" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="99" ver="5"/>
+		<designed target="Height" value="28.000000000000004" ver="5"/>
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors."+ AIPath + ".W_max.Value"]]>
+			</body>
+		</do-trace>
+		<init target="ValueName" ver="5" value="Предупредительно-высокое значение"/>
+		<do-trace access-modifier="private" target="Unit" ver="5">
+			<body>
+				<![CDATA[here.Unit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[Variant.ToBool(W_max.Enable.Out, false)]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Min" ver="5">
+			<body>
+				<![CDATA[Low.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Max" ver="5">
+			<body>
+				<![CDATA[High.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Accuracy" ver="5">
+			<body>
+				<![CDATA[here.Accuracy]]>
+			</body>
+		</do-trace>
+		<init target="AdminOnly" ver="5" value="true"/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputBoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="ErrorModule" ver="5">
+			<body>
+				<![CDATA[Error_modul.Value]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="AMax" display-name="AMax" uuid="b2866fb5-7192-44b8-8fe5-ccaaa850673a" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+		<designed target="X" value="594" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="99" ver="5"/>
+		<designed target="Height" value="28.000000000000004" ver="5"/>
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors."+ AIPath + ".A_max.Value"]]>
+			</body>
+		</do-trace>
+		<init target="ValueName" ver="5" value="Аварийно-высокое значение"/>
+		<do-trace access-modifier="private" target="Unit" ver="5">
+			<body>
+				<![CDATA[here.Unit]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[Variant.ToBool(A_max.Enable.Out, false)]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Min" ver="5">
+			<body>
+				<![CDATA[Low.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Max" ver="5">
+			<body>
+				<![CDATA[High.Value.Out.Value]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Accuracy" ver="5">
+			<body>
+				<![CDATA[here.Accuracy]]>
+			</body>
+		</do-trace>
+		<init target="AdminOnly" ver="5" value="true"/>
+		<init target="Unit" ver="5" value=""/>
+		<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+		<do-trace access-modifier="private" target="PenColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputBoundColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="BrushColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error || Error_modul]]>
+				</condition>
+				<expr>
+					<![CDATA[unit.Theme.NoConnectInputColor]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.InputColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="ErrorModule" ver="5">
+			<body>
+				<![CDATA[Error_modul.Value]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Accuracy" display-name="Accuracy" uuid="1939f783-dba4-4ed6-b11d-c9b75cb77bff" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="OutAccuracy"/>
+		<init target="Source" ver="5" ref="here.MainSource"/>
+	</object>
+	<object access-modifier="private" name="Unit" display-name="Unit" uuid="8a810ed3-9eda-41dd-9b83-db96d15e5165" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="UnitValue" display-name="UnitValue" uuid="25e6ae0c-b0df-4d5a-8f5b-bb623f8ea2a8" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="OutUnit"/>
+	</object>
+	<do-trace access-modifier="private" target="Unit" ver="5">
+		<body>
+			<![CDATA[unit.Theme.Unit[here.UnitValue]]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="A_min" display-name="A_min" uuid="f311e969-f72f-45a7-84ae-de4ffe88f365" base-type="AI_Signal" base-type-id="325af2a5-9ff9-4d98-bccf-e40a5627b748" ver="5" description="" cardinal="1">
+		<do-trace access-modifier="private" target="SignalPath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors." + AIPath + ".A_min"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="A_max" display-name="A_max" uuid="f7595442-5162-4204-907c-5a3030ac540f" base-type="AI_Signal" base-type-id="325af2a5-9ff9-4d98-bccf-e40a5627b748" ver="5" description="" cardinal="1">
+		<do-trace access-modifier="private" target="SignalPath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors." + AIPath + ".A_max"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="W_min" display-name="W_min" uuid="dd0277ff-8365-4baf-bef7-11f04b894683" base-type="AI_Signal" base-type-id="325af2a5-9ff9-4d98-bccf-e40a5627b748" ver="5" description="" cardinal="1">
+		<do-trace access-modifier="private" target="SignalPath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors." + AIPath + ".W_min"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="W_max" display-name="W_max" uuid="3e990e12-c950-4abd-98de-3ec938fe5d3f" base-type="AI_Signal" base-type-id="325af2a5-9ff9-4d98-bccf-e40a5627b748" ver="5" description="" cardinal="1">
+		<do-trace access-modifier="private" target="SignalPath" ver="5">
+			<body>
+				<![CDATA["AI_Sensors." + AIPath + ".W_max"]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Debug_mode" display-name="Debug_mode" uuid="078734c0-3c22-4f14-aa27-223fde66ee82" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="here.MainSource"/>
+		<init target="Path" ver="5" value="OutDebug_mode"/>
+	</object>
+	<object access-modifier="private" name="Error_modul" display-name="Error_modul" uuid="f7a8d594-4545-4b4c-9f30-f71554faff14" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA["Diagn." + Error]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Error" display-name="Ошибка модуля" uuid="3cce5124-ce10-430c-9059-285199395637" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+</type>
+

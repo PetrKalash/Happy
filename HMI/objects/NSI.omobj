@@ -1,0 +1,455 @@
+<type access-modifier="private" name="NSI" display-name="NSI" uuid="352a8731-3258-4502-aa86-a7becdf6c1b9" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Параметры состава газа" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="400" ver="5"/>
+	<designed target="Height" value="300" ver="5"/>
+	<init target="WindowName" ver="5" value="Параметры состава газа"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="11e523be-753e-462a-8339-cf6e5058f51c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="175" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="125" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Metod_text" display-name="Metod_text" uuid="3a16298f-8f3f-489b-9dd3-e4f6292e1797" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="380" ver="5"/>
+			<designed target="Height" value="25" ver="5"/>
+			<designed target="Text" value="Метод расчета: Metod" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="36" ver="5"/>
+			<object access-modifier="private" name="Metod" display-name="Metod" uuid="8d06234f-7d90-4494-a4d4-ff32605f21aa" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="Metod"/>
+				<init target="Source" ver="5" ref="Source_"/>
+			</object>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || Metod.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA["Метод расчета: ???"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Метод расчета: " + Metod]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Density_text" display-name="Density_text" uuid="7c8f8982-9214-45ce-9711-9e07e22cb951" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="65" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="155" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<designed target="Text" value="Плотность" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+		</object>
+		<object access-modifier="private" name="N2_text" display-name="N2_text" uuid="bc9613e8-0daf-460b-8997-c42ee704981f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="105" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="155" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<designed target="Text" value="Содержание N2" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+		</object>
+		<object access-modifier="private" name="CO2_text" display-name="CO2_text" uuid="47f3603b-ebb1-4ac6-abc2-b4bb9d48d230" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="145" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="155" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<designed target="Text" value="Содержание CO2" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Current" display-name="Current" uuid="0e9c9cc8-c763-4b09-90a6-6d56e3c7c809" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="159" ver="5"/>
+			<designed target="Y" value="35" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="100" ver="5"/>
+			<designed target="Height" value="25" ver="5"/>
+			<designed target="Text" value="Текущее" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+		</object>
+		<object access-modifier="private" name="SP" display-name="SP" uuid="a568b6be-768d-487b-98b6-0866fb0a774f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="284" ver="5"/>
+			<designed target="Y" value="35" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="100" ver="5"/>
+			<designed target="Height" value="25" ver="5"/>
+			<designed target="Text" value="Новое" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Density_" display-name="Density_" uuid="070e849f-e241-471c-985c-d449615f216c" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="156" ver="5"/>
+			<designed target="Y" value="65" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.33333333333337" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<object access-modifier="private" name="APValue" display-name="APValue" uuid="3c2ac393-b9aa-49e2-8c03-28866facc521" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="Density"/>
+				<init target="Source" ver="5" ref="Source_NSI"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA[unit.Theme.NoConnectBoundColor]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[unit.Theme.BoundColor]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[String.ToString("%.4f", APValue) + " кг/м³"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Text" ver="5" value="..."/>
+		</object>
+		<object access-modifier="private" name="N2_" display-name="N2_" uuid="d9ceb329-0b20-4f58-a799-5a62d5cffccd" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="156" ver="5"/>
+			<designed target="Y" value="105" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.33333333333337" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<object access-modifier="private" name="APValue" display-name="APValue" uuid="11e1e83f-be14-4dfa-9360-f63b00a5bd4d" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="N2"/>
+				<init target="Source" ver="5" ref="Source_NSI"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA[unit.Theme.NoConnectBoundColor]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[unit.Theme.BoundColor]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[String.ToString("%.4f", APValue) + " %"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Text" ver="5" value="..."/>
+		</object>
+		<object access-modifier="private" name="CO2_" display-name="CO2_" uuid="209f894c-0c5d-4bae-8cb9-2b2934aa34c1" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="156" ver="5"/>
+			<designed target="Y" value="145" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.33333333333337" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<object access-modifier="private" name="APValue" display-name="APValue" uuid="fe3b592e-0bf0-4ae1-b8ec-3fa77380714a" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="CO2"/>
+				<init target="Source" ver="5" ref="Source_NSI"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA[unit.Theme.NoConnectBoundColor]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[unit.Theme.BoundColor]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !Connect || APValue.Quality != 192]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[String.ToString("%.4f", APValue) + " %"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Text" ver="5" value="..."/>
+		</object>
+		<object access-modifier="private" name="Density_SP" display-name="Density_SP" uuid="7c643617-bcb8-48d5-822b-38d7cb1ae526" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="282" ver="5"/>
+			<designed target="Y" value="65" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.33333333333337" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Min" ver="5" value="0.6"/>
+			<init target="ValueName" ver="5" value="Плотность"/>
+			<init target="Unit" ver="5" value="кг/м³"/>
+			<init target="IsUint" ver="5" value="false"/>
+			<init target="Max" ver="5" value="0.8"/>
+			<init target="Accuracy" ver="5" value="4"/>
+			<init target="LWORD" ver="5" value="false"/>
+			<init target="AdminOnly" ver="5" value="true"/>
+			<init target="noUnit" ver="5" value="false"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA["Counters." + TF + ".NSI.Density_SP"]]>
+				</body>
+			</do-trace>
+			<init target="ErrorMsg" ver="5" value="Нет связи со счетчиком"/>
+			<do-trace access-modifier="private" target="Error" ver="5">
+				<body>
+					<![CDATA[!Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="N2_SP" display-name="N2_SP" uuid="44f1c0ef-f4e0-424c-831b-9c5094f24f7f" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="282" ver="5"/>
+			<designed target="Y" value="105" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.33333333333337" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Min" ver="5" value="0"/>
+			<init target="ValueName" ver="5" value="Содержание N2"/>
+			<init target="Unit" ver="5" value="%"/>
+			<init target="IsUint" ver="5" value="false"/>
+			<init target="Max" ver="5" value="16"/>
+			<init target="Accuracy" ver="5" value="4"/>
+			<init target="LWORD" ver="5" value="false"/>
+			<init target="AdminOnly" ver="5" value="true"/>
+			<init target="noUnit" ver="5" value="false"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA["Counters." + TF + ".NSI.N2_SP"]]>
+				</body>
+			</do-trace>
+			<init target="ErrorMsg" ver="5" value="Нет связи со счетчиком"/>
+			<do-trace access-modifier="private" target="Error" ver="5">
+				<body>
+					<![CDATA[!Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="CO2_SP" display-name="CO2_SP" uuid="4ed7bbf7-0e6c-4e03-821c-f2ed0302c746" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="282" ver="5"/>
+			<designed target="Y" value="145" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="107.33333333333337" ver="5"/>
+			<designed target="Height" value="35" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный"/>
+			<init target="Min" ver="5" value="0"/>
+			<init target="ValueName" ver="5" value="Содержание N2"/>
+			<init target="Unit" ver="5" value="%"/>
+			<init target="IsUint" ver="5" value="false"/>
+			<init target="Max" ver="5" value="4"/>
+			<init target="Accuracy" ver="5" value="4"/>
+			<init target="LWORD" ver="5" value="false"/>
+			<init target="AdminOnly" ver="5" value="true"/>
+			<init target="noUnit" ver="5" value="false"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA["Counters." + TF + ".NSI.CO2_SP"]]>
+				</body>
+			</do-trace>
+			<init target="ErrorMsg" ver="5" value="Нет связи со счетчиком"/>
+			<do-trace access-modifier="private" target="Error" ver="5">
+				<body>
+					<![CDATA[!Connect]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Set" display-name="Set" uuid="2422021d-acb5-4fc4-818a-e82938ab577e" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="195" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="380" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Text" value="Записать новые значения
+состава газа" ver="5"/>
+			<init target="Signal" ver="5">
+				<object access-modifier="private" uuid="be767762-a6c5-43da-94f1-3b0404af4820" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5">
+					<init target="ValuePath" ver="5" value="Set"/>
+					<init target="MainSource" ver="5" ref="Source_NSI"/>
+				</object>
+			</init>
+			<init target="EnableEngineer" ver="5" value="true"/>
+			<init target="EnableAccess" ver="5" value="false"/>
+			<init target="EnableAuto" ver="5" value="false"/>
+			<init target="WindowName" ver="5" value="Записать новые значения состава газа"/>
+			<init target="CommandText" ver="5" value="Подтвердите действие"/>
+			<do-trace access-modifier="private" target="Enabled" ver="5">
+				<body>
+					<![CDATA[Signal.Out.Quality ==192 && Connect]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="AfterAccept" display-name="AfterAccept" uuid="32f8a603-588d-4b14-8d83-ee1d75e676b9" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" ver="5" description="">
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="InvokeTrigger" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+					<object access-modifier="private" uuid="563d2e9e-8d28-4ee5-ab12-9904d25944f1" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+						<init target="Icon" ver="5" value="0"/>
+						<init target="Buttons" ver="5" value="0"/>
+						<init target="Message" ver="5" value="Команда записи уставок НСИ подана"/>
+					</object>
+				</do-on>
+			</object>
+			<init target="AfterAcceptAction" ver="5" ref="AfterAccept"/>
+		</object>
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="b0e26f88-fe43-4991-b706-c97675aada13" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="5000" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[Set.Signal.In = false;
+me.Active = false;]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Active" ver="5">
+				<body>
+					<![CDATA[Set.Signal.In]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="Source_NSI" display-name="Source_NSI" uuid="d60c69dc-b917-4e80-973e-4e2875dced39" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="NSI" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="Source_"/>
+	</object>
+	<object access-modifier="private" name="Source_" display-name="Source_" uuid="07344b11-b426-4ab3-869f-33c7f1ad2faf" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[TF]]>
+			</body>
+		</do-trace>
+		<init target="ParentSource" ver="5" ref="unit.Source.Counters"/>
+	</object>
+	<object access-modifier="private" name="Connect" display-name="Connect" uuid="6a343f79-c056-49a7-8a8d-d7b5eb71e46b" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="Source_"/>
+		<init target="Path" ver="5" value="Connect"/>
+	</object>
+	<init target="TF" ver="5" value="TF"/>
+	<object access-modifier="private" name="TF" display-name="TF" uuid="e49b6764-e1c6-41be-a3e2-980a21a15bee" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+</type>
+

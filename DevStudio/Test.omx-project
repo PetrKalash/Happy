@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Id="c03faf70-7575-4ba4-b32b-0219b28409cc" Version="1.0.0" OutputPath="bin\" IDE="Alpha.DevStudio 3.27.5" UpgradeVersion="5">
+  <Files>
+    <SourceFile Name="Test.omx" />
+  </Files>
+</Project>

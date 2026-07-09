@@ -1,0 +1,143 @@
+<type access-modifier="private" name="Кнопка" display-name="Кнопка" uuid="d238545d-67e3-43dd-a8a2-dc4f70081934" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="100" ver="5"/>
+	<designed target="Height" value="100" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="0xff00ff00" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff33334d" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="e3d228cb-5905-433c-aa26-36dd4fab4801" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="100" ver="5"/>
+		<designed target="Height" value="100" ver="5"/>
+		<designed target="Text" value="Кнопка" ver="5"/>
+		<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="0xffffffff" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<do-trace access-modifier="private" target="Font" ver="5">
+			<body>
+				<![CDATA[TextFont]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<body>
+				<![CDATA[here.Text]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="332522c5-3388-4153-a0f6-64df6f702d5d" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="1" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.ButtonColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="TextFont" display-name="Шрифт" uuid="f91e10a3-4141-4acc-9518-f9081f2f332c" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Text" display-name="Текст" uuid="c0809f90-cb0b-4db0-b1af-4b279b35e6c3" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="TextFont" ver="5" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный"/>
+	<init target="Text" ver="5" value="Текст"/>
+	<object access-modifier="private" name="RadialGradient_1" display-name="RadialGradient_1" uuid="2aa2c61b-f5f7-4aab-b71f-b5d7ee55db1b" base-type="RadialGradient" base-type-id="ec8b2b95-2c92-44b2-a9aa-3ce4fc0f08b9" ver="5" description="" cardinal="1">
+		<designed target="XCenter" value="0.5" ver="5"/>
+		<designed target="YCenter" value="0.5" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Size" value="3" ver="5"/>
+		<object access-modifier="private" name="GradientPoint_1" display-name="GradientPoint_1" uuid="42cb79a4-f754-4cfe-b99a-38171bd28162" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="5">
+			<designed target="Position" value="0.29999999999999999" ver="5"/>
+			<designed target="Color" value="0xff464646" ver="5"/>
+			<do-trace access-modifier="private" target="Color" ver="5">
+				<body>
+					<![CDATA[InColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="GradientPoint_2" display-name="GradientPoint_2" uuid="59eb45c9-9ff3-4d1e-bb74-3f6fce0b09d8" base-type="GradientPoint" base-type-id="0d4fa414-e154-4e66-8c6e-63211b3c6891" ver="5">
+			<designed target="Position" value="1" ver="5"/>
+			<designed target="Color" value="0x00ffffff" ver="5"/>
+			<do-trace access-modifier="private" target="Color" ver="5">
+				<body>
+					<![CDATA[OutColor]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="InColor" display-name="Внутренний цвет" uuid="417fea00-7e50-47fd-ae25-039fcd7628cf" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="OutColor" display-name="Внешний цвет" uuid="6d9b978c-3f9a-46b2-8474-cea69e492625" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<init target="InColor" ver="5" value="0xff464646"/>
+	<init target="OutColor" ver="5" value="0x00ffffff"/>
+	<object access-modifier="private" name="EnterTimer" display-name="EnterTimer" uuid="cf1f1707-092e-4df9-9a55-597472b0d451" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="3" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (RadialGradient_1.GradientPoint_1.Position < 0.99){
+	RadialGradient_1.GradientPoint_1.Position = RadialGradient_1.GradientPoint_1.Position + 0.01;
+	here.Scale = here.Scale + 0.002;
+} else {
+	RadialGradient_1.GradientPoint_1.Position = 0.99;
+	Hover=false;
+}
+
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Active" ver="5">
+			<body>
+				<![CDATA[Hover]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Hover" display-name="Hover" uuid="dbc98838-ed4c-4f5e-a25b-362847d38b8d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="LeaveTimer" display-name="LeaveTimer" uuid="92fa96ad-ae11-4771-a36e-5df6ce133283" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="3" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (RadialGradient_1.GradientPoint_1.Position > 0.3){
+	RadialGradient_1.GradientPoint_1.Position = RadialGradient_1.GradientPoint_1.Position - 0.01;
+	here.Scale = Math.Max(1, here.Scale - 0.002);
+}
+
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Active" ver="5">
+			<body>
+				<![CDATA[!Hover]]>
+			</body>
+		</do-trace>
+	</object>
+	<do-on access-modifier="private" name="Handler_3" display-name="Handler_3" ver="5" event="MousePress">
+		<body kind="om">
+			<![CDATA[Hover=true;]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="5" event="MouseRelease">
+		<body kind="om">
+			<![CDATA[Hover=false;]]>
+		</body>
+	</do-on>
+</type>
+

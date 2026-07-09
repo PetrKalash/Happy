@@ -1,0 +1,681 @@
+<type access-modifier="private" name="Датчик аналоговый" display-name="Датчик аналоговый" uuid="067ab412-e57d-434e-9cb0-a2f55149b067" base-type="Ellipse" base-type-id="7f9e9b77-5d97-45c4-89c1-0f67adb636cd" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="50" ver="5"/>
+	<designed target="Height" value="50" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="3" ver="5"/>
+	<designed target="BrushColor" value="0xff33334d" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="PieAngle" value="360" ver="5"/>
+	<designed target="PieAngleStart" value="360" ver="5"/>
+	<designed target="HoleSize" value="0" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Source.Connection || Status || (!OdorConnect && Odor)]]>
+			</condition>
+			<expr>
+				<![CDATA[unit.Theme.MainColor]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[AlarmMin || AlarmMax]]>
+			</condition>
+			<expr>
+				<![CDATA[0xffff0000]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[WarningMin || WarningMax]]>
+			</condition>
+			<expr>
+				<![CDATA[0xffffff00]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[AlarmInfo._15min || AlarmInfo._15max || AlarmInfo._12min || AlarmInfo._12max]]>
+			</condition>
+			<expr>
+				<![CDATA[0xffff0000]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[AlarmInfo._8min || AlarmInfo._8max || AlarmInfo._10min || AlarmInfo._10max && !(AlarmInfo._15min || AlarmInfo._15max || AlarmInfo._12min || AlarmInfo._12max)]]>
+			</condition>
+			<expr>
+				<![CDATA[0xffffff00]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[unit.Theme.MainColor]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<do-trace access-modifier="private" target="PenColor" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Source.Connection || Status || (!OdorConnect && Odor)]]>
+			</condition>
+			<expr>
+				<![CDATA[unit.Theme.NoConnectBoundColor]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[unit.Theme.BoundColor]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="fa845deb-a273-47fe-bad6-acac009d0023" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="50" ver="5"/>
+		<designed target="Height" value="50" ver="5"/>
+		<designed target="Text" value="000,000" ver="5"/>
+		<designed target="Font" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="0xffffffff" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<do-trace access-modifier="private" target="FontColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[unit.Source.Connection && (WarningMin || WarningMax) && !(AlarmMin || AlarmMax)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[unit.Source.Connection && (AlarmInfo._8min || AlarmInfo._8max || AlarmInfo._10min || AlarmInfo._10max) && !(AlarmInfo._15min || AlarmInfo._15max || AlarmInfo._12min || AlarmInfo._12max)]]>
+				</condition>
+				<expr>
+					<![CDATA[0xff000000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[unit.Theme.TextColor]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Status || (!OdorConnect && Odor)]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[String.ToString("%." + Accuracy.ValueAsString + "f", here.ValueParam)]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="ValuePath" display-name="ValuePath" uuid="7f89875c-53a4-4d13-806f-0ad59ca2d8d7" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="MainSource" display-name="MainSource" uuid="2161eb5c-46d6-4390-83ee-9ed12d87f7df" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[here.ValuePath]]>
+			</body>
+		</do-trace>
+		<init target="ParentSource" ver="5" ref="unit.Source.AI_Sensors"/>
+	</object>
+	<object access-modifier="private" name="ValueParam" display-name="ValueParam" uuid="7d4bc6a0-177b-4d1e-815a-54ba1b7297ba" base-type="ApItemFloat" base-type-id="7acf87ec-1784-4671-926e-9a41ea8d8692" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="Value"/>
+		<object access-modifier="private" name="Formatted" display-name="Formatted" uuid="06c043ad-10fb-4df3-982b-9b91c65639f7" base-type="OutputFormatter" base-type-id="9095fd20-4489-4cca-bd27-49ff94391a32" ver="5" description="" cardinal="1">
+			<designed target="InValue" value="" ver="5"/>
+			<init target="Format" ver="5">
+				<object access-modifier="private" uuid="7445274a-4039-4cf0-a035-945c2a17802d" base-type="FormatFloat" base-type-id="0b9dd5b4-9b68-4bbe-92b2-eb6fb5617d8e" ver="5">
+					<designed target="DigitsCount" value="3" ver="5"/>
+					<do-trace access-modifier="private" target="DigitsCount" ver="5">
+						<body>
+							<![CDATA[TypeConvert.ToUint1(Accuracy)]]>
+						</body>
+					</do-trace>
+				</object>
+			</init>
+			<do-trace access-modifier="private" target="InValue" ver="5">
+				<body>
+					<![CDATA[ValueParam]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<init target="ValuePath" ver="5" value="P_gas_in"/>
+	<object access-modifier="private" name="WarningMin" display-name="WarningMin" uuid="4780bcf4-43b6-4296-a43a-fb5e7ac90304" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="W_min.Signal"/>
+	</object>
+	<object access-modifier="private" name="WarningMax" display-name="WarningMax" uuid="b22dea5d-1511-49a0-b579-12fbc91dec35" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="W_max.Signal"/>
+	</object>
+	<object access-modifier="private" name="AlarmMin" display-name="AlarmMin" uuid="02cb171b-248d-4629-a5d0-0e4988180276" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="A_min.Signal"/>
+	</object>
+	<object access-modifier="private" name="AlarmMax" display-name="AlarmMax" uuid="fdfb9a47-c25d-4683-af45-5895f5ae5c87" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="A_max.Signal"/>
+	</object>
+	<object access-modifier="private" name="Stand" display-name="Stand" uuid="0581c3d0-25c0-455f-a949-586f5a030a0b" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<object access-modifier="private" name="Line_1" display-name="Line_1" uuid="ea28aa37-c5d8-4a86-a312-550101dd528f" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="5" description="" cardinal="1">
+			<designed target="X" value="25" ver="5"/>
+			<designed target="Y" value="50" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="0" ver="5"/>
+			<designed target="Height" value="10" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="3" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="86b20d2a-0155-4f76-a2da-2243606ce7e4" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="5">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="1d7a2978-a945-4d1b-bb54-282d5f60541c" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="5">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="10" ver="5"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Line_2" display-name="Line_2" uuid="a1e81d5b-f50d-4016-b155-2b469ebcf24e" base-type="Line" base-type-id="4dd08b15-1502-453f-a174-2c0a5aa850ba" ver="5" description="" cardinal="1">
+			<designed target="X" value="25" ver="5"/>
+			<designed target="Y" value="55" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="90" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="0" ver="5"/>
+			<designed target="Height" value="15" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="3" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<object access-modifier="private" name="Point_1" display-name="Point_1" uuid="b5a0722e-3ab7-42eb-918d-6899c7cd24f2" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="5">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Point_2" display-name="Point_2" uuid="ba9594f0-1e1c-4d5b-b62d-485c8f2db8a8" base-type="Point" base-type-id="467f1af0-7bb4-4a61-b6fb-06e7bfd530d6" ver="5">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="15" ver="5"/>
+			</object>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[here.ShowStand]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="ShowStand" display-name="Показывать ножку" uuid="2444afa3-d90a-4e29-81ff-52eb15e3c2e7" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="6f5091bf-5ffe-4c59-8f46-2fe0a60c24d8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="55" ver="5"/>
+		<designed target="Y" value="10" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="50" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="ед
+изм" ver="5"/>
+		<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+		<designed target="FontColor" value="0xffffffff" ver="5"/>
+		<designed target="TextAlignment" value="129" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<body>
+				<![CDATA[here.Unit]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Unit" display-name="Единица измерения" uuid="c380148e-0628-4bb4-be12-218741075cf6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="Unit" ver="5" value=""/>
+	<init target="ShowStand" ver="5" value="true"/>
+	<object access-modifier="private" name="Status" display-name="Status" uuid="f95fe7a7-8679-4299-92af-f183c4984ad5" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="Status"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick">
+		<body kind="om">
+			<![CDATA[if (!Odor) {
+Action_1.Invoke();
+}]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="SensorName" display-name="Название сигнала" uuid="a782fef8-b1f3-4f73-be6c-7d0355b9d2b8" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="UnitValue" display-name="UnitValue" uuid="29fb49a2-bbe1-4e5e-b613-fc6a48357351" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="OutUnit"/>
+	</object>
+	<do-trace access-modifier="private" target="Unit" ver="5">
+		<body>
+			<![CDATA[String.Replace(unit.Theme.Unit[here.UnitValue], "/", "
+")]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Accuracy" display-name="Accuracy" uuid="67de4d43-8129-42db-816c-55476670f8b2" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="MainSource"/>
+		<init target="Path" ver="5" value="OutAccuracy"/>
+	</object>
+	<object access-modifier="private" name="ShowSettingsUnit" display-name="Показывать ед в настройках" uuid="f59578ab-cad9-45af-9616-c7d725566fbe" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="ShowSettingsUnit" ver="5" value="true"/>
+	<object access-modifier="private" name="AlarmInfo" display-name="AlarmInfo" uuid="0cb49339-32a5-426f-b4b8-d651c6fd9def" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="50" ver="5"/>
+		<designed target="Y" value="-15" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="60" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="↓8%" ver="5"/>
+		<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="0xffff0000" ver="5"/>
+		<designed target="TextAlignment" value="129" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[_15min]]>
+				</condition>
+				<expr>
+					<![CDATA["↓15%"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[_15max]]>
+				</condition>
+				<expr>
+					<![CDATA["↑15%"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[_12min]]>
+				</condition>
+				<expr>
+					<![CDATA["↓12%"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[_12max]]>
+				</condition>
+				<expr>
+					<![CDATA["↑12%"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[_10min]]>
+				</condition>
+				<expr>
+					<![CDATA["↓10%"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[_10max]]>
+				</condition>
+				<expr>
+					<![CDATA["↑10%"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[_8min]]>
+				</condition>
+				<expr>
+					<![CDATA["↓8%"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[_8max]]>
+				</condition>
+				<expr>
+					<![CDATA["↑8%"]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<object access-modifier="private" name="ex_alarm" display-name="ex_alarm" uuid="856e9846-7763-4408-ad47-171b170932a7" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+			<designed target="Location" value="" ver="5"/>
+			<designed target="Port" value="4388" ver="5"/>
+			<designed target="HistoryPort" value="4950" ver="5"/>
+			<designed target="Path" value="" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<designed target="ReAdvise" value="0" ver="5"/>
+			<designed target="ClientDisplayName" value="HMI" ver="5"/>
+			<designed target="ClientId" value="HMI" ver="5"/>
+			<init target="ParentSource" ver="5" ref="unit.Source.Alarm"/>
+			<do-trace access-modifier="private" target="Path" ver="5">
+				<body>
+					<![CDATA[ValuePath]]>
+				</body>
+			</do-trace>
+		</object>
+		<do-trace access-modifier="private" target="FontColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[_15min || _15max || _12min || _12max]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xffffff00]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="_15min" display-name="_15min" uuid="3f4ac85a-3b9e-48b9-918e-46eb991e4597" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_15min"/>
+		</object>
+		<object access-modifier="private" name="_15max" display-name="_15max" uuid="1b80ee46-4eb2-4f0f-9364-873871cfd071" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_15max"/>
+		</object>
+		<object access-modifier="private" name="_12min" display-name="_12min" uuid="97e922a8-8583-436c-8579-0f2e944df68e" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_12min"/>
+		</object>
+		<object access-modifier="private" name="_12max" display-name="_12max" uuid="b7b12072-ccda-4b0b-957a-b538781e9e31" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_12max"/>
+		</object>
+		<object access-modifier="private" name="_10min" display-name="_10min" uuid="b1a40d95-2eca-4c73-99be-3088c81ff9b9" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="_10min"/>
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+		</object>
+		<object access-modifier="private" name="_10max" display-name="_10max" uuid="1964dbcc-db7a-4af6-8b68-9d954d02e035" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_10max"/>
+		</object>
+		<object access-modifier="private" name="_8min" display-name="_8min" uuid="e77e0147-b18a-49e2-8d15-d26a4578aa34" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_8min"/>
+		</object>
+		<object access-modifier="private" name="_8max" display-name="_8max" uuid="c2f20320-db53-4fc8-8769-2ac4c1624e85" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_8max"/>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[(_8min || _8max || _10min || _10max || _12min || _12max || _15min || _15max) && unit.Source.Connection]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="DebugMode" display-name="DebugMode" uuid="b031bcc0-38c8-4936-8757-746a4b8b8923" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="here.MainSource"/>
+		<init target="Path" ver="5" value="OutDebug_mode"/>
+	</object>
+	<object access-modifier="private" name="Blinker_1" display-name="Blinker_1" uuid="4219ae42-8966-43aa-b6c0-be382d34617f" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="5" description="" cardinal="1">
+		<designed target="Period" value="1000" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="PenColor" value="0xff55557f" ver="5"/>
+		<designed target="BrushColor" value="0xff55557f" ver="5"/>
+		<designed target="FontColor" value="4278190080" ver="5"/>
+		<do-trace access-modifier="private" target="Active" ver="5">
+			<body>
+				<![CDATA[DebugMode && unit.Source.Connection]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="SP" display-name="SP" uuid="01baf581-76bc-4abe-80b6-7170aa3d94e5" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Odor" display-name="Датчик давления в одоризации" uuid="4d4f2d86-2e23-4565-ac9e-2e3be4c475c7" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Action_1" display-name="Action_1" uuid="e5da4d29-5c2d-488a-b673-ae1c3d1d4f05" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="ff903e7a-9b54-4639-ae02-7a499d84fb2d" base-type="Аналоговый сигнал" base-type-id="57135574-406b-4a18-a44b-cb2c0791a89e" ver="5">
+				<init target="WindowName" ver="5" ref="here.SensorName"/>
+				<init target="SensorPath" ver="5" ref="here.ValuePath"/>
+				<init target="ShowUnit" ver="5" ref="here.ShowSettingsUnit"/>
+				<init target="SP_Sensor" ver="5" ref="here.SP"/>
+				<init target="KD" ver="5" ref="here.KDName"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="_OdorPuth" display-name="_OdorPuth" uuid="b192cbe2-db97-4fb6-a195-18f438d5485b" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="OdorConnect" display-name="OdorConnect" uuid="926c3254-a150-4d2b-b511-8cccccba6ddb" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[_OdorPuth + ".Connect"]]>
+			</body>
+		</do-trace>
+		<init target="Source" ver="5" ref="unit.Source.Odors"/>
+	</object>
+	<object access-modifier="private" name="KDName" display-name="Название по КД" uuid="b38d94b5-9af3-4ba5-b093-9c569bbd153a" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="KDName" ver="5" value=""/>
+	<object access-modifier="private" name="Rectangle_1" display-name="Rectangle_1" uuid="04109d6e-d221-4192-bb2c-3c7055c02311" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="45" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="50" ver="5"/>
+		<designed target="Height" value="15" ver="5"/>
+		<designed target="RoundingRadius" value="5" ver="5"/>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="0xff000000" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="c5d3e78a-1073-482d-adef-e70670595c9b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="-15" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="15" ver="5"/>
+			<designed target="Text" value="Назв." ver="5"/>
+			<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="0xff00ff00" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[here.KDName]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="AlarmInfo_1" display-name="AlarmInfo_1" uuid="75869028-45a1-4620-9bc2-22441e79d72f" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="50" ver="5"/>
+		<designed target="Y" value="-14.999999999999996" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="60" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="↓" ver="5"/>
+		<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="0xffff0000" ver="5"/>
+		<designed target="TextAlignment" value="129" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[AlarmMin]]>
+				</condition>
+				<expr>
+					<![CDATA["↓"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[AlarmMax]]>
+				</condition>
+				<expr>
+					<![CDATA["↑"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[WarningMin]]>
+				</condition>
+				<expr>
+					<![CDATA["↓"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[WarningMax]]>
+				</condition>
+				<expr>
+					<![CDATA["↑"]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<object access-modifier="private" name="ex_alarm" display-name="ex_alarm" uuid="f73678c6-75a0-4a76-8624-4bb1ae608dcf" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+			<designed target="Location" value="" ver="5"/>
+			<designed target="Port" value="4388" ver="5"/>
+			<designed target="HistoryPort" value="4950" ver="5"/>
+			<designed target="Path" value="" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<designed target="ReAdvise" value="0" ver="5"/>
+			<designed target="ClientDisplayName" value="HMI" ver="5"/>
+			<designed target="ClientId" value="HMI" ver="5"/>
+			<init target="ParentSource" ver="5" ref="unit.Source.Alarm"/>
+			<do-trace access-modifier="private" target="Path" ver="5">
+				<body>
+					<![CDATA[ValuePath]]>
+				</body>
+			</do-trace>
+		</object>
+		<do-trace access-modifier="private" target="FontColor" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[AlarmMax || AlarmMin]]>
+				</condition>
+				<expr>
+					<![CDATA[0xffff0000]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[0xffffff00]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<object access-modifier="private" name="_15min" display-name="_15min" uuid="706d0605-df6f-41f5-81d9-b7c104cfa581" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_15min"/>
+		</object>
+		<object access-modifier="private" name="_15max" display-name="_15max" uuid="4c5e4f41-df41-4af2-a9b3-fa2c4654c339" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_15max"/>
+		</object>
+		<object access-modifier="private" name="_12min" display-name="_12min" uuid="2799298e-dc98-42cb-b8a3-c8e815287cd3" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_12min"/>
+		</object>
+		<object access-modifier="private" name="_12max" display-name="_12max" uuid="8b840ce2-14bc-4aa3-927f-98d6dd464ec5" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_12max"/>
+		</object>
+		<object access-modifier="private" name="_10min" display-name="_10min" uuid="c31149e7-5724-40fe-933a-639b2157682f" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="_10min"/>
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+		</object>
+		<object access-modifier="private" name="_10max" display-name="_10max" uuid="1b391f8d-f64d-4e72-96b6-9d5acdd7b290" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_10max"/>
+		</object>
+		<object access-modifier="private" name="_8min" display-name="_8min" uuid="726a752b-da9e-42df-a504-ee013371b19a" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_8min"/>
+		</object>
+		<object access-modifier="private" name="_8max" display-name="_8max" uuid="5e654e1d-f680-4fdd-b443-3b410a38e724" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="parent.ex_alarm"/>
+			<init target="Path" ver="5" value="_8max"/>
+		</object>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[(AlarmMax || AlarmMin || WarningMax || WarningMin) && unit.Source.Connection]]>
+			</body>
+		</do-trace>
+	</object>
+</type>
+

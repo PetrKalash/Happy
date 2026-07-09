@@ -1,0 +1,5 @@
+<type access-modifier="public" name="SecurityConfigurator_Permissions" display-name="Разрешения" uuid="a6a67dc7-2872-46c8-a397-13aa48ddb4e7" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5">
+	<object access-modifier="private" name="FileSystemAccess" display-name="Доступность файловой системы" uuid="5fceae49-0be4-4174-851b-1961a41e4f78" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+	<init target="FileSystemAccess" ver="5" value="true"/>
+</type>
+

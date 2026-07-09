@@ -1,0 +1,613 @@
+<type access-modifier="private" name="ПУ. MAIN" display-name="ПУ. MAIN" uuid="b3d1038c-0e59-4247-9ed6-82c4ab9a105e" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1920" ver="5"/>
+	<designed target="Height" value="1080" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff000000" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="1920" ver="5"/>
+	<designed target="WindowHeight" value="1080" ver="5"/>
+	<designed target="WindowCaption" value="ГРС Стаханов" ver="5"/>
+	<designed target="ShowWindowCaption" value="true" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="false" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="1" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="2" ver="5"/>
+	<designed target="WindowScalingMode" value="2" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="1" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<object access-modifier="private" name="Frame_1" display-name="Frame_1" uuid="102f7e26-972d-4929-ad4f-6c6a057bf238" base-type="Frame" base-type-id="71f78e19-ef99-4133-a029-2968b14f02b6" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1920" ver="5"/>
+		<designed target="Height" value="1080" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<designed target="OverrideScaling" value="true" ver="5"/>
+		<designed target="ShowScrollBars" value="true" ver="5"/>
+		<designed target="MoveByMouse" value="true" ver="5"/>
+	</object>
+	<object access-modifier="private" name="AlarmJournal_1" display-name="AlarmJournal_1" uuid="e27dfb2d-029b-4ecd-84c8-fb6d20af877a" base-type="AlarmJournal" base-type-id="76c20eac-b5e5-48ff-ab3b-10d754d9acc2" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="953" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="1920" ver="5"/>
+		<designed target="Height" value="900" ver="5"/>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="94314b08-3a7c-4e71-9c9e-c33a576dfe22" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="1364" ver="5"/>
+			<designed target="Y" value="3" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="212" ver="5"/>
+			<designed target="Height" value="20" ver="5"/>
+			<designed target="Text" value="00:00:00 01.01.2000" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xff000000" ver="5"/>
+			<designed target="TextAlignment" value="68" ver="5"/>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="b5fe71f1-65ab-4d3e-9c95-85c2a1231b7b" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[parent.Text = DateTime.ToString(DateTime.Now());]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<designed target="WindowPosition" value="4" ver="5"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened" frame-link="Frame_1" form-action="open-in-frame" form-by-id="false">
+		<object access-modifier="private" uuid="c2a3a62d-0fa9-47ca-9995-d3f6b66d0834" base-type="01. ПУ. Фрэйм" base-type-id="d3edd195-0916-4713-be7f-07f62b5ab5f6" ver="5"/>
+	</do-on>
+	<object access-modifier="private" name="Window" display-name="Window" uuid="6a609e3c-75a6-4481-8cb5-0a9d48230de7" base-type="Window" base-type-id="04615219-28bb-4a9a-bba4-50ac66972eb0" ver="5" description="" cardinal="1">
+		<init target="Group" ver="5" ref="unit.WindowGroup.Main"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MessageReceived">
+			<body kind="om">
+				<![CDATA[
+if (messageType == "LogOff") {
+AlarmJournal_1.Alarms_1.LogOn( unit.Security.SecurityContext.CurrentUser);
+}
+if (messageType == "LogOn") {
+AlarmJournal_1.Alarms_1.LogOn( unit.Security.SecurityContext.CurrentUser);
+}
+
+if (messageType == "bottom") {
+	AlarmJournal_1.Visible = true;
+	Logo.Visible = true;
+
+	AlarmJournal_1.Y = 953;
+	AlarmJournal_1.Alarms_1.DisplayToolbar = false;
+	AlarmJournal_1.Alarms_1.DisplayStatePanel = false;
+	AlarmJournal_1.Alarms_1.ActiveMode = 0;
+	AlarmJournal_1.Width = 1920;
+	AlarmJournal_1.Height = 125;
+	
+	AlarmJournal_1.Alarms_1.FollowLatestEvent=true;
+	AlarmJournal_1.Alarms_1.X = 0;
+	AlarmJournal_1.Alarms_1.Y = 0;
+	AlarmJournal_1.Alarms_1.Width = 1920;
+	AlarmJournal_1.Alarms_1.Height = 125;
+	AlarmJournal_1.Alarms_1.Scale = 1;
+	
+	AlarmJournal_1.Alarms_1.VerticalScrollBarPolicy=1;
+	AlarmJournal_1.Alarms_1.HorizontalScrollBarPolicy=1;
+	//AlarmJournal_1.Alarms_1.LoadConfiguration("BottomConfig");
+	AlarmJournal_1.Alarms_1.SetAdvancedFilter("severity", "600 | 400");
+	
+	AlarmJournal_1.Alarms_1.SetAdvancedFilter("message", "");	
+	
+	
+}
+if (messageType == "hide") {
+	AlarmJournal_1.Visible = false;
+	Logo.Visible = false;
+}
+if (messageType == "full") {
+	AlarmJournal_1.Visible = true;
+	AlarmJournal_1.Alarms_1.DisplayToolbar = true;
+	AlarmJournal_1.Alarms_1.DisplayStatePanel = true;
+
+	AlarmJournal_1.Y = 100;
+	Logo.Visible=false;
+	AlarmJournal_1.Alarms_1.ActiveMode = 0;
+	AlarmJournal_1.Width = 1920;
+	AlarmJournal_1.Height = 900;
+	
+	AlarmJournal_1.Alarms_1.FollowLatestEvent=false;
+	AlarmJournal_1.Alarms_1.X = 220;
+	AlarmJournal_1.Alarms_1.Y = 110;
+	AlarmJournal_1.Alarms_1.Height = 729;
+	AlarmJournal_1.Alarms_1.Width = 1480;
+	AlarmJournal_1.Alarms_1.Scale = 1.3;
+		AlarmJournal_1.Alarms_1.VerticalScrollBarPolicy=0;
+	AlarmJournal_1.Alarms_1.HorizontalScrollBarPolicy=0;
+	AlarmJournal_1.Alarms_1.SetAdvancedFilter("severity", "");
+	//	AlarmJournal_1.Alarms_1.LoadConfiguration("FullConfig");
+}
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Logo" display-name="Logo" uuid="26b9d2f9-52d9-42f6-814f-c24c91590a01" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="1577" ver="5"/>
+		<designed target="Y" value="954" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="342" ver="5"/>
+		<designed target="Height" value="125" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="0xffffffff" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<object access-modifier="private" name="LogoImg" display-name="LogoImg" uuid="1ba0c073-78a7-4152-bfae-b81977776a3e" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+			<designed target="X" value="153.00000000000006" ver="5"/>
+			<designed target="Y" value="1" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="190" ver="5"/>
+			<designed target="Height" value="125" ver="5"/>
+			<designed target="PenColor" value="4278190080" ver="5"/>
+			<designed target="PenStyle" value="0" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="ImageFile" value="logo.png" ver="5"/>
+			<designed target="Active" value="true" ver="5"/>
+			<designed target="CurrentFrameNumber" value="0" ver="5"/>
+			<designed target="Speed" value="1" ver="5"/>
+		</object>
+	</object>
+	<object access-modifier="private" name="Button_1" display-name="Button_1" uuid="49c5d035-a64f-4d4a-839a-7780e61be74e" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="25" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="25" ver="5"/>
+		<designed target="Height" value="25" ver="5"/>
+		<designed target="Checkable" value="false" ver="5"/>
+		<designed target="Checked" value="false" ver="5"/>
+		<designed target="Text" value="Х" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+		<designed target="FontColor" value="4278190080" ver="5"/>
+		<designed target="OnClickFontColor" value="4278190080" ver="5"/>
+		<designed target="OnHoverFontColor" value="4278190080" ver="5"/>
+		<designed target="DisabledFontColor" value="4278190080" ver="5"/>
+		<designed target="BrushColor" value="4293914607" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<designed target="OnClickBrushColor" value="4288651167" ver="5"/>
+		<designed target="OnClickBrushStyle" value="1" ver="5"/>
+		<designed target="OnHoverBrushColor" value="4294967295" ver="5"/>
+		<designed target="OnHoverBrushStyle" value="1" ver="5"/>
+		<designed target="DisabledBrushColor" value="4290295992" ver="5"/>
+		<designed target="DisabledBrushStyle" value="1" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="OnClickPenColor" value="4278190080" ver="5"/>
+		<designed target="OnClickPenStyle" value="1" ver="5"/>
+		<designed target="OnClickPenWidth" value="1" ver="5"/>
+		<designed target="OnHoverPenColor" value="4278190080" ver="5"/>
+		<designed target="OnHoverPenStyle" value="1" ver="5"/>
+		<designed target="OnHoverPenWidth" value="1" ver="5"/>
+		<designed target="DisabledPenColor" value="4290295992" ver="5"/>
+		<designed target="DisabledPenStyle" value="1" ver="5"/>
+		<designed target="DisabledPenWidth" value="1" ver="5"/>
+		<init target="Focus" ver="5" value="false"/>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[unit.Security.Access_Operator && unit.Security.Access_Engineer]]>
+			</body>
+		</do-trace>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+			<body kind="om">
+				<![CDATA[Close();]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="523bdbdc-d728-461e-b9ab-506bb6a28b78" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="1000" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<object access-modifier="private" name="OPER_Connect" display-name="OPER_Connect" uuid="6efc78b6-4ccc-4349-a07e-874a62bc2dda" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<init target="Path" ver="5" value="Mode_work.InOPER_Connect"/>
+		</object>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[OPER_Connect=true;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Kvit_btn" display-name="Kvit_btn" uuid="e0929545-104d-4936-a5ca-90ad3c014bd1" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Signals.Kvit_btn"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+			<body kind="om">
+				<![CDATA[if (value){
+	if (!unit.Security.Access_Operator && !unit.Security.Access_Engineer) {
+		if (!unit.ModeWork.Kvit_window){
+			NoAccessAction.Invoke();
+			unit.ModeWork.Kvit_window = true;		
+		}
+		return;
+	}
+	Kvit_signal.In = true;
+}
+
+if (!value) Kvit_signal.In = false;
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Kvit_signal" display-name="Kvit_signal" uuid="e4427751-d4f9-42b8-8b74-c0612321b5ba" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="ValuePath" ver="5" value="Signals.Kvit_Signal"/>
+		<init target="MainSource" ver="5" ref="unit.Source.Main"/>
+	</object>
+	<object access-modifier="private" name="NoAccessAction" display-name="NoAccessAction" uuid="03f004ca-c1f9-4abd-8901-b9bb76f9f827" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="05231368-7901-4268-97f7-7b85ab072d7d" base-type="Сообщение" base-type-id="0babc8f4-86ac-4dba-9145-1c0d2529a898" ver="5">
+				<init target="MessageText" ver="5" value="Для квитирования необходимо авторизоваться. Данное событие записано в журнал событий."/>
+				<init target="WindowName" ver="5" value="Неавторизованное квитирование"/>
+				<init target="OnClose" ver="5" ref="Kvit_window_close"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="FileSystem_1" display-name="FileSystem_1" uuid="cc2a93f3-1828-47de-8352-5629803dac59" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512" ver="5" description="" cardinal="1">
+		<designed target="RootPath" value="/" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Kvit_window_close" display-name="Kvit_window_close" uuid="5d0311ec-d83f-4629-b3a2-50d1da2aa2bc" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+			<body kind="om">
+				<![CDATA[unit.ModeWork.Kvit_window = false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="SwitchModeNotAuth" display-name="Изменение режима работы при отсутствии авторизации" uuid="b78e54df-2703-4d75-82ed-8e2a0954443f" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value)
+	ShowAuthMessage.Invoke();]]>
+			</body>
+		</do-on>
+		<object access-modifier="private" name="ShowAuthMessage" display-name="ShowAuthMessage" uuid="13fe32d2-49d0-4370-9fc1-815becde4410" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="InvokeTrigger" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="080911f6-70ab-4b18-9fbd-620aff8b3003" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+					<init target="Message" ver="5" value="Для изменения режима работы САУ ГРС, необходимо авторизоваться"/>
+					<init target="Icon" ver="5" value="2"/>
+					<init target="Buttons" ver="5" value="0"/>
+					<designed target="ShowWindowCaption" value="false" ver="5"/>
+					<designed target="WindowCloseMode" value="0" ver="5"/>
+					<do-trace access-modifier="private" target="AutoClose" ver="5">
+						<body>
+							<![CDATA[Variant.ToBool(unit.Security.Authenticated.Out, false)]]>
+						</body>
+					</do-trace>
+					<init target="LineHeight" ver="5" value="30"/>
+					<designed target="WindowWidth" value="200" ver="5"/>
+					<designed target="Scale" value="1.5" ver="5"/>
+				</object>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="SwitchToAutomize" display-name="SwitchToAutomize" uuid="09812049-8a0d-4024-a21c-4606de91918d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value)
+	CheckSubAuto();]]>
+			</body>
+		</do-on>
+		<do access-modifier="private" name="CheckSubAuto" display-name="CheckSubAuto" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+			<object access-modifier="private" uuid="cb745bf9-2fd0-48db-8c9e-690763e3116f" base-type="Переход в авто_1" base-type-id="e61527c9-9dae-45cb-9986-e28abc342e28" ver="5">
+				<init target="ShowClose" ver="5" value="false"/>
+				<do-trace access-modifier="private" target="ShowClose" ver="5">
+					<body>
+						<![CDATA[!unit.Switch.SwitchToAutomize]]>
+					</body>
+				</do-trace>
+			</object>
+		</do>
+	</object>
+	<do-trace access-modifier="private" target="SwitchModeNotAuth" ver="5">
+		<body>
+			<![CDATA[unit.Switch.SwitchModeNotAuth]]>
+		</body>
+	</do-trace>
+	<do-trace access-modifier="private" target="SwitchToAutomize" ver="5">
+		<body>
+			<![CDATA[unit.Switch.SwitchToAutomize]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="SwitchModeAuto" display-name="SwitchModeAuto" uuid="ba204f40-bfe8-4b26-9efc-efd382a5bb3a" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value)
+	CheckSubAuto();]]>
+			</body>
+		</do-on>
+		<do access-modifier="private" name="CheckSubAuto" display-name="CheckSubAuto" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+			<object access-modifier="private" uuid="1e31e311-64b8-4e67-90aa-142757f9099d" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+				<init target="Buttons" ver="5" value="0"/>
+				<init target="Icon" ver="5" value="2"/>
+				<init target="Message" ver="5">
+					<expr>
+						<![CDATA[Message_]]>
+					</expr>
+				</init>
+			</object>
+		</do>
+		<object access-modifier="private" name="P_out_Status" display-name="P_out_Status" uuid="90f7f919-20d0-42ac-85ab-f12d99ec6dc5" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="P_gas_out.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.AI_Sensors"/>
+		</object>
+		<object access-modifier="private" name="P_in_Status" display-name="P_in_Status" uuid="301f578e-dfa1-4ecf-a3eb-ee76d4d0eb8d" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="P_gas_in.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.AI_Sensors"/>
+		</object>
+		<object access-modifier="private" name="CR1_1_Status" display-name="CR1_1_Status" uuid="6dc537c3-23d8-4205-8b62-7fe9aef39f1b" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="CR_1_1.TS_Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+		<object access-modifier="private" name="CR1_2_Status" display-name="CR1_2_Status" uuid="97dc21e7-c883-4f4c-bfd6-894aea9d0f5d" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="CR_1_2.TS_Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+		<object access-modifier="private" name="Message_" display-name="Сообщение" uuid="ccd2d07a-83ce-4d1a-b457-bbd66d51214b" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+		<do-trace access-modifier="private" target="Message_" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[P_out_Status]]>
+				</condition>
+				<expr>
+					<![CDATA["Неисправность датчика давления на выходе ГРС
+САУ ГРС была перевена в автоматизированный режим работы"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[P_in_Status]]>
+				</condition>
+				<expr>
+					<![CDATA["Неисправность датчика давления на входе ГРС
+САУ ГРС была перевена в автоматизированный режим работы"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[CR1_1_Status==3]]>
+				</condition>
+				<expr>
+					<![CDATA["Ошибка определения положения крана №1-1 на входе ГРС
+САУ ГРС была перевена в автоматизированный режим работы"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[CR1_2_Status==3]]>
+				</condition>
+				<expr>
+					<![CDATA["Ошибка определения положения крана №1-2 на выходе ГРС
+САУ ГРС была перевена в автоматизированный режим работы"]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+	</object>
+	<do-trace access-modifier="private" target="SwitchModeAuto" ver="5">
+		<body>
+			<![CDATA[unit.Switch.SwitchModeAuto]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="ShowAlgosDialogs" display-name="ShowAlgosDialogs" uuid="185d4060-baa1-49e8-a34e-12be58200235" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Enable_AO_S" display-name="Enable_AO_S" uuid="cfd738d5-670c-42dc-a6cf-5688b64aabcd" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+			<init target="Path" ver="5" value="AO_S"/>
+		</object>
+		<do access-modifier="private" name="ShowConfirm" display-name="ShowConfirm" ver="5" form-by-id="false" form-action="open-dialog">
+			<object access-modifier="private" uuid="c64fd47f-6919-4063-a136-381f51be1536" base-type="Подтверждение_1" base-type-id="75847af1-3421-4ca6-b27b-b29bfaa9277c" ver="5">
+				<init target="WindowName" ver="5" ref="textTitle"/>
+				<init target="CommandText" ver="5" ref="textWindow"/>
+				<init target="Algo" ver="5" ref="AlgoPath"/>
+			</object>
+		</do>
+		<object access-modifier="private" name="Bypass_1_High_P" display-name="Bypass_1_High_P" uuid="e1adc65f-517d-4602-90bf-49ccb17e422b" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="P_gas_out1._12max"/>
+			<init target="Source" ver="5" ref="unit.Source.Alarm"/>
+		</object>
+		<object access-modifier="private" name="Enable_Bypass_1" display-name="Enable_Bypass_1" uuid="bd224124-42ab-4b4b-ae5d-0c4a987d484f" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+			<init target="Path" ver="5" value="Bypass1.OutRun"/>
+		</object>
+		<object access-modifier="private" name="Bypass_2_High_P" display-name="Bypass_2_High_P" uuid="cdd04a54-007a-4a76-8bd6-a876fbbcea12" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="P_gas_out2._12max"/>
+			<init target="Source" ver="5" ref="unit.Source.Alarm"/>
+		</object>
+		<object access-modifier="private" name="Enable_Bypass_2" display-name="Enable_Bypass_2" uuid="89da34e7-484c-4543-9115-7974f778dcf4" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+			<init target="Path" ver="5" value="Bypass2.OutRun"/>
+		</object>
+		<object access-modifier="private" name="Bypass_3_High_P" display-name="Bypass_3_High_P" uuid="b9382dfa-b8c9-4f1f-9879-9250ed5be234" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="P_gas_out3._12max"/>
+			<init target="Source" ver="5" ref="unit.Source.Alarm"/>
+		</object>
+		<object access-modifier="private" name="Enable_Bypass_3" display-name="Enable_Bypass_3" uuid="de8c1179-59ea-4784-a8a1-3d298d7c4b7d" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="Bypass3.OutRun"/>
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		</object>
+		<object access-modifier="private" name="textWindow" display-name="textWindow" uuid="90fdb26f-c4d6-44eb-9ed0-a92e04ab460f" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="AlgoPath" display-name="AlgoPath" uuid="e727496c-dcbf-4faa-ac46-a8374cabb6e6" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="textTitle" display-name="textTitle" uuid="557df485-1ac8-4ade-be53-b666d72be0eb" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="AlgoRun" display-name="AlgoRun" uuid="325e56d8-6ab3-432f-8a47-ddfe77b1fbfa" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="unit.Source.Algo"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA[AlgoPath + ".Run"]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="AlgoRunBP" display-name="AlgoRunBP" uuid="14da1730-59eb-4d1e-9c51-2748cc0898a2" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="unit.Source.Algo"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA[AlgoPath + ".Run"]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="AlgoConfirm" display-name="AlgoConfirm" uuid="eeeaa47d-188b-4291-bee7-6bd63da3dd53" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="unit.Source.Algo"/>
+			<do-trace access-modifier="private" target="ValuePath" ver="5">
+				<body>
+					<![CDATA[AlgoPath + ".Confirm"]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="AOBS1_DOP_BP" display-name="AOBS1_DOP_BP" uuid="ad5278a8-dde5-4e35-971f-e8224c7d5b22" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="AO_BS1.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		</object>
+		<object access-modifier="private" name="AOBS2_DOP_BP" display-name="AOBS2_DOP_BP" uuid="f680147e-eeeb-4566-b530-2d6daccb48dc" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="AO_BS2.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		</object>
+		<object access-modifier="private" name="AOBS_DOP_BP(№1)" display-name="AOBS_DOP_BP(№1)" uuid="724d8f21-6cd3-491d-9136-382cec712908" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="AO_BS.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		</object>
+		<object access-modifier="private" name="AOBS_DOP_BP(№2)" display-name="AOBS_DOP_BP(№2)" uuid="da4ecba5-fc9f-4c01-9597-a70768508c4b" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="AO_BS.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		</object>
+		<object access-modifier="private" name="AOS_DOP_BP(№1)" display-name="AOS_DOP_BP(№1)" uuid="92d414d5-9dec-4041-85f1-01a3d52d0b4e" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="AO_S.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		</object>
+		<object access-modifier="private" name="AOS_DOP_BP(№2)" display-name="AOS_DOP_BP(№2)" uuid="f0b32e62-f6b9-44bc-8104-f1ee335e4dc7" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="AO_S.Status"/>
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+		</object>
+		<do access-modifier="private" name="ShowConfirmConfirm" display-name="ShowConfirmConfirm" ver="5" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="bca25614-8c3d-4f02-a6cb-8b0d11b960ed" base-type="Подтверждение_1" base-type-id="75847af1-3421-4ca6-b27b-b29bfaa9277c" ver="5">
+				<init target="WindowName" ver="5" ref="textTitle"/>
+				<init target="CommandText" ver="5" ref="textWindow"/>
+				<init target="Algo" ver="5" ref="AlgoPath"/>
+			</object>
+		</do>
+		<object access-modifier="private" name="Bypas1_Error" display-name="Bypas1_Error" uuid="3ed150cb-6ffa-4eb5-ab1f-ddda9a569739" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+			<init target="Path" ver="5" value="Bypass1.ErrorMsg"/>
+		</object>
+		<object access-modifier="private" name="Bypas2_Error" display-name="Bypas2_Error" uuid="f8301a2f-b8c3-45c6-b6b1-eeae90c981b7" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+			<init target="Path" ver="5" value="Bypass2.ErrorMsg"/>
+		</object>
+		<object access-modifier="private" name="Bypas_Error" display-name="Bypas_Error" uuid="88b2161f-fe00-4b5c-9fb7-11666de2cc23" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Algo"/>
+			<init target="Path" ver="5" value="Bypass.ErrorMsg"/>
+		</object>
+		<object access-modifier="private" name="PGZ1" display-name="PGZ1" uuid="9e88b3d7-274c-49a1-a782-c4b189a140e6" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="PG1_break"/>
+			<init target="Source" ver="5" ref="unit.Source.EKM"/>
+		</object>
+		<object access-modifier="private" name="PGZ2" display-name="PGZ2" uuid="0ebb1910-a16c-41bc-8a1f-1b6e29c7993c" base-type="ApItemInt2" base-type-id="46c29e2c-cf0c-4e96-ad30-6d7ae4e2ae8c" ver="5" description="" cardinal="1">
+			<init target="Path" ver="5" value="PG2_break"/>
+			<init target="Source" ver="5" ref="unit.Source.EKM"/>
+		</object>
+		<object access-modifier="private" name="Timer" display-name="Timer" uuid="dc2a285f-68f9-4dba-8690-364fb2922c04" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="2000" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[unit.WindowGroup.Group.SendToAll("Bypass", "Bypass");
+me.Active = false;]]>
+				</body>
+			</do-on>
+			<do-trace access-modifier="private" target="Active" ver="5">
+				<body>
+					<![CDATA[AlgoBypass.POut12Max.Value && !AlgoBypass.POut1Status.Value && !AlgoBypass.Enable1.Value]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="AlgoBypass" display-name="AlgoBypass" uuid="ee02f66a-fa9b-4241-b00a-cdd8077fd0fb" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+			<designed target="Location" value="" ver="5"/>
+			<designed target="Port" value="4388" ver="5"/>
+			<designed target="HistoryPort" value="4950" ver="5"/>
+			<designed target="Path" value="Bypass" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<designed target="ReAdvise" value="0" ver="5"/>
+			<designed target="ClientDisplayName" value="HMI" ver="5"/>
+			<designed target="ClientId" value="HMI" ver="5"/>
+			<init target="ParentSource" ver="5" ref="unit.Source.Algo"/>
+			<object access-modifier="private" name="POut12Max" display-name="POut12Max" uuid="f49a44ac-5550-4bab-9eda-a3ffe507442f" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Alarm"/>
+				<init target="Path" ver="5" value="P_gas_out1._12max"/>
+			</object>
+			<object access-modifier="private" name="POut1Status" display-name="POut1Status" uuid="a219348b-682e-4baf-a7fe-1d1d7b29c867" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="P_gas_out1.Status"/>
+				<init target="Source" ver="5" ref="unit.Source.AI_Sensors"/>
+			</object>
+			<object access-modifier="private" name="Enable1" display-name="Enable1" uuid="982cf5e4-2c9d-421f-8578-10ecded70bc5" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="Enable"/>
+				<init target="Source" ver="5" ref="AlgoBypass"/>
+			</object>
+		</object>
+	</object>
+</type>
+

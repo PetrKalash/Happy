@@ -1,0 +1,417 @@
+<type access-modifier="public" name="DOTable" display-name="DOTable" uuid="5165b6cd-2ae4-4b93-b65b-4225a5b28a5b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1368.3571428571427" ver="5"/>
+	<designed target="Height" value="600" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="BrushColor" value="4278190080" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<object access-modifier="private" name="Title" display-name="Title" uuid="70f09ae8-25f3-4398-993c-58951dc1ca2b" base-type="Dummy" base-type-id="e4b644cf-f3a8-4d11-82a0-6acc23748e14" ver="5" description="" cardinal="1">
+		<designed target="X" value="64.000000000000099" ver="5"/>
+		<designed target="Y" value="14.5" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<object access-modifier="private" name="Channel" display-name="Channel" uuid="e409a7e3-db2a-4be9-a24f-df468e4468aa" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="-63.444444444444443" ver="5"/>
+			<designed target="Y" value="-14" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="1364.8571428571427" ver="5"/>
+			<designed target="Height" value="31.523809523809518" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="24eea708-8bd8-40cf-ad81-0a454010299b" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="1364.8571428571427" ver="5"/>
+				<designed target="Height" value="31.523809523809518" ver="5"/>
+				<designed target="Text" value="Модуль дискретного вывода DO" ver="5"/>
+				<designed target="Font" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<do-trace access-modifier="private" target="FontColor" ver="5">
+					<body>
+						<![CDATA[unit.Theme.TextColor]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="Text" ver="5">
+					<body>
+						<![CDATA["Модуль дискретного вывода DO" + String.ToString(NumberDO)]]>
+					</body>
+				</do-trace>
+				<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="4a4429b2-698b-46e6-85c1-497d22152256" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="5" description="" cardinal="1">
+					<designed target="Weight" value="1" ver="5"/>
+				</object>
+				<object access-modifier="private" name="LeftMargin" display-name="LeftMargin" uuid="f6c882e3-26d2-490a-a990-b576c5505be3" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+					<designed target="Top" value="0" ver="5"/>
+					<designed target="Bottom" value="0" ver="5"/>
+					<designed target="Left" value="0" ver="5"/>
+					<designed target="Right" value="0" ver="5"/>
+				</object>
+			</object>
+			<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="c60ca3ce-a46c-4f8c-bb05-bc1911ad6242" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="SbrosUDKS" display-name="SbrosUDKS" uuid="5a318ba9-45bd-494f-82ed-074176505a9e" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+				<designed target="X" value="1166.5445665445664" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Width" value="198.31257631257631" ver="5"/>
+				<designed target="Height" value="31.523809523809518" ver="5"/>
+				<object access-modifier="private" name="DO_Signal" display-name="DO_Signal" uuid="1215e77b-2028-48b4-8a70-73efbe1f496a" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+					<init target="MainSource" ver="5" ref="unit.Source.Main"/>
+					<init target="ValuePath" ver="5" value="UDKS.Sbros_UDKS"/>
+				</object>
+				<init target="Signal" ver="5" ref="DO_Signal"/>
+				<do-trace access-modifier="private" target="CommandValue" ver="5">
+					<body>
+						<![CDATA[!Variant.ToBool(DO_Signal.Out, false)]]>
+					</body>
+				</do-trace>
+				<init target="DopExceptionText" ver="5" value="Действие невозможно. Модуль DO1 находится в ошибке"/>
+				<designed target="Text" value="" ver="5"/>
+				<designed target="OnHoverPenColor" value="0xff00ff00" ver="5"/>
+				<do-trace access-modifier="private" target="Alarm_message" ver="5">
+					<conditional-expr>
+						<condition>
+							<![CDATA[!unit.Source.Connection]]>
+						</condition>
+						<expr>
+							<![CDATA["Действие недоступно по причине отсутствия связи с контроллерами"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[DopException]]>
+						</condition>
+						<expr>
+							<![CDATA[DopExceptionText]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!unit.Security.Access_Operator && !unit.Security.Access_Engineer && EnableAuth]]>
+						</condition>
+						<expr>
+							<![CDATA["Данное действие недоступно для неавторизованного пользователя"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4)) && EnableAccess && !EnableAuto]]>
+						</condition>
+						<expr>
+							<![CDATA["Действие недоступно в текущем режиме работы"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!unit.Security.Access_Engineer && EnableEngineer]]>
+						</condition>
+						<expr>
+							<![CDATA["Данное действие доступно только пользователям с правами Инженера и выше"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[(!unit.Security.Access_Operator || !unit.Security.Access_Engineer) && EnableAdmin]]>
+						</condition>
+						<expr>
+							<![CDATA["Данное действие доступно только пользователям с правами администратора"]]>
+						</expr>
+					</conditional-expr>
+					<conditional-expr>
+						<condition>
+							<![CDATA[!(unit.ModeWork.Access || (unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4) || unit.ModeWork.ModeWork == 6) && !EnableAccess && EnableAuto]]>
+						</condition>
+						<expr>
+							<![CDATA["Действие недоступно в текущем режиме работы"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA[""]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+				<designed target="BrushColor" value="0xff2c2c2c" ver="5"/>
+				<designed target="PenColor" value="0xff00ff00" ver="5"/>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="aa11cbe2-738b-415d-81b8-065a7e98e999" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+					<designed target="X" value="0" ver="5"/>
+					<designed target="Y" value="0" ver="5"/>
+					<designed target="ZValue" value="0" ver="5"/>
+					<designed target="Rotation" value="0" ver="5"/>
+					<designed target="Scale" value="1" ver="5"/>
+					<designed target="Flip" value="0" ver="5"/>
+					<designed target="Visible" value="true" ver="5"/>
+					<designed target="Opacity" value="1" ver="5"/>
+					<designed target="Enabled" value="true" ver="5"/>
+					<designed target="Tooltip" value="" ver="5"/>
+					<designed target="Width" value="198.00000000000045" ver="5"/>
+					<designed target="Height" value="31.714285714285715" ver="5"/>
+					<designed target="Text" value="Сброс УДКС" ver="5"/>
+					<designed target="Font" value="Golos Text,14,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+					<designed target="FontColor" value="0xffffffff" ver="5"/>
+					<designed target="TextAlignment" value="132" ver="5"/>
+				</object>
+				<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="5d01a308-3f30-4567-b9bb-8df77054ee29" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="5" description="" cardinal="1">
+					<designed target="Weight" value="0.17000000000000001" ver="5"/>
+				</object>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+					<body kind="javascript">
+						<![CDATA[if (DO_Signal.In.Value) {
+	me.DO_Signal.In.Value = false;
+	me.DO_Signal.Out.Value = false;
+}]]>
+					</body>
+				</do-on>
+				<designed target="Visible" value="false" ver="5"/>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="659b2f76-f7b8-416d-83f2-c2018230d605" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="32.523809523809518" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1365.968253968254" ver="5"/>
+		<designed target="Height" value="567.47619047619048" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="0xffffffff" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="7577ae50-3c3b-45ea-82a5-2b9d427a756a" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="1" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Column" display-name="Column" uuid="f1ce5a22-65cb-4641-a903-b6c5a290adac" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="2">
+			<designed target="X" value="0" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="1365.968253968254" ver="5"/>
+			<designed target="Height" value="567.47619047619048" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="4278190080" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<object access-modifier="private" name="DOData" display-name="DOData" uuid="90ab68ab-c427-4107-88a3-1f09ba17a9eb" base-type="DOData" base-type-id="fe71abfd-fac2-4705-9838-15df4582d82b" ver="5" description="" cardinal="16">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Width" value="1365.968253968254" ver="5"/>
+				<designed target="Height" value="567.47619047619048" ver="5"/>
+				<designed target="BrushColor" value="0xff000000" ver="5"/>
+				<designed target="BrushStyle" value="0" ver="5"/>
+				<designed target="PenStyle" value="1" ver="5"/>
+				<do-trace access-modifier="private" target="CurrentShowPercent" ver="5">
+					<body>
+						<![CDATA[DIData[Index].ShowPercent]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="CurrentNameSignal" ver="5">
+					<body>
+						<![CDATA[DOData[Index].NameSignal]]>
+					</body>
+				</do-trace>
+				<designed target="Visible" value="true" ver="5"/>
+				<do-trace access-modifier="private" target="CurrentShowUnit" ver="5">
+					<body>
+						<![CDATA[DIData[Index].ShowUnit]]>
+					</body>
+				</do-trace>
+				<designed target="PenColor" value="0xffffffff" ver="5"/>
+				<object access-modifier="private" name="NumberChannel" display-name="Номер канала" uuid="f84cb8b7-70cc-4cba-a8e7-3fa1d5242a85" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="NameSignal" display-name="Название сигнала" uuid="da2497ee-fd1c-4421-9702-2845668f321a" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="PathSignal" display-name="Путь до сигнала" uuid="f53c7f40-9e61-48d9-8a0a-3dbbc4921893" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="ShowPercent" display-name="Отобразить проценты?" uuid="b5bb9cd2-e5d9-42de-a2b6-bb1642c45b35" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="ShowUnit" display-name="Показать единицы измерения?" uuid="59a32c20-884e-4d55-9856-7adaced98b58" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="IncorrectValue" display-name="IncorrectValue" uuid="9b0203a3-f282-48e0-bac7-1d23f714a937" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+				<object access-modifier="private" name="PathUDKS" display-name="PathUDKS" uuid="cb7ea095-821e-48e1-9c81-d0c292aba66c" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+					<init target="Source" ver="5" ref="unit.Source.Main"/>
+				</object>
+			</object>
+			<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="c35caac5-9eb4-4b74-8bd7-12c4aea990ca" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="2" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+		</object>
+	</object>
+	<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="4187c1ad-73dc-42c1-bac5-5236dc3abd7d" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="2" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="NumberDO" display-name="Номер модуля AI" uuid="618d3cee-864b-415d-a293-585b1e2b462d" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="CountChannels" display-name="Количество каналов" uuid="7ed954e3-79a3-412b-bdbd-6e4c98500d68" base-type="notifying_int4" base-type-id="5ccca629-a45d-46c8-a56c-83ecde8126f7" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NumberChannelCounter" display-name="NumberChannelCounter" uuid="67609fbc-8b13-44a8-8ace-c6ae638c19c0" base-type="int4" base-type-id="74222947-f188-4195-8e0e-e33bd9827255" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="LayoutMargins" display-name="LayoutMargins" uuid="96e0ce83-2576-4f3d-9863-b8affe0cd5dd" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+		<designed target="Top" value="40" ver="5"/>
+		<designed target="Bottom" value="0" ver="5"/>
+		<designed target="Left" value="0" ver="5"/>
+		<designed target="Right" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Timer" display-name="Timer" uuid="cbd46591-0d16-4232-89ca-4278342b6725" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="200" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="javascript">
+				<![CDATA[for (let i = 0; i < Body.Column.Length; i++) {
+	for (let j = 0; j < Body.Column[i].DOData.Length; j++) {
+		Body.Column[i].DOData[j].Channel.Text_1.Text = String(Body.Column[i].DOData[j].NumberChannel);
+		Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.Signal.ValuePath = Body.Column[i].DOData[j].PathSignal;
+		if (i == 0) {
+			Body.Column[i].DOData[j].LayoutMargins_1.Right = 1;
+		} else {
+			Body.Column[i].DOData[j].LayoutMargins_1.Right = 0;
+		}
+	}
+}
+// сколько каналов в первой колонке
+const firstMax  = Math.ceil(CountChannels / 2);
+// сколько каналов во второй (остаток)
+const secondMax = CountChannels - firstMax;
+
+// колонка 0 скрывает всё с индекса firstMax
+for (let j = firstMax; j < Body.Column[0].DOData.Length; j++) {
+  Body.Column[0].DOData[j].Visible = false;
+}
+
+// колонка 1 скрывает всё с индекса secondMax
+for (let j = secondMax; j < Body.Column[1].DOData.Length; j++) {
+  Body.Column[1].DOData[j].Visible = false;
+}
+me.Active = false;]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Timer2" display-name="Timer2" uuid="9c25e90a-8fee-4f25-b2f4-a170020ecec4" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="300" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="javascript">
+				<![CDATA[for (let i = 0; i < Body.Column.Length; i++) {
+	for (let j = 0; j < Body.Column[i].DOData.Length; j++) {
+		if (Body.Column[i].DOData[j].UDKS.Value == true) {
+			if (unit.Security.Access_Engineer.Value && !unit.Security.Access_Operator.Value) {
+				Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.EnableEngineer = true;
+			} else if (!unit.Security.Access_Engineer.Value && (unit.Security.Access_Operator.Value || (!unit.Security.Access_Operator.Value && !unit.Security.Access_Engineer.Value))) {
+				Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.EnableEngineer = false;
+				Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.Visible = false;
+			}
+			if (Body.Column[i].DOData[j].PathUDKS.Value == true && ((!unit.Security.Access_Engineer.Value && unit.Security.Access_Operator.Value) || (!unit.Security.Access_Operator.Value && !unit.Security.Access_Engineer.Value))) {
+				Body.Column[i].DOData[j].CurrentValue.Settings.DOUDKS.Visible = true;
+			} else {
+				Body.Column[i].DOData[j].CurrentValue.Settings.DOUDKS.Visible = false;
+			}
+			
+			if (Title.Channel.SbrosUDKS.DO_Signal.Out.Value) {
+				Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.DO_Signal.In.Value = false;
+				Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.DO_Signal.Out.Value = false;
+			}			
+			
+		}
+		Body.Column[i].DOData[j].Parameter.Text_1.Text = Body.Column[i].DOData[j].NameSignal;
+	}
+}
+
+// В будущем, пожалуйста, создайте элементы AP, чтобы доставать из астры параметры Security. А то я не могу уже писать эти unit.Security]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Timer3" display-name="Timer3" uuid="89ef313c-a94f-40fb-ac9e-bb50cbb4eeed" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="1000" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="javascript">
+				<![CDATA[for (let i = 0; i < Body.Column.Length; i++) {
+	for (let j = 0; j < Body.Column[i].DOData.Length; j++) {
+		if (Body.Column[i].DOData[j].IncorrectValue.Value) {
+		   Body.Column[i].DOData[j].Parameter.PenColor = "0xffaa00ff";
+		   Body.Column[i].DOData[j].Parameter.PenWidth = 2;
+		}
+		
+		let cell = Body.Column[i].DOData[j].NameSignal.Value;
+		let name = cell || '';
+     
+     if (Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.DO_Signal.Out.Path && 
+     Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.Signal.ValuePath == "") {
+	     if (!Body.Column[i].DOData[j].PathUDKS.Advised) {
+	     	Body.Column[i].DOData[j].Parameter.PenColor = "0xffff0000";
+	     	if (!unit.Source.Connection) {
+	     		Body.Column[i].DOData[j].Parameter.PenWidth = 1;
+	     	} else {
+					Body.Column[i].DOData[j].Parameter.PenWidth = 2;
+				}
+	     }
+	  } 
+		else if (!Body.Column[i].DOData[j].CurrentValue.Settings.DOSet.DO_Signal.Out.Advised
+		&& !Body.Column[i].DOData[j].IncorrectValue.Value
+		&& !/^резерв$/i.test(name.trim())) {
+			Body.Column[i].DOData[j].Parameter.PenColor = "0xffff0000";
+			Body.Column[i].DOData[j].Parameter.PenWidth = 2;
+		}
+	}
+}
+me.Active = false;]]>
+			</body>
+		</do-on>
+	</object>
+</type>
+

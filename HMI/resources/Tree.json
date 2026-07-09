@@ -1,0 +1,900 @@
+{
+ "UserTree": [
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/Основной ввод/Напряжение на фазе A",
+     "OpcTag": "Counters.Mercuries.Mercury1.U_phase_A",
+     "EUnit": "В",
+     "Description": "Напряжение на фазе A на основном вводе",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/Основной ввод/Напряжение на фазе B",
+     "OpcTag": "Counters.Mercuries.Mercury1.U_phase_B",
+     "EUnit": "В",
+     "Description": "Напряжение на фазе B на основном вводе",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/Основной ввод/Напряжение на фазе C",
+     "OpcTag": "Counters.Mercuries.Mercury1.U_phase_C",
+     "EUnit": "В",
+     "Description": "Напряжение на фазе C на основном вводе",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/Основной ввод/Ток на фазе A",
+     "OpcTag": "Counters.Mercuries.Mercury1.I_phase_A",
+     "EUnit": "А",
+     "Description": "Ток на фазе A на основном вводе",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/Основной ввод/Ток на фазе B",
+     "OpcTag": "Counters.Mercuries.Mercury1.I_phase_B",
+     "EUnit": "А",
+     "Description": "Ток на фазе B на основном вводе",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/Основной ввод/Ток на фазе C",
+     "OpcTag": "Counters.Mercuries.Mercury1.I_phase_C",
+     "EUnit": "А",
+     "Description": "Ток на фазе C на основном вводе",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/ПЭСПЗ/Напряжение на фазе A",
+     "OpcTag": "Counters.Mercuries.Mercury2.U_phase_A",
+     "EUnit": "В",
+     "Description": "Напряжение на фазе A на вводе ПЭСПЗ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/ПЭСПЗ/Напряжение на фазе B",
+     "OpcTag": "Counters.Mercuries.Mercury2.U_phase_B",
+     "EUnit": "В",
+     "Description": "Напряжение на фазе B на вводе ПЭСПЗ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/ПЭСПЗ/Напряжение на фазе C",
+     "OpcTag": "Counters.Mercuries.Mercury2.U_phase_C",
+     "EUnit": "В",
+     "Description": "Напряжение на фазе C на вводе ПЭСПЗ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/ПЭСПЗ/Ток на фазе A",
+     "OpcTag": "Counters.Mercuries.Mercury2.I_phase_A",
+     "EUnit": "А",
+     "Description": "Ток на фазе A на вводе ПЭСПЗ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/ПЭСПЗ/Ток на фазе B",
+     "OpcTag": "Counters.Mercuries.Mercury2.I_phase_B",
+     "EUnit": "А",
+     "Description": "Ток на фазе B на вводе ПЭСПЗ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Электроэнергия/ПЭСПЗ/Ток на фазе C",
+     "OpcTag": "Counters.Mercuries.Mercury2.I_phase_C",
+     "EUnit": "А",
+     "Description": "Ток на фазе C на вводе ПЭСПЗ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Трехход. клапаны/Датчик положения трехходового клапана 11.1-2 контура котла ТГ11.1",
+     "OpcTag": "AI_Sensors.Pos_boiler1.Value",
+     "EUnit": "%",
+     "Description": "Датчик положения трехходового клапана 11.1-2 контура котла ТГ11.1",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Трехход. клапаны/Датчик положения трехходового клапана 11.2-2 контура котла ТГ11.2",
+     "OpcTag": "AI_Sensors.Pos_boiler2.Value",
+     "EUnit": "%",
+     "Description": "Датчик положения трехходового клапана 11.2-2 контура котла ТГ11.2",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Трехход. клапаны/Датчик положения трехходового клапана 11.3-2 контура котла ТГ11.3",
+     "OpcTag": "AI_Sensors.Pos_boiler3.Value",
+     "EUnit": "%",
+     "Description": "Датчик положения трехходового клапана 11.3-2 контура котла ТГ11.3",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Трехход. клапаны/Датчик положения трехходового клапана 11-16 контура отопления",
+     "OpcTag": "AI_Sensors.Pos_otopl.Value",
+     "EUnit": "%",
+     "Description": "Датчик положения трехходового клапана 11-16 контура отопления",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Трехход. клапаны/Датчик положения трехходового клапана 11-5 контура подогрева газа",
+     "OpcTag": "AI_Sensors.Pos_heat.Value",
+     "EUnit": "%",
+     "Description": "Датчик положения трехходового клапана 11-5 контура подогрева газа",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны-регуляторы/Датчик положения крана-регулятора РУ1 на байпасе ГРС",
+     "OpcTag": "AI_Sensors.Pos_bypass.Value",
+     "EUnit": "%",
+     "Description": "Датчик положения крана-регулятора РУ1 на байпасе ГРС",
+     "DataType":"float"
+    }
+   },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 №1 в блок-боксе редуцирования",
+     "OpcTag": "Zag.CH4_1_BBR.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 №1 в блок-боксе редуцирования",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 №2 в блок-боксе редуцирования",
+     "OpcTag": "Zag.CH4_2_BBR.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 №2 в блок-боксе редуцирования",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 №3 в блок-боксе редуцирования",
+     "OpcTag": "Zag.CH4_3_BBR.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 №3 в блок-боксе редуцирования",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 №1 в УПТ",
+     "OpcTag": "Zag.CH4_1_UPT.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 №1 в УПТ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 №2 в УПТ",
+     "OpcTag": "Zag.CH4_2_UPT.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 №2 в УПТ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СО в УПТ",
+     "OpcTag": "Zag.CO_UPT.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СО в УПТ",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 №1 в шкафу одоризации",
+     "OpcTag": "Zag.CH4_1_ODR.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 №1 в шкафу одоризации",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 №2 в шкафу одоризации",
+     "OpcTag": "Zag.CH4_2_ODR.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 №2 в шкафу одоризации",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности ССС в шкафу одоризации",
+     "OpcTag": "Zag.CCC_ODR.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности ССС в шкафу одоризации",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности ССС на площадке ЕХО (Е6-1)",
+     "OpcTag": "Zag.CCC_EXO.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности ССС на площадке ЕХО (Е6-1)",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Загазованность/Датчик загазованности СН4 в вытяжной свече футлярного пространства",
+     "OpcTag": "Zag.CH4_case_space.Value",
+     "EUnit": "%",
+     "Description": "Датчик загазованности СН4 в вытяжной свече футлярного пространства",
+     "DataType":"float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Краны/Положение крана на входе 1.1",
+     "OpcTag": "Cranes.CR_1_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана на входе 1.1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 1-101 сброса газа на свечу на входе ГРС",
+     "OpcTag": "Cranes.CR_1_101.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 1-101 сброса газа на свечу на входе ГРС",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 1-2 на выходе ГРС",
+     "OpcTag": "Cranes.CR_1_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 1-2 на выходе ГРС",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 1-102 сброса газа на свечу на выходе ГРС",
+     "OpcTag": "Cranes.CR_1_102.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 1-102 сброса газа на свечу на выходе ГРС",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 1-3 на байпасе ГРС",
+     "OpcTag": "Cranes.CR_1_3.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 1-3 на байпасе ГРС",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 2.1-101 сброса конденсата с фильтра Ф2.1",
+     "OpcTag": "Cranes.CR_2_1_101.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 2.1-101 сброса конденсата с фильтра Ф2.1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 2.2-101 сброса конденсата с фильтра Ф2.2",
+     "OpcTag": "Cranes.CR_2_2_101.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 2.2-101 сброса конденсата с фильтра Ф2.2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 4.1-1 на входе линии редуцирования РД4.1",
+     "OpcTag": "Cranes.CR_4_1_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 4.1-1 на входе линии редуцирования РД4.1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана 4.2-1 на входе линии редуцирования РД4.2",
+     "OpcTag": "Cranes.CR_4_2_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана 4.2-1 на входе линии редуцирования РД4.2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана №0",
+     "OpcTag": "Cranes.CR_0.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана №0",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана №0.1",
+     "OpcTag": "Cranes.CR_0_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана №0.1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана №0.2",
+     "OpcTag": "Cranes.CR_0_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана №0.2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана №0.3",
+     "OpcTag": "Cranes.CR_0_3.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана №0.3",
+     "DataType":"uint2"
+    }
+   },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры газа перед краном 1-1 на входе узла переключения",
+    "OpcTag": "AI_Sensors.T_gas_in.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры газа перед краном 1-1 на входе узла переключения",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры газа после крана 1-2 на выходе узла переключения",
+    "OpcTag": "AI_Sensors.T_gas_out1.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры газа после крана 1-2 на выходе узла переключения",
+    "DataType":"float"
+   }
+  },
+   {
+    "Signal": {
+     "UserTree": "Температура/Датчик температуры газа после узла подогрева газа",
+     "OpcTag": "AI_Sensors.T_PG.Value",
+     "EUnit": "°C",
+     "Description": "Датчик температуры газа после узла подогрева газа",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Датчик температуры воздуха в блок-боксе редуцирования",
+     "OpcTag": "AI_Sensors.T_BBR.Value",
+     "EUnit": "°C",
+     "Description": "Датчик температуры воздуха в блок-боксе редуцирования",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Датчик температуры теплоносителя в контуре подогрева газа",
+     "OpcTag": "AI_Sensors.T_heat.Value",
+     "EUnit": "°C",
+     "Description": "Датчик температуры теплоносителя в контуре подогрева газа",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Датчик температуры теплоносителя в контуре отопления",
+     "OpcTag": "AI_Sensors.T_otopl.Value",
+     "EUnit": "°C",
+     "Description": "Датчик температуры теплоносителя в контуре отопления",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Датчик температуры воздуха в ББПТ",
+     "OpcTag": "AI_Sensors.T_BBPT.Value",
+     "EUnit": "°C",
+     "Description": "Датчик температуры воздуха в ББПТ",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Датчик температуры теплоносителя в прямом контуре котла ТГ11.1",
+     "OpcTag": "AI_Sensors.T_boiler1_suply.Value",
+     "EUnit": "°C",
+     "Description": "Датчик температуры теплоносителя в прямом контуре котла ТГ11.1",
+     "DataType":"float"
+    }
+   },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры теплоносителя в обратном контуре котла ТГ11.1",
+    "OpcTag": "AI_Sensors.T_boiler1_reverse.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры теплоносителя в обратном контуре котла ТГ11.1",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры теплоносителя в прямом контуре котла ТГ11.2",
+    "OpcTag": "AI_Sensors.T_boiler2_suply.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры теплоносителя в прямом контуре котла ТГ11.2",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры теплоносителя в обратном контуре котла ТГ11.2",
+    "OpcTag": "AI_Sensors.T_boiler2_reverse.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры теплоносителя в обратном контуре котла ТГ11.2",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры теплоносителя в прямом контуре котла ТГ11.3",
+    "OpcTag": "AI_Sensors.T_boiler3_suply.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры теплоносителя в прямом контуре котла ТГ11.3",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры теплоносителя в обратном контуре котла ТГ11.3",
+    "OpcTag": "AI_Sensors.T_boiler3_reverse.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры теплоносителя в обратном контуре котла ТГ11.3",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры воздуха в отсеке управления",
+    "OpcTag": "AI_Sensors.T_control.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры воздуха в отсеке управления",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры воздуха в мастерской",
+    "OpcTag": "AI_Sensors.T_master.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры воздуха в мастерской",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры воздуха в гардеробной с зоной приема пищи",
+    "OpcTag": "AI_Sensors.T_garderob.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры воздуха в гардеробной с зоной приема пищи",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры воздуха снаружи блок-бокса управления",
+    "OpcTag": "AI_Sensors.T_outside.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры воздуха снаружи блок-бокса управления",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры воздуха в шкафу одоризации",
+    "OpcTag": "AI_Sensors.T_ODR.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры воздуха в шкафу одоризации",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Датчик температуры газа после крана №0",
+    "OpcTag": "AI_Sensors.T_after_CR0.Value",
+    "EUnit": "°C",
+    "Description": "Датчик температуры газа после крана №0",
+    "DataType":"float"
+   }
+  },
+  {
+    "Signal": {
+     "UserTree": "Температура/Температура на выходе котла №1",
+     "OpcTag": "UPT.Boiler1.T_out",
+     "EUnit": "°C",
+     "Description": "Температура на выходе котла №1",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура на выходе котла №2",
+     "OpcTag": "UPT.Boiler2.T_out",
+     "EUnit": "°C",
+     "Description": "Температура на выходе котла №2",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура на выходе котла №3",
+     "OpcTag": "UPT.Boiler3.T_out",
+     "EUnit": "°C",
+     "Description": "Температура на выходе котла №3",
+     "DataType":"float"
+    }
+   }, 
+  {
+   "Signal": {
+    "UserTree": "Давление/Датчик давления газа перед краном 1-1 на входе ГРС",
+    "OpcTag": "AI_Sensors.P_gas_in.Value",
+    "EUnit": "кгс\/см²",
+    "Description": "Датчик давления газа перед краном 1-1 на входе ГРС",
+    "DataType":"float"
+   }
+  }, 
+     {
+   "Signal": {
+    "UserTree": "Давление/Датчик давления газа после крана 1-2 на выходе ГРС",
+    "OpcTag": "AI_Sensors.P_gas_out1.Value",
+    "EUnit": "кгс\/см²",
+    "Description": "Датчик давления газа после крана 1-2 на выходе ГРС",
+    "DataType":"float"
+   }
+  }, 
+  {
+    "Signal": {
+     "UserTree": "Давление/Датчик перепада давления на Ф2.1",
+     "OpcTag": "AI_Sensors.Dif_FS1.Value",
+     "EUnit": "кПа",
+     "Description": "Датчик перепада давления на Ф2.1",
+     "DataType":"float"
+    }
+   }, 
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик перепада давления на Ф2.2",
+     "OpcTag": "AI_Sensors.Dif_FS2.Value",
+     "EUnit": "кПа",
+     "Description": "Датчик перепада давления на Ф2.2",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления газа после узла редуцирования",
+     "OpcTag": "AI_Sensors.P_UR.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления газа после узла редуцирования",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления газа перед ГПЭС",
+     "OpcTag": "AI_Sensors.P_GPS.Value",
+     "EUnit": "кПа",
+     "Description": "Датчик давления газа перед ГПЭС",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления газа перед котлами в ББПТ",
+     "OpcTag": "AI_Sensors.P_gas_boiler.Value",
+     "EUnit": "кПа",
+     "Description": "Датчик давления газа перед котлами в ББПТ",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления теплоносителя в котловом контуре котла ТГ11.1",
+     "OpcTag": "AI_Sensors.P_boiler1.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления теплоносителя в котловом контуре котла ТГ11.1",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления теплоносителя в котловом контуре котла ТГ11.2",
+     "OpcTag": "AI_Sensors.P_boiler2.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления теплоносителя в котловом контуре котла ТГ11.2",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления теплоносителя в котловом контуре котла ТГ11.3",
+     "OpcTag": "AI_Sensors.P_boiler3.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления теплоносителя в котловом контуре котла ТГ11.3",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления теплоносителя в контуре подогрева газа",
+     "OpcTag": "AI_Sensors.P_heat.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления теплоносителя в контуре подогрева газа",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления теплоносителя в контуре отопления",
+     "OpcTag": "AI_Sensors.P_otopl.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления теплоносителя в контуре отопления",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления теплоносителя в обратном контуре",
+     "OpcTag": "AI_Sensors.P_reverse.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления теплоносителя в обратном контуре",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления газа до крана №0",
+     "OpcTag": "AI_Sensors.P_before_CR0.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления газа до крана №0",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления газа после крана №0",
+     "OpcTag": "AI_Sensors.P_after_CR0.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления газа после крана №0",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Давление/Датчик давления на аккумуляторах импульсного газа",
+     "OpcTag": "AI_Sensors.P_impuls.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления на аккумуляторах импульсного газа",
+     "DataType":"float"
+    }
+   },
+
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №1 (осн.)",
+      "OpcTag": "Counters.TF1_1.R_work",
+      "EUnit": "м3\/час",
+      "Description": "Расход в раб. условиях турбофлоу №1 (осн.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №1 (осн.)",
+      "OpcTag": "Counters.TF1_1.R_st",
+      "EUnit": "м3\/час",
+      "Description": "Расход в станд. условиях турбофлоу №1 (осн.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №1 (дубл.)",
+      "OpcTag": "Counters.TF1_2.R_work",
+      "EUnit": "м3\/час",
+      "Description": "Расход в раб. условиях турбофлоу №1 (дубл.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №1 (дубл.)",
+      "OpcTag": "Counters.TF1_2.R_st",
+      "EUnit": "м3\/час",
+      "Description": "Расход в станд. условиях турбофлоу №1 (дубл.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №1 (осн.)",
+     "OpcTag": "Counters.TF1_1.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №1 (осн.)",
+     "DataType":"uint4"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №1 (осн.)",
+     "OpcTag": "Counters.TF1_1.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №1 (осн.)",
+     "DataType":"uint4"
+    }
+   },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №1 (дубл.)",
+     "OpcTag": "Counters.TF1_2.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №2 (дубл.)",
+     "DataType":"uint4"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №1 (дубл.)",
+     "OpcTag": "Counters.TF1_2.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №2 (дубл.)",
+     "DataType":"uint4"
+    }
+   },
+  
+  
+
+
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №2 (осн.)",
+      "OpcTag": "Counters.TF2_1.R_work",
+      "EUnit": "м3\/час",
+      "Description": "Расход в раб. условиях турбофлоу №2 (осн.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №2 (осн.)",
+      "OpcTag": "Counters.TF2_1.R_st",
+      "EUnit": "м3\/час",
+      "Description": "Расход в станд. условиях турбофлоу №2 (осн.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №2 (осн.)",
+     "OpcTag": "Counters.TF2_1.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №2 (осн.)",
+     "DataType":"uint4"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №2 (осн.)",
+     "OpcTag": "Counters.TF2_1.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №2 (осн.)",
+     "DataType":"uint4"
+    }
+   },
+   {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №2 (дубл.)",
+      "OpcTag": "Counters.TF2_2.R_work",
+      "EUnit": "м3\/час",
+      "Description": "Расход в раб. условиях турбофлоу №2 (дубл.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №2 (дубл.)",
+      "OpcTag": "Counters.TF2_2.R_st",
+      "EUnit": "м3\/час",
+      "Description": "Расход в станд. условиях турбофлоу №2 (дубл.)",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №2 (дубл.)",
+     "OpcTag": "Counters.TF2_2.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №2 (дубл.)",
+     "DataType":"uint4"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №2 (дубл.)",
+     "OpcTag": "Counters.TF2_2.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №2 (дубл.)",
+     "DataType":"uint4"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "EXO E6-1/Датчик измерения уровня в ЕХО Е6-1",
+     "OpcTag": "AI_Sensors.L_emk_E6_1.Value",
+     "EUnit": "%",
+     "Description": "Датчик измерения уровня в ЕХО Е6-1",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "EXO E6-1/Датчик давления в корпусе ЕХО Е6-1",
+     "OpcTag": "AI_Sensors.P_emk_E6_1.Value",
+     "EUnit": "кПа",
+     "Description": "Датчик давления в корпусе ЕХО Е6-1",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "EXO E6-1/Датчик давления в рубашке ЕХО Е6-1",
+     "OpcTag": "AI_Sensors.P_rub_E6_1.Value",
+     "EUnit": "кгс\/см²",
+     "Description": "Датчик давления в рубашке ЕХО Е6-1",
+     "DataType":"float"
+    }
+   }
+ ]
+}

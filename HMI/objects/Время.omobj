@@ -1,0 +1,521 @@
+<type access-modifier="private" name="Время" display-name="Время" uuid="69ba8add-4f9e-4e80-a31c-2f9358e5321b" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_2" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="400" ver="5"/>
+	<designed target="Height" value="285" ver="5"/>
+	<init target="WindowName" ver="5" value="Дата и время"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="d4eeec71-fd95-4c2a-92cf-6495ba8ca82e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Text_9" display-name="Text_9" uuid="b6acc10c-5d29-434c-abed-1aa0dd4935c9" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="260" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Задание времени с ЛПУ" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_10" display-name="Text_10" uuid="d6c0d72d-98f7-4408-ae62-00dfb79f992d" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="45" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="184" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Время ПУ:" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_11" display-name="Text_11" uuid="4d066d3b-49e0-4308-8334-300994ddfdf7" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="200" ver="5"/>
+			<designed target="Y" value="45" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="190" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="1601.01.01 00:00:00" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="2316f57b-a5e4-4580-bf22-affbcbdea2b5" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[now: uint8 = DateTime.Now();
+parent.Text = DateTime.ToString(now, "%d.%m.%Y %T");
+//parent.Text = String.ToString(DateTime.Now());]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="HandSet" display-name="HandSet" uuid="aef299d2-5d2a-4306-aada-d3b3a99ac94a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="125" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="380" ver="5"/>
+			<designed target="Height" value="100" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="TimeEditor" display-name="TimeEditor" uuid="0d22e4cb-0b26-4a6f-880c-e1655532f57f" base-type="TimeEditor" base-type-id="d0247632-ed97-46ad-b054-1da38b54f7b7" ver="5" description="" cardinal="1">
+				<designed target="X" value="183.75" ver="5"/>
+				<designed target="Y" value="41.250000000000028" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Width" value="95" ver="5"/>
+				<designed target="Height" value="25" ver="5"/>
+				<designed target="Scale" value="1.5" ver="5"/>
+				<init target="pTheme" ver="5">
+					<object access-modifier="private" uuid="2cbf7cb2-5f39-4db8-b2da-d50b9a7522b3" base-type="Theme" base-type-id="05d4d7df-0f8e-4ec1-ac85-b5460e30af81" ver="5">
+						<init target="BackgroundColor" ver="5" value="0xfff0f0f0"/>
+						<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.TextColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.MainColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="EditorBrushColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.MainColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="EditorFontColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.TextColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="BorderColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.ButtonBoundColor]]>
+							</body>
+						</do-trace>
+						<init target="SelectionColor" ver="5" value="0xff4b555d"/>
+					</object>
+				</init>
+				<object access-modifier="private" name="Update" display-name="Update" uuid="83963fe5-277f-4583-abef-ad0dd6916477" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+					<designed target="Enabled" value="true" ver="5"/>
+					<designed target="InvokeTrigger" value="false" ver="5"/>
+					<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+						<body kind="om">
+							<![CDATA[Hour = TypeConvert.ToUint2((DateTime.Hour(parent.Value) - 3) % 24);
+Minute = TypeConvert.ToUint2(DateTime.Minute(parent.Value));
+Second = TypeConvert.ToUint2(DateTime.Second(parent.Value));]]>
+						</body>
+					</do-on>
+				</object>
+				<init target="pValueChanged" ver="5" ref="Update"/>
+			</object>
+			<object access-modifier="private" name="DateEditor" display-name="DateEditor" uuid="b5b6cc24-23fe-463c-beb5-8bcb42b69604" base-type="DateEditor" base-type-id="69318eaa-4b1e-41d3-a9ef-5126cded808c" ver="5" description="" cardinal="1">
+				<designed target="X" value="33.75" ver="5"/>
+				<designed target="Y" value="41.25" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Width" value="95" ver="5"/>
+				<designed target="Height" value="25" ver="5"/>
+				<designed target="Scale" value="1.5" ver="5"/>
+				<init target="pTheme" ver="5">
+					<object access-modifier="private" uuid="5c1d3e65-577a-4ea9-af34-c00f5a76d351" base-type="Theme" base-type-id="05d4d7df-0f8e-4ec1-ac85-b5460e30af81" ver="5">
+						<init target="BackgroundColor" ver="5" value="0xfff0f0f0"/>
+						<do-trace access-modifier="private" target="ForegroundColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.TextColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="BackgroundColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.MainColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="EditorBrushColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.MainColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="EditorFontColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.TextColor]]>
+							</body>
+						</do-trace>
+						<do-trace access-modifier="private" target="BorderColor" ver="5">
+							<body>
+								<![CDATA[unit.Theme.ButtonBoundColor]]>
+							</body>
+						</do-trace>
+						<init target="SelectionColor" ver="5" value="0xff4b555d"/>
+					</object>
+				</init>
+				<object access-modifier="private" name="Update" display-name="Update" uuid="2f0518b1-bce5-45d6-8006-8b4c2905c5b5" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+					<designed target="Enabled" value="true" ver="5"/>
+					<designed target="InvokeTrigger" value="false" ver="5"/>
+					<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+						<body kind="om">
+							<![CDATA[Year = DateTime.Year(parent.Value);
+Month = TypeConvert.ToUint2(DateTime.Month(parent.Value));
+Day = TypeConvert.ToUint2(DateTime.Day(parent.Value));]]>
+						</body>
+					</do-on>
+				</object>
+				<init target="pValueChanged" ver="5" ref="Update"/>
+			</object>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.BoundColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.MainColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="Year" display-name="Year" uuid="cc690718-9cf8-4697-ad8e-83b5bb65a39e" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Main"/>
+				<init target="Path" ver="5" value="Times.HMI_Set.InYear"/>
+			</object>
+			<object access-modifier="private" name="Month" display-name="Month" uuid="7a29bbcb-902c-48c1-a733-a4afd77b7090" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Main"/>
+				<init target="Path" ver="5" value="Times.HMI_Set.InMonth"/>
+			</object>
+			<object access-modifier="private" name="Day" display-name="Day" uuid="303d2e90-91fb-412e-a0f0-f3452627c92f" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Main"/>
+				<init target="Path" ver="5" value="Times.HMI_Set.InDay"/>
+			</object>
+			<object access-modifier="private" name="Hour" display-name="Hour" uuid="f07c203e-0c21-4c39-a82a-9ceda55219bf" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Main"/>
+				<init target="Path" ver="5" value="Times.HMI_Set.InHour"/>
+			</object>
+			<object access-modifier="private" name="Minute" display-name="Minute" uuid="ae4adb09-03ad-45c4-a9f9-3e14d71efb3c" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Main"/>
+				<init target="Path" ver="5" value="Times.HMI_Set.InMinute"/>
+			</object>
+			<object access-modifier="private" name="Second" display-name="Second" uuid="b851ffeb-4834-426c-8249-c5edbbd46885" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Main"/>
+				<init target="Path" ver="5" value="Times.HMI_Set.InSecond"/>
+			</object>
+			<object access-modifier="private" name="InBTN_1" display-name="InBTN_1" uuid="92a0222d-31c9-4efd-b177-503c051d31b5" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+				<designed target="X" value="310" ver="5"/>
+				<designed target="Y" value="35" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Width" value="60" ver="5"/>
+				<designed target="Height" value="35" ver="5"/>
+				<designed target="Text" value="↴" ver="5"/>
+				<designed target="Font" value="Golos Text,14,-1,5,75,0,1,0,0,0,Полужирный" ver="5"/>
+				<init target="CommandText" ver="5" value="Задать время вручную"/>
+				<init target="EnableEngineer" ver="5" value="true"/>
+				<object access-modifier="private" name="Set" display-name="Set" uuid="a10d312e-8893-4061-861f-a9e08dda3c4b" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+					<init target="ValuePath" ver="5" value="Set_time"/>
+					<object access-modifier="private" name="Action_1" display-name="Action_1" uuid="7130234b-d2a5-4f98-a8d1-4d604ca9c18a" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+						<designed target="Enabled" value="true" ver="5"/>
+						<designed target="InvokeTrigger" value="false" ver="5"/>
+						<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+							<body kind="om">
+								<![CDATA[if (Variant.ToBool(Set.Out, false)){
+	Set.In=false;
+}
+]]>
+							</body>
+						</do-on>
+					</object>
+					<init target="MainSource" ver="5" ref="here.MainSource"/>
+				</object>
+				<init target="Signal" ver="5" ref="Set"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_12" display-name="Text_12" uuid="d3a4b759-0ed7-48f7-8f6a-eabc5cf31b35" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="20" ver="5"/>
+			<designed target="Y" value="125" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="360" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Задать время вручную" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="InBTN_1" display-name="InBTN_1" uuid="f83ed83b-1044-447e-8ea8-ac31532c66e6" base-type="InBTN" base-type-id="8b637cb0-2de2-4641-9e56-22c6211674f0" ver="5" description="" cardinal="1">
+			<designed target="X" value="270" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="120" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="ЗАПРЕЩЕНО" ver="5"/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[!LPUConnect]]>
+					</condition>
+					<expr>
+						<![CDATA["НЕТ СВЯЗИ"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+					</condition>
+					<expr>
+						<![CDATA["РАЗРЕШЕНО"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["ЗАПРЕЩЕНО"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !LPUConnect]]>
+					</condition>
+					<expr>
+						<![CDATA[unit.Theme.NoConnectMainColor]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff00aa00]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffaa0000]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<object access-modifier="private" name="Enable" display-name="Enable" uuid="94cad0c4-8ed0-49d7-a2ef-6d04d623cf63" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+				<init target="ValuePath" ver="5" value="Enable"/>
+				<init target="MainSource" ver="5" ref="here.MainSource"/>
+			</object>
+			<do-trace access-modifier="private" target="Enabled" ver="5">
+				<body>
+					<![CDATA[LPUConnect]]>
+				</body>
+			</do-trace>
+			<init target="Signal" ver="5" ref="Enable"/>
+			<init target="EnableEngineer" ver="5" value="true"/>
+			<do-trace access-modifier="private" target="OnHoverBrushColor" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection || !LPUConnect]]>
+					</condition>
+					<expr>
+						<![CDATA[unit.Theme.NoConnectMainColor]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+					</condition>
+					<expr>
+						<![CDATA[0xff00aa00]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA[0xffaa0000]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+			<do-trace access-modifier="private" target="CommandValue" ver="5">
+				<body>
+					<![CDATA[!Variant.ToBool(Enable.Out, false)]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="CommandText" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[!unit.Source.Connection]]>
+					</condition>
+					<expr>
+						<![CDATA["???"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Variant.ToBool(Enable.Out, false)]]>
+					</condition>
+					<expr>
+						<![CDATA["Запретить синхронизацию времени"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["Разрешить синхронизацию времени"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_13" display-name="Text_13" uuid="657db803-a350-43e5-9423-b7b838eb6f44" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="80" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="190" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="Время ЦП:" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="129" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Text_14" display-name="Text_14" uuid="4d17635b-c5b6-46a7-babe-e22bc5b7a091" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="200" ver="5"/>
+			<designed target="Y" value="80" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="190" ver="5"/>
+			<designed target="Height" value="30" ver="5"/>
+			<designed target="Text" value="1601.01.01 00:00:00" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<do-trace access-modifier="private" target="FontColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.TextColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="strPLC_TIME" display-name="strPLC_TIME" uuid="e19cd371-7260-44b1-be84-03f676b2b404" base-type="ApItemString" base-type-id="11bc436c-015a-4db9-b901-0cc5c75e1239" ver="5" description="" cardinal="1">
+				<init target="Path" ver="5" value="OutstrPLC_TIME"/>
+				<init target="Source" ver="5" ref="unit.Source.Times"/>
+			</object>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[strPLC_TIME]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="MainSource" display-name="MainSource" uuid="5ce329e3-fdc0-4582-becd-0ba4ddb3c640" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="Times" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Main"/>
+	</object>
+	<object access-modifier="private" name="LPUConnect" display-name="LPUConnect" uuid="5baf38c7-03f7-432f-b47d-7268cd5b5a8c" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Alarm"/>
+		<init target="Path" ver="5" value="Connect_SAU"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[now: uint8 = DateTime.Now();
+Body.HandSet.DateEditor.Value = now;
+Body.HandSet.DateEditor.Update.Invoke();
+Body.HandSet.TimeEditor.Value = now;
+Body.HandSet.TimeEditor.Update.Invoke();]]>
+		</body>
+	</do-on>
+	<init target="Focus" ver="5" value="false"/>
+</type>
+

@@ -1,0 +1,11 @@
+*.prj
+*.bootinfo
+*.bootinfo_guids
+*.compileinfo
+*.Application.xml
+*.project
+*.project.~u
+*.precompilecache
+*.opt
+.DS_Store
+Thumbs.db

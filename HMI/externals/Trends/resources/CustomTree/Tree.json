@@ -1,0 +1,525 @@
+{
+ "UserTree": [
+  {
+    "Signal": {
+     "UserTree": "Краны/Положение крана на входе 1.1",
+     "OpcTag": "Cranes.CR_1_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана на входе 1.1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана на выходе №1 2.1",
+     "OpcTag": "Cranes.CR_2_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана на выходе №1 2.1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана на выходе №2 3.1",
+     "OpcTag": "Cranes.CR_3_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана на выходе №2 3.1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана свечного на входе 1.2",
+     "OpcTag": "Cranes.CR_1_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана свечного на входе 1.2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана свечного на выходе №1 2.2",
+     "OpcTag": "Cranes.CR_2_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана свечного на выходе №1 2.2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана свечного на выходе №2 3.2",
+     "OpcTag": "Cranes.CR_3_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана свечного на выходе №1 3.2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №1 4.1-1",
+     "OpcTag": "Cranes.CR_4_1_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №1 4.1-1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №1 4.1-2",
+     "OpcTag": "Cranes.CR_4_1_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №1 4.1-2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №2 4.2-1",
+     "OpcTag": "Cranes.CR_4_2_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №2 4.2-1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №2 4.2-2",
+     "OpcTag": "Cranes.CR_4_2_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №2 4.2-2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №3 4.3-1",
+     "OpcTag": "Cranes.CR_4_3_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №3 4.3-1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №3 4.3-2",
+     "OpcTag": "Cranes.CR_4_3_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №3 4.3-2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №4 4.4-1",
+     "OpcTag": "Cranes.CR_4_4_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №4 4.4-1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана редуц. на линии №4 4.4-2",
+     "OpcTag": "Cranes.CR_4_4_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана редуц. на линии №4 4.4-2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана байпаса на выходе №1 1.4-1",
+     "OpcTag": "Cranes.CR_1_4_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана байпаса на выходе №1 1.4-1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана байпаса на выходе №2 1.5-1",
+     "OpcTag": "Cranes.CR_1_5_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана байпаса на выходе №2 1.5-1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана сбросного на фильтре №1 2.1-3",
+     "OpcTag": "Cranes.CR_2_1_3.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана сбросного на фильтре №1 2.1-3",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана сбросного на фильтре №2 2.2-3",
+     "OpcTag": "Cranes.CR_2_2_3.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана сбросного на фильтре №2 2.2-3",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана после счетчиков байпасного 5.3-1",
+     "OpcTag": "Cranes.CR_5_3_1.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана после счетчиков байпасного 5.3-1",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана после счетчиков на выходе №1 5.1-2",
+     "OpcTag": "Cranes.CR_5_1_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана после счетчиков на выходе №1 5.1-2",
+     "DataType":"uint2"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Краны/Положение крана после счетчиков на выходе №2 5.2-2",
+     "OpcTag": "Cranes.CR_5_2_2.TS_Status",
+     "EUnit": "",
+     "Description": "Положение крана после счетчиков на выходе №2 5.2-2",
+     "DataType":"uint2"
+    }
+   },
+  {
+   "Signal": {
+    "UserTree": "Температура/Температура газа на входе ГРС   [°C]",
+    "OpcTag": "AI_Sensors.T_gas_in.Value",
+    "EUnit": "°C",
+    "Description": "Температура газа на входе ГРС   [°C]",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Температура газа на выходе ГРС №1  [°C]",
+    "OpcTag": "AI_Sensors.T_gas_out1.Value",
+    "EUnit": "°C",
+    "Description": "Температура газа на выходе ГРС №1  [°C]",
+    "DataType":"float"
+   }
+  },
+  {
+    "Signal": {
+     "UserTree": "Температура/Температура газа на выходе ГРС №2  [°C]",
+     "OpcTag": "AI_Sensors.T_gas_out2.Value",
+     "EUnit": "°C",
+     "Description": "Температура газа на выходе ГРС №2  [°C]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура воздуха в блок-боксе редуцироваия  [°C]",
+     "OpcTag": "AI_Sensors.T_BBR.Value",
+     "EUnit": "°C",
+     "Description": "Температура воздуха в блок-боксе редуцирования [°C]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура воздуха в котельной  [°C]",
+     "OpcTag": "AI_Sensors.T_UPT.Value",
+     "EUnit": "°C",
+     "Description": "Температура воздуха в котельной [°C]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура теплоносителя контура отопления  [°C]",
+     "OpcTag": "AI_Sensors.T_otopl.Value",
+     "EUnit": "°C",
+     "Description": "Температура теплоносителя контура отопления [°C]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура воздуха в комнате приема пищи [°C]",
+     "OpcTag": "AI_Sensors.T_KPP.Value",
+     "EUnit": "°C",
+     "Description": "Температура воздуха в комнате приема пищи [°C]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура воздуха в помещении щитовой [°C]",
+     "OpcTag": "AI_Sensors.T_shit.Value",
+     "EUnit": "°C",
+     "Description": "Температура воздуха в помещении щитовой [°C]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Температура/Температура воздуха в помещении генераторной [°C]",
+     "OpcTag": "AI_Sensors.T_GEN.Value",
+     "EUnit": "°C",
+     "Description": "Температура воздуха в помещении генераторной [°C]",
+     "DataType":"float"
+    }
+   },
+  {
+   "Signal": {
+    "UserTree": "Температура/Температура воздуха в помещении операторной ГРС   [°C]",
+    "OpcTag": "AI_Sensors.T_BBU.Value",
+    "EUnit": "°C",
+    "Description": "Температура воздуха в помещении операторной ГРС   [°C]",
+    "DataType":"float"
+   }
+  },
+  {
+   "Signal": {
+    "UserTree": "Температура/Температура воздуха снаружи ГРС   [°C]",
+    "OpcTag": "AI_Sensors.T_outside.Value",
+    "EUnit": "°C",
+    "Description": "Температура воздуха снаружи ГРС   [°C]",
+    "DataType":"float"
+   }
+  },    
+  {
+   "Signal": {
+    "UserTree": "Давление/Давление газа на входе ГРС   [кгс/см²]",
+    "OpcTag": "AI_Sensors.P_gas_in.Value",
+    "EUnit": "кгс/см²",
+    "Description": "Давление газа на входе ГРС   [кгс/см²]",
+    "DataType":"float"
+   }
+  }, 
+     {
+   "Signal": {
+    "UserTree": "Давление/Давление газа на выходе ГРС №1  [кгс/см²]",
+    "OpcTag": "AI_Sensors.P_gas_out1.Value",
+    "EUnit": "кгс/см²",
+    "Description": "Давление газа на выходе ГРС №1  [кгс/см²]",
+    "DataType":"float"
+   }
+  }, 
+  {
+    "Signal": {
+     "UserTree": "Давление/Давление газа на выходе ГРС №2  [кгс/см²]",
+     "OpcTag": "AI_Sensors.P_gas_out2.Value",
+     "EUnit": "кгс/см²",
+     "Description": "Давление газа на выходе ГРС №2  [кгс/см²]",
+     "DataType":"float"
+    }
+   }, 
+   {
+    "Signal": {
+     "UserTree": "Давление/Перепад давления на ФС 2.1   [кПа]",
+     "OpcTag": "AI_Sensors.Dif_FS1.Value",
+     "EUnit": "кПа",
+     "Description": "Перепад давления на ФС 2.1  [кПа]",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Перепад давления на ФС 2.2   [кПа]",
+     "OpcTag": "AI_Sensors.Dif_FS2.Value",
+     "EUnit": "кПа",
+     "Description": "Перепад давления на ФС 2.2  [кПа]",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Давление газа за узлом редуцирования №1   [кгс/см²]",
+     "OpcTag": "AI_Sensors.P_gas_UR1.Value",
+     "EUnit": "кгс/см²",
+     "Description": "Давление газа за узлом редуцирования №1   [кгс/см²]",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Давление газа за узлом редуцирования №2   [кгс/см²]",
+     "OpcTag": "AI_Sensors.P_gas_UR2.Value",
+     "EUnit": "кгс/см²",
+     "Description": "Давление газа за узлом редуцирования №2   [кгс/см²]",
+     "DataType":"float"
+    }
+   },   
+   {
+    "Signal": {
+     "UserTree": "Давление/Давление газа перед котлами   [кПа]",
+     "OpcTag": "AI_Sensors.P_gas_boiler.Value",
+     "EUnit": "кПа",
+     "Description": "Давление газа перед котлами   [кПа]",
+     "DataType":"float"
+    }
+   },   
+
+
+
+
+
+    
+  
+  
+
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №1 выход №1 [м3|час]",
+      "OpcTag": "Counters.TF1.R_work",
+      "EUnit": "м3/час",
+      "Description": "Расход в раб. условиях турбофлоу №1 выход №1  [м3/час]",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №1 выход №1 [м3|час]",
+      "OpcTag": "Counters.TF1.R_st",
+      "EUnit": "м3/час",
+      "Description": "Расход в станд. условиях турбофлоу №1 выход №1 [м3/час]",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №1 выход №2  [м3|час]",
+      "OpcTag": "Counters.TF3.R_work",
+      "EUnit": "м3/час",
+      "Description": "Расход в раб. условиях турбофлоу №2 выход №1   [м3/час]",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №1 выход №2  [м3|час]",
+      "OpcTag": "Counters.TF3.R_st",
+      "EUnit": "м3/час",
+      "Description": "Расход в станд. условиях турбофлоу №2 выход №1  [м3/час]",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №1 выход №1 [м3]",
+     "OpcTag": "Counters.TF1.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №1 выход №1 [м3]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №1 выход №1 [м3]",
+     "OpcTag": "Counters.TF1.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №1 выход №1 [м3]",
+     "DataType":"float"
+    }
+   },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №1 выход №2 [м3]",
+     "OpcTag": "Counters.TF3.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №2 выход №1 [м3]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №1 выход №2 [м3]",
+     "OpcTag": "Counters.TF3.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №2 выход №1 [м3]",
+     "DataType":"float"
+    }
+   },
+  
+  
+
+
+
+   {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №2 выход №2 [м3|час]",
+      "OpcTag": "Counters.TF4.R_work",
+      "EUnit": "м3/час",
+      "Description": "Расход в раб. условиях турбофлоу №2 выход №2  [м3/час]",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №2 выход №2 [м3|час]",
+      "OpcTag": "Counters.TF4.R_st",
+      "EUnit": "м3/час",
+      "Description": "Расход в станд. условиях турбофлоу №2 выход №2 [м3/час]",
+      "DataType": "float"
+    }
+  },
+
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в раб. условиях турбофлоу №2 выход №1 [м3|час]",
+      "OpcTag": "Counters.TF2.R_work",
+      "EUnit": "м3/час",
+      "Description": "Расход в раб. условиях турбофлоу №1 выход №2  [м3/час]",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+      "UserTree": "Расход газа/Расход в станд. условиях турбофлоу №2 выход №1 [м3|час]",
+      "OpcTag": "Counters.TF2.R_st",
+      "EUnit": "м3/час",
+      "Description": "Расход в станд. условиях турбофлоу №1 выход №2 [м3/час]",
+      "DataType": "float"
+    }
+  },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №2 выход №2 [м3]",
+     "OpcTag": "Counters.TF4.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №2 выход №2 [м3]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №2 выход №2 [м3]",
+     "OpcTag": "Counters.TF4.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №2 выход №2 [м3]",
+     "DataType":"float"
+    }
+   },
+  {
+    "Signal": {
+     "UserTree": "Объем газа/Рабочий объем турбофлоу №2 выход №1 [м3]",
+     "OpcTag": "Counters.TF2.V_work",
+     "EUnit": "м3",
+     "Description": "Рабочий объем турбофлоу №1 выход №2 [м3]",
+     "DataType":"float"
+    }
+   },
+   {
+    "Signal": {
+     "UserTree": "Объем газа/Стандартный объем турбофлоу №2 выход №1 [м3]",
+     "OpcTag": "Counters.TF2.V_st",
+     "EUnit": "м3",
+     "Description": "Стандартный объем турбофлоу №1 выход №2 [м3]",
+     "DataType":"float"
+    }
+   }
+
+  
+ ]
+}

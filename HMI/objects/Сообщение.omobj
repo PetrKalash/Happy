@@ -1,0 +1,97 @@
+<type access-modifier="private" name="Сообщение" display-name="Сообщение" uuid="0babc8f4-86ac-4dba-9145-1c0d2529a898" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="400" ver="5"/>
+	<designed target="Height" value="300" ver="5"/>
+	<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="25c0af94-bf4d-4009-bcc4-2bc6f1c47313" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="Text" value="Текст" ver="5"/>
+		<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+		<designed target="FontColor" value="0xffffffff" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<body>
+				<![CDATA[MessageText]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Font" ver="5">
+			<body>
+				<![CDATA[MessageFont]]>
+			</body>
+		</do-trace>
+		<object access-modifier="private" name="LoginButton" display-name="LoginButton" uuid="39753c96-5426-4aa8-80e7-82c428423d43" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="200" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="380" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<init target="Text" ver="5" value="Авторизация"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="open-dialog" form-by-id="false">
+				<object access-modifier="private" uuid="b2395dcb-5971-4c31-ad64-bbf4ad8af79a" base-type="Окно авторизации" base-type-id="7666a14b-9c55-4a89-9c1e-3812d96f4d4e" ver="5"/>
+			</do-on>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="3acf94f2-dd7d-4596-8b73-7295f3a8e1cf" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[if (!String.Equals(unit.Security.SecurityContext.CurrentUser, "guest")) {
+	parent.Text = unit.Security.SecurityContext.CurrentUserDisplayName;
+} else {
+	parent.Text = "Авторизация";
+
+}
+]]>
+					</body>
+				</do-on>
+			</object>
+			<do-trace access-modifier="private" target="Visible" ver="5">
+				<body>
+					<![CDATA[Auth]]>
+				</body>
+			</do-trace>
+		</object>
+	</object>
+	<object access-modifier="private" name="MessageText" display-name="Сообщение" uuid="e9bb958f-fb5c-4ebd-8c64-aa7f5dcb2cfe" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="MessageText" ver="5" value="Ошибка!"/>
+	<object access-modifier="private" name="MessageFont" display-name="MessageFont" uuid="ed7ebd57-0af1-4d73-bc61-d32d49abbb3e" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="MessageFont" ver="5" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный"/>
+	<object access-modifier="private" name="OnClose" display-name="OnClose" uuid="652f4802-b63c-473b-be3a-b45638f1b037" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" base-ref="true" ver="5" description=""/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Closed">
+		<body kind="om">
+			<![CDATA[OnClose.Invoke();]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="CloseOn" display-name="Закрывать при условии" uuid="dc74ffd3-10d3-4178-9a1f-d82d66649302" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[if (value) {Close();}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Window" display-name="Window" uuid="7d014d9c-7bfc-4469-b616-ebb200f5622c" base-type="Window" base-type-id="04615219-28bb-4a9a-bba4-50ac66972eb0" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MessageReceived">
+			<body kind="om">
+				<![CDATA[if (messageType == "CloseDialog") {
+	Close();
+}]]>
+			</body>
+		</do-on>
+		<init target="Group" ver="5" ref="unit.WindowGroup.Group"/>
+	</object>
+	<object access-modifier="private" name="Auth" display-name="Auth" uuid="77f3cf87-6978-485a-95f0-d9fdf745e7a1" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+</type>
+

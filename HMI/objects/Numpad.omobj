@@ -1,0 +1,440 @@
+<type access-modifier="private" name="Numpad" display-name="Numpad" uuid="8455e54e-673a-4f8c-9641-862f0ff596a1" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="350" ver="5"/>
+	<designed target="Height" value="500" ver="5"/>
+	<init target="WindowName" ver="5" value="Ввод уставки"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="6204a072-6ea4-4771-912b-a2fa261edb9c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="350" ver="5"/>
+		<designed target="Height" value="450" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Input" display-name="Input" uuid="3005919d-4581-491d-8213-c1bf6b390b24" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="5" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="340" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="BrushColor" value="0xffffffff" ver="5"/>
+			<init target="TextColor" ver="5" value="0xff000000"/>
+			<do-trace access-modifier="private" target="TextColor" ver="5">
+				<body kind="om">
+					<![CDATA[unit.Theme.InputTextColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body kind="om">
+					<![CDATA[unit.Theme.InputColor]]>
+				</body>
+			</do-trace>
+			<designed target="PenColor" value="0xff000000" ver="5"/>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body kind="om">
+					<![CDATA[unit.Theme.InputBoundColor]]>
+				</body>
+			</do-trace>
+			<init target="Text" ver="5" value="-000.000"/>
+		</object>
+		<object access-modifier="private" name="Alarm" display-name="Alarm" uuid="0e286290-40de-4406-874a-8be7a7fe7e42" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="5" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="340" ver="5"/>
+			<designed target="Height" value="40" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xffaa0000" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="773ee971-cdfb-4f8c-85d7-c3e6201a79b8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="0" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="340" ver="5"/>
+				<designed target="Height" value="40" ver="5"/>
+				<designed target="Text" value="Введено некорректное значение" ver="5"/>
+				<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+			</object>
+			<init target="Visible" ver="5" value="false"/>
+			<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="c5ff1df0-0ab8-45ab-8e3b-68f1f492300d" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+				<designed target="Period" value="1000" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+					<body kind="om">
+						<![CDATA[parent.Visible=false;
+me.Active=false;]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+		<object access-modifier="private" name="MinMax" display-name="MinMax" uuid="81130668-1b22-463b-85f5-b921feed2c9c" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="50" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="340" ver="5"/>
+			<designed target="Height" value="55" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<object access-modifier="private" name="MinText" display-name="MinText" uuid="59fd6576-ba0c-4222-b612-02532abb43bb" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="10" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="160" ver="5"/>
+				<designed target="Height" value="55" ver="5"/>
+				<designed target="Text" value="Мин: -999" ver="5"/>
+				<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="129" ver="5"/>
+				<do-trace access-modifier="private" target="Text" ver="5">
+					<body>
+						<![CDATA["Мин: " + String.ToString("%.3f", Min)]]>
+					</body>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="MaxText" display-name="MaxText" uuid="bb4674fc-c2a4-4bfa-92b4-a6440ae3fd0c" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+				<designed target="X" value="180" ver="5"/>
+				<designed target="Y" value="0" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="160" ver="5"/>
+				<designed target="Height" value="55" ver="5"/>
+				<designed target="Text" value="Макс: 999" ver="5"/>
+				<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<designed target="TextAlignment" value="129" ver="5"/>
+				<do-trace access-modifier="private" target="Text" ver="5">
+					<body>
+						<![CDATA["Макс: " + String.ToString("%.3f", Max)]]>
+					</body>
+				</do-trace>
+			</object>
+		</object>
+		<object access-modifier="private" name="Button7" display-name="Button7" uuid="a1bbc7cc-e0eb-4197-a039-1a878e073ae8" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="110" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="7"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button8" display-name="Button8" uuid="b8f2b6c5-5636-4246-a7c1-e7f0c7b50785" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="90" ver="5"/>
+			<designed target="Y" value="110" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="8"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button9" display-name="Button9" uuid="58b8decb-65f6-464f-9f22-df19368a90b1" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="175" ver="5"/>
+			<designed target="Y" value="110" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="9"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="ButtonBackspace" display-name="ButtonBackspace" uuid="fd725a7f-7135-4c2b-8dd3-4053ea625d32" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="265" ver="5"/>
+			<designed target="Y" value="110" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="←"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[if (Str.Length(Input.Text_1.Text) > 0){
+	Input.Text_1.Text = Str.Remove(Input.Text_1.Text, Str.Length(Input.Text_1.Text) - 1, 1);
+}
+]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button4" display-name="Button4" uuid="9929aff3-7b3b-4311-bf29-f4001c91c869" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="195" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="4"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button5" display-name="Button5" uuid="5b48fe74-2cbb-4eff-8b2a-21dd865abc2b" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="90" ver="5"/>
+			<designed target="Y" value="195" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button6" display-name="Button6" uuid="a7c55dff-b990-4f2f-a357-bdb6f4ed910a" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="175" ver="5"/>
+			<designed target="Y" value="195" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="6"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button1" display-name="Button1" uuid="df114c3b-5571-4901-8f8b-bfcadfa31ba4" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="280" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="1"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button2" display-name="Button2" uuid="a12a9967-aa75-4292-9f6b-92faef8d344b" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="90" ver="5"/>
+			<designed target="Y" value="280" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="2"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button3" display-name="Button3" uuid="c7684978-794b-4d32-a9e7-8342b0de5aba" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="175" ver="5"/>
+			<designed target="Y" value="280" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="3"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="ButtonDelete" display-name="ButtonDelete" uuid="9944d1da-21f6-4391-91b3-3c9a73552e2a" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="265" ver="5"/>
+			<designed target="Y" value="195" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="C"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text="";]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="ButtonMinus" display-name="ButtonMinus" uuid="7b1c1f78-f2f5-4808-bdf5-eb8ba160fe6d" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="5" ver="5"/>
+			<designed target="Y" value="365" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="-"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[if (!String.Contains(Input.Text_1.Text, "-")) {
+	Input.Text_1.Text=me.Text + Input.Text_1.Text;
+} else {
+	Input.Text_1.Text = String.Replace(Input.Text_1.Text, "-", "");
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Button0" display-name="Button0" uuid="9a98974d-9491-4e66-9525-e85ec42bc412" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="90" ver="5"/>
+			<designed target="Y" value="365" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="0"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Input.Text_1.Text=Input.Text_1.Text + me.Text;]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="ButtonDot" display-name="ButtonDot" uuid="090c1e61-6697-49a1-a868-f89764333f6c" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="175" ver="5"/>
+			<designed target="Y" value="365" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="80" ver="5"/>
+			<init target="Text" ver="5" value="."/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[if (String.Length(String.Replace(Input.Text_1.Text,"-","")) > 0 && !String.Contains(Input.Text_1.Text, me.Text)){
+	Input.Text_1.Text=Input.Text_1.Text + me.Text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="ButtonEnter" display-name="ButtonEnter" uuid="460de846-1281-4d20-92e3-df39ce82412a" base-type="Кнопка" base-type-id="d238545d-67e3-43dd-a8a2-dc4f70081934" ver="5" description="" cardinal="1">
+			<designed target="X" value="265" ver="5"/>
+			<designed target="Y" value="280" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="80" ver="5"/>
+			<designed target="Height" value="165" ver="5"/>
+			<init target="Text" ver="5" value="Ввод"/>
+			<init target="TextFont" ver="5" value="Golos Text,20,-1,5,50,0,0,0,0,0,Обычный"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[
+if (InputBox.LWORD) {
+num: uint8 = String.ToUint8(Input.Text_1.Text, 0);
+if (num <= Max && num >= Min) {
+	InputBox.Value.In.Value=num;
+	Close();
+} else {
+	Alarm.Visible=true;
+	Alarm.Timer_1.Active=true;
+}
+}else if (InputBox.IsUint) {
+num: uint2 = String.ToUint2(Input.Text_1.Text, 0);
+if (num <= Max && num >= Min) {
+	InputBox.Value.In.Value=num;
+	Close();
+} else {
+	Alarm.Visible=true;
+	Alarm.Timer_1.Active=true;
+}
+} else {
+num: float = String.ToFloat(Input.Text_1.Text, -999999);
+if (num <= Max && num >= Min) {
+	InputBox.Value.In.Value=num;
+	Close();
+} else {
+	Alarm.Visible=true;
+	Alarm.Timer_1.Active=true;
+}
+}
+]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Min" display-name="Минимальное значение" uuid="dce91108-d306-4e70-89a2-32ef0adb37c0" base-type="notifying_float" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Max" display-name="Максимальное значение" uuid="5e0649c5-4123-428d-8f26-17c2e7a46aa6" base-type="notifying_float" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="5" description="" cardinal="1"/>
+	<init target="Min" ver="5" value="-999"/>
+	<init target="Max" ver="5" value="999"/>
+	<object access-modifier="private" name="InputBox" display-name="InputBox" uuid="52ea93da-5fad-4723-9799-0b48f220f0b2" base-type="Уставка" base-type-id="55fc3497-5f4a-4420-9989-cc15acd2f4f0" base-const="true" base-ref="true" ver="5" description=""/>
+	<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="dbe26878-8c71-4339-8732-91849b34cf93" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+			<body kind="om">
+				<![CDATA[here.Body.Input.Text_1.Text="";
+Body.ButtonDot.Visible = !InputBox.IsUint;
+Body.ButtonMinus.Visible = !InputBox.IsUint;]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[
+	here.Body.Input.Text_1.Text=String.Replace(InputBox.Value.Out.ValueAsString, ",", ".");
+]]>
+		</body>
+	</do-on>
+</type>
+

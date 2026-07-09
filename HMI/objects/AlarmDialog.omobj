@@ -1,0 +1,281 @@
+<type access-modifier="private" name="AlarmDialog" display-name="AlarmDialog" uuid="1f00b57e-6cfa-42a9-9f97-75f477fc34c6" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="955" ver="5"/>
+	<designed target="Height" value="123" ver="5"/>
+	<init target="WindowName" ver="5" value="ВНИМАНИЕ!!!"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="aa3e64e0-496d-45f0-a4a2-07d779332b6f" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="955" ver="5"/>
+		<designed target="Height" value="59" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="AlarmMessage" display-name="AlarmMessage" uuid="d09e9466-161a-4e7c-951c-7f31052b8f39" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+			<designed target="X" value="-506" ver="5"/>
+			<designed target="Y" value="-51" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="1920" ver="5"/>
+			<designed target="Height" value="125" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="4278190080" ver="5"/>
+			<designed target="PenStyle" value="0" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff1f262e" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="LayoutWeight_1" display-name="LayoutWeight_1" uuid="0a23c228-8b92-4fe2-b46d-821320e9367b" base-type="LayoutWeight" base-type-id="8f3d975c-9645-4288-9406-a8dda0527008" ver="5" description="" cardinal="1">
+				<designed target="Weight" value="13" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Alarm" display-name="Alarm" uuid="205725c0-4bdb-4efc-8219-0941fc63054a" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+				<designed target="X" value="510" ver="5"/>
+				<designed target="Y" value="3" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="948" ver="5"/>
+				<designed target="Height" value="120.00000000000004" ver="5"/>
+				<designed target="RoundingRadius" value="12" ver="5"/>
+				<designed target="PenColor" value="0xffffff00" ver="5"/>
+				<designed target="PenStyle" value="1" ver="5"/>
+				<designed target="PenWidth" value="5" ver="5"/>
+				<designed target="BrushColor" value="0xff000000" ver="5"/>
+				<designed target="BrushStyle" value="0" ver="5"/>
+				<object access-modifier="private" name="Tag_alarm" display-name="Tag_alarm" uuid="bfc677d2-353f-44b4-90a8-afecec81baa8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+					<designed target="X" value="76" ver="5"/>
+					<designed target="Y" value="7.3448275862068968" ver="5"/>
+					<designed target="ZValue" value="0" ver="5"/>
+					<designed target="Rotation" value="0" ver="5"/>
+					<designed target="Scale" value="1" ver="5"/>
+					<designed target="Flip" value="0" ver="5"/>
+					<designed target="Visible" value="true" ver="5"/>
+					<designed target="Opacity" value="1" ver="5"/>
+					<designed target="Enabled" value="true" ver="5"/>
+					<designed target="Tooltip" value="" ver="5"/>
+					<designed target="Width" value="855.99999999999989" ver="5"/>
+					<designed target="Height" value="41.379310344827587" ver="5"/>
+					<designed target="Text" value="НЕИСПРАВНОСТЬ ГРС" ver="5"/>
+					<designed target="Font" value="Arial,30,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+					<designed target="FontColor" value="0xffffffff" ver="5"/>
+					<designed target="TextAlignment" value="132" ver="5"/>
+				</object>
+				<object access-modifier="private" name="Motiv_alarm" display-name="Motiv_alarm" uuid="12d642aa-22ec-46bd-9405-23bf84be39e8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+					<designed target="X" value="98" ver="5"/>
+					<designed target="Y" value="54.092387768379972" ver="5"/>
+					<designed target="ZValue" value="0" ver="5"/>
+					<designed target="Rotation" value="0" ver="5"/>
+					<designed target="Scale" value="1" ver="5"/>
+					<designed target="Flip" value="0" ver="5"/>
+					<designed target="Visible" value="true" ver="5"/>
+					<designed target="Opacity" value="1" ver="5"/>
+					<designed target="Enabled" value="true" ver="5"/>
+					<designed target="Tooltip" value="" ver="5"/>
+					<designed target="Width" value="818.00000000000011" ver="5"/>
+					<designed target="Height" value="59.132075471698052" ver="5"/>
+					<designed target="Text" value="ОТКЛОНЕНИЕ ДАВЛЕНИЯ ГАЗА НА ВХОДЕ ГРС. ОТКЛОНЕНИЕ ДАВЛЕНИЯ ГАЗА НА ВХОДЕ ГРС" ver="5"/>
+					<designed target="Font" value="Arial,20,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+					<designed target="FontColor" value="0xffff3333" ver="5"/>
+					<designed target="TextAlignment" value="132" ver="5"/>
+					<do-trace access-modifier="private" target="Text" ver="5">
+						<body>
+							<![CDATA[GVL.strTag_AlarmMassage]]>
+						</body>
+					</do-trace>
+				</object>
+			</object>
+			<init target="Visible" ver="5" value="true"/>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.BackgroundColor]]>
+				</body>
+			</do-trace>
+			<object access-modifier="private" name="Image_1" display-name="Image_1" uuid="6f7e66a7-608e-420f-ad71-296f0909a905" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+				<designed target="X" value="523" ver="5"/>
+				<designed target="Y" value="12.188679245283019" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="82" ver="5"/>
+				<designed target="Height" value="92.830188679245282" ver="5"/>
+				<designed target="PenColor" value="4278190080" ver="5"/>
+				<designed target="PenStyle" value="0" ver="5"/>
+				<designed target="PenWidth" value="1" ver="5"/>
+				<designed target="ImageFile" value="icons/warning-sign.png" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="CurrentFrameNumber" value="0" ver="5"/>
+				<designed target="Speed" value="1" ver="5"/>
+				<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="fcf5d700-95f1-4c30-85af-175041066f95" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+					<designed target="Period" value="500" ver="5"/>
+					<designed target="Active" value="true" ver="5"/>
+					<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+						<body kind="om">
+							<![CDATA[Image_1.Visible = !Image_1.Visible;]]>
+						</body>
+					</do-on>
+					<do-trace access-modifier="private" target="Active" ver="5">
+						<body>
+							<![CDATA[GVL.strSeverity == "400"]]>
+						</body>
+					</do-trace>
+				</object>
+				<init target="Visible" ver="5" value="false"/>
+			</object>
+			<object access-modifier="private" name="Image_2" display-name="Image_2" uuid="9a4e78a9-817c-4feb-93f1-c7e34bb0712c" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+				<designed target="X" value="503" ver="5"/>
+				<designed target="Y" value="-1" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="122.00000000000001" ver="5"/>
+				<designed target="Height" value="121.99999999999999" ver="5"/>
+				<designed target="PenColor" value="4278190080" ver="5"/>
+				<designed target="PenStyle" value="0" ver="5"/>
+				<designed target="PenWidth" value="1" ver="5"/>
+				<designed target="ImageFile" value="icons/warning-icon.png" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="CurrentFrameNumber" value="0" ver="5"/>
+				<designed target="Speed" value="1" ver="5"/>
+				<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="287dd721-dbb1-402e-99b2-4df3918cd416" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+					<designed target="Period" value="500" ver="5"/>
+					<designed target="Active" value="true" ver="5"/>
+					<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+						<body kind="om">
+							<![CDATA[Image_2.Visible = !Image_2.Visible;]]>
+						</body>
+					</do-on>
+					<do-trace access-modifier="private" target="Active" ver="5">
+						<body>
+							<![CDATA[GVL.strSeverity == "600"]]>
+						</body>
+					</do-trace>
+				</object>
+				<init target="Visible" ver="5" value="false"/>
+			</object>
+			<object access-modifier="private" name="Image_3" display-name="Image_3" uuid="0e4b6a33-c52d-4be1-9f72-bb6cbcf2ea4c" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+				<designed target="X" value="1410.5984802431612" ver="5"/>
+				<designed target="Y" value="12.101013171225949" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="35.425531914893668" ver="5"/>
+				<designed target="Height" value="35.425531914893618" ver="5"/>
+				<designed target="PenColor" value="0xff000000" ver="5"/>
+				<designed target="PenStyle" value="0" ver="5"/>
+				<designed target="PenWidth" value="1" ver="5"/>
+				<designed target="ImageFile" value="icons/remove2.png" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="CurrentFrameNumber" value="0" ver="5"/>
+				<designed target="Speed" value="1" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Ellipse_1" display-name="Ellipse_1" uuid="50ec8ed8-b573-4bf9-b9dd-c7c223881c5d" base-type="Ellipse" base-type-id="7f9e9b77-5d97-45c4-89c1-0f67adb636cd" ver="5" description="" cardinal="1">
+				<designed target="X" value="1409.8000000000002" ver="5"/>
+				<designed target="Y" value="11.400000000000027" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="36.600000000000023" ver="5"/>
+				<designed target="Height" value="36.600000000000001" ver="5"/>
+				<designed target="PenColor" value="0xffffffff" ver="5"/>
+				<designed target="PenStyle" value="1" ver="5"/>
+				<designed target="PenWidth" value="2" ver="5"/>
+				<designed target="BrushColor" value="0xff000000" ver="5"/>
+				<designed target="BrushStyle" value="0" ver="5"/>
+				<designed target="PieAngle" value="360" ver="5"/>
+				<designed target="PieAngleStart" value="360" ver="5"/>
+				<designed target="HoleSize" value="0" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+					<body kind="om">
+						<![CDATA[Kvit_signal.Value = true;]]>
+					</body>
+				</do-on>
+			</object>
+		</object>
+	</object>
+	<designed target="ShowWindowMinimize" value="false" ver="5"/>
+	<designed target="ShowWindowMaximize" value="false" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<object access-modifier="private" name="Kvit_alarmMessage" display-name="Kvit_alarmMessage" uuid="89ca151a-b3be-4a26-b409-cf71851fdc2e" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+			<body kind="om">
+				<![CDATA[here.AlarmMessage.Visible = false;]]>
+			</body>
+		</do-on>
+		<designed target="Period" value="100" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (GVL.Kvit== true){
+	Close();
+}]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="InvokeTrigger" ver="5">
+			<body>
+				<![CDATA[here.Kvit]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="7cdbacb8-2afc-4feb-9308-f0ef24641c02" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="500" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (GVL.strSeverity == "400") { Body.AlarmMessage.Alarm.Tag_alarm.Text = "НЕИСПРАВНОСТЬ ГРС"; Body.AlarmMessage.Alarm.PenColor = 0xffffff00; }
+else if (GVL.strSeverity == "600") { Body.AlarmMessage.Alarm.Tag_alarm.Text = "АВАРИЯ ГРС"; Body.AlarmMessage.Alarm.PenColor = 0xffff3333; }
+else { Body.AlarmMessage.Alarm.Tag_alarm.Text = "Неисправность ГРС"; Body.AlarmMessage.Alarm.PenColor = 0xffff3333; }]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Kvit_signal" display-name="Kvit_signal" uuid="0a9511c8-3a30-44ef-8677-4d092408bbf2" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+		<init target="Source" ver="5" ref="unit.Source.Main"/>
+		<init target="Path" ver="5" value="Signals.Kvit_signal"/>
+	</object>
+</type>
+

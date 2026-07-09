@@ -1,0 +1,287 @@
+<type access-modifier="private" name="AlarmJournal" display-name="AlarmJournal" uuid="76c20eac-b5e5-48ff-ab3b-10d754d9acc2" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1260" ver="5"/>
+	<designed target="Height" value="900" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="4293914607" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="1260" ver="5"/>
+	<designed target="WindowHeight" value="900" ver="5"/>
+	<designed target="WindowCaption" value="Form_1" ver="5"/>
+	<designed target="ShowWindowCaption" value="false" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="2" ver="5"/>
+	<designed target="WindowBorderStyle" value="0" ver="5"/>
+	<designed target="WindowState" value="0" ver="5"/>
+	<designed target="WindowScalingMode" value="1" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="0" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<object access-modifier="private" name="Alarms_1" display-name="Alarms_1" uuid="51ab13e0-bfc6-49cd-9c00-c123d9a5b575" base-type="Alarms" base-type-id="e8a9dba0-e07f-4bfe-95f9-b75887e3f21b" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="1262" ver="5"/>
+		<designed target="Height" value="900" ver="5"/>
+		<init target="init_ApSource" ver="5" ref="unit.Source.Main"/>
+		<init target="SoundPlaybackManagmentAvailable" ver="5" value="false"/>
+		<init target="AcknowledgmentDoubleClick" ver="5" value="false"/>
+		<init target="RequestAcknowledgmentComment" ver="5" value="false"/>
+		<init target="WriteComputerNameToComment" ver="5" value="false"/>
+		<init target="AckAllAvailable" ver="5" value="true"/>
+		<init target="ShowMilliseconds" ver="5" value="false"/>
+		<object access-modifier="private" name="RequestTimer" display-name="RequestTimer" uuid="d32d7ce2-1a86-4b42-8e1a-dea564e3ccc7" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="1000" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[
+
+Filter:string = "{\"==\":{\"severity\":600}}";
+Alarms_1.RequestRecentEvents(0.05, false, Filter);
+RequestTimer.Active = false;]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="RequestEventsStart" ver="5" value="true"/>
+		<object access-modifier="private" name="Connection" display-name="Connection" uuid="d2504ee6-3410-4aa9-9fdb-34aecff273c7" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<init target="Path" ver="5" value="Service.Modules.OpcUAClient.REGUL.HasActiveServer"/>
+		</object>
+		<object access-modifier="private" name="SecurityContext_1" display-name="SecurityContext_1" uuid="9fa5d275-c734-45bf-8c34-6fc58140faec" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="CurrentUserChanged">
+				<body kind="om">
+					<![CDATA[if (CurrentUserDisplayName == "guest") {
+Alarms_1.LogOff();
+} else {
+Alarms_1.LogOn(CurrentUser);
+}
+]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="init_ScreenKeyboard" ver="5">
+			<object access-modifier="private" uuid="ba081b1f-7e8f-4d8a-be7f-4c24c9e003e9" base-type="ScreenKeyboardOptions" base-type-id="0589bc8e-fbb2-4f0e-b5d2-f0d825538ef1" ver="5">
+				<init target="Enabled" ver="5" value="true"/>
+			</object>
+		</init>
+		<do-trace access-modifier="private" target="AckAllAvailable" ver="5">
+			<body>
+				<![CDATA[unit.Security.Access_Operator || unit.Security.Access_Engineer]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="AcknowledgmentAvailable" ver="5">
+			<body>
+				<![CDATA[unit.Security.Access_Operator || unit.Security.Access_Engineer]]>
+			</body>
+		</do-trace>
+		<object access-modifier="private" name="Kvit_signal" display-name="Kvit_signal" uuid="3167b16f-ea57-40fd-b490-765c676cd71a" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<init target="Path" ver="5" value="Signals.Kvit_signal"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnValueChanged">
+				<body kind="om">
+					<![CDATA[if (value && ModeWork.IsPU) {
+	Alarms_1.AckAll();
+	Timer_1.Active= true;
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="b4f1be5a-0542-451c-9f0c-a6b60b932abd" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+			<designed target="Period" value="1000" ver="5"/>
+			<designed target="Active" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+				<body kind="om">
+					<![CDATA[Alarms_1.AckAll();
+me.Active=false;]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="VerticalScrollBarPolicy" ver="5" value="0"/>
+		<init target="AcknowledgmentAllVisible" ver="5" value="true"/>
+		<do-trace access-modifier="private" target="ActiveMode" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Init.Complete]]>
+				</condition>
+				<expr>
+					<![CDATA[AlarmsTable.ActiveMode]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<init target="LineTransfer" ver="5" value="false"/>
+		<designed target="PenWidth" value="6" ver="5"/>
+		<designed target="PenColor" value="0xffab0003" ver="5"/>
+		<designed target="BrushStyle" value="1" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<do-trace access-modifier="private" target="ConfigurationFolder" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Init.Complete]]>
+				</condition>
+				<expr>
+					<![CDATA[AlarmsTable.ConfigurationFolder]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="DisplayToolbar" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Init.Complete]]>
+				</condition>
+				<expr>
+					<![CDATA[AlarmsTable.DisplayToolbar]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="Mute" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Init.Complete]]>
+				</condition>
+				<expr>
+					<![CDATA[AlarmsTable.Mute]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="DisplayStatePanel" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[Init.Complete]]>
+				</condition>
+				<expr>
+					<![CDATA[AlarmsTable.DisplayStatePanel]]>
+				</expr>
+			</conditional-expr>
+		</do-trace>
+		<init target="isMiniAlarm" ver="5" value="false"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[Alarms_1.LogOn(Alarms_1.SecurityContext_1.CurrentUser);]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="Config" display-name="Config" uuid="46056827-9f47-4d5d-b409-f828fd0e0e35" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="b12b7a76-4cb0-42ba-a5be-d84c2236642f" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+			<body kind="om">
+				<![CDATA[Alarms_1.LoadConfiguration(FileSystem_1.CombinePath(FileSystem_1.ProjectFolder, "/resources/AlarmSettings"));]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="FileSystem_1" display-name="FileSystem_1" uuid="b7bd98fb-dfbe-4951-8bee-80f106702cb9" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512" ver="5" description="" cardinal="1">
+		<designed target="RootPath" value="/" ver="5"/>
+	</object>
+	<object access-modifier="private" name="TouchScreen" display-name="TouchScreen" uuid="a1105489-a22c-4687-a803-55f0bbc96544" base-type="TouchScreen" base-type-id="f0752ad3-872f-466f-ada7-8c03a9b972dc" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="478.5" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="1262" ver="5"/>
+		<designed target="Height" value="421.5" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Sbros" display-name="Sbros" uuid="25da717e-0a8d-4bb6-9af9-c3881465518b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="InvokeTrigger" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+				<body kind="javascript">
+					<![CDATA[//unit.Source.DebugTool_1.Log(Alarms_1.Scale);
+//unit.Source.DebugTool_1.Log(TouchScreen.CustomTable.GetRowCount() - 1);
+if (Alarms_1.Scale == 1) {
+	if (TouchScreen.CurrentCell > 30) {
+			TouchScreen.CurrentCell = 30;
+	}	
+	
+} else {
+	if (TouchScreen.CurrentCell > TouchScreen.CustomTable.GetRowCount()) {
+			TouchScreen.CurrentCell = TouchScreen.CustomTable.GetRowCount() - 1;
+	}
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="AlternativMaxSbros" ver="5" value="true"/>
+		<init target="AltSbros" ver="5" ref="Sbros"/>
+		<init target="CustomTable" ver="5" ref="Alarms_1.AlarmsTable.Main_tables_Operative.Table_Operative_mode"/>
+	</object>
+	<object access-modifier="private" name="TouchScreenTimer" display-name="TouchScreenTimer" uuid="7be0aede-2f51-4b4c-8dfe-cc287464e2fd" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="1000" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="javascript">
+				<![CDATA[TouchScreen.isSbrosCurrentCell = Alarms_1.Toolbar.Visible;
+
+let OldVersionAlarms = Alarms_1.AlarmsTable.Main_tables_Operative.Table_Operative_mode;
+
+TouchScreen.Width = OldVersionAlarms.Width-20;
+TouchScreen.X = Alarms_1.X;
+
+
+TouchScreen.Height = OldVersionAlarms.Height - Alarms_1.Statusbar.Height;
+TouchScreen.Y = Alarms_1.Y + 60;
+
+if ( Alarms_1.Toolbar.Visible == true ){
+ TouchScreen.Y = TouchScreen.Y + Alarms_1.Toolbar.Height;
+}
+TouchScreen.Scale = Alarms_1.Scale;
+
+// TouchScreen.Y = TouchScreen.Y  + Alarms_1.AlarmsTable.TableOne.HeaderHeight * Alarms_1.Scale;
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="TouchScreen_1" display-name="TouchScreen_1" uuid="688abea3-7a20-4daf-a9d8-a8ef83387902" base-type="TouchScreen" base-type-id="f0752ad3-872f-466f-ada7-8c03a9b972dc" ver="5" description="" cardinal="1">
+		<designed target="X" value="1.5484662576687118" ver="5"/>
+		<designed target="Y" value="58" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Width" value="1258.1288343558285" ver="5"/>
+		<designed target="Height" value="770" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Sbros" display-name="Sbros" uuid="f94742eb-e85f-415e-8486-b8af026f182b" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="InvokeTrigger" value="false" ver="5"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked">
+				<body kind="javascript">
+					<![CDATA[//unit.Source.DebugTool_1.Log(Alarms_1.Scale);
+//unit.Source.DebugTool_1.Log(TouchScreen.CustomTable.GetRowCount() - 1);
+if (Alarms_1.Scale == 1) {
+	if (TouchScreen.CurrentCell > 30) {
+			TouchScreen.CurrentCell = 30;
+	}	
+	
+} else {
+	if (TouchScreen.CurrentCell > TouchScreen.CustomTable.GetRowCount()) {
+			TouchScreen.CurrentCell = TouchScreen.CustomTable.GetRowCount() - 1;
+	}
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<init target="AlternativMaxSbros" ver="5" value="true"/>
+		<init target="AltSbros" ver="5" ref="Sbros"/>
+		<init target="CustomTable" ver="5" ref="Alarms_1.AlarmsTable.Main_tables_Historical.Table_History_mode"/>
+		<do-trace access-modifier="private" target="Visible" ver="5">
+			<body>
+				<![CDATA[Alarms_1.Toolbar.pAlarmsTable.ActiveMode == 1]]>
+			</body>
+		</do-trace>
+	</object>
+</type>
+

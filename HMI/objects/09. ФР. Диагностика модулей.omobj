@@ -1,0 +1,305 @@
+<type access-modifier="private" name="09. ФР. Диагностика модулей" display-name="09. ФР. Диагностика модулей" uuid="8213ee99-3b12-4d53-ac32-9bda1d8faaae" base-type="Form" base-type-id="ffaf5544-6200-45f4-87ec-9dd24558a9d5" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="1200" ver="5"/>
+	<designed target="Height" value="440" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="BrushColor" value="0xff000000" ver="5"/>
+	<designed target="BrushStyle" value="0" ver="5"/>
+	<designed target="WindowX" value="0" ver="5"/>
+	<designed target="WindowY" value="0" ver="5"/>
+	<designed target="WindowWidth" value="1920" ver="5"/>
+	<designed target="WindowHeight" value="1080" ver="5"/>
+	<designed target="WindowCaption" value="Form_1" ver="5"/>
+	<designed target="ShowWindowCaption" value="true" ver="5"/>
+	<designed target="ShowWindowMinimize" value="true" ver="5"/>
+	<designed target="ShowWindowMaximize" value="true" ver="5"/>
+	<designed target="ShowWindowClose" value="true" ver="5"/>
+	<designed target="AlwaysOnTop" value="false" ver="5"/>
+	<designed target="WindowSizeMode" value="0" ver="5"/>
+	<designed target="WindowBorderStyle" value="1" ver="5"/>
+	<designed target="WindowState" value="0" ver="5"/>
+	<designed target="WindowScalingMode" value="0" ver="5"/>
+	<designed target="MonitorNumber" value="0" ver="5"/>
+	<designed target="WindowPosition" value="0" ver="5"/>
+	<designed target="WindowCloseMode" value="0" ver="5"/>
+	<designed target="WindowIconPath" value="" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.MainColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Bus" display-name="Bus" uuid="f08f3eef-5aaa-4e7d-891f-2a38ede2584e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="17" ver="5"/>
+		<designed target="Y" value="1" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="1440" ver="5"/>
+		<designed target="Height" value="552" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="0xff00ff00" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Crate" display-name="Crate" uuid="f7468309-208b-4abf-8f08-e7733b2b35be" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="3">
+			<designed target="X" value="10" ver="5"/>
+			<designed target="Y" value="10" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="1180" ver="5"/>
+			<designed target="Height" value="200" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffff0000" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="4278190080" ver="5"/>
+			<designed target="BrushStyle" value="0" ver="5"/>
+			<object access-modifier="private" name="LayoutSizeLimits" display-name="LayoutSizeLimits" uuid="5d94a6ea-47bc-4297-88ec-a902fda8ad12" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+				<designed target="MinWidth" value="0" ver="5"/>
+				<designed target="MinHeight" value="0" ver="5"/>
+				<designed target="MaxWidth" value="16777215" ver="5"/>
+				<designed target="MaxHeight" value="200" ver="5"/>
+				<init target="MaxHeight" ver="5" value="0"/>
+			</object>
+			<object access-modifier="private" name="CrateOK" display-name="CrateOK" uuid="b8aaca5b-dd34-4bb5-a087-7e3cc73c428a" base-type="GoodBad" base-type-id="3e51710e-5207-476d-973e-dc0687fe77ee" ver="5" description="" cardinal="1">
+				<designed target="X" value="20" ver="5"/>
+				<designed target="Y" value="75" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Width" value="50" ver="5"/>
+				<designed target="Height" value="50" ver="5"/>
+				<object access-modifier="private" name="LayoutSizeLimits_1" display-name="LayoutSizeLimits_1" uuid="5e93072a-35c0-40a0-8df3-8b6fc678d20a" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+					<designed target="MinWidth" value="0" ver="5"/>
+					<designed target="MinHeight" value="0" ver="5"/>
+					<designed target="MaxWidth" value="50" ver="5"/>
+					<designed target="MaxHeight" value="50" ver="5"/>
+				</object>
+				<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="ae0bd8db-42e5-4815-84f8-86c29a4d0125" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+					<designed target="X" value="-10" ver="5"/>
+					<designed target="Y" value="50" ver="5"/>
+					<designed target="ZValue" value="0" ver="5"/>
+					<designed target="Rotation" value="0" ver="5"/>
+					<designed target="Scale" value="1" ver="5"/>
+					<designed target="Flip" value="0" ver="5"/>
+					<designed target="Visible" value="true" ver="5"/>
+					<designed target="Opacity" value="1" ver="5"/>
+					<designed target="Enabled" value="true" ver="5"/>
+					<designed target="Tooltip" value="" ver="5"/>
+					<designed target="Width" value="70" ver="5"/>
+					<designed target="Height" value="50" ver="5"/>
+					<designed target="Text" value="Состояние
+шлейфа №1" ver="5"/>
+					<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+					<designed target="FontColor" value="0xffffffff" ver="5"/>
+					<designed target="TextAlignment" value="132" ver="5"/>
+					<do-trace access-modifier="private" target="Text" ver="5">
+						<body>
+							<![CDATA["Состояние шлейфа №" + String.ToString(CrateIndex + 1)]]>
+						</body>
+					</do-trace>
+				</object>
+				<init target="Good" ver="5" value="true"/>
+				<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="580aadb9-d4cb-459e-87de-afe514652254" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+					<designed target="Top" value="0" ver="5"/>
+					<designed target="Bottom" value="0" ver="5"/>
+					<designed target="Left" value="20" ver="5"/>
+					<designed target="Right" value="20" ver="5"/>
+				</object>
+				<do-trace access-modifier="private" target="Good" ver="5">
+					<body>
+						<![CDATA[!CrateError && unit.Source.Connection]]>
+					</body>
+				</do-trace>
+				<do-trace access-modifier="private" target="ImageFile" ver="5">
+					<conditional-expr>
+						<condition>
+							<![CDATA[Good]]>
+						</condition>
+						<expr>
+							<![CDATA["icons/check.png"]]>
+						</expr>
+					</conditional-expr>
+					<default-expr>
+						<expr>
+							<![CDATA["icons/remove.png"]]>
+						</expr>
+					</default-expr>
+				</do-trace>
+			</object>
+			<object access-modifier="private" name="LinearLayout" display-name="LinearLayout" uuid="cf3c6794-aeb2-4ead-881a-cb5d30b3075f" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<object access-modifier="private" name="LayoutAlignment" display-name="LayoutAlignment" uuid="9b3a592e-0147-422f-af31-eecbc1c93fbe" base-type="LayoutAlignment" base-type-id="cb30d8f3-1816-4ca2-87ec-f9a3c4b4e7b4" ver="5" description="" cardinal="1">
+				<designed target="HorizontalAlignment" value="1" ver="5"/>
+				<designed target="VerticalAlignment" value="1" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="dcad05fa-9f83-4150-9f9c-dff87f6203b1" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+					<body kind="om">
+						<![CDATA[CrateIndex=Index;]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="CrateIndex" display-name="CrateIndex" uuid="78a55a1e-71a5-4876-97a4-d46959a8630c" base-type="notifying_int8" base-type-id="c594ba4b-148e-403d-a019-22af8f44ab42" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="LayoutMargins_1" display-name="LayoutMargins_1" uuid="a3f3387a-d2cd-47e1-868d-9dec59af5243" base-type="LayoutMargins" base-type-id="d86ce751-1ea7-42c6-8d4b-10c651a2727d" ver="5" description="" cardinal="1">
+				<designed target="Top" value="10" ver="5"/>
+				<designed target="Bottom" value="10" ver="5"/>
+				<designed target="Left" value="10" ver="5"/>
+				<designed target="Right" value="10" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Module" display-name="Module" uuid="50fbd7cd-ec67-4e5b-b219-29938025308d" base-type="Module" base-type-id="c064515e-8f5a-4ded-9147-b86965c486f0" ver="5" description="" cardinal="20">
+				<designed target="X" value="90" ver="5"/>
+				<designed target="Y" value="10" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Width" value="40" ver="5"/>
+				<designed target="Height" value="180" ver="5"/>
+				<object access-modifier="private" name="LayoutSizeLimits" display-name="LayoutSizeLimits" uuid="ecd92b13-5269-4b03-81fc-d662e6a16a03" base-type="LayoutSizeLimits" base-type-id="10342c1f-560b-4160-9de5-7e2c08026f47" ver="5" description="" cardinal="1">
+					<designed target="MinWidth" value="40" ver="5"/>
+					<designed target="MinHeight" value="180" ver="5"/>
+					<designed target="MaxWidth" value="50" ver="5"/>
+					<designed target="MaxHeight" value="180" ver="5"/>
+					<init target="MinWidth" ver="5" value="0"/>
+					<init target="MaxWidth" ver="5" value="0"/>
+				</object>
+				<init target="Visible" ver="5" value="false"/>
+				<designed target="Speed" value="0" ver="5"/>
+			</object>
+			<init target="Visible" ver="5" value="false"/>
+			<init target="PenStyle" ver="5" value="0"/>
+			<object access-modifier="private" name="CrateError" display-name="CrateError" uuid="251d3a69-f760-4ff5-b411-6d9dffd08e72" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Diagn"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="5f2347e5-74a8-41af-8714-02857558f30b" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+			<designed target="Orientation" value="2" ver="5"/>
+			<designed target="Gap" value="0" ver="5"/>
+		</object>
+		<object access-modifier="private" name="LayoutAlignment_1" display-name="LayoutAlignment_1" uuid="d9a783cb-9fdc-43e6-b9de-809ba36c2af1" base-type="LayoutAlignment" base-type-id="cb30d8f3-1816-4ca2-87ec-f9a3c4b4e7b4" ver="5" description="" cardinal="1">
+			<designed target="HorizontalAlignment" value="1" ver="5"/>
+			<designed target="VerticalAlignment" value="1" ver="5"/>
+		</object>
+		<init target="PenStyle" ver="5" value="0"/>
+	</object>
+	<object access-modifier="private" name="Debug" display-name="Debug" uuid="5d785ff8-9605-4cff-b8a6-14422c954093" base-type="DebugTool" base-type-id="43946044-139a-43f4-a7b8-19a6074ffc56" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="modules" display-name="modules" uuid="b3a0fd82-e9b4-4877-a23e-b73795cc2385" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="c915b95d-cbbc-4de9-954b-589c654dcf73" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_4" display-name="Handler_4" ver="5" event="Initialized">
+			<body kind="javascript">
+				<![CDATA[
+let doubleCUArray = [
+	"CU 00 051",
+	"CU 00 052",
+	"CU 00 061",
+	"CU 00 062",
+	"CU 00 071",
+	"CU 00 072",
+	"CU 00 082",
+	"CU 00 151",
+	"CU 00 161",
+	"CU 00 171",
+	"CU 00 181"
+];
+
+let STType1 = [
+	"ST 00 001",
+	"ST 01 012",
+	"ST 01 022",
+	"ST 02 012",
+	"ST 02 022",
+	"ST 02 111",
+	"ST 02 121"
+];
+
+let STType2 = [
+	"ST 01 013",
+	"ST 01 023",
+	"ST 02 013",
+	"ST 02 023",
+	"ST 02 113",
+	"ST 02 123"
+]
+
+
+
+
+let busArray = JSON.parse(here.modules);
+
+for(let i = 0; i < busArray.array.length; i++){
+	here.Bus.Crate[i].Visible = true;
+	here.Bus.Crate[i].LayoutSizeLimits.MaxHeight = 200;
+	here.Bus.Crate[i].CrateError.Path = "Error_crate" + (i+1); 
+	let crateWidth = here.Bus.Crate[i].CrateOK.LayoutSizeLimits_1.MaxWidth + here.Bus.Crate[i].CrateOK.LayoutMargins_1.Left + here.Bus.Crate[i].CrateOK.LayoutMargins_1.Right; 
+	for (let j = 0; j < busArray.array[i].length; j++){
+		here.Bus.Crate[i].Module[j].Visible = true;
+		here.Bus.Crate[i].Module[j].TextBlock.TextName.Text = busArray.array[i][j].kdName;
+		here.Bus.Crate[i].Module[j].Error.Path ="Error_"+ busArray.array[i][j].kdName;
+		here.Bus.Crate[i].Module[j].ImageFile = FileSystem.CombinePath(FileSystem.CurrentUserFolder, "diagn/" + busArray.array[i][j].moduleName + ".png");
+		here.Bus.Crate[i].Module[j].GoodBad_IN.Visible = false;
+		if (STType1.findIndex((element) => element == busArray.array[i][j].moduleName) != -1) {
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinWidth = 50;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxWidth = 50;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinHeight = 130;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxHeight = 130;
+			here.Bus.Crate[i].Module[j].TextBlock.Y = 135;
+			here.Bus.Crate[i].Module[j].GoodBad.Y = 50;
+			here.Bus.Crate[i].Module[j].GoodBad_IN.Visible = true;
+			here.Bus.Crate[i].Module[j].Link.Path = "Link_" + busArray.array[i][j].kdName;
+		} else if (STType2.findIndex((element) => element == busArray.array[i][j].moduleName) != -1){
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinWidth = 25;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxWidth = 25;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinHeight = 127;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxHeight = 127;
+			here.Bus.Crate[i].Module[j].TextBlock.Y = 132;
+			here.Bus.Crate[i].Module[j].GoodBad.Y = 51;
+			here.Bus.Crate[i].Module[j].GoodBad.Width = 25;
+			here.Bus.Crate[i].Module[j].GoodBad.Height = 25;
+			here.Bus.Crate[i].Module[j].GoodBad.X = 0;
+			here.Bus.Crate[i].Module[j].TextBlock.Width = 25;
+		} else if (doubleCUArray.findIndex((element) => element == busArray.array[i][j].moduleName) != -1) {
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinWidth = 100
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxWidth = 100;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinHeight = 180;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxHeight = 180;
+			here.Bus.Crate[i].Module[j].TextBlock.Width = 100;
+			here.Bus.Crate[i].Module[j].GoodBad.X = 25;
+		} else {
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinWidth = 50
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxWidth = 50;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MinHeight = 180;
+			here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxHeight = 180;
+		}
+		crateWidth = crateWidth + here.Bus.Crate[i].Module[j].LayoutSizeLimits.MaxWidth;
+	}
+	here.Bus.Crate[i].LayoutSizeLimits.MaxWidth = crateWidth;
+}]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="FileSystem" display-name="FileSystem" uuid="f5a04ddc-e670-4c23-b0cd-923616ea1ed5" base-type="FileSystem" base-type-id="34d744f9-7303-4077-a3f7-9c06c0945512" ver="5" description="" cardinal="1">
+		<designed target="RootPath" value="/" ver="5"/>
+	</object>
+</type>
+

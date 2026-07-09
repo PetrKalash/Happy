@@ -1,0 +1,156 @@
+<type access-modifier="private" name="LR_Mode" display-name="LR_Mode" uuid="ce46c200-e3cd-4dc1-b301-2671a5060972" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="110" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff000000" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="d0bea6f8-4e00-449c-be35-c90e847dddc4" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="1" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Set_Mode" display-name="Set_Mode" uuid="ba0bfca0-eadf-49b7-aa5e-1c00af3eebd6" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<init target="ValuePath" ver="5" value="Set_mode"/>
+		<init target="MainSource" ver="5" ref="LRSource"/>
+	</object>
+	<object access-modifier="private" name="Status" display-name="Status" uuid="94949728-ad30-4adb-963f-572d6a1eeab0" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="UR1.Status"/>
+		<init target="Source" ver="5" ref="unit.Source.Algo"/>
+	</object>
+	<object access-modifier="private" name="Mode" display-name="Mode" uuid="7157a13a-24c9-4ee1-a7c9-241aeb218c96" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+		<init target="Path" ver="5" value="Mode"/>
+		<init target="Source" ver="5" ref="LRSource"/>
+	</object>
+	<object access-modifier="private" name="LRSource" display-name="LRSource" uuid="67303398-a9a0-4143-92b3-c060cc788c00" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5" description="" cardinal="1">
+		<designed target="Location" value="" ver="5"/>
+		<designed target="Port" value="4388" ver="5"/>
+		<designed target="HistoryPort" value="4950" ver="5"/>
+		<designed target="Path" value="" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<designed target="ReAdvise" value="0" ver="5"/>
+		<designed target="ClientDisplayName" value="HMI" ver="5"/>
+		<designed target="ClientId" value="HMI" ver="5"/>
+		<init target="ParentSource" ver="5" ref="unit.Source.Algo"/>
+		<do-trace access-modifier="private" target="Path" ver="5">
+			<body>
+				<![CDATA[LRPath]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="LRPath" display-name="LRPath" uuid="4919f817-a363-4dd3-825c-ca53472727eb" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+		<body kind="om">
+			<![CDATA[if (!unit.Security.Access_Engineer && !unit.Security.Access_Operator){
+	NoEngineerAction.Invoke();
+	return;
+}
+if (!unit.ModeWork.Access){
+	NoAccessAction.Invoke();
+	return;
+}
+
+if (Mode < 3){
+	ChangeMode.Invoke();
+}]]>
+		</body>
+	</do-on>
+	<do-trace access-modifier="private" target="PenColor" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Source.Connection || Mode == 4]]>
+			</condition>
+			<expr>
+				<![CDATA[0xffff0000]]>
+			</expr>
+		</conditional-expr>
+		<conditional-expr>
+			<condition>
+				<![CDATA[Mode == 3]]>
+			</condition>
+			<expr>
+				<![CDATA[0xffffff00]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[0xff55ff00]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="NoEngineerAction" display-name="NoEngineerAction" uuid="db821c0e-5881-4845-8cdd-a9d550b8b1e2" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="33d76509-2a15-4a8d-ac5c-b9e3e79a7764" base-type="Сообщение" base-type-id="0babc8f4-86ac-4dba-9145-1c0d2529a898" ver="5">
+				<init target="MessageText" ver="5" value="Управление алгоритмами станции доступно только авторизированным пользователям"/>
+				<init target="WindowName" ver="5" value="Недостаточно прав"/>
+			</object>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="NoAccessAction" display-name="NoAccessAction" uuid="84cad06c-a98f-4750-9587-f947291b6d1d" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" ver="5" description="" cardinal="1">
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="InvokeTrigger" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Invoked" form-action="open-dialog" form-by-id="false">
+			<object access-modifier="private" uuid="d61a9a34-aaf6-4312-8e2b-437ef40fb5a0" base-type="Сообщение" base-type-id="0babc8f4-86ac-4dba-9145-1c0d2529a898" ver="5">
+				<init target="MessageText" ver="5" value="Для управления алгоритмами необходимо перейти в режим управления от данного устройства"/>
+				<init target="WindowName" ver="5" value="Неподходящий режим работы"/>
+			</object>
+		</do-on>
+	</object>
+	<designed target="Editable" value="false" ver="5"/>
+	<designed target="Text" value="" ver="5"/>
+	<designed target="SelectedIndex" value="-1" ver="5"/>
+	<designed target="Font" value="MS Shell Dlg 2,11,-1,5,50,0,0,0,0,0" ver="5"/>
+	<designed target="FontColor" value="4278190080" ver="5"/>
+	<designed target="MaxVisibleItems" value="10" ver="5"/>
+	<designed target="InsertPolicy" value="3" ver="5"/>
+	<object access-modifier="private" name="Initializer_1" display-name="Initializer_1" uuid="0b5ffe2f-7340-4599-b065-5f956f24c82b" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+			<body kind="om">
+				<![CDATA[// parent.AddItem("Не выбрано");
+parent.AddItem("Основная");
+parent.AddItem("Резерв");
+parent.AddItem("Ремонт");
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="isInit" display-name="isInit" uuid="59c1f114-7838-4b80-b1cf-84bb1abbd47d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Timer_1" display-name="Timer_1" uuid="35c6f820-9374-4411-b5f0-094dd455d87c" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="500" ver="5"/>
+		<designed target="Active" value="true" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[
+parent.SelectedIndex= TypeConvert.ToInt4(Variant.ToUint2(Set_Mode.Out, 0));
+isInit=true;
+me.Active=false;]]>
+			</body>
+		</do-on>
+	</object>
+	<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="SelectedChanged">
+		<body kind="om">
+			<![CDATA[if(isInit)
+	Set_Mode.In=TypeConvert.ToUint2(selected);]]>
+		</body>
+	</do-on>
+	<do-trace access-modifier="private" target="SelectedIndex" ver="5">
+		<body>
+			<![CDATA[Variant.ToInt4(Set_Mode.Out, 0)]]>
+		</body>
+	</do-trace>
+</type>
+

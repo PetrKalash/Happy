@@ -1,0 +1,98 @@
+<object access-modifier="private" name="Theme" display-name="Theme" uuid="f9717f87-e907-4ae4-adc0-e8efcac78496" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5" description="" cardinal="1">
+	<object access-modifier="private" name="BackgroundColor" display-name="Цвет заднего фона" uuid="34f19eae-353d-45b4-bbb5-a09711e2b9cf" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="MainColor" display-name="Цвет элементов" uuid="6f506ba1-3508-4c2d-ac26-3c6959f993de" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="TitleColor" display-name="Цвет заголовка" uuid="29961d24-1867-4291-9a0e-7369377a31a0" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="ButtonColor" display-name="Цвет кнопок" uuid="130cfa55-e7d4-4ff9-ac33-9b987676ef5d" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="InputColor" display-name="Цвет заднего фона уставок" uuid="a983639c-b2f3-4845-99d8-d85d56450538" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="TextColor" display-name="Цвет текста" uuid="5bf36fdc-4e36-4d77-8fe1-8b1b74f0f5f7" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="InputTextColor" display-name="Цвет текста уставок" uuid="4a451753-1c7e-4bca-86be-a345a7210192" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="BoundColor" display-name="Цвет рамки" uuid="74c9a42d-fb3e-42cf-86a3-e91dead05ed5" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="InputBoundColor" display-name="Цвет рамки уставок" uuid="3fc98efc-d4e4-4ba5-9f60-ab8bb908a1da" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="ButtonBoundColor" display-name="Цвет рамки кнопок" uuid="d791e95c-2f57-4192-8905-168a9390e609" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NoConnectBackgroundColor" display-name="Цвет заднего фона при отсутствии связи" uuid="ed5fc3a2-de28-4d76-a828-26e0c5cb486c" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NoConnectMainColor" display-name="Цвет элемента при отсутствии связи" uuid="9786fb9e-322c-494c-8c9c-1ec001e9f513" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NoConnectInputColor" display-name="Цвет заднего фона уставок при отсутствии связи" uuid="eab9e999-71ba-4717-8fd6-cb1a1379a645" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NoConnectTextColor" display-name="Цвет текста при отстуствии связи" uuid="34610190-ec31-4382-804b-5945eacf0a12" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NoConnectInputTextColor" display-name="Цвет текста уставок при отсутствии связи" uuid="1a3052b6-a520-4fed-a9de-e618c7d51bbf" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NoConnectBoundColor" display-name="Цвет рамки при отсутствии связи" uuid="5465c299-0a4e-417d-af99-352eda638c2c" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="NoConnectInputBoundColor" display-name="Цвет рамки уставок при отсутствии связи" uuid="c899a672-6adf-4776-b063-d6f8e6dc4042" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<init target="BackgroundColor" ver="5" value="0xff000000"/>
+	<init target="MainColor" ver="5" value="0xff2d2d2d"/>
+	<init target="TitleColor" ver="5" value="0xff2d2d2d"/>
+	<init target="ButtonColor" ver="5" value="0xff2d2d2d"/>
+	<init target="TextColor" ver="5" value="0xffffffff"/>
+	<init target="InputTextColor" ver="5" value="0xffffffff"/>
+	<init target="BoundColor" ver="5" value="0xffffffff"/>
+	<init target="InputBoundColor" ver="5" value="0xff0000ff"/>
+	<init target="InputColor" ver="5" value="0xff2d2d2d"/>
+	<init target="NoConnectBackgroundColor" ver="5" value="0xff4c5d71"/>
+	<init target="NoConnectMainColor" ver="5" value="0xff48586b"/>
+	<init target="NoConnectTextColor" ver="5" value="0xffffffff"/>
+	<init target="NoConnectInputTextColor" ver="5" value="0xffffffff"/>
+	<init target="NoConnectBoundColor" ver="5" value="0xffff0000"/>
+	<init target="NoConnectInputBoundColor" ver="5" value="0xffff0000"/>
+	<init target="NoConnectInputColor" ver="5" value="0xff4c5d71"/>
+	<object access-modifier="private" name="BackDarkLightColor" display-name="BackDarkLightColor" uuid="ec44ca6b-26da-443b-a270-14dafcb052f3" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="BackDarkColor" display-name="BackDarkColor" uuid="2c2ada96-f446-4230-baa6-bcdab0b43a3a" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Alarm" display-name="Alarm" uuid="981a1fd7-5185-4371-9a54-2efce3f9a247" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Delay_Opacity" display-name="Delay_Opacity" uuid="3e22fbf9-b7c9-4749-8e94-0e45766f871b" base-type="notifying_float" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="LightGreenColor" display-name="LightGreenColor" uuid="c637b6f2-7e9a-47c2-b27f-89722bf649c8" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Unit" display-name="Unit" uuid="8bf5da47-e9dc-4bec-8d8d-c80b643e7454" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="8"/>
+	<object access-modifier="private" name="UnitInit" display-name="UnitInit" uuid="c6c3b2e1-d9a0-4fef-b6b8-c4e9a9098132" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+			<body kind="om">
+				<![CDATA[Unit[0] = "МПа";
+Unit[1] = "кгс/см²";
+Unit[2] = "кПа";
+Unit[3] = "бар";
+Unit[4] = "кгс/м²";
+Unit[5] = "°C";
+Unit[6] = "%";
+Unit[7] = "В";]]>
+			</body>
+		</do-on>
+	</object>
+	<init target="ButtonBoundColor" ver="5" value="0xff55ff00"/>
+	<do access-modifier="private" name="hexToRGB" display-name="hexToRGB" ver="5" type="variant" type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a">
+		<body kind="javascript">
+			<![CDATA[str = hex.toString(16);
+
+const a = parseInt(hex.slice(0, 2), 16);
+const r = parseInt(hex.slice(2, 4), 16);
+const g = parseInt(hex.slice(4, 6), 16);
+const b = parseInt(hex.slice(6, 8), 16);
+return { r, g, b };]]>
+		</body>
+		<param access-modifier="private" name="hex" display-name="" uuid="58c793be-d099-409b-8e67-49cf9b925ea9" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5"/>
+	</do>
+	<init target="Alarm" ver="5" value="0xffff0000"/>
+	<do access-modifier="private" name="Pretify" display-name="Pretify" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[let n = value.toString();
+return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + " ");]]>
+		</body>
+		<param access-modifier="private" name="value" display-name="" uuid="0d775a25-e387-4099-900b-b9ab6f9ea0c2" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5"/>
+	</do>
+	<do access-modifier="private" name="Floor" display-name="Floor" ver="5" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+		<body kind="javascript">
+			<![CDATA[return Math.floor(value);]]>
+		</body>
+		<param access-modifier="private" name="value" display-name="" uuid="ece2a449-e51e-45f3-ac4a-2bb9b2641d9e" base-type="float" base-type-id="730a70b7-31fd-42cf-860d-ba8faa618f9d" ver="5"/>
+	</do>
+	<do access-modifier="private" name="UnPretify" display-name="UnPretify" ver="5" type="uint4" type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e">
+		<body kind="om">
+			<![CDATA[return String.ToUint4(String.Replace(value, " ", ""),0);]]>
+		</body>
+		<param access-modifier="private" name="value" display-name="" uuid="beccb3dc-cf8e-4ac9-9b8f-e8c145ab9154" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5"/>
+	</do>
+	<do access-modifier="private" name="ToHex" display-name="ToHex" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="javascript">
+			<![CDATA[return value.toString(16);]]>
+		</body>
+		<param access-modifier="private" name="value" display-name="" uuid="6ef82ec4-ee47-4223-96c3-efb97b8f2d5c" base-type="uint4" base-type-id="a42274b8-724b-4f03-bcf9-dd8498c29f8e" ver="5"/>
+	</do>
+	<init target="BackDarkLightColor" ver="5" value="0xff1f1f1f"/>
+	<init target="Delay_Opacity" ver="5" value="5"/>
+	<init target="LightGreenColor" ver="5" value="0xff99ff33"/>
+</object>
+

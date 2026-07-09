@@ -1,0 +1,356 @@
+<type access-modifier="private" name="Проверка оборудования" display-name="Проверка оборудования" uuid="d33c9fe3-f44d-49e1-a1ab-7b575a13dd78" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="500" ver="5"/>
+	<designed target="Height" value="360" ver="5"/>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="a64dc68e-1447-4d49-a7da-0803d3e3fd1d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="4278190080" ver="5"/>
+		<designed target="PenStyle" value="1" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="Label" display-name="Label" uuid="966ad12e-c16b-4e75-820a-924bc01d6640" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="50" ver="5"/>
+			<designed target="Y" value="20" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="230" ver="5"/>
+			<designed target="Text" value="Проверка условий для 
+разрешения алгоритма" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,75,0,0,0,0,0,Полужирный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="TextAlignment" value="36" ver="5"/>
+			<object access-modifier="private" name="Blinker" display-name="Blinker" uuid="6d36a3fe-c60b-4246-98a3-4947acd5dc64" base-type="Blinker" base-type-id="de67e797-c7fd-4703-9e0a-c04ac4022006" ver="5" description="" cardinal="1">
+				<designed target="Period" value="250" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="PenColor" value="0xff000000" ver="5"/>
+				<designed target="BrushColor" value="4278190080" ver="5"/>
+				<designed target="FontColor" value="0xffffffff" ver="5"/>
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Blink">
+					<body kind="om">
+						<![CDATA[Loading.Rotation = TypeConvert.ToDouble((Loading.Rotation + 11.25));]]>
+					</body>
+				</do-on>
+			</object>
+			<object access-modifier="private" name="Loading" display-name="Loading" uuid="3006913f-69b2-489f-a3e0-56ef16c8faa8" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="" cardinal="1">
+				<designed target="X" value="155" ver="5"/>
+				<designed target="Y" value="60" ver="5"/>
+				<designed target="ZValue" value="0" ver="5"/>
+				<designed target="Rotation" value="0" ver="5"/>
+				<designed target="Scale" value="1" ver="5"/>
+				<designed target="Flip" value="0" ver="5"/>
+				<designed target="Visible" value="true" ver="5"/>
+				<designed target="Opacity" value="1" ver="5"/>
+				<designed target="Enabled" value="true" ver="5"/>
+				<designed target="Tooltip" value="" ver="5"/>
+				<designed target="Width" value="90" ver="5"/>
+				<designed target="Height" value="90" ver="5"/>
+				<designed target="PenColor" value="4278190080" ver="5"/>
+				<designed target="PenStyle" value="0" ver="5"/>
+				<designed target="PenWidth" value="1" ver="5"/>
+				<designed target="ImageFile" value="loading.png" ver="5"/>
+				<designed target="Active" value="true" ver="5"/>
+				<designed target="CurrentFrameNumber" value="0" ver="5"/>
+				<designed target="Speed" value="1" ver="5"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Text_2" display-name="Text_2" uuid="7fa818e3-c4d2-4481-a5bb-c50ab2adcde2" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="660" ver="5"/>
+			<designed target="Y" value="335" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="250" ver="5"/>
+			<designed target="Height" value="15" ver="5"/>
+			<designed target="Text" value="Текст" ver="5"/>
+			<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<designed target="TextAlignment" value="33" ver="5"/>
+			<init target="Text" ver="5" value=""/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[unit.Cranes.CranesArray[0]]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="Table" display-name="Table" uuid="7fae1c18-df45-47e2-8f54-c793edbf618f" base-type="Table" base-type-id="c65ff4dc-f22b-47d3-9333-72c4e4e5f662" ver="5" description="" cardinal="1">
+			<designed target="X" value="530" ver="5"/>
+			<designed target="Y" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Width" value="500" ver="5"/>
+			<designed target="Height" value="250" ver="5"/>
+			<designed target="BackgroundColor" value="0xff333333" ver="5"/>
+			<designed target="FrameColor" value="0xff000000" ver="5"/>
+			<designed target="GridColor" value="0xffd8d8d8" ver="5"/>
+			<designed target="HeaderHeight" value="21" ver="5"/>
+			<designed target="HeaderVisible" value="false" ver="5"/>
+			<designed target="RowHeight" value="30" ver="5"/>
+			<designed target="RowOrder" value="0" ver="5"/>
+			<designed target="SelectionBehavior" value="0" ver="5"/>
+			<designed target="SelectionMode" value="0" ver="5"/>
+			<designed target="SelectionOverlayEnabled" value="false" ver="5"/>
+			<designed target="LatestRowTracking" value="false" ver="5"/>
+			<designed target="DelayedSortingEnabled" value="false" ver="5"/>
+			<designed target="HorizontalScrollMode" value="0" ver="5"/>
+			<designed target="VerticalScrollMode" value="0" ver="5"/>
+			<designed target="HorizontalScrollBarPolicy" value="0" ver="5"/>
+			<designed target="VerticalScrollBarPolicy" value="2" ver="5"/>
+			<designed target="RowHeightResizeMode" value="3" ver="5"/>
+			<object access-modifier="private" name="Column" display-name="Column" uuid="b0e0a62a-e903-422f-a0d1-08ac0a2e7056" base-type="TableColumn" base-type-id="109c05c5-8dcf-4a8f-aedd-5bb547cca2d4" ver="5" description="" cardinal="1">
+				<designed target="Title" value="Блокировка" ver="5"/>
+				<designed target="Description" value="" ver="5"/>
+				<designed target="Id" value="block" ver="5"/>
+				<designed target="ColumnOwnId" value="" ver="5"/>
+				<designed target="BackgroundColor" value="4281545523" ver="5"/>
+				<designed target="ForegroundColor" value="4293388263" ver="5"/>
+				<designed target="Font" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+				<designed target="TextAlignment" value="132" ver="5"/>
+				<designed target="TitleBackgroundColor" value="4281545523" ver="5"/>
+				<designed target="TitleForegroundColor" value="4293388263" ver="5"/>
+				<designed target="TitleFont" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+				<designed target="TitleTextAlignment" value="132" ver="5"/>
+				<designed target="Width" value="500" ver="5"/>
+				<designed target="WidthResizeMode" value="0" ver="5"/>
+				<designed target="Emptiable" value="true" ver="5"/>
+				<designed target="Hidden" value="false" ver="5"/>
+				<designed target="NumberFormat" value="%g" ver="5"/>
+				<designed target="TimeFormat" value="dd.MM.yyyy hh:mm:ss.zzz" ver="5"/>
+				<designed target="JsonFilter" value="" ver="5"/>
+				<designed target="SortingEnabled" value="false" ver="5"/>
+				<designed target="SortOrder" value="0" ver="5"/>
+				<designed target="SortPriority" value="0" ver="5"/>
+				<designed target="SortMode" value="0" ver="5"/>
+				<designed target="WordWrap" value="true" ver="5"/>
+			</object>
+			<object access-modifier="private" name="Model" display-name="Model" uuid="48fd7262-40d1-4519-8a5a-204202b3fae7" base-type="TableModel" base-type-id="32b2875b-ee3e-454d-bcbb-40806a49273c" ver="5" description="" cardinal="1">
+				<designed target="Frozen" value="false" ver="5"/>
+				<designed target="MaxRowCount" value="10000" ver="5"/>
+				<designed target="OptOfProcessingEvents" value="0" ver="5"/>
+			</object>
+			<init target="TableModel" ver="5" ref="Model"/>
+			<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="ca58eba4-9487-41a6-9d2e-3ae1c49675e1" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+				<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+					<body kind="om">
+						<![CDATA[Body.Table.Model.AddColumn("block", "Причина блокировки","","","string",true,false);]]>
+					</body>
+				</do-on>
+			</object>
+			<init target="Visible" ver="5" value="false"/>
+			<init target="X" ver="5" value="0"/>
+			<init target="Y" ver="5" value="60"/>
+			<designed target="Focus" value="false" ver="5"/>
+		</object>
+		<object access-modifier="private" name="Text_3" display-name="Text_3" uuid="777d99a9-4bd8-46ea-bd9c-13f4996874b8" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+			<designed target="X" value="660" ver="5"/>
+			<designed target="Y" value="365" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="250" ver="5"/>
+			<designed target="Height" value="15" ver="5"/>
+			<designed target="Text" value="Текст" ver="5"/>
+			<designed target="Font" value="Golos Text,8.25,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<designed target="TextAlignment" value="33" ver="5"/>
+			<init target="Text" ver="5" value=""/>
+			<do-trace access-modifier="private" target="Text" ver="5">
+				<body>
+					<![CDATA[unit.Algos.AO_BS.Trigger[0]]]>
+				</body>
+			</do-trace>
+		</object>
+		<object access-modifier="private" name="AcceptBtn" display-name="AcceptBtn" uuid="3846cdb1-74d3-48cd-a367-5aa85cc5d315" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="5" description="" cardinal="1">
+			<designed target="X" value="25" ver="5"/>
+			<designed target="Y" value="105" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="140" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Checkable" value="false" ver="5"/>
+			<designed target="Checked" value="false" ver="5"/>
+			<designed target="Text" value="Подтвердить" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="5"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="5"/>
+			<designed target="BrushColor" value="0xff000000" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<designed target="OnClickBrushColor" value="4288651167" ver="5"/>
+			<designed target="OnClickBrushStyle" value="1" ver="5"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="5"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="5"/>
+			<designed target="DisabledBrushColor" value="4290295992" ver="5"/>
+			<designed target="DisabledBrushStyle" value="1" ver="5"/>
+			<designed target="PenColor" value="0xff00ff00" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="2" ver="5"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="5"/>
+			<designed target="OnClickPenStyle" value="1" ver="5"/>
+			<designed target="OnClickPenWidth" value="1" ver="5"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverPenStyle" value="1" ver="5"/>
+			<designed target="OnHoverPenWidth" value="1" ver="5"/>
+			<designed target="DisabledPenColor" value="4290295992" ver="5"/>
+			<designed target="DisabledPenStyle" value="1" ver="5"/>
+			<designed target="DisabledPenWidth" value="1" ver="5"/>
+			<init target="Visible" ver="5" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[Enable_Algo.In=true;]]>
+				</body>
+			</do-on>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick" form-action="close"/>
+		</object>
+		<object access-modifier="private" name="CancelBtn" display-name="CancelBtn" uuid="b07b56ca-5b95-4bb3-b010-031ece0ad723" base-type="Button" base-type-id="61e46e4a-827f-4dd2-ac8a-b68bcaddf442" ver="5" description="" cardinal="1">
+			<designed target="X" value="335" ver="5"/>
+			<designed target="Y" value="105" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="140" ver="5"/>
+			<designed target="Height" value="45" ver="5"/>
+			<designed target="Checkable" value="false" ver="5"/>
+			<designed target="Checked" value="false" ver="5"/>
+			<designed target="Text" value="Отмена" ver="5"/>
+			<designed target="TextAlignment" value="132" ver="5"/>
+			<designed target="Font" value="Golos Text,12,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+			<designed target="FontColor" value="0xffffffff" ver="5"/>
+			<designed target="OnClickFontColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverFontColor" value="4278190080" ver="5"/>
+			<designed target="DisabledFontColor" value="4278190080" ver="5"/>
+			<designed target="BrushColor" value="0xff000000" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<designed target="OnClickBrushColor" value="4288651167" ver="5"/>
+			<designed target="OnClickBrushStyle" value="1" ver="5"/>
+			<designed target="OnHoverBrushColor" value="4294967295" ver="5"/>
+			<designed target="OnHoverBrushStyle" value="1" ver="5"/>
+			<designed target="DisabledBrushColor" value="4290295992" ver="5"/>
+			<designed target="DisabledBrushStyle" value="1" ver="5"/>
+			<designed target="PenColor" value="0xffff0000" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="2" ver="5"/>
+			<designed target="OnClickPenColor" value="4278190080" ver="5"/>
+			<designed target="OnClickPenStyle" value="1" ver="5"/>
+			<designed target="OnClickPenWidth" value="1" ver="5"/>
+			<designed target="OnHoverPenColor" value="4278190080" ver="5"/>
+			<designed target="OnHoverPenStyle" value="1" ver="5"/>
+			<designed target="OnHoverPenWidth" value="1" ver="5"/>
+			<designed target="DisabledPenColor" value="4290295992" ver="5"/>
+			<designed target="DisabledPenStyle" value="1" ver="5"/>
+			<designed target="DisabledPenWidth" value="1" ver="5"/>
+			<init target="Visible" ver="5" value="false"/>
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick" form-action="close"/>
+		</object>
+		<object access-modifier="private" name="Enable_Algo" display-name="Enable_Algo" uuid="56e9fad1-3c15-40c0-8c40-5cd75b88e4e7" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+			<init target="MainSource" ver="5" ref="unit.Source.Main"/>
+			<init target="ValuePath" ver="5" value="Mode_work.Cmd_oper_auto"/>
+		</object>
+	</object>
+	<init target="WindowName" ver="5" value="Проверка условий для
+разрешения алгоритма"/>
+	<init target="ShowClose" ver="5" value="false"/>
+	<do access-modifier="private" name="CheckAlgo" display-name="CheckAlgo" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[let msg = unit.Algos[AlgoPath].CheckAlgoRedy(false).split(",");
+
+if (msg.length != 0 && msg[0] != "") {
+	for (let i = 0; i < msg.length; i++) {			
+		Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, msg[i]);
+	}
+}; ]]>
+		</body>
+	</do>
+	<designed target="WindowSizeMode" value="2" ver="5"/>
+	<object access-modifier="private" name="AlgoPath" display-name="Путь до алгоритма" uuid="910c5f65-b77d-4866-a7f9-4f0cd070d673" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[
+CheckAlgo();
+CheckCranes();
+
+if (Body.Table.Model.GetRowCount() > 0){
+	Body.Table.Visible = true;
+	Body.Label.Text = "Внимание! Следующие сигналы блокируют разрешение алгоритма!";
+	Body.Label.FontColor = 0xffff0000;
+	here.WindowName = "Разрешение алгоритма заблокировано";
+	here.ShowClose = true;
+	return;
+}
+
+Body.AcceptBtn.Visible = true;
+Body.CancelBtn.Visible = true;
+Body.Label.Loading.Visible = false;
+Body.Label.Blinker.Active = false;
+Body.Label.Text = "Блокирующих условий не обнаружено.
+Разрешить алгоритм?";
+here.WindowName = "Подтверждение";
+here.Height = 225;
+
+]]>
+		</body>
+	</do-on>
+	<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="void" type-id="cfbbcafa-e13e-4354-a33a-6e57b818e4da">
+		<body kind="javascript">
+			<![CDATA[let msg = unit.Algos[AlgoPath].CheckCranes(false).split(",");
+
+if (msg.length != 0 && msg[0] != "") {
+	for (let i = 0; i < msg.length; i++) {			
+		Body.Table.Model.AddRow();
+		Body.Table.Model.SetCellData(Body.Table.Model.GetRowCount()-1, 0, msg[i]);
+	}
+}; 
+
+]]>
+		</body>
+	</do>
+</type>
+

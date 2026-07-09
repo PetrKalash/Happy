@@ -1,0 +1,133 @@
+<type access-modifier="private" name="Текст с фоном" display-name="Текст с фоном" uuid="4e26a05b-0786-4a04-afc4-174a35d64c0d" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="100" ver="5"/>
+	<designed target="Height" value="100" ver="5"/>
+	<designed target="RoundingRadius" value="5" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff33334d" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="1e68e155-5371-46d5-849b-db672e9e5e1d" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="1" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="b6717310-3963-49d6-980a-95fbb54e7ffa" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="165" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="..." ver="5"/>
+		<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="0xffffffff" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<body>
+				<![CDATA[here.Text]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="FontColor" ver="5">
+			<body>
+				<![CDATA[here.TextColor]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="Font" ver="5">
+			<body>
+				<![CDATA[here.TextFont]]>
+			</body>
+		</do-trace>
+	</object>
+	<do-trace access-modifier="private" target="PenColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.BoundColor]]>
+		</body>
+	</do-trace>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.MainColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="Text" display-name="Текст" uuid="4a83c16d-d68f-46f7-9ca1-22a6d66071bd" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="TextColor" display-name="Цвет шрифта" uuid="ca8d35b6-d802-436b-9224-a688f9898449" base-type="notifying_uint4" base-type-id="2606f4f1-fd02-40e5-b3c8-9c59e02296fb" ver="5" description="" cardinal="1"/>
+	<init target="TextColor" ver="5" value="0xffffffff"/>
+	<init target="Text" ver="5" value="..."/>
+	<do-trace access-modifier="private" target="TextColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.TextColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="TextFont" display-name="Шрифт" uuid="24b5e872-dce2-4f8d-9a3f-10b36d376a30" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="TextFont" ver="5" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный"/>
+	<object access-modifier="private" name="EnterTimer" display-name="EnterTimer" uuid="641cb8da-5228-439a-8cdf-6d525fb6dd3f" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="3" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (here.Scale < 1.14){
+	here.Scale = here.Scale + 0.002;
+} else {
+	Hover=false;
+}
+
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Active" ver="5">
+			<body>
+				<![CDATA[Hover]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="LeaveTimer" display-name="LeaveTimer" uuid="8ac0af09-1051-43f8-98a5-263176c48d81" base-type="Timer" base-type-id="72ba7cd4-549e-41f2-923c-2431b91f349a" ver="5" description="" cardinal="1">
+		<designed target="Period" value="3" ver="5"/>
+		<designed target="Active" value="false" ver="5"/>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="OnTimer">
+			<body kind="om">
+				<![CDATA[if (here.Scale > 1){
+	here.Scale = Math.Max(1, here.Scale - 0.002);
+}
+
+]]>
+			</body>
+		</do-on>
+		<do-trace access-modifier="private" target="Active" ver="5">
+			<body>
+				<![CDATA[!Hover]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="Hover" display-name="Hover" uuid="014c00cc-5a59-4ba2-a3a1-f63e724944a4" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<do-on access-modifier="private" name="Handler_5" display-name="Handler_5" ver="5" event="MousePress">
+		<body kind="om">
+			<![CDATA[if (BTN) {
+Hover=true;
+}]]>
+		</body>
+	</do-on>
+	<do-on access-modifier="private" name="Handler_6" display-name="Handler_6" ver="5" event="MouseRelease">
+		<body kind="om">
+			<![CDATA[if (BTN) {
+Hover=false;
+}]]>
+		</body>
+	</do-on>
+	<object access-modifier="private" name="BTN" display-name="BTN" uuid="675e2fe4-fe6f-4132-b0e4-aee5ece42de5" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+</type>
+

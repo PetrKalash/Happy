@@ -1,0 +1,94 @@
+<type access-modifier="private" name="Ввод пароля" display-name="Ввод пароля" uuid="1842de5c-cf05-4ac5-84b1-03d5644c512b" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="100" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="RoundingRadius" value="0" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="BrushColor" value="0xffffffff" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<do-trace access-modifier="private" target="PenColor" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Source.Connection]]>
+			</condition>
+			<expr>
+				<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[unit.Theme.InputBoundColor]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="558aa978-c59c-4b67-852f-106e95a52ef5" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="100" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="***" ver="5"/>
+		<designed target="Font" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="4278190080" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<do-trace access-modifier="private" target="Font" ver="5">
+			<body>
+				<![CDATA[TextFont]]>
+			</body>
+		</do-trace>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="e0ebba43-5925-48dd-a896-0745fce3fc43" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="1" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+		<body kind="om">
+			<![CDATA[OpenKeyboard();
+
+]]>
+		</body>
+	</do-on>
+	<do access-modifier="private" name="OpenKeyboard" display-name="OpenKeyboard" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="7176f6f4-7066-41b7-ae0e-9bb77d1449de" base-type="Keyboard" base-type-id="b2b024f3-cb65-498f-a698-db0720e3b5da" ver="5">
+			<init target="ParentTextInput" ver="5" ref="here"/>
+			<init target="HideInput" ver="5" value="true"/>
+		</object>
+	</do>
+	<object access-modifier="private" name="TextFont" display-name="Шрифт" uuid="6bca02ac-3d45-4b94-a9b8-4f6d8e3112fe" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="TextFont" ver="5" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный"/>
+	<object access-modifier="private" name="PasswordValue" display-name="PasswordValue" uuid="12fdd164-bbe3-494a-9533-a434c2c56b62" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[here.Text_1.Text = "";
+for (i: int4 = 0; i < String.Length(me.Value); i+=1) {
+	here.Text_1.Text = here.Text_1.Text + "*";
+}
+]]>
+			</body>
+		</do-on>
+	</object>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.InputColor]]>
+		</body>
+	</do-trace>
+</type>
+

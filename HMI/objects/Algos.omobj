@@ -1,0 +1,1347 @@
+<object access-modifier="private" name="Algos" display-name="Algos" uuid="536bbe9c-236f-4c03-8cfd-f03195bdba9a" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5" description="" cardinal="1">
+	<object access-modifier="private" name="AO_BS" display-name="AO_BS" uuid="27881b48-5f5f-4768-b01f-226861b95be5" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="a389b27b-7bb1-4ccd-88c2-3b90af3dfc02" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="11">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="bfa6bab3-f956-45dc-820d-068090d32c4c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<object access-modifier="private" name="CranesArray" display-name="CranesArray" uuid="3f772f28-240e-48d7-9451-0065630c9d96" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="3">
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			<object access-modifier="private" name="Name" display-name="Name" uuid="78cf323a-24f6-42d5-845a-244eade0d4b6" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="Status" display-name="Status" uuid="b45774c1-3778-4742-bbb0-627fd67ff0ea" base-type="notifying_uint2" base-type-id="ac10cc3c-8557-43b5-8da5-1144cd866e59" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="line_TS_O" display-name="line_TS_O" uuid="842ba746-9aa4-4b6d-b62f-5d982d507716" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="line_TS_C" display-name="line_TS_C" uuid="4baa2c47-4d9a-471b-aea1-e7db57c82830" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="Status_line_TU_O" display-name="Status_line_TU_O" uuid="3f8268bc-1d24-4009-a330-1eee001693a0" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="Status_line_TU_C" display-name="Status_line_TU_C" uuid="dcf42825-b640-42d0-bcc9-bfa0bc53a434" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="f006f106-1b05-4449-88c3-0a03d54e6cb3" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arrCranes = this.CranesArray;
+
+let msg = [];
+
+for (let i = 0; i < arrCranes.Length; i++){
+	msg.push( unit.Cranes.CheckCrane(
+	CranesArray[i].Value,
+	CranesArray[i].Name,
+	CranesArray[i].Status, 
+	CranesArray[i].line_TS_O, 
+	CranesArray[i].line_TS_C, 
+	CranesArray[i].Status_line_TU_O, 
+	CranesArray[i].Status_line_TU_C));
+	
+	if ( FirstTrue && msg.length > 0) {
+		return msg[0];
+	}
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="41d610b9-f987-4689-baea-7f07d982eaab" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="3689a8d5-29e5-49e3-b389-34742c807685" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[	let triggerArray = [
+	{
+		path: "Alarm.P_gas_out1._15max",
+		text: "Повышение давления на выходе ГРС на 15%"	
+	},
+	{
+		path: "EKM.Out1_high",
+		text: "ЭКМ: Повышение давления на выходе ГРС"	
+	},
+	{
+		path: "Alarm.P_gas_out1._15min",
+		text: "Понижение давления на выходе ГРС на 15%"	
+	},
+	{
+		path: "EKM.Out1_low",
+		text: "ЭКМ: Понижение давления на выходе ГРС"	
+	},
+	{
+		path: "AI_Sensors.P_gas_out1.Status"	,
+		text: "Неисправность датчика давления на выходе ГРС"
+	},
+	{
+		path: "Alarm.P_gas_in._15min",
+		text: "Понижение давления на входе на 15%"
+	},
+	{
+		path: "EKM.In_low"	,
+		text: "ЭКМ: Понижение давления на входе ГРС"
+	},
+	{
+		path: "AI_Sensors.P_gas_in.Status",
+		text: "Неисправность датчика давления на входе ГРС"
+	},
+	{
+		path: "Alarm.P_delta_in",
+		text: "Резкое понижение давления на входе ГРС"
+	},
+	{
+		path: "Algos.AO_BS.StatusError"	,
+		text: "Ошибка алгоритма"
+	},
+	{
+		path: "Algos.AO_BS.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path.trim();
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Initialize_Cran" display-name="Initialize_Cran" uuid="06661f74-db3c-4a19-a1be-f21d2b3b51e4" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let cranePathArray = [
+	 {
+        path: "CR_1_1",
+        name: "Кран 1-1",
+        status: 1
+    },	
+    {
+        path: "CR_1_2",
+        name: "Кран 1-2",
+        status: 1
+    },	   
+    {
+        path: "CR_1_3",
+        name: "Кран 1-3",
+        status: 2
+    }
+];
+
+cranePathArray.forEach((crane, index) => {
+	CranesArray[index].Path = crane.path + ".TS_Status";
+	CranesArray[index].Name = crane.name;
+	CranesArray[index].Status = crane.status;
+	CranesArray[index].line_TS_O.Path = crane.path + ".line_TS_O";
+	CranesArray[index].line_TS_C.Path = crane.path + ".line_TS_C";
+	CranesArray[index].Status_line_TU_O.Path = crane.path + ".Status_line_TU_O";
+	CranesArray[index].Status_line_TU_C.Path = crane.path + ".Status_line_TU_C";
+})
+
+ ]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="AO_S" display-name="AO_S" uuid="1e90e720-fb45-4c7a-a93d-1354071a52f7" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="9223f26e-944f-4990-bb9c-acb43e1e1d9f" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="4">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="f14951c1-00ed-4635-af26-d6575fa90196" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="9b4833b5-0dd6-4ed3-b9b8-3a9e51416f26" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arrCranes = this.CranesArray;
+
+let msg = [];
+
+for (let i = 0; i < arrCranes.Length; i++){
+	msg.push( unit.Cranes.CheckCrane(
+	CranesArray[i].Value,
+	CranesArray[i].Name,
+	CranesArray[i].Status, 
+	CranesArray[i].line_TS_O, 
+	CranesArray[i].line_TS_C, 
+	CranesArray[i].Status_line_TU_O, 
+	CranesArray[i].Status_line_TU_C));
+	
+	if ( FirstTrue && msg.length > 0) {
+		return msg[0];
+	}
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="a925f8a0-b1a8-4728-9747-28806a7c2c63" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="CranesArray" display-name="CranesArray" uuid="795072b0-a6b4-419e-a54c-f5cfd812ab28" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="5">
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			<object access-modifier="private" name="Name" display-name="Name" uuid="d0b10998-c513-4fea-9f67-d3212b378ac0" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="Status" display-name="Status" uuid="1ef7465e-fff8-48da-a965-35d4dc60b996" base-type="notifying_uint2" base-type-id="ac10cc3c-8557-43b5-8da5-1144cd866e59" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="line_TS_O" display-name="line_TS_O" uuid="4fa46d60-8b82-406f-82f1-ce3ab9cfe49c" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="line_TS_C" display-name="line_TS_C" uuid="eb72707c-48d4-4aa0-9290-25b34d1e95b8" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="Status_line_TU_O" display-name="Status_line_TU_O" uuid="d62b78e3-22eb-4099-a881-15508586dc68" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="Status_line_TU_C" display-name="Status_line_TU_C" uuid="8618e473-8183-4cfc-a135-6abbea4c9e2c" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Initialize_Cran" display-name="Initialize_Cran" uuid="281c0098-41b0-4335-8139-2d83be7b9111" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let cranePathArray = [
+	{
+		path: "CR_1_1",
+		name: "Кран 1-1",
+		status: 1
+	},
+	{
+		path: "CR_1_2",
+		name: "Кран 1-2",
+		status: 1
+	},
+	{
+		path: "CR_1_3",
+		name: "Кран 1-3",
+		status: 2
+	},
+	{
+		path: "CR_1_101",
+		name: "Кран 1-101",
+		status: 2
+	},
+	{
+		path: "CR_1_102",
+		name: "Кран 1-102",
+		status: 2
+	} 
+];
+
+cranePathArray.forEach((crane, index) => {
+	CranesArray[index].Path = crane.path + ".TS_Status";
+	CranesArray[index].Name = crane.name;
+	CranesArray[index].Status = crane.status;
+	CranesArray[index].line_TS_O.Path = crane.path + ".line_TS_O";
+	CranesArray[index].line_TS_C.Path = crane.path + ".line_TS_C";
+	CranesArray[index].Status_line_TU_O.Path = crane.path + ".Status_line_TU_O";
+	CranesArray[index].Status_line_TU_C.Path = crane.path + ".Status_line_TU_C";
+})
+
+ ]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="f3c2ab50-51c5-43f5-8c67-bbcbba721999" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Alarm.Pojar",
+		text: "Пожар ГРС"	
+	},
+	{
+		path: "Algos.AO_S.StatusError",
+		text: "Ошибка алгоритма"
+	},
+	{
+		path: "Algos.AO_S.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	},
+	{
+		path: "Zag.All_Zag_p2",
+		text: "Второй порог загазованности в технологических блоках"	
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Bypass" display-name="Bypass" uuid="dbdbfb92-7146-4b5a-934f-e9e938ba0f9d" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="1f766497-4895-4a8b-863a-5fde178cd142" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="8">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="42925313-ef66-40f6-9abe-d21fc8c91e57" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="9a4c7af3-a22d-4d6c-8da2-0fe39da378a9" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arrCranes = this.CranesArray;
+
+let msg = [];
+
+for (let i = 0; i < arrCranes.Length; i++){
+	msg.push( unit.Cranes.CheckCrane(
+	CranesArray[i].Value,
+	CranesArray[i].Name,
+	CranesArray[i].Status, 
+	CranesArray[i].line_TS_O, 
+	CranesArray[i].line_TS_C, 
+	CranesArray[i].Status_line_TU_O, 
+	CranesArray[i].Status_line_TU_C));
+	
+	if ( FirstTrue && msg.length > 0) {
+		return msg[0];
+	}
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="9ccdb547-5a02-482e-81df-b36488abf551" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="CranesArray" display-name="CranesArray" uuid="06ee45b1-6d73-484f-8017-dba21878e994" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="3">
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			<object access-modifier="private" name="Name" display-name="Name" uuid="90c65542-a22a-4d1e-b5f2-e3c556b93ac4" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="Status" display-name="Status" uuid="45b9f534-ef43-41dd-b9d7-5ab06d14f7f4" base-type="notifying_uint2" base-type-id="ac10cc3c-8557-43b5-8da5-1144cd866e59" ver="5" description="" cardinal="1"/>
+			<object access-modifier="private" name="line_TS_O" display-name="line_TS_O" uuid="24f41088-dfd1-4b86-ba37-87511b838c57" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="line_TS_C" display-name="line_TS_C" uuid="cdfee178-1609-4d9b-bfd2-648b892bf279" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="Status_line_TU_O" display-name="Status_line_TU_O" uuid="da345bea-2e5e-43b3-9f4d-064d853eda2d" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+			<object access-modifier="private" name="Status_line_TU_C" display-name="Status_line_TU_C" uuid="f52c4cdb-b6e3-460a-9044-7695ab0d6067" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+				<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+			</object>
+		</object>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="fa4c42d4-21d5-4751-8deb-77f181985b34" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Alarm.P_gas_out1._12max",
+		text: "Повышение давления на выходе ГРС на 12%"	
+	},
+	{
+		path: "Alarm.P_gas_out1._12min",
+		text: "Понижение давления на выходе ГРС на 12%"	
+	},
+	{
+		path: "AI_Sensors.P_gas_out1.Status",
+		text: "Неисправность датчика давления на выходе ГРС"
+	},
+	{
+		path: "Algos.Bypass.StatusError",
+		text: "Ошибка алгоритма"
+	},
+	{
+		path: "Algos.Bypass.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	},
+	{
+		path: "Regs.BP1_reg.TU_Error",
+		text: "Обнаружен обрыв ТУ на байпасном регуляторе"	
+	},	
+	{
+		path: "Regs.BP1_reg.Status",
+		text: "Сигнализация неисправности на байпасном регуляторе"	
+	},
+	{
+		path: "Algos.UR1.StatusSuccess",
+		text: "Выход из строя всех узлов редуцирования"	
+	},
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path.trim();
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+		<object access-modifier="private" name="Initialize_Cran" display-name="Initialize_Cran" uuid="ec239667-cec4-4d4c-b047-5d8ed50c7d3f" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[	let cranePathArray = [
+
+	{
+        path: "CR_1_3",
+        name: "Кран 1-3",
+        status: 2
+    },
+	{
+        path: "CR_1_1",
+        name: "Кран 1-1",
+        status: 1
+    },
+	{
+        path: "CR_1_2",
+        name: "Кран 1-2",
+        status: 1
+    }
+
+];
+
+cranePathArray.forEach((crane, index) => {
+	CranesArray[index].Path = crane.path + ".TS_Status";
+	CranesArray[index].Name = crane.name;
+	CranesArray[index].Status = crane.status;
+	CranesArray[index].line_TS_O.Path = crane.path + ".line_TS_O";
+	CranesArray[index].line_TS_C.Path = crane.path + ".line_TS_C";
+	CranesArray[index].Status_line_TU_O.Path = crane.path + ".Status_line_TU_O";
+	CranesArray[index].Status_line_TU_C.Path = crane.path + ".Status_line_TU_C";
+})
+
+ ]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Drain_cond1" display-name="Drain_cond1" uuid="63461563-26dc-422b-b249-b3558846876b" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="91c79e87-1d50-4e5d-84ac-3614e0b1eee3" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="6">
+			<object access-modifier="private" name="Text" display-name="Text" uuid="51d7b298-ff98-465a-883c-5bd6d79dcfbe" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="666ac6aa-496a-4382-99ba-5ba97e717396" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arrCranes = this.CranesArray;
+
+let msg = [];
+
+for (let i = 0; i < arrCranes.Length; i++){
+	msg.push( unit.Cranes.CheckCrane(
+	CranesArray[i].Value,
+	CranesArray[i].Name,
+	CranesArray[i].Status, 
+	CranesArray[i].line_TS_O, 
+	CranesArray[i].line_TS_C, 
+	CranesArray[i].Status_line_TU_O, 
+	CranesArray[i].Status_line_TU_C));
+	
+	if ( FirstTrue && msg.length > 0) {
+		return msg[0];
+	}
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="52a5045f-728b-4124-905a-e4c85a05341a" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="f8cfc38b-9f77-48b9-92b8-f40a1e6b9ec6" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Algos.Drain_cond1.L_high"	,
+		text: "Высокий уровень конденсата в фильтре-сепараторе №1"
+	},
+	{
+		path: "Algos.Drain_cond1.L_low"	,
+		text: "Низкий уровень конденсата в фильтре-сепараторе №1"
+	},
+	{
+		path: "Algos.Drain_cond1.L_high_alarm"	,
+		text: "Неисправность сигнализатора верхнего уровня конденсата в фильтре-сепараторе №1"
+	},
+	{
+		path: "Algos.Drain_cond1.L_low_alarm"	,
+		text: "Неисправность сигнализатора нижнего уровня конденсата в фильтре-сепараторе №1"
+	},
+	{
+		path: "Algos.Drain_cond1.StatusError"	,
+		text: "Ошибка алгоритма"
+	},
+	{
+		path: "Algos.Drain_cond1.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	}
+]
+
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path.trim();
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Drain_cond2" display-name="Drain_cond2" uuid="2c150ebe-c3ef-41c1-a6bd-27cca2635298" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="5424af31-cd36-49ea-939f-a5b3fc53a043" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="6">
+			<object access-modifier="private" name="Text" display-name="Text" uuid="daa84fd6-cf24-4bbf-b59a-88c2dab5133c" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="10e90c21-34be-4cf0-b338-34e05fa6046d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arrCranes = this.CranesArray;
+
+let msg = [];
+
+for (let i = 0; i < arrCranes.Length; i++){
+	msg.push( unit.Cranes.CheckCrane(
+	CranesArray[i].Value,
+	CranesArray[i].Name,
+	CranesArray[i].Status, 
+	CranesArray[i].line_TS_O, 
+	CranesArray[i].line_TS_C, 
+	CranesArray[i].Status_line_TU_O, 
+	CranesArray[i].Status_line_TU_C));
+	
+	if ( FirstTrue && msg.length > 0) {
+		return msg[0];
+	}
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="d5a45d39-6395-4bd4-b3c7-f88d7a3acc36" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="1c14c814-899f-457f-a97f-97a9f61a1345" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Algos.Drain_cond2.L_high"	,
+		text: "Высокий уровень конденсата в фильтре-сепараторе №2"
+	},
+	{
+		path: "Algos.Drain_cond2.L_low"	,
+		text: "Низкий уровень конденсата в фильтре-сепараторе №2"
+	},
+	{
+		path: "Algos.Drain_cond2.L_high_alarm"	,
+		text: "Неисправность сигнализатора верхнего уровня конденсата в фильтре-сепараторе №2"
+	},
+	{
+		path: "Algos.Drain_cond2.L_low_alarm"	,
+		text: "Неисправность сигнализатора нижнего уровня конденсата в фильтре-сепараторе №2"
+	},
+	{
+		path: "Algos.Drain_cond2.StatusError"	,
+		text: "Ошибка алгоритма"
+	},
+	{
+		path: "Algos.Drain_cond2.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	}
+]
+
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path.trim();
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Zag_BBR" display-name="Zag_BBR" uuid="9786290c-6461-4656-9e7f-c6676a3ff066" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="177709e8-8101-4f5d-8d1b-449d4552de43" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="5">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="65d0dcd9-f4b7-4dce-bc9b-747db8f4cda9" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="0ba10f5b-6449-4b07-871e-1ef2306cbb40" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="5692bbd4-7c30-4660-b2d3-a891b0716592" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Alarm.Pojar",
+		text: "Пожар ГРС"	
+	},
+	{
+		path: "Zag.Zag_BBR_p1",
+		text: "Загазованность в блок-боксе редуцирования"	
+	},
+	{
+		path: "Zag.Zag_BBR_Error",
+		text: "Неисправность датчиков загазованности в блок-боксе редуцирования"	
+	},
+	{
+		path: "Algos.Zag_BBR.StatusError",
+		text: "Ошибка алгоритма загазованности в блок-боксе редуцирования"	
+	},
+	{
+		path: "Algos.Zag_BBR.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	}	
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Zag_UPT" display-name="Zag_UPT" uuid="a1398500-5fc8-4dc3-b2b3-dcf0f6b0cc07" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="1d068daf-b2be-4bd8-ae49-157863ce76db" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="5">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="11dbdeb5-66f3-4720-bef8-ce916a5dd96a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="e5a51abf-5002-4249-8df6-ce9c2ce6c336" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="bb3588f3-6c8d-4603-8cc1-1d8933ee439a" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Alarm.Pojar",
+		text: "Пожар ГРС"	
+	},
+	{
+		path: "Zag.Zag_UPT_p1",
+		text: "Загазованность в блок-боксе подготовки теплоносителя"	
+	},
+	{
+		path: "Zag.Zag_UPT_Error",
+		text: "Неисправность датчиков загазованности в блок-боксе подготовки теплоносителя"	
+	},
+	{
+		path: "Algos.Zag_UPT.StatusError",
+		text: "Ошибка алгоритма загазованности в блок-боксе подготовки теплоносителя"	
+	},
+	{
+		path: "Algos.Zag_UPT.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	}	
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="UR1" display-name="UR1" uuid="f320ebac-0f48-431e-a1e5-4e09e7cf2150" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="8d8ef30c-93f7-4f99-8d5f-80bf8b078c6c" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="6">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="3f0f7cf8-5bb8-4339-a2b7-3d8b0b988beb" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="2a098757-a049-48af-857a-e203ebac3c9d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="af8945c1-a0a5-4ce7-9aa4-bb853cafa5c5" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Alarm.P_gas_out1._10max",
+		text: "Повышение выходного давления на 10%"	
+	},
+	{
+		path: "Alarm.P_gas_out1._10min",
+		text: "Понижение выходного давления на 10%"	
+	},
+	{
+		path: "Algos.UR1.Mode",
+		text: "Нештатный режим работы ЛР"	
+	},
+	{
+		path: "Algos.UR1.StatusError",
+		text: "Ошибка алгоритма"	
+	},
+	{
+		path: "Algos.UR1.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	},
+	{
+		path: "Algos.UR1.UR_Err",
+		text: "Необходимо выбрать основую и резервную линию узла редуцирования"	
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Block_boiler_UPT" display-name="Block_boiler_UPT" uuid="cb4cdf7d-d8ab-45c2-9dae-f37cd4e4595f" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="f565c773-b064-435d-8554-f1bbc79f59d7" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="22">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="484bc1f0-9684-4276-85f9-e9af4b067f63" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			<init target="Value" ver="5" value="false"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="6870e47e-d8d7-4057-82af-bb21633e7fab" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="66de6251-c9ff-4436-a1dc-7be9484bcda1" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Zag.Zag_UPT_p2"	,
+		text: "Загазованность второй порог в блок-боксе подготовки теплоносителя"
+	},
+	{
+		path: "Zag.Zag_UPT_Error"	,
+		text: "Неисправность датчиков загазованности в блок-боксе подготовки теплоносителя"
+	},
+	{
+		path: "AI_Sensors.P_gas_boiler.A_min.Signal",
+		text: "Давление газа перед котлами минимальное"
+	},
+	{ 
+		path: "AI_Sensors.P_gas_boiler.A_max.Signal",
+		text: "Давление газа перед котлами максимальное"	
+	},
+	{ 
+		path: "AI_Sensors.P_gas_boiler.Status",
+		text: "Неисправность датчика давления газа перед котлами"	
+	},	
+	{ 
+		path: "AI_Sensors.P_boiler1.A_max.Signal",
+		text: "Повышенное давление теплоносителя на выходе из котла №1"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler1.A_min.Signal",
+		text: "Пониженное давление теплоносителя на выходе из котла №1"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler2.A_max.Signal",
+		text: "Повышенное давление теплоносителя на выходе из котла №2"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler2.A_min.Signal",
+		text: "Пониженное давление теплоносителя на выходе из котла №2"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler3.A_max.Signal",
+		text: "Повышенное давление теплоносителя на выходе из котла №3"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler3.A_min.Signal",
+		text: "Пониженное давление теплоносителя на выходе из котла №3"	
+	},
+	{ 
+		path: "AI_Sensors.T_boiler1.A_max.Signal",
+		text: "Повышенная температура теплоносителя на выходе из котла №1"	
+	},
+	{ 
+		path: "AI_Sensors.T_boiler2.A_max.Signal",
+		text: "Повышенная температура теплоносителя на выходе из котла №2"	
+	},
+	{ 
+		path: "AI_Sensors.T_boiler3.A_max.Signal",
+		text: "Повышенная температура теплоносителя на выходе из котла №3"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler1.Status",
+		text: "Неисправность датчика давления теплоносителя на выходе из котла №1"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler2.Status",
+		text: "Неисправность датчика давления теплоносителя на выходе из котла №2"	
+	},
+	{ 
+		path: "AI_Sensors.P_boiler3.Status",
+		text: "Неисправность датчика давления теплоносителя на выходе из котла №3"	
+	},
+	{ 
+		path: "AI_Sensors.T_boiler1_suply.Status",
+		text: "Неисправность датчика температуры теплоносителя в прямом конутре котла №1"
+	},
+	{ 
+		path: "AI_Sensors.T_boiler2_suply.Status",
+		text: "Неисправность датчика температуры теплоносителя в прямом конутре котла №2"
+	},
+	{ 
+		path: "AI_Sensors.T_boiler3_suply.Status",
+		text: "Неисправность датчика температуры теплоносителя в прямом конутре котла №3"
+	},
+	{
+		path: "Algos.Block_boiler_UPT.StatusError"	,
+		text: "Ошибка алгоритма"
+	},
+	{
+		path: "Algos.Block_boiler_UPT.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path =  triggerArray[i].path.trim();
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Test_bypass" display-name="Test_bypass" uuid="a18f23fc-224f-4cee-85f9-46aae6ab5b15" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="f83d5c83-602e-4ad5-9d09-0593ef75085d" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="4">
+			<object access-modifier="private" name="Text" display-name="Text" uuid="06effa9f-c581-4d3a-ba32-047db0e57258" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="e5debd88-909d-484d-97cd-ed011c77d705" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="10abb528-6c13-45f2-9534-97dc5a81658b" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Algos.Test_bypass1.StatusError"	,
+		text: "Ошибка алгоритма"
+	},
+	{
+		path: "Algos.Test_bypass1.StatusSuccess",
+		text: "Необходимо сбросить алгоритм"	
+	},
+	{
+		path: "Regs.BP1_reg.TU_Error",
+		text: "Обнаружен обрыв ТУ на байпасном регуляторе"	
+	},	
+	{
+		path: "Regs.BP1_reg.Status",
+		text: "Сигнализация неисправности на байпасном регуляторе"	
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path.trim();
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Boiler_UPT" display-name="Boiler_UPT" uuid="680062c1-d983-4443-851a-bfc236444d38" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="92328074-e02f-42bb-9b3a-19edc86374e9" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="2">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="28125c0e-b09f-4b63-a99d-719a95cad9a2" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="0428e9f4-9ff2-4ec7-9eb9-50903d532cbf" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="6788dd13-fd7b-4866-8c64-039505688e05" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "UPT.Mode_Bool",
+		text: "Ручное управление запрещено в текущем режиме работы ШУПТ. Для управления ШУПТ, переведите его в режим работы от САУ"
+	},
+	{
+		path: "Algos.Boiler_UPT.Alarm",
+		text: "Работа котлов: Управление алгоритмом запрещено в связи с ошибкой алгоритма. Необходимо сбросить алгоритм"
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Pump_boiler1" display-name="Pump_boiler1" uuid="7d92a659-9248-410b-99bf-18de7095520d" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="52b61532-9ec3-41c1-9231-77b808e8016f" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="2">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="45dc5370-ea92-4a50-83eb-c3ed6f8cc3ff" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="b33ca3b6-ea2b-4fd6-996b-929bde0d7501" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="64701fff-e332-4db3-bfae-bd85bf221e1e" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "UPT.Mode_Bool",
+		text: "Ручное управление запрещено в текущем режиме работы ШУПТ. Для управления ШУПТ, переведите его в режим работы от САУ"
+	},
+	{
+		path: "Algos.Pump_boiler1.Alarm",
+		text: "Работа насосов контура котла №1: Управление алгоритмом запрещено в связи с ошибкой алгоритма. Необходимо сбросить алгоритм"
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Pump_boiler2" display-name="Pump_boiler2" uuid="8e9c8851-7b78-449c-b4e3-d8841de080d4" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="6f786379-53e0-44e4-a69b-1b1635126767" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="2">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="5f9cd332-556f-4786-bb7e-6166d0403380" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="d7f6cf0a-27ec-41a5-806b-70cdc8561a0a" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="229ee5ad-93a8-4ad3-ab68-76654869fcfd" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "UPT.Mode_Bool",
+		text: "Ручное управление запрещено в текущем режиме работы ШУПТ. Для управления ШУПТ, переведите его в режим работы от САУ"
+	},
+	{
+		path: "Algos.Pump_boiler2.Alarm",
+		text: "Работа насосов контура котла №2: Управление алгоритмом запрещено в связи с ошибкой алгоритма. Необходимо сбросить алгоритм"
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Pump_boiler3" display-name="Pump_boiler3" uuid="990d26ad-63d9-4b22-90c9-26b0d1dbc586" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="1ee5d512-86a4-4449-bb1e-c7549dee4e62" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="2">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="d339e454-6db9-417c-9d66-9dd577c277ef" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="d2edb265-2b5a-4a5e-9d95-631b0ad047a4" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="c6474b1e-8bff-46e3-b4b3-160c4c3a1ebc" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "UPT.Mode_Bool",
+		text: "Ручное управление запрещено в текущем режиме работы ШУПТ. Для управления ШУПТ, переведите его в режим работы от САУ"
+	},
+	{
+		path: "Algos.Pump_boiler3.Alarm",
+		text: "Работа насосов контура котла №3: Управление алгоритмом запрещено в связи с ошибкой алгоритма. Необходимо сбросить алгоритм"
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Pump_heat_UPT" display-name="Pump_heat_UPT" uuid="dbac22c6-387a-4e18-8b37-18247017617d" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="a9d95285-4d01-485b-a4b7-714769a74d54" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="2">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="50607db4-2ee8-49e0-83af-b037a0d1be5a" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="7affccff-aa4d-4538-8fa3-0916a708435f" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="9de13c76-32f6-44c5-ad85-770dda0379b3" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "UPT.Mode_Bool",
+		text: "Ручное управление запрещено в текущем режиме работы ШУПТ. Для управления ШУПТ, переведите его в режим работы от САУ"
+	},
+	{
+		path: "Algos.Pump_heat_UPT.Alarm",
+		text: "Работа насосов подогрева: Управление алгоритмом запрещено в связи с ошибкой алгоритма. Необходимо сбросить алгоритм"
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Pump_otopl_UPT" display-name="Pump_otopl_UPT" uuid="8c664e1e-891f-4c60-a179-f2128f5cfe8d" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="9bd8884b-1378-4ed9-9027-e6712c56ad10" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="2">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="bd441d5c-10aa-4283-84d4-4e3abde9e1ab" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="658f4f4c-1c68-4e8f-a341-da8f3b7c4b8f" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="4671885f-bcb9-4fdb-b570-ec7f7f45b4b5" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "UPT.Mode_Bool",
+		text: "Ручное управление запрещено в текущем режиме работы ШУПТ. Для управления ШУПТ, переведите его в режим работы от САУ"
+	},
+	{
+		path: "Algos.Pump_otopl_UPT.Alarm",
+		text: "Работа насосов контура отопления: Управление алгоритмом запрещено в связи с ошибкой алгоритма. Необходимо сбросить алгоритм"
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+	<object access-modifier="private" name="Podp_UPT" display-name="Podp_UPT" uuid="9f6e79e3-678e-41e3-9882-4a404c0b93b9" base-type="Folder" base-type-id="6b532336-2e8c-41e5-a6b7-2d505e6d5e0b" ver="5" description="" cardinal="1">
+		<object access-modifier="private" name="Trigger" display-name="Trigger" uuid="d096d308-698d-4417-85f1-693c4e4def14" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="3">
+			<init target="Source" ver="5" ref="unit.Source.Main"/>
+			<object access-modifier="private" name="Text" display-name="Text" uuid="7100600f-f048-48a6-ae77-fa3ac148c62b" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		</object>
+		<do access-modifier="private" name="CheckAlgoRedy" display-name="CheckAlgoRedy" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+			<body kind="javascript">
+				<![CDATA[let arr = this.Trigger;
+
+
+let msg = []; // Массив сообщений
+
+for (let i = 0; i< arr.Length; i++) {
+	if (arr[i].Value) {		
+		msg.push(arr[i].Text);
+		if (FirstTrue) {
+			return msg[0];
+			
+		}		
+	} 
+}
+
+return msg.join(",");]]>
+			</body>
+			<param access-modifier="private" name="FirstTrue" display-name="" uuid="6caccd26-e725-4fc5-927c-4d81c4b3642d" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		</do>
+		<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="02c14922-1668-4ac2-9ac3-568853f59730" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+			<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+				<body kind="javascript">
+					<![CDATA[let triggerArray = [
+	{
+		path: "Algos.Podp_UPT.Trig",
+		text: "Понижение Ртепл. на 20% от номинального (рабочего) давления"
+	},
+	{
+		path: "UPT.Mode_Bool",
+		text: "Ручное управление запрещено в текущем режиме работы ШУПТ. Для управления ШУПТ, переведите его в режим работы от САУ"
+	},
+	{
+		path: "Algos.Podp_UPT.Alarm",
+		text: "Работа насоса контура подпитки: Управление алгоритмом запрещено в связи с ошибкой алгоритма. Необходимо сбросить алгоритм"
+	}
+]
+
+for (let i = 0; i < triggerArray.length; i++) {
+	Trigger[i].Path = triggerArray[i].path;
+	Trigger[i].Text = triggerArray[i].text;
+}]]>
+				</body>
+			</do-on>
+		</object>
+	</object>
+</object>
+

@@ -1,0 +1,46 @@
+<type access-modifier="private" name="GoodBad" display-name="GoodBad" uuid="3e51710e-5207-476d-973e-dc0687fe77ee" base-type="Image" base-type-id="5a6b2782-c728-4a42-8c02-1a83ef97e138" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="50" ver="5"/>
+	<designed target="Height" value="50" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="0" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="ImageFile" value="icons/check.png" ver="5"/>
+	<designed target="Active" value="true" ver="5"/>
+	<designed target="CurrentFrameNumber" value="0" ver="5"/>
+	<designed target="Speed" value="1" ver="5"/>
+	<do-trace access-modifier="private" target="ImageFile" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[Good]]>
+			</condition>
+			<expr>
+				<![CDATA["icons/check.png"]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA["icons/remove.png"]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="Good" display-name="Good" uuid="f4152c0b-8918-4a1d-aedc-a3ed5af3d831" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="ValueChanged">
+			<body kind="om">
+				<![CDATA[OnChange.Invoke();]]>
+			</body>
+		</do-on>
+	</object>
+	<init target="Good" ver="5" value="false"/>
+	<object access-modifier="private" name="OnChange" display-name="OnChange" uuid="a7691431-875b-449a-9e52-278faa3c35d9" base-type="Action" base-type-id="a9ee9770-1c4a-44c9-b815-157d9fc2ab95" base-const="true" base-ref="true" ver="5" description=""/>
+</type>
+

@@ -1,0 +1,144 @@
+<type access-modifier="private" name="Изменение пароля" display-name="Изменение пароля" uuid="e4ba3dcc-2041-433c-86c5-beeef2826230" base-type="Диалоговое окно" base-type-id="c6f28eac-4a61-4441-83cd-7aa6cf5c9e47" ver="5" description="">
+	<designed target="WindowCaption" value="Диалоговое окно_1" ver="5"/>
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Width" value="600" ver="5"/>
+	<designed target="Height" value="400" ver="5"/>
+	<object access-modifier="private" name="SecurityContext" display-name="SecurityContext" uuid="c1219bf5-6dc9-4ba4-a3ee-a2872fb8f127" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5"/>
+	<object access-modifier="private" name="UserName" display-name="UserName" uuid="790e954b-56df-4a1a-8d8a-e87e408566a0" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" cardinal="5"/>
+	<object access-modifier="private" name="UserList" display-name="UserList" uuid="98d1a36e-6ab9-406f-8f14-57fcb5a00da7" base-type="UserList" base-type-id="7d9c142e-8718-4caa-82be-60ea2ec65981" ver="5">
+		<init target="SecurityContext" ver="5">
+			<object access-modifier="private" uuid="a3fe75da-9f28-4af6-9f2f-e674482ea387" base-type="SecurityContext" base-type-id="d9cb0fff-b70a-4e2d-833d-3f73cf74e0dd" ver="5"/>
+		</init>
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="UpdateFinished">
+			<body kind="om">
+				<![CDATA[Body.ComboBox_UserList.Clear();
+//очистка выпадающего списка перед обновлением
+i: var = 0;
+while (i < Count)
+//для всех учетных записей (Count)
+{
+	Body.ComboBox_UserList.AddItem(GetDisplayName(i));
+	//добавление в выпадающий список всех имен пользователей
+	UserName[i] = GetLoginName(i);
+	//добавление логина во вспомогательную переменную для хранения и вызова логинов пользователей вместо отображаемых имен
+	i+=1;
+}
+
+
+]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="Body" display-name="Body" uuid="dcdfad33-2639-402e-b16e-4cc9274f26df" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="50" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="400" ver="5"/>
+		<designed target="Height" value="250" ver="5"/>
+		<designed target="RoundingRadius" value="0" ver="5"/>
+		<designed target="PenColor" value="0xff000000" ver="5"/>
+		<designed target="PenStyle" value="0" ver="5"/>
+		<designed target="PenWidth" value="1" ver="5"/>
+		<designed target="BrushColor" value="4278190080" ver="5"/>
+		<designed target="BrushStyle" value="0" ver="5"/>
+		<object access-modifier="private" name="ComboBox_UserList" display-name="ComboBox_UserList" uuid="928610ec-3ab9-4b1c-9d7a-5fcaa0f602ad" base-type="ComboBox" base-type-id="3495bcd2-01f2-4709-b7f4-e9cf6f3a00bc" ver="5">
+			<designed target="X" value="100" ver="5"/>
+			<designed target="Y" value="80" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<designed target="Editable" value="false" ver="5"/>
+			<designed target="Text" value="" ver="5"/>
+			<designed target="SelectedIndex" value="-1" ver="5"/>
+			<designed target="Font" value="Golos Text,16,-1,5,50,0,0,0,0,0" ver="5"/>
+			<designed target="FontColor" value="4278190080" ver="5"/>
+			<designed target="MaxVisibleItems" value="10" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="InsertPolicy" value="3" ver="5"/>
+		</object>
+		<designed target="Flip" value="0" ver="5"/>
+		<object access-modifier="private" name="OldPassword" display-name="OldPassword" uuid="58fcb4ba-734f-4ae0-b31c-30f290d7aa4d" base-type="Ввод пароля" base-type-id="1842de5c-cf05-4ac5-84b1-03d5644c512b" ver="5" description="" cardinal="1">
+			<designed target="X" value="100" ver="5"/>
+			<designed target="Y" value="140" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный"/>
+		</object>
+		<object access-modifier="private" name="NewPassword" display-name="NewPassword" uuid="6f5f3882-1085-49e7-8758-3de161999c57" base-type="Ввод пароля" base-type-id="1842de5c-cf05-4ac5-84b1-03d5644c512b" ver="5" description="" cardinal="1">
+			<designed target="X" value="100" ver="5"/>
+			<designed target="Y" value="200" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Width" value="400" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<init target="TextFont" ver="5" value="Golos Text,16,-1,5,50,0,0,0,0,0,Обычный"/>
+		</object>
+		<object access-modifier="private" name="EnableButton" display-name="EnableButton" uuid="0a381b8b-c1d6-43ec-b394-a7c9fdb59a77" base-type="Текст с фоном" base-type-id="4e26a05b-0786-4a04-afc4-174a35d64c0d" ver="5" description="" cardinal="1">
+			<designed target="X" value="180" ver="5"/>
+			<designed target="Y" value="270" ver="5"/>
+			<designed target="ZValue" value="0" ver="5"/>
+			<designed target="Rotation" value="0" ver="5"/>
+			<designed target="Scale" value="1" ver="5"/>
+			<designed target="Flip" value="0" ver="5"/>
+			<designed target="Visible" value="true" ver="5"/>
+			<designed target="Opacity" value="1" ver="5"/>
+			<designed target="Enabled" value="true" ver="5"/>
+			<designed target="Tooltip" value="" ver="5"/>
+			<designed target="Width" value="240" ver="5"/>
+			<designed target="Height" value="50" ver="5"/>
+			<designed target="RoundingRadius" value="0" ver="5"/>
+			<designed target="PenColor" value="0xffffffff" ver="5"/>
+			<designed target="PenStyle" value="1" ver="5"/>
+			<designed target="PenWidth" value="1" ver="5"/>
+			<designed target="BrushColor" value="0xff33334d" ver="5"/>
+			<designed target="BrushStyle" value="1" ver="5"/>
+			<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="ad714787-2896-4e79-84b5-23a42fc0dd80" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+				<designed target="Orientation" value="1" ver="5"/>
+				<designed target="Gap" value="0" ver="5"/>
+			</object>
+			<do-trace access-modifier="private" target="BrushColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonColor]]>
+				</body>
+			</do-trace>
+			<do-trace access-modifier="private" target="PenColor" ver="5">
+				<body>
+					<![CDATA[unit.Theme.ButtonBoundColor]]>
+				</body>
+			</do-trace>
+			<do-on access-modifier="private" name="Handler_2" display-name="Handler_2" ver="5" event="MouseClick">
+				<body kind="om">
+					<![CDATA[
+SecurityContext.AsyncLoginWithPasswordChange(UserName[ComboBox_UserList.SelectedIndex],OldPassword.PasswordValue,NewPassword.PasswordValue);
+/*выполнение функции AsyncLoginWithPasswordChange, входными 
+параметрами для которой
+являются логин, старый пароль и новый пароль */
+Close();
+]]>
+				</body>
+			</do-on>
+			<init target="Text" ver="5" value="Изменить и войти"/>
+			<init target="BTN" ver="5" value="true"/>
+		</object>
+	</object>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Opened">
+		<body kind="om">
+			<![CDATA[UserList.BeginUpdate();]]>
+		</body>
+	</do-on>
+</type>
+

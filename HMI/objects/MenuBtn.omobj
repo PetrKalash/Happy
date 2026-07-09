@@ -1,0 +1,32 @@
+<type access-modifier="private" name="MenuBtn" display-name="MenuBtn" uuid="7678e17d-a512-4f4c-9d72-e603fba1b37e" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="190" ver="5"/>
+	<designed target="Height" value="70" ver="5"/>
+	<designed target="RoundingRadius" value="30" ver="5"/>
+	<designed target="PenColor" value="0xffffffff" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="1" ver="5"/>
+	<designed target="BrushColor" value="0xff33334d" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<do-trace access-modifier="private" target="PenColor" ver="5">
+		<body>
+			<![CDATA[unit.Theme.ButtonBoundColor]]>
+		</body>
+	</do-trace>
+	<object access-modifier="private" name="MouseDialog" display-name="Название диалгового окна" uuid="b613c5fa-4693-41b8-91e7-17b3ddd53cf7" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+		<body kind="om">
+			<![CDATA[unit.WindowGroup.Group.SendToAll(MouseDialog, MouseDialog);]]>
+		</body>
+	</do-on>
+</type>
+

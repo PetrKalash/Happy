@@ -1,0 +1,103 @@
+<object access-modifier="private" name="Cranes" display-name="Cranes" uuid="1d3ae9cb-6656-4e6d-8897-9d18f8631a32" base-type="" base-type-id="00000000-0000-0000-0000-000000000000" ver="5" description="" cardinal="1">
+	<do access-modifier="private" name="CheckCrane" display-name="CheckCrane" ver="5" type="string" type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d">
+		<body kind="om">
+			<![CDATA[warningMessage: string = "";
+
+
+	if (TS_O) {
+		warningMessage += "- ошибка ТС открытого положения";
+	} 
+	if (TS_C) {
+		warningMessage += " - ошибка ТС закрытого положения";
+	} 
+	if (TU_O > 0) {
+		warningMessage += " - ошибка ТУ команды открытия";	
+	} 
+	if (TU_C > 0) {
+		warningMessage += " - ошибка ТУ команды закрытия";	
+	}
+		
+
+if (needed != 0){
+	neededText: string = "закрыт"; 
+	if (needed==2) neededText = "открыт";
+
+	if (craneStatus == 3) warningMessage += " - ошибка положения крана";
+	else if (craneStatus == 0) warningMessage += " - промежуточное положение крана";
+	else if (needed == 4) warningMessage = warningMessage;
+	else if (craneStatus != needed) warningMessage += " - кран " + neededText;
+
+}
+
+if (String.Length(String.Trim(warningMessage)) > 0) warningMessage = name + warningMessage;
+else warningMessage = "";
+
+return warningMessage;
+]]>
+		</body>
+		<param access-modifier="private" name="craneStatus" display-name="" uuid="ab02b34e-e067-43a9-a68f-1c8bb3a074ef" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="5"/>
+		<param access-modifier="private" name="name" display-name="" uuid="1f9c87a4-3030-447c-880c-9813f12b87e9" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5"/>
+		<param access-modifier="private" name="needed" display-name="" uuid="f87e60f2-8459-469e-aa13-4183766adc90" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="5"/>
+		<param access-modifier="private" name="TS_O" display-name="" uuid="db1af01e-d7dc-4ba6-bdc7-a3063ec0622c" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		<param access-modifier="private" name="TS_C" display-name="" uuid="e4f12d42-8163-4db5-9cbe-8cc5711cf570" base-type="bool" base-type-id="7c9fe1ab-1ee2-42d8-939f-94ce3e89fca8" ver="5"/>
+		<param access-modifier="private" name="TU_O" display-name="" uuid="db5752cb-f3ca-4204-82d1-2295b6c39aea" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="5"/>
+		<param access-modifier="private" name="TU_C" display-name="" uuid="50bd02e6-cbff-4f6d-a09e-ed1a5299089d" base-type="uint2" base-type-id="ae923ad8-8b75-4813-8121-36efe3cc8c12" ver="5"/>
+	</do>
+	<object access-modifier="private" name="Initializer" display-name="Initializer" uuid="92302041-3d21-46d9-a463-909c9d74288d" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+			<body kind="javascript">
+				<![CDATA[unit.Source.DebugTool_1.Log(Object.keys(here.CranesArray));]]>
+			</body>
+		</do-on>
+	</object>
+	<object access-modifier="private" name="CranesArray" display-name="CranesArray" uuid="50baee01-e208-4fed-9d0a-897079332725" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="17">
+		<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		<object access-modifier="private" name="Name" display-name="Name" uuid="d764dcf4-faa6-451c-a1b8-681dc761ee42" base-type="string" base-type-id="76403785-f3d5-41a7-9eb6-d19d2aa2d95d" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="Status" display-name="Status" uuid="7a6e3415-1257-449f-a47a-7f3ff4623c61" base-type="notifying_uint2" base-type-id="ac10cc3c-8557-43b5-8da5-1144cd866e59" ver="5" description="" cardinal="1"/>
+		<object access-modifier="private" name="line_TS_O" display-name="line_TS_O" uuid="1ce8e3a8-50ac-4776-bc8a-4225e994fb2e" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+		<object access-modifier="private" name="line_TS_C" display-name="line_TS_C" uuid="c673df89-2bbd-4c00-9cc5-86139765ef41" base-type="ApItemBool" base-type-id="e3f11724-0f76-4497-8d01-38fbb82fb844" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+		<object access-modifier="private" name="Status_line_TU_O" display-name="Status_line_TU_O" uuid="67350c4e-97f9-4bd3-984f-5a18bf1928e0" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+		<object access-modifier="private" name="Status_line_TU_C" display-name="Status_line_TU_C" uuid="5c94b671-cd4a-4edf-a547-0070786be1ea" base-type="ApItemUInt2" base-type-id="d6557328-aca6-4831-a14e-08aed3c64a82" ver="5" description="" cardinal="1">
+			<init target="Source" ver="5" ref="unit.Source.Cranes"/>
+		</object>
+	</object>
+	<do access-modifier="private" name="CheckCranes" display-name="CheckCranes" ver="5" type="variant" type-id="7d3322c1-a2cf-4732-a957-abd69e3e4b7a">
+		<body kind="javascript">
+			<![CDATA[let craneStatusArray = [ 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,0,0,0,0,1,2,0,1];
+
+let msg = [];
+for (let i = 0; i < craneStatusArray.length; i++){
+	msg[i] = CheckCrane(CranesArray[i].Value, CranesArray[i].Name, craneStatusArray[i], CranesArray[i].line_TS_O.Value, CranesArray[i].line_TS_C.Value, CranesArray[i].Status_line_TU_O.Value, CranesArray[i].Status_line_TU_C.Value); 
+}
+
+return msg]]>
+		</body>
+	</do>
+	<object access-modifier="private" name="Initialize" display-name="Initialize" uuid="c58ed4b1-560f-4d3c-96dd-e65e548a0bae" base-type="Initializer" base-type-id="6db89679-9299-4993-ad1a-0d086cd1c7d2" ver="5" description="" cardinal="1">
+		<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="Initialized">
+			<body kind="javascript">
+				<![CDATA[let cranePathArray = [
+];
+
+cranePathArray.forEach((crane, index) => {
+	CranesArray[index].Path = crane.path + ".TS_Status";
+	CranesArray[index].Name = crane.name;
+	CranesArray[index].Status = crane.status;
+	CranesArray[index].line_TS_O.Path = crane.path + ".line_TS_O";
+	CranesArray[index].line_TS_C.Path = crane.path + ".line_TS_C";
+	CranesArray[index].Status_line_TU_O.Path = crane.path + ".Status_line_TU_O";
+	CranesArray[index].Status_line_TU_C.Path = crane.path + ".Status_line_TU_C";
+})
+
+ ]]>
+			</body>
+		</do-on>
+	</object>
+</object>
+

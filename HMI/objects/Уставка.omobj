@@ -1,0 +1,275 @@
+<type access-modifier="private" name="Уставка" display-name="Уставка" uuid="55fc3497-5f4a-4420-9989-cc15acd2f4f0" base-type="Rectangle" base-type-id="15726dc3-881e-4d8d-b0fa-a8f8237f08ca" ver="5" description="">
+	<designed target="X" value="0" ver="5"/>
+	<designed target="Y" value="0" ver="5"/>
+	<designed target="ZValue" value="0" ver="5"/>
+	<designed target="Rotation" value="0" ver="5"/>
+	<designed target="Scale" value="1" ver="5"/>
+	<designed target="Flip" value="0" ver="5"/>
+	<designed target="Visible" value="true" ver="5"/>
+	<designed target="Opacity" value="1" ver="5"/>
+	<designed target="Enabled" value="true" ver="5"/>
+	<designed target="Tooltip" value="" ver="5"/>
+	<designed target="Width" value="100" ver="5"/>
+	<designed target="Height" value="30" ver="5"/>
+	<designed target="RoundingRadius" value="5" ver="5"/>
+	<designed target="PenColor" value="4278190080" ver="5"/>
+	<designed target="PenStyle" value="1" ver="5"/>
+	<designed target="PenWidth" value="2" ver="5"/>
+	<designed target="BrushColor" value="0xffffffff" ver="5"/>
+	<designed target="BrushStyle" value="1" ver="5"/>
+	<do-trace access-modifier="private" target="BrushColor" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Source.Connection || Error]]>
+			</condition>
+			<expr>
+				<![CDATA[unit.Theme.NoConnectInputColor]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[unit.Theme.InputColor]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<do-trace access-modifier="private" target="PenColor" ver="5">
+		<conditional-expr>
+			<condition>
+				<![CDATA[!unit.Source.Connection || Error]]>
+			</condition>
+			<expr>
+				<![CDATA[unit.Theme.NoConnectInputBoundColor]]>
+			</expr>
+		</conditional-expr>
+		<default-expr>
+			<expr>
+				<![CDATA[unit.Theme.InputBoundColor]]>
+			</expr>
+		</default-expr>
+	</do-trace>
+	<object access-modifier="private" name="Text_1" display-name="Text_1" uuid="51a55178-9229-492d-8803-c112cbfcd922" base-type="Text" base-type-id="21d59f8d-2ca4-4592-92ca-b4dc48992a0f" ver="5" description="" cardinal="1">
+		<designed target="X" value="0" ver="5"/>
+		<designed target="Y" value="0" ver="5"/>
+		<designed target="ZValue" value="0" ver="5"/>
+		<designed target="Rotation" value="0" ver="5"/>
+		<designed target="Scale" value="1" ver="5"/>
+		<designed target="Flip" value="0" ver="5"/>
+		<designed target="Visible" value="true" ver="5"/>
+		<designed target="Opacity" value="1" ver="5"/>
+		<designed target="Enabled" value="true" ver="5"/>
+		<designed target="Tooltip" value="" ver="5"/>
+		<designed target="Width" value="100" ver="5"/>
+		<designed target="Height" value="30" ver="5"/>
+		<designed target="Text" value="-000.000" ver="5"/>
+		<designed target="Font" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный" ver="5"/>
+		<designed target="FontColor" value="4278190080" ver="5"/>
+		<designed target="TextAlignment" value="132" ver="5"/>
+		<do-trace access-modifier="private" target="Text" ver="5">
+			<conditional-expr>
+				<condition>
+					<![CDATA[!unit.Source.Connection || Error]]>
+				</condition>
+				<expr>
+					<![CDATA["???"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[LWORD]]>
+				</condition>
+				<expr>
+					<![CDATA[Value.Out.ValueAsString]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[isAlgos]]>
+				</condition>
+				<expr>
+					<![CDATA[String.ToString("%." + String.ToString(Accuracy) + "f", Variant.ToFloat(Value.Out, 0)) + " " + "сек"]]>
+				</expr>
+			</conditional-expr>
+			<conditional-expr>
+				<condition>
+					<![CDATA[noUnit]]>
+				</condition>
+				<expr>
+					<![CDATA[String.ToString("%." + String.ToString(Accuracy) + "f", Variant.ToFloat(Value.Out, 0))]]>
+				</expr>
+			</conditional-expr>
+			<default-expr>
+				<expr>
+					<![CDATA[String.ToString("%." + String.ToString(Accuracy) + "f", Variant.ToFloat(Value.Out, 0)) + " " + here.Unit]]>
+				</expr>
+			</default-expr>
+		</do-trace>
+		<do-trace access-modifier="private" target="Font" ver="5">
+			<body>
+				<![CDATA[TextFont]]>
+			</body>
+		</do-trace>
+		<do-trace access-modifier="private" target="FontColor" ver="5">
+			<body>
+				<![CDATA[unit.Theme.InputTextColor]]>
+			</body>
+		</do-trace>
+		<init target="Text" ver="5" value=""/>
+	</object>
+	<object access-modifier="private" name="LinearLayout_1" display-name="LinearLayout_1" uuid="214abe83-e482-492a-8192-4926bbebd835" base-type="LinearLayout" base-type-id="800edd71-7303-408c-890b-8346e98f5718" ver="5" description="" cardinal="1">
+		<designed target="Orientation" value="1" ver="5"/>
+		<designed target="Gap" value="0" ver="5"/>
+	</object>
+	<object access-modifier="private" name="Value" display-name="Value" uuid="1dc28f77-a3d9-4856-a64c-85aef2bd9df3" base-type="Параметр" base-type-id="9a3f97e9-6cd9-421e-aa9f-7a51ac9d23a3" ver="5" description="" cardinal="1">
+		<do-trace access-modifier="private" target="ValuePath" ver="5">
+			<body>
+				<![CDATA[here.ValuePath]]>
+			</body>
+		</do-trace>
+		<init target="MainSource" ver="5">
+			<object access-modifier="private" uuid="c1911786-e892-4597-bcc7-78983c5a396f" base-type="ApSource" base-type-id="966603da-f05e-4b4d-8ef0-919efbf8ab2c" ver="5">
+				<designed target="Location" value="" ver="5"/>
+				<designed target="Port" value="4388" ver="5"/>
+				<designed target="HistoryPort" value="4950" ver="5"/>
+				<designed target="Path" value="" ver="5"/>
+				<designed target="Active" value="false" ver="5"/>
+				<designed target="ReAdvise" value="0" ver="5"/>
+				<designed target="ClientDisplayName" value="HMI" ver="5"/>
+				<designed target="ClientId" value="HMI" ver="5"/>
+				<init target="ParentSource" ver="5" ref="Source.Main"/>
+			</object>
+		</init>
+	</object>
+	<object access-modifier="private" name="ValuePath" display-name="Путь" uuid="ef213237-3ae9-4550-abd6-f7899a2c7965" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="ValueName" display-name="Название" uuid="923d1ed2-d89b-4090-89b9-f86720473b40" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<do-on access-modifier="private" name="Handler_1" display-name="Handler_1" ver="5" event="MouseClick">
+		<body kind="om">
+			<![CDATA[if (!unit.Source.Connection){
+	OpenConnectionDialog();
+} else if (!(Security.Access_Operator || Security.Access_Engineer)){
+	OpenRightsDialog();
+} else if (!(unit.ModeWork.Access || unit.ModeWork.IsPU && unit.ModeWork.ModeWork == 4)) {
+	OpenModeDialog();	
+} else if (unit.ModeWork.ModeWork == 0) {
+	OpenInfoDialog();
+} else if (Error) {
+	OpenErrorDialog();
+} else if (AdminOnly && !unit.Security.Access_Engineer){
+	OpenAdminDialog();
+} else if (unit.ModeWork.Debug){
+	OpenNumpad();
+} else if (isPumps) {
+	OpenPumps();
+} else {
+	OpenNumpad();
+}
+
+
+
+]]>
+		</body>
+	</do-on>
+	<do access-modifier="private" name="OpenRightsDialog" display-name="OpenRightsDialog" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="7263406a-6c07-4c98-8d55-fbc5554ab19e" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Message" ver="5" value="Для изменения уставки, пожалуйста, авторизируйтесь."/>
+			<init target="Icon" ver="5" value="2"/>
+		</object>
+	</do>
+	<do access-modifier="private" name="OpenPumps" display-name="OpenPumps" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="f70e3a6d-8c91-4237-b29f-79c180b011bd" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Message" ver="5" value="Перед заданием уставки, отключите алгоритм"/>
+			<init target="Icon" ver="5" value="2"/>
+		</object>
+	</do>
+	<do access-modifier="private" name="OpenNumpad" display-name="OpenNumpad" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="a7c2fb2f-f300-491a-b337-5b5b37414cc0" base-type="Numpad" base-type-id="8455e54e-673a-4f8c-9641-862f0ff596a1" ver="5">
+			<init target="InputBox" ver="5" ref="here"/>
+			<init target="WindowName" ver="5" ref="ValueName"/>
+			<init target="Min" ver="5" ref="here.Min"/>
+			<init target="Max" ver="5" ref="here.Max"/>
+		</object>
+	</do>
+	<object access-modifier="private" name="Unit" display-name="Единица измерения" uuid="453b1a06-fd64-417d-8077-9e462969cfb3" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="Unit" ver="5" value=""/>
+	<object access-modifier="private" name="Min" display-name="Минимальное значение" uuid="e30fc407-7eb9-44f3-abe4-59b2ca631870" base-type="notifying_float" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Max" display-name="Максимальное значение" uuid="a1c1eb91-5fa4-4e26-b828-829492005887" base-type="notifying_float" base-type-id="bb7d05ee-cbf0-4c44-8740-1905239c8ead" ver="5" description="" cardinal="1"/>
+	<init target="Min" ver="5" value="-999"/>
+	<init target="Max" ver="5" value="999"/>
+	<do access-modifier="private" name="OpenConnectionDialog" display-name="OpenConnectionDialog" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="41a17d61-2560-4329-9d2f-85a07615fde1" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Message" ver="5" value="Отсутвует связь с модулями САУ"/>
+			<init target="Icon" ver="5" value="3"/>
+		</object>
+	</do>
+	<object access-modifier="private" name="TextFont" display-name="Шрифт" uuid="e06529cc-597b-4865-ab4e-c13d7a4c0307" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<init target="TextFont" ver="5" value="Golos Text,10,-1,5,50,0,0,0,0,0,Обычный"/>
+	<object access-modifier="private" name="IsUint" display-name="Беззнаковое целое число" uuid="984c29a9-89e6-4902-85ef-61ea5ebb06bb" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="IsUint" ver="5" value="false"/>
+	<do access-modifier="private" name="OpenModeDialog" display-name="OpenModeDialog" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="4d3cd33c-dad9-4cde-869c-593c32774062" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Icon" ver="5" value="2"/>
+			<init target="Message" ver="5" value="Изменение уставки недоступно в текущем режиме работы"/>
+		</object>
+	</do>
+	<do access-modifier="private" name="OpenInfoDialog" display-name="OpenInfoDialog" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="17969bde-8ed6-4ac9-918a-7487057c5992" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Message" ver="5" value="Изменение уставки запрещено в информационном режиме работы"/>
+			<init target="Icon" ver="5" value="3"/>
+		</object>
+	</do>
+	<object access-modifier="private" name="AdminOnly" display-name="AdminOnly" uuid="9c48f823-4041-4af1-9980-60cc4710ba3d" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<do access-modifier="private" name="OpenAdminDialog" display-name="OpenAdminDialog" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="3620c3a5-1e12-42d5-9713-3937b8fe8ab8" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Icon" ver="5" value="2"/>
+			<init target="Message" ver="5" value='Измение уставки доступно только пользователю с правами "Инженер" и выше'/>
+		</object>
+	</do>
+	<object access-modifier="private" name="Accuracy" display-name="Accuracy" uuid="31b8b47c-39a3-4c79-be5a-ed78f3eea1fa" base-type="notifying_uint2" base-type-id="ac10cc3c-8557-43b5-8da5-1144cd866e59" ver="5" description="" cardinal="1"/>
+	<init target="Accuracy" ver="5" value="1"/>
+	<object access-modifier="private" name="LWORD" display-name="LWORD" uuid="60aaa1ef-a4b2-4ed9-a82d-27b3192ce9b1" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="noUnit" display-name="noUnit" uuid="f6dbf036-c9ec-4562-a5d6-c39cb1a898cc" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<init target="noUnit" ver="5" value="true"/>
+	<object access-modifier="private" name="isAlgos" display-name="isAlgos" uuid="f3db65dd-daea-473c-96dd-085fccd5ddbf" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="isPumps" display-name="isPumps" uuid="a2a198d6-101a-4930-86e5-64ff0b478c53" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="Error" display-name="Error" uuid="6958d1de-36d8-4f57-8eab-6694701531ed" base-type="notifying_bool" base-type-id="f8797810-1baa-4a1f-af36-cf839bf252e8" ver="5" description="" cardinal="1"/>
+	<object access-modifier="private" name="ErrorMsg" display-name="ErrorMsg" uuid="92769a81-cdbf-43cf-b1d5-c9b7233eec36" base-type="notifying_string" base-type-id="14976fbf-36ab-415f-abc3-9f8fdc217351" ver="5" description="" cardinal="1"/>
+	<do access-modifier="private" name="OpenErrorDialog" display-name="OpenErrorDialog" ver="5" form-action="open-dialog" form-by-id="false" type="void">
+		<object access-modifier="private" uuid="ee178a72-2748-4ed9-be59-6b9e09a7e91d" base-type="MessageDialog_1" base-type-id="e57be645-5922-4aa1-be96-4629255ec5dc" ver="5">
+			<init target="Icon" ver="5" value="3"/>
+			<init target="Message" ver="5" ref="ErrorMsg"/>
+			<do-trace access-modifier="private" target="WindowIconPath" ver="5">
+				<conditional-expr>
+					<condition>
+						<![CDATA[Icon == 3]]>
+					</condition>
+					<expr>
+						<![CDATA["CommonLib_Icons/Error16.png"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Icon == 2]]>
+					</condition>
+					<expr>
+						<![CDATA["CommonLib_Icons/Warning16.png"]]>
+					</expr>
+				</conditional-expr>
+				<conditional-expr>
+					<condition>
+						<![CDATA[Icon == 1]]>
+					</condition>
+					<expr>
+						<![CDATA["CommonLib_Icons/Question16.png"]]>
+					</expr>
+				</conditional-expr>
+				<default-expr>
+					<expr>
+						<![CDATA["CommonLib_Icons/Information16.png"]]>
+					</expr>
+				</default-expr>
+			</do-trace>
+		</object>
+	</do>
+	<init target="isAlgos" ver="5" value="false"/>
+	<init target="isPumps" ver="5" value="false"/>
+</type>
+
